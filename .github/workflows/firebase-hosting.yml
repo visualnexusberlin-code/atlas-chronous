@@ -1,0 +1,28 @@
+# Despliegue automático en Firebase Hosting
+# · push a main  → publica en el sitio principal (canal live)
+# · pull request → crea un enlace de vista previa temporal (7 días) y lo comenta en el PR
+name: Firebase Hosting
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+  checks: write
+
+jobs:
+  deploy:
+    if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ATLAS_CHRONOUS }}
+          projectId: atlas-chronous
+          channelId: ${{ github.event_name == 'push' && 'live' || '' }}
+          expires: 7d

@@ -1,0 +1,12 @@
+# Firebase
+.firebase/
+firebase-debug.log*
+*-debug.log
+# Sistema
+.DS_Store
+Thumbs.db
+node_modules/
+# Fuentes de investigación: libros y PDFs con derechos NO se suben
+*.pdf
+*.epub
+fuentes/
