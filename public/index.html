@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="generator" content="Grecia Eterna v0.5">
+<meta name="generator" content="Grecia Eterna v0.6">
 <title>Grecia Eterna</title>
 <meta name="description" content="Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro sobre el mar color de vino.">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -393,6 +393,195 @@ body[data-lens="asombro"]{--lens:var(--gold)}
   .imago-note{grid-column:1}
   .statue{max-width:260px}
 }
+
+/* ---------- v0.6 · EL UMBRAL · PLATÓN ---------- */
+/* Layout: a full-bleed black chamber after the reading room; the 3D stage fills the width, a glass panel narrates the steps on the left, tabs switch between the three myths; below, a second reading room on the same grid as .room. */
+:root{--um-black:#000;--um-cyan:#80d8ff;--um-fire:#ff8a2a;--um-orichalc:#ff4d6d;--um-soul:#64b5f6}
+.umbral{background:var(--um-black);border-top:1px solid var(--line);position:relative;margin-top:24px}
+.umbral:before{content:"";position:absolute;left:0;right:0;top:-120px;height:120px;background:linear-gradient(180deg,rgba(0,0,0,0),#000);pointer-events:none}
+.um-intro{padding-inline:var(--gutter);padding-block:88px 44px;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(28px,5vw,80px);align-items:end}
+.um-intro .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.um-intro h2{margin:10px 0 0;font-family:var(--f-display);font-weight:400;font-size:clamp(3.2rem,8vw,6.4rem);line-height:.9;letter-spacing:.005em}
+.um-intro h2 span{display:block;font-size:.3em;letter-spacing:.16em;margin-top:.7em;color:var(--dim)}
+.um-intro h2 span b{font-weight:400;color:var(--gold)}
+.um-intro h2 span em{font-style:normal;color:var(--um-cyan)}
+.um-lead{display:grid;gap:14px}
+.um-lead p{margin:0;color:var(--dim);font-size:15px;max-width:60ch}
+.um-lead p:first-child{color:var(--ink);font-family:var(--f-display);font-size:1.35rem;line-height:1.4}
+
+.um-stage{position:relative;height:clamp(640px,92vh,980px);overflow:hidden;background:#000;border-block:1px solid rgba(128,216,255,.08)}
+.um-view{position:absolute;inset:0}
+.um-stage canvas{display:block;width:100%;height:100%;touch-action:pan-y;cursor:grab}
+.um-stage canvas:active{cursor:grabbing}
+.um-labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.um-lb{position:absolute;left:0;top:0;white-space:nowrap;display:grid;justify-items:center;line-height:1.2;text-shadow:0 1px 10px #000,0 0 3px #000;transition:opacity .5s}
+.um-lb b{font-family:var(--f-display);font-weight:400;font-size:13px;color:var(--ink)}
+.um-lb small{font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.um-lb.off{opacity:0}
+.um-lb[data-c="green"] b{color:#5cf29a}.um-lb[data-c="blue"] b{color:#6fcaff}.um-lb[data-c="red"] b{color:#ff6b7f}.um-lb[data-c="gold"] b{color:var(--gold)}.um-lb[data-c="cyan"] b{color:var(--um-cyan)}.um-lb[data-c="fire"] b{color:#ffb266}
+
+.um-tabs{position:absolute;top:18px;left:50%;transform:translateX(-50%);display:flex;gap:3px;padding:3px;border:1px solid var(--line-strong);border-radius:10px;background:rgba(6,4,8,.7);backdrop-filter:blur(10px);z-index:2}
+.um-tabs button{border:0;background:none;border-radius:7px;padding:8px 16px;display:grid;justify-items:center;gap:0;line-height:1.15;color:var(--dim);min-width:0}
+.um-tabs button b{font-weight:500;font-size:12.5px}
+.um-tabs button span{font-family:var(--f-display);font-size:12px;color:var(--faint)}
+.um-tabs button:hover{color:var(--ink)}
+.um-tabs button[aria-selected="true"]{background:rgba(128,216,255,.12);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(128,216,255,.45)}
+.um-tabs button[aria-selected="true"] span{color:var(--um-cyan)}
+
+.um-panel{position:absolute;left:16px;top:16px;bottom:16px;width:380px;background:rgba(4,3,6,.74);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:6px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent;z-index:1}
+.um-panel-in{padding:20px 24px 24px;display:grid;gap:16px}
+.um-cat{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:11px;color:var(--faint)}
+.um-tag{border:1px solid rgba(128,216,255,.4);color:var(--um-cyan);border-radius:999px;padding:2px 10px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.um-head h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1.02}
+.um-head .gr{font-family:var(--f-display);font-size:1.1rem;color:var(--um-cyan)}
+.um-steps{display:flex;gap:6px;align-items:center}
+.um-steps button{flex:1;height:26px;border:0;background:none;padding:0;display:grid;align-items:center}
+.um-steps button i{display:block;height:2px;border-radius:2px;background:var(--line-strong);transition:background .3s,height .3s}
+.um-steps button[aria-current="step"] i{background:var(--um-cyan);height:3px}
+.um-steps button.done i{background:rgba(128,216,255,.5)}
+.um-step{display:grid;gap:8px;min-height:10em}
+.um-step .n{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.um-step h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.15;color:var(--ink)}
+.um-step p{margin:0;color:var(--ink);font-size:14px;line-height:1.6}
+.um-step .q{font-family:var(--f-display);font-size:1.08rem;line-height:1.4;color:var(--ink);padding-left:14px;border-left:2px solid var(--um-cyan)}
+.um-step .q small{display:block;font-family:var(--f-body);font-size:11px;color:var(--faint);margin-top:4px}
+.um-step .ln{font-size:12px;color:var(--dim)}
+.um-step .ln b{font-weight:600;color:var(--um-cyan);font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.um-nav{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.um-nav .ctl{height:32px}
+.um-nav .ctl[disabled]{opacity:.35;cursor:default}
+.um-nav .grow{flex:1}
+.um-scrub{display:grid;gap:6px;padding:12px 14px;border:1px solid rgba(255,77,109,.28);border-radius:5px}
+.um-scrub[hidden]{display:none}
+.um-scrub label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.um-scrub input{width:100%;accent-color:var(--um-orichalc)}
+.um-scrub .sc{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
+.um-more{border-top:1px solid var(--line);padding-top:12px}
+.um-more summary{cursor:pointer;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);font-weight:600;list-style:none}
+.um-more summary::-webkit-details-marker{display:none}
+.um-more summary:before{content:"+ ";color:var(--um-cyan)}
+.um-more[open] summary:before{content:"− "}
+.um-more p{margin:10px 0 0;font-size:13px;color:var(--dim);line-height:1.6}
+.um-more p b{color:var(--ink);font-weight:500}
+.um-tools{position:absolute;right:16px;bottom:16px;display:flex;gap:6px;align-items:center;z-index:1}
+.um-tools .ctl{background:rgba(6,4,8,.7);backdrop-filter:blur(8px)}
+.um-tools .ctl[aria-pressed="true"]{border-color:var(--um-cyan);background:rgba(128,216,255,.14)}
+.um-tools .ctl[hidden]{display:none}
+.um-hint{position:absolute;right:18px;top:22px;font-size:11.5px;color:var(--faint);pointer-events:none;text-align:right;max-width:220px}
+.um-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;opacity:.9}
+.um-nogl .um-poster{display:block}
+.um-nogl canvas{display:none}
+
+.um-room{padding-inline:var(--gutter);padding-block:80px 64px;display:grid;gap:88px;max-width:1180px;margin:0 auto}
+.um-room .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+/* espectro mito — alegoría */
+.spectrum{position:relative;padding:44px 0 8px}
+.spectrum .bar{position:relative;height:2px;background:linear-gradient(90deg,var(--gold),rgba(240,231,217,.35) 50%,var(--um-cyan))}
+.spectrum .ends{display:flex;justify-content:space-between;margin-top:14px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.spectrum .ends span:first-child b{color:var(--gold)}
+.spectrum .ends span:last-child b{color:var(--um-cyan)}
+.spectrum .ends b{font-family:var(--f-display);font-size:1.15rem;letter-spacing:.02em;text-transform:none;font-weight:400;margin-right:6px}
+.sp-dot{position:absolute;top:0;transform:translate(-50%,0);border:0;background:none;padding:0;display:grid;justify-items:center;gap:6px;color:var(--dim);font-size:11.5px;white-space:nowrap}
+.sp-dot i{width:9px;height:9px;border-radius:50%;background:var(--ink);box-shadow:0 0 0 3px #000;display:block}
+.sp-dot.hi{top:-6px}.sp-dot.lo{top:auto;bottom:-44px;flex-direction:column-reverse;display:flex;align-items:center}
+.sp-dot.scene i{background:var(--um-cyan);box-shadow:0 0 0 3px #000,0 0 14px rgba(128,216,255,.7)}
+.sp-dot:hover,.sp-dot:focus-visible{color:var(--ink)}
+.sp-dot span{order:-1}
+.sp-wrap{padding:12px 0 56px}
+.sp-note{margin:40px 0 0;color:var(--dim);max-width:70ch;font-size:14px}
+/* otros mitos */
+.myths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 40px}
+.myth{border-top:1px solid var(--line-strong);padding-top:16px;display:grid;grid-template-columns:78px minmax(0,1fr);gap:8px 18px;align-content:start}
+.myth svg{grid-row:1/span 4;width:78px;height:78px;overflow:visible}
+.myth svg *{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.myth h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.15}
+.myth .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:11.5px;color:var(--faint)}
+.myth p{margin:0;color:var(--dim);font-size:14px}
+.myth p.x{color:var(--ink);font-size:13.5px}
+.myth p.x b{font-weight:600;color:var(--gold);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-right:6px}
+/* alegorías */
+.alleg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px}
+.sun-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.sun-table th{font-family:var(--f-display);font-weight:400;font-size:1.1rem;text-align:left;padding:0 0 10px;color:var(--ink);border-bottom:1px solid var(--line-strong)}
+.sun-table th:last-child{color:var(--um-cyan)}
+.sun-table td{padding:9px 12px 9px 0;border-bottom:1px solid var(--line);color:var(--dim);vertical-align:top}
+.sun-table td:first-child{color:var(--faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;width:30%}
+.alleg h3{margin:0 0 10px;font-family:var(--f-display);font-weight:400;font-size:1.55rem}
+.alleg .lead{margin:0 0 18px;color:var(--dim);font-size:14px}
+.line-wrap{display:grid;grid-template-columns:120px minmax(0,1fr);gap:26px;align-items:stretch}
+.dline{display:flex;flex-direction:column-reverse;gap:3px;height:340px}
+.dline button{border:0;padding:0 0 0 14px;background:none;position:relative;text-align:left;display:flex;align-items:center;color:var(--dim);font-family:var(--f-display);font-size:14px}
+.dline button:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:2px;background:var(--line-strong);transition:background .3s,width .3s}
+.dline button[aria-pressed="true"]{color:var(--ink)}
+.dline button[aria-pressed="true"]:before{width:6px;background:var(--um-cyan);box-shadow:0 0 14px rgba(128,216,255,.6)}
+.dline button.s:before{background:rgba(227,180,96,.45)}
+.dline button.s[aria-pressed="true"]:before{background:var(--gold);box-shadow:0 0 14px rgba(227,180,96,.6)}
+.dline .cut{height:0;border-top:1px dashed var(--line-strong);margin:4px 0;position:relative}
+.dline .cut span{position:absolute;right:0;top:-8px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);background:#000;padding-left:6px}
+.line-out{display:grid;gap:10px;align-content:start}
+.line-out h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.5rem}
+.line-out h4 small{display:block;font-family:var(--f-body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:4px}
+.line-out dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;font-size:13.5px}
+.line-out dt{color:var(--faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px}
+.line-out dd{margin:0;color:var(--ink)}
+.line-out p{margin:0;color:var(--dim);font-size:13px}
+.line-note{margin:18px 0 0;font-size:12.5px;color:var(--faint);max-width:70ch}
+.ship{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:28px;align-items:center;margin-top:44px;padding-top:30px;border-top:1px solid var(--line-strong)}
+.ship svg{width:100%;height:auto;overflow:visible}
+.ship h3{margin:0 0 8px;font-family:var(--f-display);font-weight:400;font-size:1.55rem}
+.ship p{margin:0 0 10px;color:var(--dim);font-size:14px}
+.ship p b{color:var(--ink);font-weight:500}
+/* dilemas */
+.dilemmas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.dil{border:1px solid var(--line);border-radius:6px;padding:16px 18px;display:grid;gap:8px;align-content:start;background:rgba(240,231,217,.02)}
+.dil .src{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.dil h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.3rem;line-height:1.15}
+.dil .pq{margin:0;font-family:var(--f-display);font-size:1.05rem;line-height:1.4;color:var(--ink)}
+.dil .im{margin:0;font-size:13px;color:var(--dim)}
+.dil .im b{color:var(--um-cyan);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.dil .choose{display:flex;flex-wrap:wrap;gap:6px}
+.dil .choose button{border:1px solid var(--line-strong);background:none;border-radius:999px;padding:5px 12px;font-size:12px;color:var(--dim)}
+.dil .choose button:hover{border-color:var(--um-cyan);color:var(--ink)}
+.dil .choose button[aria-pressed="true"]{border-color:var(--um-cyan);background:rgba(128,216,255,.12);color:var(--ink)}
+.dil .ans{margin:0;font-size:13px;color:var(--ink);min-height:0}
+.dil .ans:empty{display:none}
+/* del concepto al código */
+.concept{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.concept figure{margin:0;display:grid;gap:10px;align-content:start}
+.concept img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;border:1px solid var(--line);display:block}
+.concept figcaption{display:grid;gap:6px}
+.concept figcaption b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;color:var(--ink)}
+.concept figcaption span{font-size:12.5px;color:var(--dim)}
+.concept figcaption code{font-family:var(--f-type);font-size:11.5px;color:var(--um-cyan)}
+.concept .go{justify-self:start;font-size:12px;border:1px solid var(--line-strong);background:none;border-radius:999px;padding:5px 12px;color:var(--ink)}
+.concept .go:hover{border-color:var(--um-cyan)}
+.um-taller{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 40px;counter-reset:ut}
+.um-taller li{counter-increment:ut;display:grid;gap:4px;border-top:1px solid var(--line);padding-top:14px}
+.um-taller b{font-family:var(--f-display);font-weight:400;font-size:1.22rem;color:var(--ink)}
+.um-taller b:before{content:counter(ut,upper-roman) " · ";color:var(--um-cyan);font-size:.9rem}
+.um-taller .ref{font-size:11px;color:var(--um-cyan)}
+.um-taller p{margin:0;color:var(--dim);font-size:13.5px}
+.chip.umbral-go{border-color:rgba(128,216,255,.45);color:var(--ink);justify-self:start}
+.chip.umbral-go:hover{border-color:var(--um-cyan);background:rgba(128,216,255,.08)}
+
+@media (max-width:1100px) and (min-width:901px){ .dilemmas,.concept{grid-template-columns:repeat(2,minmax(0,1fr))} .um-panel{width:330px} }
+@media (max-width:900px){
+  .um-intro{grid-template-columns:minmax(0,1fr);padding-block:64px 32px}
+  .um-stage{height:auto;overflow:visible}
+  .um-view{position:relative;inset:auto;height:64vh;min-height:420px}
+  .um-tabs{position:relative;top:auto;left:auto;transform:none;margin:12px 16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr))}
+  .um-tabs button{padding:8px 4px}
+  .um-panel{position:relative;inset:auto;width:auto;margin:12px 16px 16px;overflow:visible}
+  .um-hint{display:none}
+  .myths,.alleg,.dilemmas,.concept,.um-taller,.ship{grid-template-columns:minmax(0,1fr)}
+  .line-wrap{grid-template-columns:96px minmax(0,1fr)}
+  .sp-dot span{font-size:10.5px}
+  .spectrum{overflow-x:auto;overflow-y:visible;padding-bottom:12px}
+  .spectrum .inner{min-width:640px;position:relative}
+}
+.um-veil{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
+.um-step .ln button{border:0;background:none;padding:0;color:var(--um-cyan);font-size:12px;text-decoration:underline;text-underline-offset:3px}
+.um-room>section{min-width:0}
 </style>
 </head>
 <body>
@@ -622,8 +811,156 @@ body[data-lens="asombro"]{--lens:var(--gold)}
     </section>
   </div>
 
+
+  <section class="umbral" id="umbral" aria-labelledby="umTitle">
+    <div class="um-intro">
+      <div>
+        <div class="kicker">Platón · República, Timeo, Critias, Fedro, Banquete</div>
+        <h2 id="umTitle">El Umbral<span><b>μῦθος</b> · entre mito, alegoría y razón · <em>λόγος</em></span></h2>
+      </div>
+      <div class="um-lead">
+        <p>En este espacio, el mito no disfraza la verdad: la hace respirable.</p>
+        <p>La razón griega nace proclamando la muerte del mito, pero Platón lo convoca de nuevo. No como un retroceso a la superstición, sino como el único lenguaje que se sostiene cuando la lógica toca su propio abismo: el alma, la muerte, el amor, el orden del cosmos. Expulsa a los poetas de su república con una mano mientras con la otra escribe algunas de las páginas más deslumbrantes de la literatura.</p>
+        <p>Una caverna, un soldado que despierta en su pira, una isla tragada por el mar. No son adornos para amenizar una lección: son máquinas de intuición, construidas para obligarnos a ver lo que las palabras técnicas apenas señalan. Aquí se recorren en luz.</p>
+      </div>
+    </div>
+
+    <div class="um-stage" id="umStage">
+      <div class="um-tabs" role="tablist" aria-label="Mitos en tres dimensiones" id="umTabs">
+        <button type="button" role="tab" id="umTab-caverna" aria-controls="umPanel" aria-selected="true" data-scene="caverna"><b>La Caverna</b><span lang="grc">σπήλαιον</span></button>
+        <button type="button" role="tab" id="umTab-er" aria-controls="umPanel" aria-selected="false" tabindex="-1" data-scene="er"><b>El mito de Er</b><span lang="grc">Ἤρ</span></button>
+        <button type="button" role="tab" id="umTab-atlantida" aria-controls="umPanel" aria-selected="false" tabindex="-1" data-scene="atlantida"><b>La Atlántida</b><span lang="grc">Ἀτλαντίς</span></button>
+      </div>
+      <div class="um-view">
+        <canvas id="umGl" aria-hidden="true"></canvas>
+        <img class="um-poster" id="umPoster" alt="">
+        <div class="um-veil" id="umVeil" aria-hidden="true"></div>
+        <div class="um-labels" id="umLabels" aria-hidden="true"></div>
+        <p class="um-hint">Arrastra para girar · Ctrl + rueda para acercar</p>
+        <div class="um-tools">
+          <button type="button" class="ctl" id="umSound" aria-pressed="false" hidden>♪ Las sirenas</button>
+          <button type="button" class="ctl" id="umReset" aria-label="Volver al encuadre del paso">◎</button>
+        </div>
+      </div>
+      <aside class="um-panel" id="umPanel" role="tabpanel" aria-labelledby="umTab-caverna" aria-live="polite">
+        <div class="um-panel-in" id="umPanelIn"></div>
+      </aside>
+    </div>
+
+    <div class="um-room">
+      <section aria-labelledby="spTitle">
+        <div class="sec-head">
+          <div class="kicker">Mythos · allegoría</div>
+          <h2 id="spTitle">Una frontera porosa</h2>
+          <p>Un <i>mythos</i> es un relato verosímil y poético; una <i>allegoría</i>, un mapa donde cada término corresponde a un concepto. En Platón la frontera se mueve: la Caverna es una imagen (<i>eikón</i>) que la tradición llama mito. Toca cada figura: las tres en azul se abren en el escenario.</p>
+        </div>
+        <div class="spectrum"><div class="inner">
+          <div class="sp-wrap"><div class="bar" id="spBar"></div></div>
+          <div class="ends"><span><b>μῦθος</b>relato</span><span><b>ἀλληγορία</b>correspondencia</span></div>
+        </div></div>
+        <p class="sp-note" id="spNote">Ninguna posición es definitiva: es una lectura del atlas para empezar a discutir.</p>
+      </section>
+
+      <section aria-labelledby="mythTitle">
+        <div class="sec-head">
+          <div class="kicker">Otros mitos</div>
+          <h2 id="mythTitle">Cuatro relatos más</h2>
+          <p>Un carro que pierde las alas, un cuerpo partido por un rayo, un dios que regala la escritura y una mentira para fundar una ciudad.</p>
+        </div>
+        <div class="myths" id="umMyths"></div>
+      </section>
+
+      <section aria-labelledby="allegTitle">
+        <div class="sec-head">
+          <div class="kicker">República VI · alegorías puras</div>
+          <h2 id="allegTitle">El Sol, la Línea y la Nave</h2>
+          <p>Justo antes de la Caverna, Platón construye dos modelos visuales. Son su preparación: la Caverna los pone en movimiento.</p>
+        </div>
+        <div class="alleg">
+          <div>
+            <h3>La alegoría del Sol</h3>
+            <p class="lead">Lo que el Sol es para lo visible, el Bien lo es para lo inteligible. Una analogía término a término (508b–509b).</p>
+            <table class="sun-table">
+              <thead><tr><th scope="col"></th><th scope="col">Mundo visible</th><th scope="col">Mundo inteligible</th></tr></thead>
+              <tbody>
+                <tr><td>Principio</td><td>el Sol</td><td>la Idea del Bien</td></tr>
+                <tr><td>Da</td><td>luz</td><td>verdad</td></tr>
+                <tr><td>Hace posible</td><td>la vista y lo visto</td><td>el conocimiento y lo conocido</td></tr>
+                <tr><td>Además</td><td>generación y crecimiento</td><td>el ser mismo de las Formas</td></tr>
+                <tr><td>Órgano</td><td>el ojo, el más «solar» de los sentidos</td><td>la inteligencia (<i>noûs</i>)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3>La Línea dividida</h3>
+            <p class="lead">Una línea cortada en dos partes desiguales, y cada parte cortada en la misma proporción (509d–511e). Toca un segmento.</p>
+            <div class="line-wrap">
+              <div class="dline" id="dline" role="group" aria-label="Segmentos de la línea dividida"></div>
+              <div class="line-out" id="lineOut" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+        <p class="line-note">Un detalle que Platón no subraya y los geómetras sí: si los dos cortes guardan la misma proporción, los segmentos centrales (<i>pístis</i> y <i>diánoia</i>) salen siempre iguales. La creencia sobre las cosas y el pensamiento matemático ocupan la misma longitud.</p>
+        <div class="ship">
+          <svg viewBox="0 0 220 150" role="img" aria-label="Una nave con un timón disputado y un piloto que mira las estrellas">
+            <g stroke="var(--line-strong)" fill="none" stroke-width="1.2" stroke-linecap="round">
+              <path d="M18 98h184l-22 26H44z" stroke="var(--dim)"/><path d="M110 98V22" stroke="var(--dim)"/><path d="M110 26l54 54h-54z" stroke="var(--dim)"/><path d="M110 30l-44 58h44z"/>
+              <path d="M40 104l-18 30" stroke="var(--gold)"/><path d="M0 136c30-8 60 8 110 0s90 8 110 0" stroke="rgba(128,216,255,.4)"/>
+            </g>
+            <g fill="var(--ink)"><circle cx="44" cy="88" r="3"/><circle cx="56" cy="90" r="3"/><circle cx="68" cy="88" r="3"/><circle cx="150" cy="90" r="4" fill="var(--um-cyan)"/></g>
+            <g fill="var(--um-cyan)"><circle cx="160" cy="16" r="1.6"/><circle cx="176" cy="28" r="1.2"/><circle cx="192" cy="12" r="1.6"/><circle cx="204" cy="34" r="1"/></g>
+            <path d="M150 86l18-44" stroke="rgba(128,216,255,.45)" stroke-dasharray="2 3"/>
+          </svg>
+          <div>
+            <h3>La Nave del Estado</h3>
+            <p>Un patrón corpulento y algo sordo (el pueblo); marineros que se disputan el timón sin saber navegar (los demagogos); y, olvidado en cubierta, el único que estudia los astros, las estaciones y los vientos (el filósofo). Los demás lo llaman «mirador de estrellas» (488a–489a).</p>
+            <p><b>Eco en el atlas:</b> es la misma burla que recibió Tales al caer en un pozo por mirar el cielo.</p>
+            <button type="button" class="chip" data-fly-station="tales">Tales de Mileto ↗</button>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="dilTitle">
+        <div class="sec-head">
+          <div class="kicker">Dilemas y paradojas</div>
+          <h2 id="dilTitle">Donde el argumento se atasca</h2>
+          <p>Seis nudos que Platón deja abiertos o desata a costa de reformular todo lo anterior. En dos de ellos te toca elegir.</p>
+        </div>
+        <div class="dilemmas" id="umDil"></div>
+      </section>
+
+      <section aria-labelledby="conTitle">
+        <div class="sec-head">
+          <div class="kicker">Dirección de arte</div>
+          <h2 id="conTitle">Del concepto al código</h2>
+          <p>Las tres escenas nacen de imágenes de concepto y de una guía técnica: fondo negro absoluto, líneas de luz, halos, mallas de alambre y partículas con resplandor (<i>bloom</i>). Nada de texturas: solo geometría que brilla.</p>
+        </div>
+        <div class="concept">
+          <figure><img src="assets/img/cueva.webp" alt="Imagen de concepto: caverna de alambre, fuego naranja, prisioneros encadenados, portadores con objetos y un camino de luz hacia un sol blanco" decoding="async"><figcaption><b>La Caverna</b><span>Caverna en <code>wireframe</code> azul pizarra, fuego de partículas, sombras proyectadas en tiempo real sobre el muro y haces láser hacia el Sol.</span><button type="button" class="go" data-um="caverna">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="assets/img/er.webp" alt="Imagen de concepto: huso de luz vertical, ocho anillos concéntricos, río de almas en partículas, tres portales de las Moiras y el vórtice del Leteo" decoding="async"><figcaption><b>El mito de Er</b><span>Huso de luz, ocho anillos con sus velocidades platónicas, río de almas sobre una <code>CatmullRomCurve3</code>, tres Moiras y el vórtice del Leteo.</span><button type="button" class="go" data-um="er">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="assets/img/atlantis.webp" alt="Imagen de concepto: ciudad concéntrica dorada y cian, núcleo con agujas y halos rojos, vórtices azules que la devoran" decoding="async"><figcaption><b>La Atlántida</b><span>Anillos con las medidas del <i>Critias</i>, murallas de bronce, estaño y oricalco, y un colapso por <code>vertex displacement</code>.</span><button type="button" class="go" data-um="atlantida">Abrir la escena ↑</button></figcaption></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="utTitle">
+        <div class="sec-head">
+          <div class="kicker">Para el aula</div>
+          <h2 id="utTitle">Sugerencias para el taller</h2>
+          <p>Cuatro ejercicios que cruzan mito, imagen y técnica.</p>
+        </div>
+        <ol class="um-taller">
+          <li><b>Tu caverna</b><span class="ref">República VII</span><p>Con una linterna, objetos recortados y una pared: proyecta sombras para alguien que no ve los objetos. ¿Qué nombres les da? ¿Qué pantalla usamos hoy como muro?</p></li>
+          <li><b>Elegir una vida</b><span class="ref">República X, 617d–620d</span><p>Reparte «modelos de vida» en tarjetas y deja elegir por turnos, como en Er. Ulises, el último, escoge la vida tranquila de un hombre cualquiera. ¿Qué elegiría cada uno sabiendo que después olvidará?</p></li>
+          <li><b>Diseña tu Atlántida</b><span class="ref">Critias 113c–121c</span><p>Dibuja una ciudad ideal en anillos concéntricos y, sobre ella, marca en rojo el punto exacto donde empezaría su soberbia.</p></li>
+          <li><b>Theuth y la IA</b><span class="ref">Fedro 274c–275b</span><p>Thamus teme que la escritura dé apariencia de sabiduría sin sabiduría. Relee el diálogo cambiando «escritura» por «inteligencia artificial». ¿Qué objeción sigue en pie? ¿Qué uso sería remedio y cuál veneno?</p></li>
+        </ol>
+        <p class="src-note"><b>Procedencia.</b> República, Timeo, Critias, Fedro, Banquete, Eutifrón, Menón, Parménides y Sofista: paráfrasis propias y citas breves en traducción orientativa, con numeración Stephanus. Texto base del concepto: <i>plat_n_mitos_alegor_as_y_gu_a_visual_three_js.md</i> y notas de <i>PLATONISMO.md</i>. Pendiente de revisión editorial humana.</p>
+      </section>
+    </div>
+  </section>
+
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v0.5 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>.</p>
+    <p><b>Grecia Eterna</b> · prototipo v0.6 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -1420,6 +1757,7 @@ function renderCodex(keepScroll){
       <footer><span class="status" data-s="${esc(s.frag.s)}">${esc(s.frag.s)}</span><span>${esc(s.frag.ref)}</span></footer>
     </figure>
     ${s.note?`<p class="c-note">${esc(s.note)}</p>`:""}
+    ${s.id==="platon"?`<button type="button" class="chip umbral-go" data-umbral>Entrar en El Umbral: la Caverna, Er y la Atlántida en 3D ↓</button>`:""}
     ${state.mirada<0?ploBlock(s):""}
     ${dcBlock(s)}
     ${CITY[CITY_AT[s.id]]?`<div class="city"><p class="c-sub">La ciudad según De Crescenzo · ${esc(PLACES[CITY_AT[s.id]].es)}</p><p>${esc(CITY[CITY_AT[s.id]].t)}</p><span>${esc(CITY[CITY_AT[s.id]].ref)}</span></div>`:""}
@@ -2090,7 +2428,858 @@ renderTrack();
 if(GL){ GL.select(startI,-1,{fly:fromHash?true:false}); GL.start(); } else if(FB) FB.update();
 })();
 </script>
+<script src="vendor/three/r128/examples/js/shaders/CopyShader.js"></script>
+<script src="vendor/three/r128/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="vendor/three/r128/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="vendor/three/r128/examples/js/postprocessing/RenderPass.js"></script>
+<script src="vendor/three/r128/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="vendor/three/r128/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script>
+/* =================================================================
+   v0.6 · EL UMBRAL · PLATÓN
+   Sección propia al final de la página. Tres mitos en Three.js
+   (Caverna, Er, Atlántida) con resplandor UnrealBloom cuando está
+   disponible; alegorías, otros mitos y dilemas en la sala inferior.
+   ================================================================= */
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const smooth=t=>t*t*(3-2*t);
 
-</body></html>
+/* ---------------- 1. DATOS ---------------- */
+const SCENES={
+ caverna:{id:"caverna", title:"La Caverna", gr:"τὸ σπήλαιον", ref:"República VII, 514a–521b", cat:"Híbrido canónico", sub:"alegoría · mito",
+  arg:"Prisioneros encadenados desde niños miran el fondo de una gruta. Detrás de ellos arde un fuego y, entre el fuego y ellos, unos portadores pasan figuras por encima de un muro bajo. Los prisioneros solo ven sombras y las toman por lo real. Uno es liberado: sube con dolor, queda deslumbrado, aprende a mirar y contempla el Sol. Luego baja a liberar a los demás, que lo toman por loco e intentarían matarlo.",
+  sense:"Puente entre epistemología, ontología y política. Las cadenas son el hábito y el prejuicio; la subida, la ascensión dialéctica hacia lo inteligible; el Sol, la Idea del Bien; el regreso funda el deber del filósofo en la ciudad. Platón presenta la imagen como una figura de «nuestra naturaleza respecto de la educación y de su falta» (514a).",
+  steps:[
+   {t:"Sombras", k:"εἰκασία", x:"Encadenados desde la infancia por el cuello y las piernas, los prisioneros solo pueden mirar al frente. Para ellos, lo verdadero no es otra cosa que las sombras de los objetos. Si los portadores hablan, creen que la voz sale de las sombras.", q:"«Son semejantes a nosotros», responde Sócrates.", qref:"República 515a", line:0},
+   {t:"El fuego y el muro", k:"πίστις", x:"Detrás, un muro bajo, como el biombo de los titiriteros. Por encima pasan estatuillas de hombres y de animales, figuras de piedra y de madera. Cada sombra del fondo está calculada en tiempo real desde la llama: gira la cámara y compruébalo.", q:"Nada verían de sí mismos ni de los otros, salvo las sombras que el fuego proyecta.", qref:"República 515a (paráfrasis)", line:1},
+   {t:"El ascenso", k:"διάνοια · νόησις", x:"Uno es desatado y obligado a volverse. La luz le duele. Arrastrado por la subida áspera, primero distingue sombras, luego reflejos en el agua, después las cosas mismas; de noche, las estrellas y la luna; al final, el Sol, no reflejado sino en su propio lugar.", q:"Comprendería que el Sol produce las estaciones y los años y gobierna todo lo visible.", qref:"República 516b–c (paráfrasis)", line:3},
+   {t:"El retorno", k:"la obligación", x:"Si volviera a su asiento, sus ojos se llenarían de tiniebla. Mientras se acostumbra, los demás se reirían de él: subió y volvió con la vista estropeada. Y si intentara desatarlos, lo matarían si pudieran. La sombra del juicio de Sócrates cae sobre la escena.", q:"Hay que bajar de nuevo.", qref:"República 520c", go:"socrates", goL:"Sócrates, 399 a.C."}
+  ]},
+ er:{id:"er", title:"El mito de Er", gr:"ὁ μῦθος τοῦ Ἤρος", ref:"República X, 614b–621d", cat:"Mito escatológico", sub:"cosmología · justicia · elección",
+  arg:"Er, hijo de Armenio, panfilio, muere en batalla. Diez días después recogen los cadáveres ya corrompidos; el suyo está intacto. Al duodécimo día, tendido en la pira, revive y cuenta lo que vio: un prado con dos aberturas en la tierra y dos en el cielo, el huso de la Necesidad, las Moiras, la elección de las vidas y el Leteo.",
+  sense:"Cosmología astronómica, justicia distributiva y teodicea. La República termina con una afirmación radical de la responsabilidad: cada alma elige su modelo de vida, y el discernimiento aprendido en la filosofía es lo único que la protege de elegir mal.",
+  steps:[
+   {t:"Doce días sobre la pira", x:"Er despierta en la pira funeraria. Su alma ha llegado a un lugar prodigioso: un prado con dos aberturas en la tierra y dos en el cielo. Los jueces envían a los justos hacia arriba, por la derecha, y a los injustos hacia abajo. Por las otras dos bocas regresan almas polvorientas del subsuelo y almas limpias del cielo, tras un viaje de mil años.", q:"Debía ser el mensajero de los hombres sobre lo de allá.", qref:"República 614d"},
+   {t:"El huso de la Necesidad", x:"Tras cuatro días de camino ven una luz recta como una columna, parecida al arcoíris pero más brillante y pura. En su centro, el huso de Anánke: ocho torteras encajadas, cada una con su color, su anchura y su velocidad. La exterior gira en un sentido; las siete interiores, lentamente, en el contrario. Sobre cada círculo canta una sirena una sola nota, y las ocho forman una armonía.", q:"Activa «Las sirenas»: cada nota suena cuando su círculo pasa frente a ti.", qref:"República 616b–617b"},
+   {t:"Las Moiras y la elección", x:"Alrededor, en tronos, las hijas de la Necesidad: Láquesis canta el pasado, Cloto el presente, Átropos el futuro. Un profeta lanza los lotes y extiende en el suelo modelos de vida, muchos más que almas. Ulises, el último en elegir, busca largo rato la vida tranquila de un hombre cualquiera y la encuentra en un rincón, despreciada por todos.", q:"La culpa es de quien elige; el dios no es culpable.", qref:"República 617e"},
+   {t:"El Leteo", x:"Las almas cruzan un calor terrible hasta la llanura del Olvido y acampan junto al río Ameles, cuya agua ningún recipiente retiene. Todas deben beber una medida; quien bebe sin prudencia lo olvida todo. A medianoche, un trueno y un temblor: las almas salen disparadas como estrellas fugaces hacia su nacimiento. Er no bebió. Por eso pudo contarlo.", q:"Y así el relato se salvó y no se perdió.", qref:"República 621b–c"}
+  ]},
+ atlantida:{id:"atlantida", title:"La Atlántida", gr:"ἡ Ἀτλαντὶς νῆσος", ref:"Timeo 20d–25d · Critias 108e–121c", cat:"Mito histórico-político", sub:"fábula de advertencia",
+  arg:"Unos sacerdotes egipcios de Sais cuentan a Solón que, nueve mil años antes, más allá de las Columnas de Heracles, existió una isla mayor que Libia y Asia juntas. Su imperio quiso someter el Mediterráneo; la Atenas primitiva lo detuvo y, en un solo día y una noche, terremotos e inundaciones sepultaron la isla bajo el mar.",
+  sense:"Ficción moral y advertencia política: el negativo de la República. Un imperio naval y mercantil, riquísimo en oricalco, que traiciona su sobriedad fundacional. Platón la presenta como historia verdadera; la mayoría de los estudiosos la lee como una invención filosófica.",
+  steps:[
+   {t:"La ciudad concéntrica", x:"Poseidón rodea la colina de Clito con anillos alternos de tierra y mar. El Critias da las medidas: una isla central de cinco estadios de diámetro y, alrededor, agua de un estadio, tierra y agua de dos, tierra y agua de tres. Un canal de cincuenta estadios la une al mar. La muralla exterior está forrada de bronce; la siguiente, de estaño; la de la acrópolis, de oricalco, que brilla como fuego.", q:"Todo lo que ves está a escala.", qref:"Critias 115d–116c", T:0},
+   {t:"Oricalco y soberbia", x:"Diez reyes, hijos de Poseidón, gobiernan según leyes grabadas en una columna de oricalco del templo central. Durante generaciones desprecian el oro. Pero la parte divina se diluye en la mortal: a quien sabe mirar le parecen feos; a los demás, más hermosos y felices que nunca, llenos de ambición injusta.", q:"Arrastra el tiempo de la isla para ver encenderse la hibris.", qref:"Critias 120e–121b", T:.45},
+   {t:"Un día y una noche terribles", x:"Tras la derrota ante la Atenas arcaica llegan terremotos y diluvios extraordinarios. En un solo día y una noche terribles, la isla se hunde en el mar y desaparece. Desde entonces, ese mar es impracticable por un bajío de fango.", q:"«En un solo día y una noche.»", qref:"Timeo 25c–d", T:1, anim:true},
+   {t:"El relato inacabado", x:"En el Critias, Zeus convoca a los dioses en su morada, en el centro del universo, para castigar a los atlantes. «Y, reunidos, les dijo…». Ahí se corta el diálogo, a mitad de frase. La ciudad perfecta se hunde y el relato que la contaba también. Solo queda el eco de los anillos bajo el agua.", q:"El diálogo termina a mitad de frase.", qref:"Critias 121c", T:1, go:"solon", goL:"Solón y los sacerdotes de Sais"}
+  ]}
+};
+const ORDER=["caverna","er","atlantida"];
+
+const LINE=[
+ {gr:"εἰκασία", es:"imaginación, conjetura", s:true, obj:"sombras y reflejos", fac:"se toman las imágenes por las cosas", cav:0, cavL:"las sombras del muro"},
+ {gr:"πίστις", es:"creencia", s:true, obj:"seres vivos, cosas naturales y fabricadas", fac:"se confía en lo que se percibe", cav:1, cavL:"las estatuillas y el fuego"},
+ {gr:"διάνοια", es:"pensamiento discursivo", obj:"figuras matemáticas", fac:"se razona desde hipótesis y con ayuda de imágenes, como el geómetra", cav:2, cavL:"los reflejos y las cosas de fuera"},
+ {gr:"νόησις", es:"intelección", obj:"las Formas", fac:"la dialéctica asciende sin imágenes hasta un principio que ya no es hipótesis", cav:2, cavL:"el Sol"}
+];
+const LEN=[1/9,2/9,2/9,4/9];
+
+const MYTHS=[
+ {id:"carro", t:"El carro alado", ref:"Fedro 246a–256e", cat:"Híbrido · alegoría psicológica / mito",
+  x:"El alma es una yunta alada: un auriga, la razón, y dos caballos. Uno blanco y noble, el ímpetu; otro negro y rebelde, el apetito. En la procesión de los dioses, las almas suben a contemplar las Formas en la Llanura de la Verdad; si el caballo negro desequilibra la marcha, las alas se quiebran y el alma cae a un cuerpo.",
+  c:"Psicología tripartita y lírica erótica. La belleza que vemos aquí despierta el recuerdo de lo visto allá y hace que a las alas les vuelvan a brotar las plumas.",
+  svg:`<g stroke="var(--dim)" stroke-width="1.3"><path d="M10 52c10-14 22-18 34-16"/><path d="M14 64c10-10 20-12 30-12"/><circle cx="50" cy="44" r="10" stroke="var(--ink)"/><path d="M46 36l14-18M54 36l10-14" stroke="var(--gold)"/><path d="M50 54v14M42 70h16"/></g><g stroke-width="1.6"><path d="M4 36c8-8 18-10 26-6" stroke="var(--ink)"/><path d="M6 72c8-4 16-4 22 0" stroke="#6b5f73"/></g>`},
+ {id:"androgino", t:"El andrógino", ref:"Banquete 189c–193d · discurso de Aristófanes", cat:"Mito etiológico · antropológico",
+  x:"Al principio había tres géneros de seres esféricos, con cuatro brazos, cuatro piernas y dos rostros. Quisieron asaltar el cielo, y Zeus los partió por la mitad como quien corta una serba. Desde entonces cada mitad busca a la otra para volver a ser una.",
+  c:"Poética erótica y psicología ontológica. El amor no es solo apetito: es el nombre del deseo de restituir una integridad perdida. Lo pone en boca del comediógrafo que se burló de Sócrates en Las nubes.",
+  svg:`<g stroke-width="1.3"><path d="M39 8a31 31 0 0 0 0 62" stroke="var(--ink)"/><path d="M43 8a31 31 0 0 1 0 62" stroke="var(--gold)"/><path d="M41 4l-6 20 10 8-8 16 8 10-4 16" stroke="var(--um-cyan)"/></g>`},
+ {id:"theuth", t:"Theuth y Thamus", ref:"Fedro 274c–275b", cat:"Mito crítico · alegoría epistemológica",
+  x:"El dios egipcio Theuth ofrece al rey Thamus la escritura como un remedio (phármakon) para la memoria. El rey responde que producirá olvido: quienes confíen en signos exteriores tendrán apariencia de sabiduría y no sabiduría.",
+  c:"Filosofía del lenguaje y crítica de la técnica que fija los saberes frente al diálogo vivo. Paradoja fértil: la conocemos porque Platón la escribió. Havelock lee aquí el paso de la cultura oral a la escrita.",
+  svg:`<g stroke-width="1.3"><rect x="14" y="16" width="44" height="52" rx="3" stroke="var(--dim)"/><path d="M22 28h28M22 36h22M22 44h26M22 52h16" stroke="var(--faint)"/><path d="M58 22c8 0 12 6 12 12s-4 12-12 12" stroke="var(--um-cyan)"/><circle cx="64" cy="12" r="4" stroke="var(--gold)"/></g>`},
+ {id:"metales", t:"Los metales · la «noble mentira»", ref:"República III, 414b–415d", cat:"Mito político · ficción fundacional",
+  x:"Para cohesionar la ciudad, se contará que todos los ciudadanos son hermanos nacidos de la misma Tierra, pero que el dios mezcló oro en los que han de gobernar, plata en los guardianes y hierro y bronce en labradores y artesanos.",
+  c:"Sociología política: justifica la división de funciones y, a la vez, abre una vía de movilidad, porque un hijo de bronce puede nacer de oro y viceversa. Popper la leyó como propaganda; otros, como un mito sobre el temple del alma.",
+  svg:`<g stroke-width="1.6"><circle cx="24" cy="30" r="12" stroke="var(--gold)"/><circle cx="54" cy="30" r="12" stroke="#c9cfd6"/><circle cx="39" cy="56" r="12" stroke="#b07a4a"/></g>`}
+];
+
+const SPECTRUM=[
+ {id:"androgino", t:"Andrógino", x:8, pos:"lo", note:"El andrógino es relato puro: una historia de origen contada por un poeta cómico, sin tabla de correspondencias."},
+ {id:"er", t:"Er", x:15, pos:"hi", scene:true, note:"Er es mito escatológico: Sócrates lo llama «relato» y lo ofrece como algo en lo que conviene confiar, no como una demostración."},
+ {id:"atlantida", t:"Atlántida", x:24, pos:"lo", scene:true, note:"La Atlántida se presenta como historia transmitida por Solón: un mito disfrazado de crónica."},
+ {id:"metales", t:"Metales", x:35, pos:"hi", note:"La «noble mentira» es un mito fabricado con una función política explícita: casi una alegoría de la ciudad."},
+ {id:"theuth", t:"Theuth", x:46, pos:"lo", note:"Theuth y Thamus es una fábula con tesis: cada personaje encarna una posición sobre la escritura."},
+ {id:"carro", t:"Carro alado", x:58, pos:"hi", note:"El carro alado mezcla un mito cósmico (la procesión de los dioses) con una alegoría psicológica término a término."},
+ {id:"caverna", t:"Caverna", x:67, pos:"lo", scene:true, note:"La Caverna es el híbrido canónico: Platón la llama imagen (eikón) y la descifra él mismo, pieza por pieza."},
+ {id:"nave", t:"Nave", x:81, pos:"hi", target:"#allegTitle", note:"La Nave del Estado es alegoría política pura: cada figura de la cubierta tiene su equivalente en la ciudad."},
+ {id:"linea", t:"Línea", x:89, pos:"lo", target:"#allegTitle", note:"La Línea dividida no cuenta nada: es un diagrama. La alegoría llevada al límite de la geometría."},
+ {id:"sol", t:"Sol", x:96, pos:"hi", target:"#allegTitle", note:"El Sol es la analogía más estricta: lo que el Sol es a lo visible, el Bien lo es a lo inteligible."}
+];
+
+const DILEMMAS=[
+ {t:"El dilema de Eutifrón", src:"Eutifrón 10a", p:"¿Lo piadoso es amado por los dioses porque es piadoso, o es piadoso porque los dioses lo aman?", i:"Separa el bien de la arbitrariedad: si depende del capricho divino, no es bien; si es bien por sí mismo, los dioses lo reconocen, no lo crean.",
+  ch:[["Porque es piadoso","Es la vía de Sócrates: el bien tiene una naturaleza propia, que los dioses aman porque la reconocen. La ética se vuelve investigable."],["Porque los dioses lo aman","Es la primera respuesta de Eutifrón. Sócrates le hace ver el problema: si los dioses discrepan entre sí, lo mismo sería piadoso e impío a la vez."]]},
+ {t:"La paradoja de Menón", src:"Menón 80d–e", p:"No se puede buscar lo que ya se sabe, porque ya se sabe; ni lo que no se sabe, porque no se sabría qué buscar ni cómo reconocerlo.", i:"Platón responde con la anámnesis: conocer es recordar. Un esclavo sin estudios, bien preguntado, «recuerda» cómo duplicar un cuadrado."},
+ {t:"El anillo de Giges", src:"República II, 359c–360d", p:"Un pastor encuentra un anillo que lo vuelve invisible. Sin testigos ni castigo, ¿seguiría alguien siendo justo?", i:"Glaucón sostiene que la justicia es solo un pacto por miedo. Toda la República es la respuesta.",
+  ch:[["Sí, seguiría siendo justo","Es la apuesta de Sócrates: la justicia es la salud del alma, y nadie en su sano juicio elige enfermar aunque nadie lo vea."],["No, nadie lo sería","Es la tesis de Glaucón: quien pudiera obrar mal sin consecuencias y no lo hiciera sería, a ojos de todos, el más necio de los hombres."]]},
+ {t:"La paradoja del filósofo rey", src:"República VII, 519c–521b", p:"Los más aptos para gobernar son justamente los que no desean el poder.", i:"Por eso hay que obligarlos a bajar a la caverna: si no, gobiernan los ambiciosos que lo desean."},
+ {t:"El tercer hombre", src:"Parménides 132a–b", p:"Si varios hombres se parecen porque participan de la Idea de Hombre, hará falta otra Idea que explique su parecido con ella, y así sin fin.", i:"Crisis de la participación (méthexis). Platón se critica a sí mismo; Aristóteles bautizará el argumento."},
+ {t:"La paradoja del no-ser", src:"Sofista 237a–259d", p:"Si mentir es decir «lo que no es», y lo que no es no existe, ¿cómo es posible siquiera el error?", i:"El «parricidio» de Parménides: el no-ser se piensa como alteridad (héteron). Decir lo falso es decir algo distinto de lo que es."}
+];
+
+/* ---------------- 2. SALA INFERIOR ---------------- */
+function scrollToStage(){ $("#umStage").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); }
+function flyStation(id){
+  const exp=document.querySelector(".experience");
+  if(location.hash==="#"+id){ try{ history.replaceState(null,"","#"); }catch(_){ } }
+  location.hash=id;
+  exp.scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"});
+}
+
+$("#umMyths").innerHTML=MYTHS.map(m=>`<article class="myth" id="myth-${m.id}">
+  <svg viewBox="0 0 78 78" aria-hidden="true">${m.svg}</svg>
+  <h3>${esc(m.t)}</h3>
+  <div class="meta"><span class="um-tag">${esc(m.cat)}</span><span>${esc(m.ref)}</span></div>
+  <p>${esc(m.x)}</p>
+  <p class="x"><b>Cruce</b>${esc(m.c)}</p>
+</article>`).join("");
+
+(function buildSpectrum(){
+  const bar=$("#spBar");
+  bar.innerHTML=SPECTRUM.map(s=>`<button type="button" class="sp-dot ${s.pos}${s.scene?" scene":""}" data-sp="${s.id}" style="left:${s.x}%"><i></i><span>${esc(s.t)}</span></button>`).join("");
+  bar.addEventListener("click",e=>{
+    const b=e.target.closest("[data-sp]"); if(!b) return;
+    const s=SPECTRUM.find(x=>x.id===b.dataset.sp);
+    $("#spNote").textContent=s.note;
+    if(s.scene){ UM.show(s.id,0); scrollToStage(); return; }
+    const el=s.target?$(s.target):$("#myth-"+s.id);
+    if(el) setTimeout(()=>el.scrollIntoView({behavior:reduced?"auto":"smooth",block:"center"}),reduced?0:900);
+  });
+})();
+
+(function buildLine(){
+  const host=$("#dline"), out=$("#lineOut");
+  let h="";
+  LINE.forEach((l,i)=>{
+    if(i===2) h+=`<div class="cut"><span>visible ↓ · inteligible ↑</span></div>`;
+    h+=`<button type="button" data-l="${i}" class="${l.s?"s":""}" style="flex:${LEN[i]*9}" aria-pressed="false"><span lang="grc">${l.gr}</span></button>`;
+  });
+  host.innerHTML=h;
+  function show(i){
+    host.querySelectorAll("button").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.l===i)));
+    const l=LINE[i];
+    out.innerHTML=`<h4><span lang="grc">${l.gr}</span><small>${esc(l.es)} · ${["1/9","2/9","2/9","4/9"][i]} de la línea</small></h4>
+      <dl><dt>Objetos</dt><dd>${esc(l.obj)}</dd><dt>Modo</dt><dd>${esc(l.fac)}</dd><dt>En la caverna</dt><dd>${esc(l.cavL)}</dd></dl>
+      <p><button type="button" class="chip" data-cav="${l.cav}">Verlo en la caverna ↑</button></p>`;
+  }
+  host.addEventListener("click",e=>{ const b=e.target.closest("[data-l]"); if(b) show(+b.dataset.l); });
+  out.addEventListener("click",e=>{ const b=e.target.closest("[data-cav]"); if(!b) return; UM.show("caverna",+b.dataset.cav); scrollToStage(); });
+  show(0);
+})();
+
+$("#umDil").innerHTML=DILEMMAS.map((d,k)=>`<article class="dil">
+  <span class="src">${esc(d.src)}</span><h3>${esc(d.t)}</h3><p class="pq">${esc(d.p)}</p>
+  ${d.ch?`<div class="choose" role="group" aria-label="Elige una respuesta">${d.ch.map((c,j)=>`<button type="button" data-d="${k}" data-c="${j}" aria-pressed="false">${esc(c[0])}</button>`).join("")}</div><p class="ans" id="ans${k}" aria-live="polite"></p>`:""}
+  <p class="im"><b>Implicación</b>${esc(d.i)}</p>
+</article>`).join("");
+$("#umDil").addEventListener("click",e=>{
+  const b=e.target.closest("[data-d]"); if(!b) return; const d=DILEMMAS[+b.dataset.d], j=+b.dataset.c;
+  b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  $("#ans"+b.dataset.d).textContent=d.ch[j][1];
+});
+
+document.addEventListener("click",e=>{
+  const f=e.target.closest("[data-fly-station]"); if(f){ e.preventDefault(); flyStation(f.dataset.flyStation); return; }
+  const u=e.target.closest("[data-umbral]"); if(u){ e.preventDefault(); $("#umbral").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); return; }
+  const g=e.target.closest(".concept [data-um]"); if(g){ UM.show(g.dataset.um,0); scrollToStage(); }
+});
+
+/* ---------------- 3. PANEL Y PESTAÑAS ---------------- */
+const st={scene:"caverna", step:0, T:0, Tgoal:0};
+const panelIn=$("#umPanelIn"), tabs=[...document.querySelectorAll("#umTabs [role=tab]")];
+function renderPanel(){
+  const S=SCENES[st.scene], s=S.steps[st.step], last=st.step===S.steps.length-1;
+  const nextScene=ORDER[(ORDER.indexOf(st.scene)+1)%ORDER.length];
+  panelIn.innerHTML=`
+    <div class="um-cat"><span class="um-tag">${esc(S.cat)}</span><span>${esc(S.sub)}</span></div>
+    <div class="um-head"><h3>${esc(S.title)}</h3><div class="gr" lang="grc">${esc(S.gr)}</div><div class="um-cat" style="margin-top:6px">${esc(S.ref)}</div></div>
+    <div class="um-steps">${S.steps.map((x,i)=>`<button type="button" data-step="${i}" aria-label="Paso ${i+1}: ${esc(x.t)}"${i===st.step?' aria-current="step"':""} class="${i<st.step?"done":""}"><i></i></button>`).join("")}</div>
+    <div class="um-step">
+      <span class="n">Paso ${st.step+1} de ${S.steps.length}${s.k?` · <span lang="grc" style="text-transform:none;letter-spacing:.02em">${esc(s.k)}</span>`:""}</span>
+      <h4>${esc(s.t)}</h4><p>${esc(s.x)}</p>
+      ${s.q?`<p class="q">${esc(s.q)}<small>${esc(s.qref)}</small></p>`:""}
+      ${s.line!=null?`<p class="ln"><b>Línea dividida</b><button type="button" data-goline>${esc(LINE[s.line].gr)} · ${esc(LINE[s.line].es)} ↓</button></p>`:""}
+    </div>
+    ${S.id==="atlantida"?`<div class="um-scrub"><label for="umScrubIn">El tiempo de la isla</label><input type="range" id="umScrubIn" min="0" max="100" step="1" value="${Math.round(st.Tgoal*100)}" aria-valuetext="${tLabel(st.Tgoal)}"><div class="sc"><span>Esplendor</span><span>Hibris</span><span>Un día y una noche</span></div></div>`:""}
+    <div class="um-nav">
+      <button type="button" class="ctl" data-nav="-1"${st.step===0?" disabled":""}>‹ Anterior</button>
+      <button type="button" class="ctl" data-nav="1">${last?"Siguiente mito →":"Siguiente ›"}</button>
+      ${s.go?`<button type="button" class="chip" data-fly-station="${s.go}">${esc(s.goL)} ↗</button>`:""}
+    </div>
+    <details class="um-more"><summary>Argumento y sentido</summary><p><b>Argumento.</b> ${esc(S.arg)}</p><p><b>Cruce.</b> ${esc(S.sense)}</p></details>`;
+  tabs.forEach(t=>{ const on=t.dataset.scene===st.scene; t.setAttribute("aria-selected",String(on)); t.tabIndex=on?0:-1; });
+  $("#umPanel").setAttribute("aria-labelledby","umTab-"+st.scene);
+  $("#umSound").hidden=st.scene!=="er";
+  void nextScene;
+}
+function tLabel(T){ return T<.25?"Esplendor":(T<.55?"Hibris":"Cataclismo"); }
+panelIn.addEventListener("click",e=>{
+  const n=e.target.closest("[data-nav]");
+  if(n){ const d=+n.dataset.nav, S=SCENES[st.scene];
+    if(st.step+d>=S.steps.length){ UM.show(ORDER[(ORDER.indexOf(st.scene)+1)%ORDER.length],0); }
+    else UM.show(st.scene,Math.max(0,st.step+d)); return; }
+  const s=e.target.closest("[data-step]"); if(s){ UM.show(st.scene,+s.dataset.step); return; }
+  if(e.target.closest("[data-goline]")){ $("#allegTitle").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); const b=document.querySelector(`#dline [data-l="${SCENES.caverna.steps[st.step].line}"]`); if(b) b.click(); }
+});
+panelIn.addEventListener("input",e=>{ if(e.target.id!=="umScrubIn") return; st.Tgoal=+e.target.value/100; st.Tanim=null; e.target.setAttribute("aria-valuetext",tLabel(st.Tgoal)); });
+$("#umTabs").addEventListener("click",e=>{ const t=e.target.closest("[role=tab]"); if(t) UM.show(t.dataset.scene,0); });
+$("#umTabs").addEventListener("keydown",e=>{
+  const i=tabs.findIndex(t=>t.dataset.scene===st.scene); let j=-1;
+  if(e.key==="ArrowRight") j=(i+1)%tabs.length; if(e.key==="ArrowLeft") j=(i+tabs.length-1)%tabs.length;
+  if(j<0) return; e.preventDefault(); UM.show(tabs[j].dataset.scene,0); tabs[j].focus();
+});
+
+const UM={
+  show(scene,step){
+    const changed=scene!==st.scene;
+    st.scene=scene; st.step=step;
+    const s=SCENES[scene].steps[step];
+    if(scene==="atlantida"){ if(s.anim && !reduced){ st.Tanim={from:Math.min(st.T,.5),t0:performance.now(),dur:7500}; } else st.Tanim=null; st.Tgoal=s.T; }
+    renderPanel();
+    if(GL) GL.show(scene,step,changed); else posterFor(scene);
+    if(changed) stopSound();
+  }
+};
+window.GreciaUmbral=UM;
+
+/* ---------------- 4. MOTOR 3D ---------------- */
+const stageEl=$("#umStage"), view=$(".um-view"), canvas=$("#umGl"), labelsEl=$("#umLabels");
+let GL=null;
+const POSTERS={}; document.querySelectorAll(".concept img").forEach((im,k)=>{ POSTERS[ORDER[k]]=im.getAttribute("src"); });
+function posterFor(scene){ const p=$("#umPoster"); p.src=POSTERS[scene]||""; p.alt="Imagen de concepto de "+SCENES[scene].title; }
+
+let glowTex=null;
+function getGlow(){
+  if(glowTex) return glowTex;
+  const c=document.createElement("canvas"); c.width=c.height=128; const g=c.getContext("2d");
+  const r=g.createRadialGradient(64,64,0,64,64,64); r.addColorStop(0,"rgba(255,255,255,1)"); r.addColorStop(.18,"rgba(255,255,255,.75)"); r.addColorStop(.45,"rgba(255,255,255,.18)"); r.addColorStop(1,"rgba(255,255,255,0)");
+  g.fillStyle=r; g.fillRect(0,0,128,128); glowTex=new THREE.CanvasTexture(c); return glowTex;
+}
+function ADD(o){ return Object.assign({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending},o||{}); }
+function lineMat(hex,op){ return new THREE.LineBasicMaterial(ADD({color:hex,opacity:op})); }
+function basic(hex,op){ return new THREE.MeshBasicMaterial(ADD({color:hex,opacity:op})); }
+function glow(hex,size,op){ const s=new THREE.Sprite(new THREE.SpriteMaterial(ADD({map:getGlow(),color:hex,opacity:op==null?1:op}))); s.scale.set(size,size,1); return s; }
+function holoMat(hex,op){
+  return new THREE.ShaderMaterial(ADD({uniforms:{uC:{value:new THREE.Color(hex)},uO:{value:op==null?1:op}},
+    vertexShader:`varying vec3 vN; varying vec3 vV; void main(){ vec4 mv=modelViewMatrix*vec4(position,1.0); vN=normalize(normalMatrix*normal); vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform vec3 uC; uniform float uO; varying vec3 vN; varying vec3 vV; void main(){ float f=pow(1.0-abs(dot(normalize(vN),normalize(vV))),2.0); gl_FragColor=vec4(uC*(0.3+1.5*f),(0.08+0.92*f)*uO); }`}));
+}
+function tube(curve,r,hex,op,seg){ return new THREE.Mesh(new THREE.TubeGeometry(curve,seg||80,r,6,false),basic(hex,op)); }
+function segs(arr,hex,op){ const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(arr,3)); return new THREE.LineSegments(g,lineMat(hex,op)); }
+function circlePts(r,y,n,cx,cz){ const a=[]; for(let i=0;i<n;i++){ const t=i/n*Math.PI*2, u=(i+1)/n*Math.PI*2; a.push((cx||0)+Math.cos(t)*r,y,(cz||0)+Math.sin(t)*r,(cx||0)+Math.cos(u)*r,y,(cz||0)+Math.sin(u)*r); } return a; }
+function rnd(seed){ let s=seed>>>0||1; return ()=>{ s^=s<<13; s>>>=0; s^=s>>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
+
+/* figura humana holográfica; mira hacia −x */
+function makeFigure(mat,seated){
+  const g=new THREE.Group(), hip=seated?.48:.92;
+  const add=(geo,x,y,z,rx,rz)=>{ const m=new THREE.Mesh(geo,mat); m.position.set(x,y,z); if(rx) m.rotation.x=rx; if(rz) m.rotation.z=rz; g.add(m); return m; };
+  add(new THREE.SphereGeometry(.12,18,14),0,hip+.8,0);
+  add(new THREE.CylinderGeometry(.05,.06,.1,8),0,hip+.66,0);
+  add(new THREE.CylinderGeometry(.18,.13,.62,14),0,hip+.31,0);
+  if(seated){
+    add(new THREE.CylinderGeometry(.05,.04,.56,8),-.16,hip+.26,.24,0,-.75);
+    add(new THREE.CylinderGeometry(.05,.04,.56,8),-.16,hip+.26,-.24,0,-.75);
+    add(new THREE.CylinderGeometry(.075,.065,.46,8),-.22,hip,.1,0,Math.PI/2);
+    add(new THREE.CylinderGeometry(.075,.065,.46,8),-.22,hip,-.1,0,Math.PI/2);
+    add(new THREE.CylinderGeometry(.06,.05,hip,8),-.45,hip/2,.1);
+    add(new THREE.CylinderGeometry(.06,.05,hip,8),-.45,hip/2,-.1);
+  } else {
+    g.userData.arms=[add(new THREE.CylinderGeometry(.05,.04,.64,8),0,hip+.3,.25,.08),add(new THREE.CylinderGeometry(.05,.04,.64,8),0,hip+.3,-.25,-.08)];
+    g.userData.legs=[add(new THREE.CylinderGeometry(.075,.055,hip,8),0,hip/2,.09),add(new THREE.CylinderGeometry(.075,.055,hip,8),0,hip/2,-.09)];
+  }
+  return g;
+}
+function humanShape(){
+  const b=new THREE.Shape(), P=[[-.14,0],[-.06,0],[-.03,.8],[.03,.8],[.06,0],[.14,0],[.13,.9],[.22,1.35],[.24,.8],[.29,.8],[.28,1.45],[.18,1.52],[.06,1.52],[.06,1.58],[-.06,1.58],[-.06,1.52],[-.18,1.52],[-.28,1.45],[-.29,.8],[-.24,.8],[-.22,1.35],[-.13,.9]];
+  P.forEach(([x,y],i)=>i?b.lineTo(x,y-.85):b.moveTo(x,y-.85));
+  const h=new THREE.Shape(); h.absarc(0,1.7-.85,.12,0,Math.PI*2,false);
+  return [b,h];
+}
+function birdShape(){ const s=new THREE.Shape(); const P=[[-.5,0],[-.15,.06],[0,.35],[.1,.08],[.45,.12],[.2,-.04],[.35,-.18],[.05,-.08],[-.2,-.06]]; P.forEach(([x,y],i)=>i?s.lineTo(x,y):s.moveTo(x,y)); return [s]; }
+
+/* ---------- ESCENA · LA CAVERNA ---------- */
+function buildCaverna(U){
+  const G=new THREE.Group(), R=rnd(7);
+  const WALLX=-7.4, F=new THREE.Vector3(3.1,1.78,0);
+  const CLIP=[new THREE.Plane(new THREE.Vector3(0,0,-1),2.95),new THREE.Plane(new THREE.Vector3(0,0,1),2.95),new THREE.Plane(new THREE.Vector3(0,1,0),0),new THREE.Plane(new THREE.Vector3(0,-1,0),4.95)];
+  /* roca en alambre */
+  function rockBox(w,h,d,sx,sy,sz,jit){
+    const geo=new THREE.BoxGeometry(w,h,d,sx,sy,sz), p=geo.attributes.position;
+    for(let i=0;i<p.count;i++){ const x=p.getX(i),y=p.getY(i),z=p.getZ(i); const k=jit*(.6+.4*Math.sin(x*1.7+z*2.3+y));
+      p.setXYZ(i,x+(R()-.5)*k,y+(R()-.5)*k,z+(R()-.5)*k); }
+    return new THREE.LineSegments(new THREE.WireframeGeometry(geo),lineMat(0x5b86c4,.22));
+  }
+  const cave=rockBox(14.4,5,6.4,7,3,3,.5); cave.position.set(-1.2,2.5,0); G.add(cave);
+  const tun=rockBox(7.4,3,3.2,5,2,2,.35); tun.position.set(7.4,3.1,0); tun.rotation.z=.72; G.add(tun);
+  /* suelo */
+  const fl=[]; for(let x=-8;x<=6;x+=1){ fl.push(x,0,-3,x,0,3); } for(let z=-3;z<=3;z+=1){ fl.push(-8.4,0,z,6,0,z); }
+  G.add(segs(fl,0x3f5f8f,.12));
+  /* el muro del fondo, iluminado por el fuego */
+  const wallMat=new THREE.ShaderMaterial({uniforms:{uTime:U.uTime,uF:{value:1}},transparent:true,depthWrite:false,
+    vertexShader:`varying vec3 vW; void main(){ vec4 w=modelMatrix*vec4(position,1.0); vW=w.xyz; gl_Position=projectionMatrix*viewMatrix*w; }`,
+    fragmentShader:`uniform float uTime; uniform float uF; varying vec3 vW;
+      float h(vec2 p){ return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453); }
+      float n(vec2 p){ vec2 i=floor(p), f=fract(p); f=f*f*(3.0-2.0*f); return mix(mix(h(i),h(i+vec2(1,0)),f.x),mix(h(i+vec2(0,1)),h(i+vec2(1,1)),f.x),f.y); }
+      void main(){ vec2 q=vec2(vW.z,vW.y); float rock=0.55+0.45*(n(q*2.3)*0.6+n(q*6.1)*0.4);
+        float d=length((q-vec2(0.0,2.4))*vec2(0.3,0.42)); float lit=0.25+0.75*exp(-d*d*1.4);
+        float fl=0.82+0.1*sin(uTime*9.0)+0.08*sin(uTime*23.0+1.3);
+        float band=mix(0.28,1.0,smoothstep(1.02,1.3,vW.y));
+        vec3 c=vec3(1.0,0.42,0.12)*rock*lit*fl*band*0.36*uF;
+        float edge=smoothstep(0.0,0.35,2.9-abs(vW.z))*smoothstep(0.0,0.3,vW.y)*smoothstep(0.0,0.4,4.8-vW.y);
+        gl_FragColor=vec4(c,edge*0.95); }`});
+  const wall=new THREE.Mesh(new THREE.PlaneGeometry(6,5,1,1),wallMat); wall.rotation.y=Math.PI/2; wall.renderOrder=1; wall.position.set(WALLX,2.5,0); G.add(wall);
+  G.add(segs([WALLX,0,-3,WALLX,5,-3, WALLX,0,3,WALLX,5,3, WALLX,5,-3,WALLX,5,3, WALLX,0,-3,WALLX,0,3],0xff9a4d,.25));
+  /* sombras proyectadas desde la llama */
+  const shadowMat=new THREE.MeshBasicMaterial({color:0x050203,transparent:true,opacity:.9,depthWrite:false,side:THREE.DoubleSide,clippingPlanes:CLIP});
+  const rimMat=lineMat(0xff3a3a,.5); rimMat.clippingPlanes=CLIP;
+  function makeShadow(shapes,k){
+    const geo=new THREE.ShapeGeometry(shapes), m=new THREE.Mesh(geo,shadowMat), e=new THREE.LineSegments(new THREE.EdgesGeometry(geo),rimMat);
+    m.renderOrder=2; e.renderOrder=3; const g=new THREE.Group(); g.add(m); g.add(e); g.rotation.y=Math.PI/2; g.userData.k=k; G.add(g); return g;
+  }
+  const casters=[];
+  const circ=(r)=>{ const s=new THREE.Shape(); s.absarc(0,0,r,0,Math.PI*2,false); return [s]; };
+  const sq=(a)=>{ const s=new THREE.Shape(); s.moveTo(-a,-a); s.lineTo(a,-a); s.lineTo(a,a); s.lineTo(-a,a); return [s]; };
+  /* parapeto */
+  const para=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(.28,1.5,5.4)),lineMat(0x7aa6e0,.4)); para.position.set(-1.9,.75,0); G.add(para);
+  const paraF=new THREE.Mesh(new THREE.BoxGeometry(.26,1.48,5.38),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.72,depthWrite:true})); paraF.position.copy(para.position); G.add(paraF);
+  /* prisioneros */
+  const prisMat=holoMat(0x6ff0ff,.9);
+  const prisZ=[-1.5,-.5,.5,1.5], pris=[];
+  prisZ.forEach(z=>{ const f=makeFigure(prisMat,true); f.position.set(-4.4,0,z); G.add(f); pris.push(f);
+    casters.push({obj:f,off:new THREE.Vector3(0,.78,0),shadow:makeShadow(humanShape(),.62),scale:.62}); });
+  const ch=[]; for(let i=0;i<prisZ.length-1;i++){ const z0=prisZ[i],z1=prisZ[i+1]; for(let k=0;k<6;k++){ const a=z0+(z1-z0)*k/6,b=z0+(z1-z0)*(k+1)/6; ch.push(-4.4,1.14+(k%2?.03:-.03),a,-4.4,1.14+(k%2?-.03:.03),b, -4.85,.1,a,-4.85,.1,b); } }
+  ch.push(-4.4,1.14,-2.3,-4.4,1.14,-1.5, -4.4,1.14,1.5,-4.4,1.14,2.3);
+  G.add(segs(ch,0xb8c7d9,.55));
+  /* portadores y figuras */
+  const carMat=holoMat(0xb58cff,.55), carriers=[];
+  const objs=[
+    {mk:()=>new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.IcosahedronGeometry(.2,1)),lineMat(0x00e676,.95)), sh:circ(.2), c:0x00e676},
+    {mk:()=>new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(.34,.34,.34)),lineMat(0xb04dff,1)), sh:sq(.17), c:0xb04dff},
+    {mk:()=>{ const g=new THREE.Group(); const m=new THREE.Mesh(new THREE.ShapeGeometry(humanShape()),new THREE.MeshBasicMaterial(ADD({color:0xffe0a8,opacity:.5,side:THREE.DoubleSide}))); m.scale.setScalar(.34); m.rotation.y=Math.PI/2; g.add(m); const e=new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry),lineMat(0xffe0a8,.9)); e.scale.copy(m.scale); e.rotation.copy(m.rotation); g.add(e); return g; }, sh:humanShape(), c:0xffe0a8, s:.34},
+    {mk:()=>{ const g=new THREE.Group(); const geo=new THREE.ShapeGeometry(birdShape()); const m=new THREE.Mesh(geo,new THREE.MeshBasicMaterial(ADD({color:0x33ff99,opacity:.45,side:THREE.DoubleSide}))); m.rotation.y=Math.PI/2; g.add(m); const e=new THREE.LineSegments(new THREE.EdgesGeometry(geo),lineMat(0x33ff99,1)); e.rotation.y=Math.PI/2; g.add(e); return g; }, sh:birdShape(), c:0x33ff99, s:1}
+  ];
+  objs.forEach((o,k)=>{
+    const f=makeFigure(carMat,false); f.rotation.y=Math.PI/2; G.add(f);
+    const ob=o.mk(); G.add(ob);
+    const sh=makeShadow(o.sh,o.s||1);
+    carriers.push({f,ob,ph:k/objs.length});
+    casters.push({obj:ob,off:new THREE.Vector3(),shadow:sh,scale:o.s||1});
+  });
+  /* el fuego */
+  const base=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1.1,1.3,1.1)),lineMat(0xff9a4d,.35)); base.position.set(F.x,.65,0); G.add(base);
+  const baseF=new THREE.Mesh(new THREE.BoxGeometry(1.08,1.28,1.08),new THREE.MeshBasicMaterial({color:0x000000})); baseF.position.copy(base.position); G.add(baseF);
+  const FN=520, fPh=new Float32Array(FN), fR=new Float32Array(FN*3);
+  for(let i=0;i<FN;i++){ fPh[i]=Math.random(); fR[i*3]=Math.random()*2-1; fR[i*3+1]=Math.random(); fR[i*3+2]=Math.random()*2-1; }
+  const fG=new THREE.BufferGeometry(); fG.setAttribute("position",new THREE.Float32BufferAttribute(new Float32Array(FN*3),3)); fG.setAttribute("aPh",new THREE.BufferAttribute(fPh,1)); fG.setAttribute("aR",new THREE.BufferAttribute(fR,3));
+  const fM=new THREE.ShaderMaterial(ADD({uniforms:{uTime:U.uTime,uScale:U.uScale,uB:{value:new THREE.Vector3(F.x,1.32,0)},uAmp:{value:1}},
+    vertexShader:`attribute float aPh; attribute vec3 aR; uniform float uTime; uniform float uScale; uniform vec3 uB; uniform float uAmp; varying float vT;
+      void main(){ float t=fract(uTime*(0.55+aR.y*0.5)+aPh); vT=t; float w=(1.0-t)*0.42*uAmp;
+        vec3 p=uB+vec3(aR.x*w+sin(uTime*3.0+aPh*20.0)*0.06*t, t*(1.1+aR.y*0.7)*uAmp, aR.z*w+cos(uTime*2.6+aPh*17.0)*0.06*t);
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.05+0.09*(1.0-t))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`varying float vT; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; vec3 c=mix(vec3(1.0,0.78,0.35),vec3(1.0,0.28,0.04),vT); gl_FragColor=vec4(c,smoothstep(0.5,0.0,d)*(1.0-vT)*0.9); }`}));
+  const fire=new THREE.Points(fG,fM); fire.frustumCulled=false; G.add(fire);
+  const fGlow=glow(0xff7a22,4.2,.55); fGlow.position.copy(F); G.add(fGlow);
+  /* camino, escalones y haces láser hacia el Sol */
+  const SUN=new THREE.Vector3(16.5,11.5,-1.6);
+  const pathP=[[4.1,.03],[5.3,.3],[6.7,1.7],[8.5,4.1],[10.2,5.62]];
+  const beams=[-.42,-.14,.14,.42];
+  beams.forEach((z,k)=>{ const pts=pathP.map(([x,y])=>new THREE.Vector3(x,y,z)); pts.push(new THREE.Vector3(SUN.x-.4,SUN.y-.6,SUN.z+z*.3));
+    const c=new THREE.CatmullRomCurve3(pts,false,"centripetal"); G.add(tube(c,.02,k%2?0x80d8ff:0xffffff,.95,160)); G.add(tube(c,.07,0x80d8ff,.09,160)); });
+  const walkCurve=new THREE.CatmullRomCurve3([[-4.4,0,.5],[-3.4,0,1.2],[-2.4,0,3.0],[.2,0,3.0],[2.6,0,2.2],[4.3,.08,.5],[5.3,.3,0],[6.7,1.7,0],[8.5,4.1,0],[10.2,5.62,0],[12.2,5.62,.9]].map(a=>new THREE.Vector3(...a)),false,"centripetal");
+  const stairC=new THREE.CatmullRomCurve3(pathP.map(([x,y])=>new THREE.Vector3(x,y,0)),false,"centripetal"); const stairs=[]; for(let k=0;k<28;k++){ const p=stairC.getPointAt(.12+k/27*.88); stairs.push(p.x,p.y+.01,-.6,p.x,p.y+.01,.6); }
+  G.add(segs(stairs,0x80d8ff,.35));
+  /* el mundo de fuera: explanada, árbol y su reflejo, estrellas y luna */
+  const out=[]; for(let x=10;x<=17;x+=1){ out.push(x,5.6,-3,x,5.6,3); } for(let z=-3;z<=3;z+=1){ out.push(10,5.6,z,17,5.6,z); }
+  G.add(segs(out,0x3f5f8f,.14));
+  const tree=new THREE.Group();
+  tree.add(new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.ConeGeometry(.7,1.7,7,2)),lineMat(0x7dffb0,.55))); tree.children[0].position.y=1.55;
+  tree.add(new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.CylinderGeometry(.07,.09,.7,6)),lineMat(0xd7b37a,.6))); tree.children[1].position.y=.35;
+  tree.position.set(13.6,5.6,-1.6); G.add(tree);
+  const refl=tree.clone(); refl.traverse(o=>{ if(o.material){ o.material=o.material.clone(); o.material.color.set(0x80d8ff); o.material.opacity=.22; } }); refl.scale.y=-1; refl.position.set(13.6,5.58,-1.6); G.add(refl);
+  G.add(segs(circlePts(1.3,5.61,48,13.6,-1.6),0x80d8ff,.35));
+  const starP=[]; const RS=rnd(3); for(let i=0;i<160;i++){ starP.push(9+RS()*14,8+RS()*9,-6+RS()*9); }
+  const sG=new THREE.BufferGeometry(); sG.setAttribute("position",new THREE.Float32BufferAttribute(starP,3));
+  G.add(new THREE.Points(sG,new THREE.PointsMaterial(ADD({color:0xe8f0ff,size:.06,opacity:.8}))));
+  const moon=glow(0xcfd8ff,1.1,.7); moon.position.set(11.4,10.4,1.8); G.add(moon);
+  const sun=glow(0xfff1c8,9,1); sun.position.copy(SUN); G.add(sun);
+  const sunC=new THREE.Mesh(new THREE.SphereGeometry(1.3,32,20),new THREE.MeshBasicMaterial({color:0xffffff})); sunC.position.copy(SUN); G.add(sunC);
+  /* el liberado */
+  const freeMat=holoMat(0xffffff,1), freed=makeFigure(freeMat,false); freed.visible=false; G.add(freed);
+  const freedGlow=glow(0x80d8ff,1.6,.6); freed.add(freedGlow); freedGlow.position.y=1.1;
+
+  const labels=[
+    {t:"El fondo de la caverna",s:"sombras",p:[WALLX,4.1,-1.2],steps:[0,1],c:"fire"},
+    {t:"Los prisioneros",s:"encadenados",p:[-4.4,1.9,-2.4],steps:[0,3],c:"cyan"},
+    {t:"El muro bajo",s:"portadores",p:[-1.9,2.7,-2.9],steps:[1]},
+    {t:"El fuego",s:"τὸ πῦρ",p:[F.x,3.2,0],steps:[1],c:"fire"},
+    {t:"La subida",s:"áspera y empinada",p:[6.4,2.6,1.4],steps:[2]},
+    {t:"Reflejos",s:"en el agua",p:[13.6,5.9,.2],steps:[2],c:"cyan"},
+    {t:"El Sol",s:"la Idea del Bien",p:[SUN.x,SUN.y-2.3,SUN.z],steps:[2],c:"gold"}
+  ];
+  const cams=[
+    {t:[-6.3,1.6,0],d:6.8,az:1.25,pol:1.3},
+    {t:[-2.8,1.6,0],d:11,az:.42,pol:1.18},
+    {t:[4,3,0],d:18,az:.28,pol:1.16,follow:true},
+    {t:[-2.4,1.6,0],d:12,az:.62,pol:1.18}
+  ];
+  let step=0, walk=0, walkGoal=0, tStep=0;
+  const tmp=new THREE.Vector3(), tmp2=new THREE.Vector3();
+  function placeShadow(c){
+    c.obj.getWorldPosition(tmp); tmp.add(c.off);
+    const t=(WALLX-F.x)/(tmp.x-F.x); if(!(t>0)||!isFinite(t)){ c.shadow.visible=false; return; }
+    c.shadow.visible=true;
+    c.shadow.position.set(WALLX+.02+c.shadow.userData.k*.004,F.y+(tmp.y-F.y)*t,F.z+(tmp.z-F.z)*t);
+    const s=t*c.scale; c.shadow.scale.set(s,s,s);
+  }
+  return {group:G,labels,cams,
+    enter(i){ step=i; tStep=0;
+      walkGoal=i===2?1:0;
+      if(i<2){ walk=0; freed.visible=false; }
+      if(i===2){ walk=Math.min(walk,.02); freed.visible=true; }
+      if(i===3){ freed.visible=true; walk=Math.max(walk,.99); }
+      prisMat.uniforms.uC.value.set(i===3?0xff4d6d:0x6ff0ff);
+      wallMat.uniforms.uF.value=1;
+      if(i===3){ const v=$("#umVeil"); v.style.transition="none"; v.style.opacity=reduced?0:.88; requestAnimationFrame(()=>{ v.style.transition="opacity 3.2s ease"; v.style.opacity=0; }); }
+    },
+    focus(goal){ if(step===2||step===3){ const p=walkCurve.getPointAt(clamp(walk,0,1)); goal.t.set(p.x,p.y+1.1,p.z); goal.d=step===2?8.5+walk*5:9; } },
+    bloomBoost(){ return step===2?smooth(clamp((walk-.72)/.2,0,1))*1.1*(1-smooth(clamp((tStep-11)/4,0,1))*.7):0; },
+    update(dt,time){
+      tStep+=dt;
+      const speed=step===2?.085:.14;
+      if(reduced) walk=walkGoal; else walk+= clamp(walkGoal-walk,-speed*dt,speed*dt);
+      /* portadores */
+      carriers.forEach((c,k)=>{ const u=((time*.055+c.ph)%1), z=-3.4+u*6.8, fade=smooth(clamp(u/.08,0,1))*smooth(clamp((1-u)/.08,0,1));
+        c.f.position.set(-1.35,0,z*.62); c.ob.position.set(-1.35,1.98+Math.sin(time*2+k)*.03,z*.62); c.ob.rotation.y=time*.6+k;
+        c.f.visible=c.ob.visible=fade>.05; const sw=Math.sin(time*6+k)*.35; if(c.f.userData.legs){ c.f.userData.legs[0].rotation.x=sw; c.f.userData.legs[1].rotation.x=-sw; c.f.userData.arms[0].rotation.x=2.9; c.f.userData.arms[1].rotation.x=-2.9; c.f.userData.arms[0].position.y=1.55; c.f.userData.arms[1].position.y=1.55; } });
+      casters.forEach(c=>{ placeShadow(c); if(c.obj.visible===false) c.shadow.visible=false; });
+      /* el liberado */
+      if(freed.visible){ const w=clamp(walk,0,1), p=walkCurve.getPointAt(w), q=walkCurve.getPointAt(clamp(w+(walkGoal>walk?.01:-.01),0,1));
+        freed.position.copy(p); tmp2.subVectors(q,p); if(tmp2.lengthSq()>1e-6) freed.rotation.y=Math.atan2(tmp2.z,-tmp2.x);
+        const moving=Math.abs(walkGoal-walk)>.002, sw=moving?Math.sin(time*7)*.4:0;
+        freed.userData.legs[0].rotation.x=sw; freed.userData.legs[1].rotation.x=-sw;
+        freedGlow.material.opacity=.3+.5*smooth(clamp((w-.6)/.3,0,1)); }
+      if(step===3){ prisMat.uniforms.uO.value=.75+.25*Math.sin(time*5); } else prisMat.uniforms.uO.value=.9;
+      fM.uniforms.uAmp.value=.92+.08*Math.sin(time*11);
+      fGlow.material.opacity=.45+.1*Math.sin(time*9)+.05*Math.sin(time*23);
+    }};
+}
+
+/* ---------- ESCENA · EL MITO DE ER ---------- */
+function buildEr(U){
+  const G=new THREE.Group(), H0=6.2;
+  /* prado: rejilla polar */
+  const gr=[]; for(let r=2;r<=18;r+=2) gr.push(...circlePts(r,0,96)); for(let k=0;k<32;k++){ const a=k/32*Math.PI*2; gr.push(Math.cos(a)*1.4,0,Math.sin(a)*1.4,Math.cos(a)*18,0,Math.sin(a)*18); }
+  G.add(segs(gr,0x3c5a8c,.14));
+  /* columna de luz, como un arcoíris */
+  const colMat=new THREE.ShaderMaterial(ADD({side:THREE.DoubleSide,uniforms:{uTime:U.uTime},
+    vertexShader:`varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader:`uniform float uTime; varying vec2 vUv; vec3 hue(float h){ return clamp(abs(mod(h*6.0+vec3(0,4,2),6.0)-3.0)-1.0,0.0,1.0); }
+      void main(){ float v=vUv.y; float a=smoothstep(0.0,0.12,v)*smoothstep(1.0,0.75,v); vec3 c=mix(vec3(1.0),hue(fract(vUv.x*2.0+v*0.6-uTime*0.03)),0.35);
+        gl_FragColor=vec4(c,a*0.16*(0.8+0.2*sin(v*40.0-uTime*2.0))); }`}));
+  const col=new THREE.Mesh(new THREE.CylinderGeometry(.55,.55,34,32,1,true),colMat); col.position.y=11; G.add(col);
+  G.add(tube(new THREE.LineCurve3(new THREE.Vector3(0,-1,0),new THREE.Vector3(0,26,0)),.035,0xffffff,1,4));
+  /* doble huso: aros menguantes y líneas de tensión */
+  for(let k=1;k<=5;k++){ const r=(1-k/6)*1.5; [H0+k*1.05,H0-k*.9].forEach(y=>G.add(segs(circlePts(r,y,64),0xdfe9ff,.5))); }
+  const ten=[]; for(let k=0;k<18;k++){ const a=k/18*Math.PI*2, r=1.8; ten.push(0,H0+6.2,0,Math.cos(a)*r,H0,Math.sin(a)*r, 0,H0-5.2,0,Math.cos(a)*r,H0,Math.sin(a)*r); }
+  G.add(segs(ten,0xcfe0ff,.28));
+  /* las ocho torteras */
+  const W=[
+    {r:7.4,b:.09,c:0xbcd3ff,v:0,name:"Estrellas fijas"},
+    {r:6.6,b:.026,c:0xe8c872,v:.12,name:"Saturno"},
+    {r:5.9,b:.033,c:0xffffff,v:.19,name:"Júpiter"},
+    {r:5.2,b:.065,c:0xff6a4d,v:.26,name:"Marte"},
+    {r:4.5,b:.04,c:0xf0cf7a,v:.36,name:"Mercurio"},
+    {r:3.8,b:.075,c:0xeaf1ff,v:.36,name:"Venus"},
+    {r:3.0,b:.048,c:0xfff1c0,v:.36,name:"Sol"},
+    {r:2.25,b:.055,c:0xbfd0ff,v:.55,name:"Luna"}
+  ];
+  const whorls=W.map((w,i)=>{
+    const g=new THREE.Group(); g.position.y=H0;
+    const m=new THREE.Mesh(new THREE.TorusGeometry(w.r,w.b,8,220),basic(w.c,i===6?1:.75)); m.rotation.x=Math.PI/2; g.add(m);
+    g.add(segs(circlePts(w.r-.14,-.08,160),w.c,.18));
+    let node=null;
+    if(i===0){ const sp=[]; const R=rnd(11); for(let k=0;k<260;k++){ const a=R()*Math.PI*2, rr=w.r+(R()-.5)*.35; sp.push(Math.cos(a)*rr,(R()-.5)*.12,Math.sin(a)*rr); }
+      const sg=new THREE.BufferGeometry(); sg.setAttribute("position",new THREE.Float32BufferAttribute(sp,3)); g.add(new THREE.Points(sg,new THREE.PointsMaterial(ADD({color:0xffffff,size:.07,opacity:.9})))); }
+    else { node=glow(w.c,i===6?1.9:.9,1); node.position.set(w.r,0,0); g.add(node); }
+    G.add(g);
+    return {g,w,node,ang:i*.7,last:Math.floor((i*.7-.35)/(Math.PI*2)),pulse:0};
+  });
+  /* aberturas del juicio */
+  const OP=[{p:[-9.5,0,5.2],up:false},{p:[-6.2,0,7.6],up:false},{p:[-9.5,13,5.2],up:true},{p:[-6.2,13,7.6],up:true}];
+  OP.forEach(o=>{ G.add(segs(circlePts(1.1,o.p[1],48,o.p[0],o.p[2]),o.up?0xdfe9ff:0x9aa7c7,.6)); G.add(segs(circlePts(.75,o.p[1]+(o.up?.02:-.02),48,o.p[0],o.p[2]),o.up?0xdfe9ff:0x9aa7c7,.3)); });
+  function stream(from,to,n,hex,speed,spread){
+    const ph=new Float32Array(n), rr=new Float32Array(n*2); for(let i=0;i<n;i++){ ph[i]=Math.random(); rr[i*2]=Math.random()*2-1; rr[i*2+1]=Math.random()*2-1; }
+    const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(new Float32Array(n*3),3)); g.setAttribute("aPh",new THREE.BufferAttribute(ph,1)); g.setAttribute("aR",new THREE.BufferAttribute(rr,2));
+    const m=new THREE.ShaderMaterial(ADD({uniforms:{uTime:U.uTime,uScale:U.uScale,uA:{value:new THREE.Vector3(...from)},uB:{value:new THREE.Vector3(...to)},uC:{value:new THREE.Color(hex)},uO:{value:1}},
+      vertexShader:`attribute float aPh; attribute vec2 aR; uniform float uTime; uniform float uScale; uniform vec3 uA; uniform vec3 uB; varying float vT;
+        void main(){ float t=fract(uTime*${speed.toFixed(3)}+aPh); vT=t; vec3 p=mix(uA,uB,t); p.x+=aR.x*${spread.toFixed(2)}*(0.4+sin(t*3.1416)); p.z+=aR.y*${spread.toFixed(2)}*(0.4+sin(t*3.1416));
+          vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=0.09*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+      fragmentShader:`uniform vec3 uC; uniform float uO; varying float vT; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; gl_FragColor=vec4(uC,smoothstep(0.5,0.0,d)*sin(vT*3.1416)*uO); }`}));
+    const p=new THREE.Points(g,m); p.frustumCulled=false; G.add(p); return m;
+  }
+  const MEADOW=[-7.6,.1,5.9];
+  const sA=stream(MEADOW,OP[2].p,70,0xdfe9ff,.07,.35), sB=stream(MEADOW,[OP[0].p[0],-3,OP[0].p[2]],70,0x8f7aa8,.06,.35),
+        sC=stream(OP[3].p,MEADOW,70,0xdfe9ff,.06,.35), sD=stream([OP[1].p[0],-3,OP[1].p[2]],MEADOW,70,0xa08f7a,.05,.35);
+  /* la pira de Er */
+  const pyre=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1.6,.6,.8)),lineMat(0xff9a4d,.7)); pyre.position.set(-12.4,.3,9.4); G.add(pyre);
+  const pg=glow(0xff7a22,2.6,.6); pg.position.set(-12.4,.8,9.4); G.add(pg);
+  const erSoul=glow(0xffffff,.9,1); G.add(erSoul);
+  const erCurve=new THREE.CatmullRomCurve3([[-12.4,.9,9.4],[-11.4,3.2,8.6],[-9.4,3,7],[-7.6,.8,5.9]].map(a=>new THREE.Vector3(...a)));
+  /* Anánke y las Moiras */
+  const an=glow(0xffffff,1.4,1); an.position.set(0,.35,0); G.add(an);
+  const MO=[{n:"Láquesis",s:"el pasado",c:0x29b6f6,cc:"blue",p:[0,0,-2.7]},{n:"Cloto",s:"el presente",c:0x00e676,cc:"green",p:[-2.34,0,1.35]},{n:"Átropos",s:"el futuro",c:0xff1744,cc:"red",p:[2.34,0,1.35]}];
+  const haloMat=c=>new THREE.ShaderMaterial(ADD({side:THREE.DoubleSide,uniforms:{uC:{value:new THREE.Color(c)},uTime:U.uTime,uO:{value:1}},
+    vertexShader:`varying vec2 vUv; void main(){ vUv=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader:`uniform vec3 uC; uniform float uTime; uniform float uO; varying vec2 vUv; void main(){ float a=pow(1.0-vUv.y,1.6)*(0.7+0.3*sin(vUv.x*60.0+uTime*1.5)); gl_FragColor=vec4(uC,a*0.55*uO); }`}));
+  const moirai=MO.map(m=>{ const g=new THREE.Group(); g.position.set(...m.p);
+    const hm=haloMat(m.c); const cy=new THREE.Mesh(new THREE.CylinderGeometry(.62,.62,1.5,40,1,true),hm); cy.position.y=.75; g.add(cy);
+    const ring=new THREE.Mesh(new THREE.TorusGeometry(.62,.03,6,80),basic(m.c,1)); ring.rotation.x=Math.PI/2; ring.position.y=.02; g.add(ring);
+    G.add(g); return {g,hm}; });
+  G.add(segs(circlePts(2.7,.01,120),0xffffff,.4)); G.add(segs(circlePts(3.45,.01,120),0xffffff,.16));
+  /* modelos de vida */
+  const LN=46, lp=[], lc=[]; const RL=rnd(5); const pal=[[.5,.8,1],[1,.85,.5],[.7,1,.8],[1,.6,.7],[.85,.75,1]];
+  for(let i=0;i<LN;i++){ const a=-.35+RL()*1.9, r=4.4+RL()*1.9; lp.push(Math.sin(a)*r,.05,Math.cos(a)*r+.6); const c=pal[i%pal.length]; lc.push(...c); }
+  const ulyI=LN-1; lp[ulyI*3]=5.9; lp[ulyI*3+2]=3.6;
+  const lg=new THREE.BufferGeometry(); lg.setAttribute("position",new THREE.Float32BufferAttribute(lp,3)); lg.setAttribute("color",new THREE.Float32BufferAttribute(lc,3));
+  const lph=new Float32Array(LN); for(let i=0;i<LN;i++) lph[i]=RL(); lg.setAttribute("aPh",new THREE.BufferAttribute(lph,1));
+  const lm=new THREE.ShaderMaterial(ADD({vertexColors:true,uniforms:{uTime:U.uTime,uScale:U.uScale,uO:{value:0}},
+    vertexShader:`attribute float aPh; uniform float uTime; uniform float uScale; varying vec3 vC; varying float vA; void main(){ vC=color; vA=0.55+0.45*sin(uTime*1.4+aPh*30.0); vec4 mv=modelViewMatrix*vec4(position,1.0); gl_PointSize=0.3*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying vec3 vC; varying float vA; void main(){ vec2 q=abs(gl_PointCoord-0.5); float box=step(max(q.x,q.y),0.42)-step(max(q.x,q.y),0.34)*0.7; gl_FragColor=vec4(vC,box*vA*uO); }`}));
+  G.add(new THREE.Points(lg,lm));
+  const uly=glow(0xe3b460,1.2,0); uly.position.set(5.9,.3,3.6); G.add(uly);
+  /* río de almas y Leteo */
+  const river=new THREE.CatmullRomCurve3([[-7.6,.3,5.9],[-5,.6,4.6],[-2.6,.4,3.8],[0,.3,3.7],[3,.5,5.1],[5.6,.3,5.4],[7.8,.2,6.6],[9.6,.1,7.4]].map(a=>new THREE.Vector3(...a)),false,"centripetal");
+  const RN=1700, rp=new Float32Array(RN*3), rph=new Float32Array(RN), roff=new Float32Array(RN*3), sp=river.getSpacedPoints(400);
+  for(let i=0;i<RN;i++){ rph[i]=Math.random(); roff[i*3]=(Math.random()-.5); roff[i*3+1]=Math.random(); roff[i*3+2]=(Math.random()-.5); }
+  const rg=new THREE.BufferGeometry(); rg.setAttribute("position",new THREE.BufferAttribute(rp,3)); rg.setAttribute("aR",new THREE.BufferAttribute(roff,3));
+  const rm=new THREE.ShaderMaterial(ADD({uniforms:{uScale:U.uScale,uO:{value:.5}},
+    vertexShader:`attribute vec3 aR; uniform float uScale; varying float vA; void main(){ vA=0.35+0.65*aR.y; vec4 mv=modelViewMatrix*vec4(position,1.0); gl_PointSize=(0.035+0.07*aR.y)*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying float vA; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; gl_FragColor=vec4(0.39,0.71,0.96,smoothstep(0.5,0.0,d)*vA*uO); }`}));
+  const riverPts=new THREE.Points(rg,rm); riverPts.frustumCulled=false; G.add(riverPts);
+  const LC=new THREE.Vector3(9.6,.05,7.4);
+  const VN=1400, vp=[], vc=[], vd=[]; const RV=rnd(9);
+  for(let i=0;i<VN;i++){ const arm=i%4, t=RV(); vd.push(arm,t,RV()); vp.push(0,0,0); const h=[[.4,.7,1],[.6,1,.7],[1,.5,.6],[1,.85,.5]][arm]; vc.push(...h); }
+  const vg=new THREE.BufferGeometry(); vg.setAttribute("position",new THREE.Float32BufferAttribute(vp,3)); vg.setAttribute("color",new THREE.Float32BufferAttribute(vc,3)); vg.setAttribute("aD",new THREE.Float32BufferAttribute(vd,3));
+  const vm=new THREE.ShaderMaterial(ADD({vertexColors:true,uniforms:{uTime:U.uTime,uScale:U.uScale,uC:{value:LC},uO:{value:.6}},
+    vertexShader:`attribute vec3 aD; uniform float uTime; uniform float uScale; uniform vec3 uC; varying vec3 vCol; varying float vA;
+      void main(){ vCol=color; float t=fract(aD.y+uTime*0.05); float r=2.6*exp(-2.2*t)+0.05; float a=aD.x*1.5708 + log(r+0.2)*-2.4 + uTime*0.6 + aD.z*0.35;
+        vec3 p=uC+vec3(cos(a)*r,(aD.z-0.5)*0.06*r,sin(a)*r); vA=smoothstep(0.0,0.1,t)*(1.0-t);
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.04+0.05*aD.z)*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying vec3 vCol; varying float vA; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; gl_FragColor=vec4(vCol,smoothstep(0.5,0.0,d)*vA*uO); }`}));
+  const vortex=new THREE.Points(vg,vm); vortex.frustumCulled=false; G.add(vortex);
+  /* estrellas fugaces */
+  const SN=150, sd=[]; for(let i=0;i<SN;i++) sd.push(Math.random(),Math.random()*Math.PI*2,Math.random());
+  const sg=new THREE.BufferGeometry(); sg.setAttribute("position",new THREE.Float32BufferAttribute(new Float32Array(SN*3),3)); sg.setAttribute("aD",new THREE.Float32BufferAttribute(sd,3));
+  const sm=new THREE.ShaderMaterial(ADD({uniforms:{uTime:U.uTime,uScale:U.uScale,uC:{value:LC},uO:{value:0},uT0:{value:0}},
+    vertexShader:`attribute vec3 aD; uniform float uTime; uniform float uScale; uniform vec3 uC; uniform float uT0; varying float vA;
+      void main(){ float t=fract((uTime-uT0)*0.22+aD.x); vec3 dir=normalize(vec3(cos(aD.y)*0.5,1.0,sin(aD.y)*0.5)); vec3 p=uC+dir*t*(10.0+aD.z*12.0);
+        vA=(1.0-t)*smoothstep(0.0,0.05,t); vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.08+0.06*aD.z)*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying float vA; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; gl_FragColor=vec4(0.95,0.97,1.0,smoothstep(0.5,0.0,d)*vA*uO); }`}));
+  const shoot=new THREE.Points(sg,sm); shoot.frustumCulled=false; G.add(shoot);
+
+  const labels=[
+    {t:"Er, sobre la pira",s:"día duodécimo",p:[-12.4,1.7,9.4],steps:[0],c:"fire"},
+    {t:"Aberturas del cielo",s:"justos · por la derecha",p:[-7.8,14.2,6.4],steps:[0]},
+    {t:"Aberturas de la tierra",s:"injustos · hacia abajo",p:[-7.8,-.6,7.8],steps:[0]},
+    {t:"El huso de la Necesidad",s:"ἀτράκτος Ἀνάγκης",p:[0,H0+7.2,0],steps:[1]},
+    {t:"Estrellas fijas",s:"la tortera exterior",p:[-7.4,H0+.6,0],steps:[1]},
+    {t:"Anánke",s:"la Necesidad",p:[0,1.1,0],steps:[1,2],c:"gold"},
+    {t:"Láquesis",s:"canta el pasado",p:[0,1.9,-2.7],steps:[2],c:"blue"},
+    {t:"Cloto",s:"canta el presente",p:[-2.34,1.9,1.35],steps:[2],c:"green"},
+    {t:"Átropos",s:"canta el futuro",p:[2.34,1.9,1.35],steps:[2],c:"red"},
+    {t:"La vida de Ulises",s:"un hombre cualquiera",p:[5.9,.9,3.6],steps:[2],c:"gold",late:true},
+    {t:"Llanura del Olvido",s:"río Ameles",p:[9.6,1.3,7.4],steps:[3],c:"cyan"}
+  ];
+  const cams=[
+    {t:[-7.2,3.4,5.8],d:19,az:-.75,pol:1.12},
+    {t:[0,6.4,0],d:21,az:.35,pol:1.0},
+    {t:[1.2,.9,1.8],d:12,az:.22,pol:1.1},
+    {t:[5.2,1.4,5.6],d:17,az:.95,pol:1.02}
+  ];
+  let step=0, tStep=0;
+  const tmp=new THREE.Vector3();
+  return {group:G,labels,cams,whorls,
+    enter(i){ step=i; tStep=0; sm.uniforms.uT0.value=U.uTime.value; },
+    lateOK(){ return tStep>4; },
+    update(dt,time){
+      tStep+=dt;
+      const speedK=soundOn?1.8:1;
+      whorls.forEach((h,i)=>{ const w=.06-h.w.v; h.ang+=w*dt*speedK*(reduced?0:1); h.g.rotation.y=h.ang;
+        if(h.node){ h.pulse=Math.max(0,h.pulse-dt*.7); h.node.scale.setScalar((i===6?1.9:.9)*(1+h.pulse*1.4)); }
+        const turns=Math.floor((h.ang-.35)/(Math.PI*2)); if(turns!==h.last){ h.last=turns; h.pulse=1; if(soundOn) sirenNote(i); } });
+      const e=(a)=>1-Math.exp(-dt*a);
+      const tgt={river:[.35,.45,1,1][step],vort:[.25,.35,.55,1][step],lives:[0,0,1,0][step],moi:[.35,.5,1,.45][step],streams:[1,.25,.2,.15][step]};
+      rm.uniforms.uO.value+=(tgt.river-rm.uniforms.uO.value)*e(2);
+      vm.uniforms.uO.value+=(tgt.vort-vm.uniforms.uO.value)*e(2);
+      lm.uniforms.uO.value+=(tgt.lives-lm.uniforms.uO.value)*e(2);
+      moirai.forEach(m=>{ m.hm.uniforms.uO.value+=(tgt.moi-m.hm.uniforms.uO.value)*e(2); });
+      [sA,sB,sC,sD].forEach(m=>{ m.uniforms.uO.value+=(tgt.streams-m.uniforms.uO.value)*e(2); });
+      sm.uniforms.uO.value+=(((step===3&&tStep>3.5)?1:0)-sm.uniforms.uO.value)*e(1.5);
+      uly.material.opacity+=((step===2&&tStep>4?1:0)-uly.material.opacity)*e(2);
+      /* partículas del río */
+      const n=sp.length-1;
+      for(let i=0;i<RN;i++){ const t=(rph[i]+time*.028*(.7+roff[i*3+1]*.6))%1, f=t*n, k=Math.floor(f), fr=f-k, a=sp[k], b=sp[Math.min(k+1,n)];
+        const w=.35+.25*Math.sin(t*9);
+        rp[i*3]=a.x+(b.x-a.x)*fr+roff[i*3]*w; rp[i*3+1]=a.y+(b.y-a.y)*fr+roff[i*3+1]*.18; rp[i*3+2]=a.z+(b.z-a.z)*fr+roff[i*3+2]*w; }
+      rg.attributes.position.needsUpdate=true;
+      /* el alma de Er */
+      const u=step===0?clamp((tStep-.6)/5,0,1):1; erCurve.getPointAt(smooth(u),tmp); erSoul.position.copy(tmp); erSoul.visible=step===0;
+      pg.material.opacity=.45+.15*Math.sin(time*9);
+    }};
+}
+
+/* ---------- ESCENA · LA ATLÁNTIDA ---------- */
+function buildAtlantida(U){
+  const G=new THREE.Group(), K=.6, R=rnd(21);
+  const UA={uC:{value:0},uH:{value:0},uV:{value:0}};
+  const cityMat=(hex,op)=>new THREE.ShaderMaterial(ADD({uniforms:{uC:UA.uC,uH:UA.uH,uTime:U.uTime,uCol:{value:new THREE.Color(hex)},uO:{value:op}},
+    vertexShader:`uniform float uC; uniform float uH; uniform float uTime; varying float vA; varying float vHot;
+      void main(){ vec3 p=position; float r=length(p.xz);
+        float n=sin(p.x*2.3+p.z*1.7)*0.5+sin(p.x*5.1-p.z*4.3)*0.5;
+        float c=clamp(uC*1.3-(r/9.0)*0.3,0.0,1.0); c=c*c*(3.0-2.0*c);
+        float ang=c*c*(1.8/(0.6+r*0.14)); float s=sin(ang), co=cos(ang); p.xz=mat2(co,-s,s,co)*p.xz;
+        p.y-=c*(2.4+1.3*n); p.xz*=1.0-c*0.16; p+=c*vec3(n*0.45,0.0,sin(r*3.0+uTime)*0.35);
+        vA=1.0-smoothstep(0.5,1.0,c)*0.9; vHot=1.0-smoothstep(1.0,7.0,r);
+        gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.0); }`,
+    fragmentShader:`uniform vec3 uCol; uniform float uO; uniform float uH; varying float vA; varying float vHot;
+      void main(){ vec3 c=mix(uCol,vec3(1.0,0.2,0.33),uH*vHot*0.75); gl_FragColor=vec4(c,uO*vA); }`}));
+  const lines=(arr,hex,op)=>{ const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(arr,3)); const m=new THREE.LineSegments(g,cityMat(hex,op)); G.add(m); return m; };
+  /* anillos de tierra: trama urbana */
+  const LAND=[[0,2.5],[3.5,5.5],[7.5,10.5]].map(([a,b])=>[a*K,b*K]);
+  const WATER=[[2.5,3.5],[5.5,7.5],[10.5,13.5]].map(([a,b])=>[a*K,b*K]);
+  const grid=[], bld=[];
+  LAND.slice(1).forEach(([a,b])=>{
+    for(let r=a;r<=b+1e-6;r+=.3) grid.push(...circlePts(r,.02,Math.round(r*28)));
+    const nr=Math.round(b*9); for(let k=0;k<nr;k++){ const t=k/nr*Math.PI*2; grid.push(Math.cos(t)*a,.02,Math.sin(t)*a,Math.cos(t)*b,.02,Math.sin(t)*b); }
+    const nb=Math.round((b*b-a*a)*14);
+    for(let i=0;i<nb;i++){ const t=R()*Math.PI*2, r=a+.12+R()*(b-a-.24), w=.08+R()*.14, d=.08+R()*.14, h=.06+R()*.32;
+      const cx=Math.cos(t)*r, cz=Math.sin(t)*r, ca=Math.cos(t), sa=Math.sin(t);
+      const P=[[-w,-d],[w,-d],[w,d],[-w,d]].map(([u,v])=>[cx+u*ca-v*sa,cz+u*sa+v*ca]);
+      for(let k=0;k<4;k++){ const p=P[k], q=P[(k+1)%4]; bld.push(p[0],0,p[1],q[0],0,q[1], p[0],h,p[1],q[0],h,q[1], p[0],0,p[1],p[0],h,p[1]); } }
+  });
+  lines(grid,0xffb300,.26); lines(bld,0xffc640,.42);
+  /* murallas: bronce, estaño, oricalco */
+  function wall(r,h,hex,op){ const a=[...circlePts(r,0,160),...circlePts(r,h,160)]; for(let k=0;k<64;k++){ const t=k/64*Math.PI*2; a.push(Math.cos(t)*r,0,Math.sin(t)*r,Math.cos(t)*r,h*(k%4?1:1.6),Math.sin(t)*r); } return lines(a,hex,op); }
+  wall(10.5*K,.42,0xd08a4a,.9); wall(5.5*K,.36,0xc7d3dc,.85); const oriW=wall(2.5*K,.32,0xff5a3c,1);
+  /* isla central: recinto, templo y columna */
+  const isl=[...circlePts(2.1*K,.02,90),...circlePts(1.6*K,.02,80),...circlePts(.9*K,.02,60)];
+  lines(isl,0xffd27a,.5);
+  const tp=[]; const box=(x,z,w,d,h)=>{ const P=[[x-w,z-d],[x+w,z-d],[x+w,z+d],[x-w,z+d]]; for(let k=0;k<4;k++){ const p=P[k],q=P[(k+1)%4]; tp.push(p[0],0,p[1],q[0],0,q[1],p[0],h,p[1],q[0],h,q[1],p[0],0,p[1],p[0],h,p[1]); } };
+  box(0,0,.36,.18,.28); box(0,0,.24,.12,.5);
+  const spire=(x,z,h,r)=>{ for(let k=0;k<6;k++){ const t=k/6*Math.PI*2, u=(k+1)/6*Math.PI*2; tp.push(x+Math.cos(t)*r,.5,z+Math.sin(t)*r,x,.5+h,z, x+Math.cos(t)*r,.5,z+Math.sin(t)*r,x+Math.cos(u)*r,.5,z+Math.sin(u)*r); } };
+  spire(0,0,2.1,.12); [[.16,0,1.3],[-.16,0,1.3],[0,.09,1.0],[0,-.09,1.0],[.28,.1,.7],[-.28,-.1,.7],[.28,-.1,.7],[-.28,.1,.7]].forEach(([x,z,h])=>spire(x,z,h,.06));
+  lines(tp,0xfff0c8,.9);
+  const beamT=tube(new THREE.LineCurve3(new THREE.Vector3(0,.6,0),new THREE.Vector3(0,16,0)),.025,0xffffff,.8,2); G.add(beamT);
+  const pillar=glow(0xff3355,.9,1); pillar.position.set(0,.35,.5); G.add(pillar);
+  /* canal y puentes */
+  const cn=[]; [-.1,.1].forEach(o=>cn.push(3.5*K,.02,o,30,.02,o)); lines(cn,0x00e5ff,.6);
+  const br=[]; [Math.PI/2,Math.PI,Math.PI*1.5].forEach(t=>{ [-.07,.07].forEach(o=>{ const ca=Math.cos(t), sa=Math.sin(t); br.push(ca*2.5*K-sa*o,.08,sa*2.5*K+ca*o,ca*10.5*K-sa*o,.08,sa*10.5*K+ca*o); }); });
+  lines(br,0xffe29a,.7);
+  /* anillos de agua */
+  const WN=2600, wp=new Float32Array(WN*3), wd=new Float32Array(WN*3);
+  for(let i=0;i<WN;i++){ const ring=i%3, [a,b]=WATER[ring]; wd[i*3]=a+.05+Math.random()*(b-a-.1); wd[i*3+1]=Math.random()*Math.PI*2; wd[i*3+2]=(ring%2?-1:1)*(.12+Math.random()*.05); }
+  const wg=new THREE.BufferGeometry(); wg.setAttribute("position",new THREE.BufferAttribute(wp,3)); wg.setAttribute("aD",new THREE.BufferAttribute(wd,3));
+  const wm=new THREE.ShaderMaterial(ADD({uniforms:{uTime:U.uTime,uScale:U.uScale,uC:UA.uC},
+    vertexShader:`attribute vec3 aD; uniform float uTime; uniform float uScale; uniform float uC; varying float vA;
+      void main(){ float a=aD.y+uTime*aD.z*(1.0+uC*6.0); float r=aD.x*(1.0-uC*0.5); vec3 p=vec3(cos(a)*r,0.03-uC*(1.5+sin(a*3.0)),sin(a)*r);
+        vA=0.8-uC*0.5; vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=0.045*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`varying float vA; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; gl_FragColor=vec4(0.0,0.9,1.0,smoothstep(0.5,0.0,d)*vA); }`}));
+  const water=new THREE.Points(wg,wm); water.frustumCulled=false; G.add(water);
+  const wl=[]; WATER.forEach(([a,b])=>{ wl.push(...circlePts(a+.02,.01,160),...circlePts(b-.02,.01,160)); }); lines(wl,0x00e5ff,.5);
+  /* mar abierto */
+  const sea=[]; for(let r=9;r<=34;r+=2.2) sea.push(...circlePts(r,-.02,140)); for(let k=0;k<48;k++){ const t=k/48*Math.PI*2; sea.push(Math.cos(t)*8.4,-.02,Math.sin(t)*8.4,Math.cos(t)*34,-.02,Math.sin(t)*34); }
+  G.add(segs(sea,0x2c3c8c,.2));
+  /* diez reyes y halos de la hibris */
+  const kings=[]; for(let k=0;k<10;k++){ const t=k/10*Math.PI*2+.3, s=glow(0xffd27a,.55,1); s.position.set(Math.cos(t)*2.05*K,.25,Math.sin(t)*2.05*K); G.add(s); kings.push(s); }
+  const halos=[]; for(let k=0;k<4;k++){ const t=Math.PI/4+k*Math.PI/2, g=new THREE.Group(); g.position.set(Math.cos(t)*1.45*K,0,Math.sin(t)*1.45*K);
+    const m=new THREE.Mesh(new THREE.TorusGeometry(.26,.025,6,48),basic(0xff1f55,1)); m.rotation.x=Math.PI/2; m.position.y=.05; g.add(m);
+    const b=new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(.18,.4,.18)),lineMat(0xff6680,.9)); b.position.y=.2; g.add(b);
+    const gl=glow(0xff1f55,1.4,0); gl.position.y=.25; g.add(gl); G.add(g); halos.push({g,m,gl}); }
+  /* vórtices del cataclismo */
+  const VN=3200, vd=new Float32Array(VN*3); for(let i=0;i<VN;i++){ vd[i*3]=i%4; vd[i*3+1]=Math.random(); vd[i*3+2]=Math.random(); }
+  const vg=new THREE.BufferGeometry(); vg.setAttribute("position",new THREE.Float32BufferAttribute(new Float32Array(VN*3),3)); vg.setAttribute("aD",new THREE.BufferAttribute(vd,3));
+  const vm=new THREE.ShaderMaterial(ADD({uniforms:{uTime:U.uTime,uScale:U.uScale,uC:UA.uC,uV:UA.uV},
+    vertexShader:`attribute vec3 aD; uniform float uTime; uniform float uScale; uniform float uC; uniform float uV; varying float vA; varying float vZ;
+      void main(){ float q=aD.x*1.5708+0.7854; vec3 c=vec3(cos(q)*8.2,0.0,sin(q)*8.2); float t=fract(aD.y+uTime*0.09);
+        float r=4.2*(1.0-t)+0.15; float a=t*14.0+aD.z*6.2832+uTime*1.3; vec3 p=c+vec3(cos(a)*r,-t*t*3.0+aD.z*0.5*(1.0-t),sin(a)*r);
+        p.xz=mix(p.xz,p.xz*0.35,t*uC*0.8); vZ=aD.z; vA=uV*sin(t*3.1416)*0.85;
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.05+0.07*aD.z)*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`varying float vA; varying float vZ; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; vec3 c=mix(vec3(0.24,0.29,0.85),vec3(0.55,0.42,1.0),vZ); gl_FragColor=vec4(c,smoothstep(0.5,0.0,d)*vA); }`}));
+  const vort=new THREE.Points(vg,vm); vort.frustumCulled=false; G.add(vort);
+  /* el eco bajo el agua */
+  const echo=[]; [...LAND.map(x=>x[1]),...WATER.map(x=>x[1])].forEach(r=>echo.push(...circlePts(r,-1.3,140)));
+  const echoL=segs(echo,0x5fb8ff,0); G.add(echoL);
+  const mud=[]; const RM=rnd(33); for(let i=0;i<900;i++){ const a=RM()*Math.PI*2, r=Math.sqrt(RM())*9; mud.push(Math.cos(a)*r,-.05+RM()*.05,Math.sin(a)*r); }
+  const mg=new THREE.BufferGeometry(); mg.setAttribute("position",new THREE.Float32BufferAttribute(mud,3));
+  const mudM=new THREE.PointsMaterial(ADD({color:0x8a7a5a,size:.05,opacity:0})); G.add(new THREE.Points(mg,mudM));
+
+  const labels=[
+    {t:"Templo de Poseidón",s:"plata y pináculos de oro",p:[0,2.9,0],steps:[0,1],c:"gold"},
+    {t:"Muralla de oricalco",s:"la acrópolis",p:[2.5*K*.72,.8,2.5*K*.72],steps:[0],c:"red"},
+    {t:"Muralla de estaño",s:"segundo anillo",p:[-5.5*K*.72,.8,5.5*K*.72],steps:[0]},
+    {t:"Muralla de bronce",s:"anillo exterior",p:[-10.5*K*.72,.9,-10.5*K*.72],steps:[0],c:"fire"},
+    {t:"Canal · 50 estadios",s:"hacia el mar",p:[12.5,.5,0],steps:[0],c:"cyan"},
+    {t:"Columna de las leyes",s:"diez reyes",p:[0,1.1,.7],steps:[1],c:"red"},
+    {t:"Bajío de fango",s:"el mar impracticable",p:[0,.8,0],steps:[3]}
+  ];
+  const cams=[
+    {t:[0,0,0],d:18.5,az:.55,pol:.98},
+    {t:[0,.9,0],d:10,az:.95,pol:1.02},
+    {t:[0,-.5,0],d:25,az:.25,pol:.88},
+    {t:[0,-.4,0],d:21,az:.1,pol:.2}
+  ];
+  let step=0;
+  return {group:G,labels,cams,
+    enter(i){ step=i; },
+    update(dt,time){
+      const T=st.T, H=clamp(T/.45,0,1), C=clamp((T-.5)/.5,0,1);
+      UA.uH.value=H; UA.uC.value=C; UA.uV.value+=((step===3?.12:1)*C-UA.uV.value)*(1-Math.exp(-dt*1.5));
+      kings.forEach((k,i)=>{ k.material.color.setRGB(1,.82-.62*H,.48-.3*H); k.material.opacity=(1-C)*(.8+.2*Math.sin(time*2+i)); });
+      halos.forEach((h,i)=>{ const p=.6+.4*Math.sin(time*3+i*1.7); h.m.material.opacity=(.35+.65*H)*(1-C); h.gl.material.opacity=H*p*(1-C)*.9; h.g.position.y=-C*2.5; h.g.visible=C<.98; });
+      pillar.material.opacity=(.4+.6*H)*(1-C); pillar.position.y=.35-C*2.4;
+      beamT.material.opacity=.8*(1-C); beamT.position.y=-C*2;
+      oriW.material.uniforms.uO.value=1;
+      echoL.material.opacity=smooth(clamp((C-.8)/.2,0,1))*(.25+.1*Math.sin(time*1.2));
+      mudM.opacity=smooth(clamp((C-.85)/.15,0,1))*.55;
+    }};
+}
+
+/* ---------- MOTOR ---------- */
+function initGL(){
+  if(typeof THREE==="undefined") throw new Error("three");
+  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:"high-performance"});
+  const hasBloom=!!(THREE.EffectComposer&&THREE.RenderPass&&THREE.UnrealBloomPass);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,hasBloom?1.5:2));
+  renderer.setClearColor(0x000000,1); renderer.localClippingEnabled=true;
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(40,1,.05,400);
+  const U={uTime:{value:0},uScale:{value:600}};
+  let composer=null, bloom=null;
+  if(hasBloom){ try{ composer=new THREE.EffectComposer(renderer); composer.addPass(new THREE.RenderPass(scene,camera)); bloom=new THREE.UnrealBloomPass(new THREE.Vector2(512,512),1.0,.55,.1); composer.addPass(bloom); }catch(e){ composer=null; bloom=null; } }
+  const BUILD={caverna:buildCaverna,er:buildEr,atlantida:buildAtlantida};
+  const BLOOM={caverna:[1.05,.5,.08],er:[.95,.55,.08],atlantida:[.95,.5,.1]};
+  const built={}; let cur=null, curId=null;
+  const labelEls=new Map();
+  function ensure(id){ if(built[id]) return built[id]; const s=BUILD[id](U); s.group.visible=false; scene.add(s.group); built[id]=s;
+    s.labels.forEach(l=>{ const el=document.createElement("div"); el.className="um-lb off"; if(l.c) el.dataset.c=l.c; el.innerHTML=`<b>${esc(l.t)}</b><small>${esc(l.s)}</small>`; labelsEl.appendChild(el); l.el=el; l.v=new THREE.Vector3(...l.p); });
+    return s; }
+  const rig={cur:{t:new THREE.Vector3(0,2,0),d:20,az:0,pol:1},goal:{t:new THREE.Vector3(0,2,0),d:20,az:0,pol:1}};
+  let vw={w:1,h:1,px:0};
+  function setGoal(c){ rig.goal.t.set(...c.t); rig.goal.d=c.d*fitK(); rig.goal.az=c.az; rig.goal.pol=c.pol; }
+  function fitK(){ const a=vw.aspect||1.6; return a<1?1.55:(a<1.35?1.2:1); }
+  let stepIdx=0, first=true;
+  function show(id,step,changed){
+    const s=ensure(id);
+    if(cur && curId!==id){ cur.group.visible=false; cur.labels.forEach(l=>l.el.classList.add("off")); }
+    cur=s; curId=id; stepIdx=step; s.group.visible=true; s.enter(step);
+    setGoal(s.cams[step]);
+    if(changed||reduced||first){ first=false; const c=s.cams[step]; rig.cur.t.set(...c.t); rig.cur.d=c.d*fitK()*1.25; rig.cur.az=c.az-.25; rig.cur.pol=c.pol-.1; if(reduced){ rig.cur.d=c.d*fitK(); rig.cur.az=c.az; rig.cur.pol=c.pol; } }
+    if(bloom){ const b=BLOOM[id]; bloom.strength=b[0]; bloom.radius=b[1]; bloom.threshold=b[2]; }
+    kick();
+  }
+  function resize(){
+    const r=view.getBoundingClientRect(), w=Math.max(1,Math.round(r.width)), h=Math.max(1,Math.round(r.height));
+    renderer.setSize(w,h,false); if(composer) composer.setSize(w,h);
+    const wide=window.innerWidth>900, pw=wide?($("#umPanel").offsetWidth+16):0;
+    vw={w,h,px:pw,aspect:(w-pw)/h};
+    if(pw) camera.setViewOffset(w,h,-pw/2,0,w,h); else camera.clearViewOffset();
+    camera.aspect=w/h; camera.updateProjectionMatrix();
+    U.uScale.value=h*renderer.getPixelRatio()/(2*Math.tan(camera.fov*Math.PI/360));
+    if(cur) setGoal(cur.cams[stepIdx]);
+  }
+  /* entrada */
+  let drag=null, moved=0; const ptrs=new Map();
+  canvas.addEventListener("pointerdown",e=>{ ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); moved=0; if(ptrs.size===1) drag={x:e.clientX,y:e.clientY,az:rig.goal.az,pol:rig.goal.pol}; try{ canvas.setPointerCapture(e.pointerId); }catch(_){ } });
+  canvas.addEventListener("pointermove",e=>{ if(!ptrs.has(e.pointerId)) return; const prev=ptrs.get(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(ptrs.size===2){ const [a,b]=[...ptrs.values()], o=[...ptrs.entries()].find(([id])=>id!==e.pointerId)[1]; const dn=Math.hypot(a.x-b.x,a.y-b.y), dp=Math.hypot(prev.x-o.x,prev.y-o.y); if(dp>0) rig.goal.d=clamp(rig.goal.d*dp/dn,3,60); moved=99; kick(); return; }
+    if(drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y; moved=Math.max(moved,Math.hypot(dx,dy)); if(moved>3){ rig.goal.az=drag.az-dx*.005; rig.goal.pol=clamp(drag.pol-dy*.004,.12,1.5); kick(); } } });
+  const end=e=>{ ptrs.delete(e.pointerId); if(!ptrs.size) drag=null; };
+  canvas.addEventListener("pointerup",end); canvas.addEventListener("pointercancel",end);
+  canvas.addEventListener("wheel",e=>{ if(!(e.ctrlKey||e.metaKey)) return; e.preventDefault(); rig.goal.d=clamp(rig.goal.d*Math.exp(e.deltaY*.004),3,60); kick(); },{passive:false});
+  $("#umReset").addEventListener("click",()=>{ if(cur){ setGoal(cur.cams[stepIdx]); kick(); } });
+  /* bucle */
+  let running=false, rafId=0, last=performance.now();
+  function kick(){ if(!rafId && running && !document.hidden){ last=performance.now(); rafId=requestAnimationFrame(frame); } }
+  new IntersectionObserver(es=>{ running=es[0].isIntersecting; if(!running) stopSound(); kick(); },{threshold:0,rootMargin:"120px"}).observe(stageEl);
+  document.addEventListener("visibilitychange",kick);
+  const tmp=new THREE.Vector3();
+  function frame(now){
+    rafId=0; if(!running||document.hidden||!cur) return;
+    const dt=Math.min(.05,(now-last)/1000); last=now;
+    if(!reduced) U.uTime.value+=dt;
+    /* tiempo de la Atlántida */
+    if(st.Tanim){ const t=clamp((now-st.Tanim.t0)/st.Tanim.dur,0,1); st.T=st.Tanim.from+(1-st.Tanim.from)*smooth(t); if(t>=1) st.Tanim=null; const sc=$("#umScrubIn"); if(sc) sc.value=Math.round(st.T*100); }
+    else { st.T+=(st.Tgoal-st.T)*(reduced?1:1-Math.exp(-dt*2.2)); }
+    cur.update(dt,U.uTime.value);
+    if(cur.focus) cur.focus(rig.goal);
+    const k=reduced?1:1-Math.exp(-dt*2.4), c=rig.cur, g=rig.goal;
+    c.t.lerp(g.t,k); c.d+=(g.d-c.d)*k; c.az+=(g.az-c.az)*k; c.pol+=(g.pol-c.pol)*k;
+    const sp=Math.sin(c.pol); camera.position.set(c.t.x+c.d*sp*Math.sin(c.az),c.t.y+c.d*Math.cos(c.pol),c.t.z+c.d*sp*Math.cos(c.az)); camera.lookAt(c.t);
+    if(bloom){ const b=BLOOM[curId]; bloom.strength=b[0]+(cur.bloomBoost?cur.bloomBoost():0); }
+    if(composer) composer.render(); else renderer.render(scene,camera);
+    /* etiquetas */
+    cur.labels.forEach(l=>{
+      const on=l.steps.includes(stepIdx) && (!l.late||(cur.lateOK&&cur.lateOK()));
+      tmp.copy(l.v).project(camera);
+      const vis=on && tmp.z<1 && tmp.z>-1;
+      if(vis){ const x=(tmp.x*.5+.5)*vw.w, y=(-tmp.y*.5+.5)*vw.h; l.el.style.transform=`translate(${x.toFixed(1)}px,${y.toFixed(1)}px) translate(-50%,-100%)`; }
+      l.el.classList.toggle("off",!(vis));
+    });
+    rafId=requestAnimationFrame(frame);
+  }
+  new ResizeObserver(resize).observe(view); resize();
+  return {show};
+}
+
+/* ---------------- 5. LAS SIRENAS (Web Audio, solo si se pide) ---------------- */
+let actx=null, master=null, soundOn=false, drone=[];
+const RATIOS=[1,9/8,81/64,4/3,3/2,27/16,243/128,2];
+function sirenNote(i){
+  if(!actx||!soundOn) return;
+  const t=actx.currentTime, f=110*RATIOS[7-i];
+  const o=actx.createOscillator(), o2=actx.createOscillator(), g=actx.createGain();
+  o.type="sine"; o2.type="triangle"; o.frequency.value=f*2; o2.frequency.value=f*2*1.003;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(.07,t+.25); g.gain.exponentialRampToValueAtTime(.0005,t+4.2);
+  o.connect(g); o2.connect(g); g.connect(master); o.start(t); o2.start(t); o.stop(t+4.4); o2.stop(t+4.4);
+}
+function startSound(){
+  try{
+    actx=actx||new (window.AudioContext||window.webkitAudioContext)();
+    if(actx.state==="suspended") actx.resume();
+    master=actx.createGain(); master.gain.value=0; master.connect(actx.destination);
+    const lp=actx.createBiquadFilter(); lp.type="lowpass"; lp.frequency.value=900; lp.connect(master);
+    drone=[55,82.5].map(f=>{ const o=actx.createOscillator(), g=actx.createGain(); o.type="sine"; o.frequency.value=f; g.gain.value=.05; o.connect(g); g.connect(lp); o.start(); return o; });
+    master.gain.linearRampToValueAtTime(.8,actx.currentTime+1.2);
+    soundOn=true; $("#umSound").setAttribute("aria-pressed","true");
+    [7,6,5,4].forEach((i,k)=>setTimeout(()=>sirenNote(i),k*420));
+  }catch(_){ soundOn=false; }
+}
+function stopSound(){
+  if(!soundOn) return; soundOn=false; $("#umSound").setAttribute("aria-pressed","false");
+  if(actx&&master){ const m=master; m.gain.cancelScheduledValues(actx.currentTime); m.gain.setValueAtTime(m.gain.value,actx.currentTime); m.gain.linearRampToValueAtTime(0,actx.currentTime+.6);
+    const d=drone; setTimeout(()=>{ d.forEach(o=>{ try{ o.stop(); }catch(_){ } }); try{ m.disconnect(); }catch(_){ } },800); }
+}
+$("#umSound").addEventListener("click",()=>{ soundOn?stopSound():startSound(); });
+
+/* ---------------- 6. ARRANQUE ---------------- */
+try{ GL=initGL(); }catch(err){ GL=null; view.classList.add("um-nogl"); }
+UM.show("caverna",0);
+})();
+</script>
 </body>
 </html>
