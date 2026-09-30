@@ -1,5 +1,13 @@
 # Historial
 
+## v0.8 · La orilla (colofón) · 2026-09-30
+- Nueva sección final, **La orilla**: interludios de *phýsis* a partir de una reflexión y dos fotografías de la orilla.
+- Un único mundo de partículas (simulación en CPU sobre un campo de flujo sin divergencia) con capa de cáusticas; los estados se definen por parámetros, no por escenas.
+  - **La forma aparece**: Heráclito, Anaximandro, Demócrito, Empédocles, Platón, Aristóteles y la orilla. El cursor perturba el flujo sin gobernarlo; controles de diferenciación, escala, Amor/Discordia y condiciones.
+  - **Del logos al flujo**: phýsis, logos, medida, modelo, simulación (con tiempo reversible) y regreso.
+- Sala final: origen de la observación, el círculo de veinticinco siglos, dos lecturas del mismo mundo y método, dirección de arte y conclusión que vuelve a θαῦμα.
+- El texto del panel aparece después del fenómeno; la cámara permanece casi inmóvil.
+
 ## v0.7 · El Liceo · 2026-09-30
 - Nueva sección bajo El Umbral, **El Liceo**, dedicada a Aristóteles, con la misma gramática: intro, escenario 3D con pestañas y panel, y sala de lectura.
 - Cuatro escenas en Three.js con resplandor UnrealBloom:

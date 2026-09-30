@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="generator" content="Grecia Eterna v0.7">
+<meta name="generator" content="Grecia Eterna v0.8">
 <title>Grecia Eterna</title>
 <meta name="description" content="Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro sobre el mar color de vino.">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -721,6 +721,109 @@ body[data-lens="asombro"]{--lens:var(--gold)}
   .pa-table{font-size:12.5px}
   .pa-table td:first-child{width:auto}
 }
+
+/* ---------- v0.8 · LA ORILLA · COLOFÓN ---------- */
+/* Layout: the last black chamber. Same grammar as El Umbral and El Liceo, quieter: two recorridos instead of scene tabs, a still camera over a granular field, and a reading room that closes the atlas and returns to θαῦμα. Accent: mineral white with amber and a cold trace. */
+:root{--or-min:#d7dcd9;--or-min-rgb:215,220,217;--or-cold:#8fc7d9}
+.orilla{background:#000;border-top:1px solid rgba(var(--or-min-rgb),.14);position:relative}
+.orilla .um-intro{padding-block:104px 44px}
+.orilla .um-intro h2 span b{color:var(--gold)}
+.orilla .um-intro h2 span em{color:var(--or-cold)}
+.orilla .um-stage{border-block:1px solid rgba(var(--or-min-rgb),.08)}
+.orilla .um-stage canvas{cursor:crosshair}
+.orilla .um-tabs button[aria-selected="true"]{background:rgba(var(--or-min-rgb),.1);box-shadow:inset 0 0 0 1px rgba(var(--or-min-rgb),.45)}
+.orilla .um-tabs button[aria-selected="true"] span{color:var(--or-min)}
+.orilla .um-tag{border-color:rgba(var(--or-min-rgb),.4);color:var(--or-min)}
+.orilla .um-head .gr{color:var(--gold)}
+.orilla .um-steps button[aria-current="step"] i{background:var(--or-min)}
+.orilla .um-steps button.done i{background:rgba(var(--or-min-rgb),.45)}
+.orilla .um-step .q{border-left-color:var(--gold)}
+.orilla .um-more summary:before{color:var(--or-min)}
+.orilla .ctl:hover{border-color:var(--or-min)}
+.orilla .um-step .or-lema{margin:0;font-family:var(--f-display);font-size:1.28rem;line-height:1.32;color:var(--ink)}
+.or-body{display:grid;gap:8px}
+.or-late{animation:orIn 1.4s ease 2.2s both}
+@keyframes orIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.or-late{animation:none}}
+.or-ctrl{display:grid;gap:8px;padding:12px 14px;border:1px solid rgba(var(--or-min-rgb),.22);border-radius:5px}
+.or-ctrl label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.or-ctrl input{width:100%;accent-color:var(--or-min)}
+.or-ctrl .sc{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
+.or-ctrl .sc span[lang]{font-family:var(--f-display);font-size:12.5px}
+.or-ctrl p{margin:0;font-size:12px;color:var(--dim)}
+.or-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font-size:11.5px;letter-spacing:.06em;color:var(--faint);pointer-events:none;transition:opacity 1s;white-space:nowrap}
+.um-lb[data-c="min"] b{color:var(--or-min)}.um-lb[data-c="cold"] b{color:var(--or-cold)}.um-lb[data-c="earth"] b{color:#d19a66}.um-lb[data-c="water"] b{color:#6fb6ff}.um-lb[data-c="air"] b{color:#dfe6ec}.um-lb[data-c="firec"] b{color:#ff7a4d}
+
+.or-room{padding-inline:var(--gutter);padding-block:84px 40px;display:grid;gap:96px;max-width:1180px;margin:0 auto}
+.or-room>section{min-width:0}
+.or-room .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.or-origen{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1fr) minmax(0,.95fr);gap:18px 26px;align-items:start}
+.or-origen figure{margin:0;display:grid;gap:8px}
+.or-origen img{width:100%;height:auto;display:block;border-radius:3px;filter:saturate(.9) contrast(1.02)}
+.or-origen figcaption{font-size:11.5px;color:var(--faint)}
+.or-origen .txt{display:grid;gap:14px;align-content:start}
+.or-origen .txt p{margin:0;color:var(--dim);font-size:14.5px}
+.or-origen .txt blockquote{margin:6px 0;font-family:var(--f-display);font-size:1.45rem;line-height:1.3;color:var(--ink);padding-left:16px;border-left:2px solid var(--gold)}
+.or-chain{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:0;counter-reset:ch}
+.or-chain li{position:relative;padding:22px 10px 0 0;font-size:12.5px;color:var(--dim);line-height:1.35}
+.or-chain li:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,rgba(var(--or-min-rgb),.4),rgba(var(--or-min-rgb),.12))}
+.or-chain li:after{content:"";position:absolute;top:-3px;left:0;width:7px;height:7px;border-radius:50%;background:var(--or-min)}
+.or-chain li:first-child:after,.or-chain li:last-child:after{background:var(--gold);box-shadow:0 0 10px rgba(227,180,96,.8)}
+.or-chain b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.05rem;color:var(--ink);margin-bottom:2px}
+.or-logos{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;margin-top:40px}
+.or-logos p{margin:0 0 12px;color:var(--dim);font-size:14.5px}
+.or-big{margin:0;font-family:var(--f-display);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.35;color:var(--ink)}
+.or-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border-top:1px solid var(--line-strong)}
+.or-two article{padding:22px 28px 26px 0;display:grid;gap:10px;align-content:start}
+.or-two article+article{padding:22px 0 26px 28px;border-left:1px solid var(--line)}
+.or-two h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.5rem}
+.or-two .who{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.or-two article:first-child .who{color:var(--um-cyan)} .or-two article:last-child .who{color:var(--ly-amber)}
+.or-two p{margin:0;color:var(--dim);font-size:14px}
+.or-two pre{margin:4px 0 0;font-family:var(--f-type);font-size:12px;line-height:1.5;color:var(--ink);background:rgba(240,231,217,.03);border:1px dashed var(--line);border-radius:4px;padding:10px 12px;white-space:pre}
+.or-method{margin-top:44px;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:start}
+.or-method .motto{margin:0;font-family:var(--f-display);font-size:clamp(1.4rem,2.5vw,1.9rem);line-height:1.3;color:var(--ink)}
+.or-method .motto span{color:var(--ly-amber)} .or-method .motto em{font-style:normal;color:var(--um-cyan)}
+.or-method ol{margin:0;padding:0;list-style:none;display:grid;gap:0;counter-reset:m}
+.or-method li{counter-increment:m;display:grid;grid-template-columns:34px minmax(0,1fr);gap:4px 12px;padding:12px 0;border-top:1px solid var(--line)}
+.or-method li:before{content:counter(m);font-family:var(--f-display);font-size:1.4rem;color:var(--faint);grid-row:span 2;line-height:1}
+.or-method li b{font-weight:500;color:var(--ink);font-size:14px}
+.or-method li span{color:var(--dim);font-size:13.5px}
+.or-real{margin:36px 0 0;max-width:70ch;padding:18px 20px;border:1px solid rgba(var(--or-min-rgb),.25);border-radius:6px;font-family:var(--f-display);font-size:1.2rem;line-height:1.45;color:var(--ink)}
+.or-real small{display:block;font-family:var(--f-body);font-size:11.5px;color:var(--faint);margin-top:8px}
+.or-art{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:36px;align-items:start}
+.or-art img{width:100%;height:auto;display:block;border-radius:4px;border:1px solid var(--line)}
+.or-art figure{margin:0;display:grid;gap:8px}
+.or-art figcaption{font-size:11.5px;color:var(--faint)}
+.or-rules{display:grid;gap:18px}
+.or-rules blockquote{margin:0;font-family:var(--f-display);font-size:1.3rem;line-height:1.36;color:var(--ink);padding-left:16px;border-left:2px solid var(--or-min)}
+.or-rules p{margin:0;color:var(--dim);font-size:13.5px}
+.or-rules ol{margin:0;padding-left:18px;color:var(--dim);font-size:13px;display:grid;gap:4px}
+.or-end{padding:40px 0 20px;display:grid;gap:26px;justify-items:center;text-align:center}
+.or-end .q1{margin:0;max-width:30ch;font-family:var(--f-display);font-size:clamp(1.5rem,3vw,2.3rem);line-height:1.28;color:var(--dim)}
+.or-end .q2{margin:0;max-width:34ch;font-family:var(--f-display);font-size:clamp(1.7rem,3.6vw,2.8rem);line-height:1.22;color:var(--ink)}
+.or-end .q2 em{font-style:normal;color:var(--gold)}
+.or-end .q3{margin:0;max-width:62ch;font-size:14.5px;color:var(--dim)}
+.or-end .thw{font-family:var(--f-display);font-size:clamp(3rem,8vw,5.5rem);line-height:1;color:var(--gold);margin-top:12px}
+.or-end .thw small{display:block;font-family:var(--f-body);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-top:10px}
+.or-end .btnrow{justify-content:center}
+.chip.orilla-go{border-color:rgba(var(--or-min-rgb),.45);color:var(--ink);justify-self:start}
+.chip.orilla-go:hover{border-color:var(--or-min);background:rgba(var(--or-min-rgb),.08)}
+@media (max-width:1100px) and (min-width:901px){ .or-chain{grid-template-columns:repeat(5,minmax(0,1fr));row-gap:22px} .or-origen{grid-template-columns:minmax(0,.7fr) minmax(0,1fr)} .or-origen .txt{grid-column:1/-1} }
+@media (max-width:900px){
+  .or-origen,.or-logos,.or-two,.or-method,.or-art{grid-template-columns:minmax(0,1fr)}
+  .or-two article,.or-two article+article{padding:20px 0;border-left:0}
+  .or-two article+article{border-top:1px solid var(--line)}
+  .or-chain{grid-template-columns:minmax(0,1fr);gap:0}
+  .or-chain li{padding:10px 0 10px 22px}
+  .or-chain li:before{top:0;bottom:0;left:3px;right:auto;width:1px;height:auto;background:rgba(var(--or-min-rgb),.25)}
+  .or-chain li:after{top:16px}
+  .or-two pre{white-space:pre-wrap}
+  .or-cue{white-space:normal;text-align:center;width:80%}
+}
+.or-logos .or-big{margin:0;font-family:var(--f-display);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.35;color:var(--ink)}
+.or-two article .chip{justify-self:start}
+.or-end .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500}
 </style>
 </head>
 <body>
@@ -1267,13 +1370,151 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <li><b>Tu término medio</b><span class="ref">Ética Nicomáquea II 6</span><p>Elige un hábito digital, como el tiempo de pantalla o la exposición en redes. Nombra el vicio por exceso y por defecto, y describe dónde está tu medio, no el de todos.</p></li>
           <li><b>Peripecia en sesenta segundos</b><span class="ref">Poética 10–11</span><p>Escribe el guion de una pieza breve de vídeo con nudo, peripecia y anagnórisis que coincidan. ¿Qué emoción queda al final? ¿Es catarsis o solo clic?</p></li>
         </ol>
+        <p class="rama-note"><b>Colofón</b>El atlas termina donde empezó, ante algo que cambia y tiene forma. <button type="button" class="chip orilla-go" data-orilla>Bajar a la orilla ↓</button></p>
         <p class="src-note"><b>Procedencia.</b> Categorías, Sobre la interpretación, Primeros Analíticos, Física, Sobre el cielo, Metafísica, Partes de los animales, Ética Nicomáquea, Política y Poética: paráfrasis propias y citas breves en traducción orientativa, con numeración Bekker. La anécdota de Calcis procede de la tradición biográfica antigua. Texto base del concepto: <i>gemini-code-1790759978095.md</i>. Pendiente de revisión editorial humana.</p>
       </section>
     </div>
   </section>
 
+
+  <section class="umbral orilla" id="orilla" aria-labelledby="orTitle">
+    <div class="um-intro">
+      <div>
+        <div class="kicker">Colofón · interludios de phýsis</div>
+        <h2 id="orTitle">La orilla<span><b>φύσις</b> · la forma aparece · <em>λόγος</em></span></h2>
+      </div>
+      <div class="um-lead">
+        <p>Una película de agua sobre la arena, unos segundos de luz. Y la misma pregunta que en Mileto.</p>
+        <p>Todo este atlas empezó con un gesto: alguien se detiene ante algo que cambia y se pregunta por qué tiene forma. Este colofón vuelve a ese gesto desde el presente. Una corriente mínima en la orilla, fotografiada hoy, contiene a la vez la fascinación por observar, el placer de pensar sin permiso y el peso de veinticinco siglos de respuestas.</p>
+        <p>Abajo hay un solo mundo de partículas. No cambia de aspecto: cambian sus reglas. Heráclito, Anaximandro, Demócrito, Empédocles, Platón y Aristóteles lo leen de otra manera, y el mismo sistema se comporta según cada lectura. Primero el fenómeno; después, el nombre.</p>
+      </div>
+    </div>
+
+    <div class="um-stage" id="orStage">
+      <div class="um-tabs" role="tablist" aria-label="Recorridos del interludio" id="orTabs">
+        <button type="button" role="tab" id="orTab-forma" aria-controls="orPanel" aria-selected="true" data-track="forma"><b>La forma aparece</b><span lang="grc">φύσις</span></button>
+        <button type="button" role="tab" id="orTab-logos" aria-controls="orPanel" aria-selected="false" tabindex="-1" data-track="logos"><b>Del logos al flujo</b><span lang="grc">λόγος → ῥοή</span></button>
+      </div>
+      <div class="um-view" id="orView">
+        <canvas id="orGl" aria-hidden="true"></canvas>
+        <img class="um-poster" id="orPoster" alt="">
+        <div class="um-labels" id="orLabels" aria-hidden="true"></div>
+        <p class="or-cue" id="orCue">Mueve el cursor sobre el agua: participas en el flujo, pero no lo gobiernas</p>
+      </div>
+      <aside class="um-panel" id="orPanel" role="tabpanel" aria-labelledby="orTab-forma" aria-live="polite">
+        <div class="um-panel-in" id="orPanelIn"></div>
+      </aside>
+    </div>
+
+    <div class="or-room">
+      <section aria-labelledby="orOrTitle">
+        <div class="sec-head">
+          <div class="kicker">Origen · la orilla como laboratorio filosófico</div>
+          <h2 id="orOrTitle">Una observación de ayer</h2>
+        </div>
+        <div class="or-origen">
+          <figure><img src="assets/img/orilla1.webp" alt="Fotografía cenital de la orilla: sobre la arena, una lámina finísima de agua dibuja crestas y nodos de luz que convergen en una intersección" loading="lazy" decoding="async"><figcaption>Orilla 01 · intersección de corrientes</figcaption></figure>
+          <figure><img src="assets/img/orilla2.webp" alt="Fotografía cenital de la orilla: dos corrientes mínimas se cruzan sobre la arena y forman un nodo del que salen ramificaciones" loading="lazy" decoding="async"><figcaption>Orilla 02 · nodo y ramificación</figcaption></figure>
+          <div class="txt">
+            <p>Una película mínima de agua sobre arena, atravesada por corrientes que se encuentran, se separan y vuelven a cruzarse. La luz del sol, refractada por una superficie en movimiento, se concentra en líneas y nodos; el microrrelieve de la arena la desvía. El resultado dura segundos y, sin embargo, parece tener estructura.</p>
+            <blockquote>¿Cómo puede aparecer orden dentro de algo que no deja de cambiar?</blockquote>
+            <p>No se trata de convertir la playa en una metáfora decorativa de la filosofía griega, sino de reconocer que la experiencia de la <i>phýsis</i>, algo que nace, cambia, se organiza y desaparece, es precisamente el territorio donde empezó la investigación racional griega. Antes de explicar el concepto, el escenario deja contemplar un comportamiento.</p>
+            <button type="button" class="chip orilla-go" data-or="forma" data-or-step="0">Volver al agua ↑</button>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="orLgTitle">
+        <div class="sec-head">
+          <div class="kicker">Del logos al flujo · de la observación a la simulación</div>
+          <h2 id="orLgTitle">Un círculo de veinticinco siglos</h2>
+          <p>La tradición griega sistematizó maneras de preguntar por la naturaleza: causa, proporción, forma, cambio, identidad, elemento, número, demostración. Ese impulso no lleva en línea recta a la ciencia moderna, pero forma parte de la historia que la hizo posible.</p>
+        </div>
+        <ol class="or-chain">
+          <li><b>phýsis</b>lo que nace y cambia</li>
+          <li><b>asombro</b>y observación</li>
+          <li><b>logos</b>dar razón</li>
+          <li><b>concepto</b>medida, demostración</li>
+          <li><b>matemática</b>y física</li>
+          <li><b>modelo</b>lo que se conserva</li>
+          <li><b>simulación</b>el cálculo de lo posible</li>
+          <li><b>IA</b>instrumento de aproximación</li>
+          <li><b>phýsis</b>vista de nuevo</li>
+        </ol>
+        <div class="or-logos">
+          <div>
+            <p>El agua ofrece un puente especialmente fértil. Siglos después de los presocráticos, las ecuaciones de Navier–Stokes (Navier, 1822; Stokes, 1845) formularon matemáticamente buena parte de la dinámica de los fluidos. Su comportamiento general sigue guardando problemas abiertos: demostrar que sus soluciones en tres dimensiones existen y se mantienen suaves es uno de los Problemas del Milenio.</p>
+            <p>La inteligencia artificial no los ha «resuelto». Lo que sí hacen hoy los métodos numéricos, el aprendizaje automático y los modelos híbridos es <b>aproximar, acelerar, explorar y visualizar</b> flujos de enorme complejidad. La abstracción técnica vuelve a la naturaleza de la que partió.</p>
+            <button type="button" class="chip orilla-go" data-or="logos" data-or-step="0">Recorrerlo en el escenario ↑</button>
+          </div>
+          <p class="or-big">Del asombro nació el logos; del logos, el método; del método, la simulación; y de la simulación, un nuevo asombro ante la phýsis.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="orTwTitle">
+        <div class="sec-head">
+          <div class="kicker">Platón y Aristóteles · dos lecturas del mismo mundo</div>
+          <h2 id="orTwTitle">Un juego que sigue abierto</h2>
+          <p>El mismo campo de partículas plantea la tensión central del atlas sin convertirla en un duelo con vencedor.</p>
+        </div>
+        <div class="or-two">
+          <article><span class="who">Lectura platónica</span><h3>La estructura hace inteligible</h3><p>Las apariencias cambian, pero su inteligibilidad parece depender de estructuras que no cambian con cada manifestación concreta. En la escena, el flujo es atraído por una geometría tenue: perturbas el fenómeno y la estructura reaparece.</p><pre>estructura
+   ↓  hace inteligible
+fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data-or-step="4">Ver la lectura platónica ↑</button></article>
+          <article><span class="who">Lectura aristotélica</span><h3>La forma surge de la materia</h3><p>La forma no necesita descender desde una capa separada. Puede surgir de la organización de la materia, de sus disposiciones y de las fuerzas que actúan sobre ella. En la escena se retira la geometría: el patrón nace de reglas locales.</p><pre>materia + condiciones + potencia
+        ↓  actualización
+      forma</pre><button type="button" class="chip" data-or="forma" data-or-step="5">Ver la lectura aristotélica ↑</button></article>
+        </div>
+        <div class="or-method">
+          <p class="motto"><span>Aristóteles</span> para comenzar. <em>Platón</em> para abstraer. <span>Aristóteles</span> para volver al mundo.</p>
+          <ol>
+            <li><b>Observar</b><span>¿Qué está ocurriendo realmente?</span></li>
+            <li><b>Abstraer</b><span>¿Qué relaciones permanecen cuando cambian las circunstancias?</span></li>
+            <li><b>Formalizar</b><span>¿Podemos expresarlas mediante una estructura general?</span></li>
+            <li><b>Volver al fenómeno</b><span>¿Esa estructura explica, predice o ilumina lo que vemos?</span></li>
+            <li><b>Corregir</b><span>Si el mundo contradice la abstracción, es la abstracción la que cambia.</span></li>
+          </ol>
+        </div>
+        <p class="or-real">Quizá lo profundamente estable no sean formas separadas ni objetos aislados, sino relaciones y estructuras que pueden realizarse en distintos sistemas materiales.<small>Una posición intermedia, cercana al realismo estructural: evita pensar que toda regularidad es una entidad separada del mundo, y también que la abstracción matemática es una invención arbitraria sin contacto con la realidad.</small></p>
+      </section>
+
+      <section aria-labelledby="orArtTitle">
+        <div class="sec-head">
+          <div class="kicker">Dirección de arte</div>
+          <h2 id="orArtTitle">No representar la filosofía</h2>
+          <p>Un único campo de partículas, un único campo de flujo y una capa de cáusticas. Siete estados conceptuales definidos por parámetros, no siete escenas: la historia de las ideas se ve como la transformación de un mismo mundo.</p>
+        </div>
+        <div class="or-art">
+          <figure><img src="assets/img/physis-hoja-contacto.webp" alt="Hoja de contacto con seis estudios sobre fondo oscuro: dos vórtices de líneas doradas, un campo casi uniforme de trazos, una ola de partículas que se vuelve discreta, geometría y árbol sobre corrientes, cuatro nubes de colores que se encuentran en un punto y un haz de líneas que atraviesa círculos concéntricos" loading="lazy" decoding="async"><figcaption>Hoja de contacto de los interludios: devenir, ápeiron, átomos, dos ontologías, cuatro raíces y phýsis.</figcaption></figure>
+          <div class="or-rules">
+            <blockquote>No representar la filosofía. Hacer que el sistema se comporte filosóficamente.</blockquote>
+            <p>Heráclito no necesita una cita flotando sobre el agua; Platón no necesita una estatua; Aristóteles no necesita un diagrama. Si el comportamiento encarna la idea, el concepto se entiende antes de ser nombrado. Por eso, en el panel, el texto llega después del fenómeno.</p>
+            <ol>
+              <li>Cámara casi inmóvil: se mueve el pensamiento, no el espectáculo.</li>
+              <li>Negro, gris mineral, blanco, ámbar y pequeños acentos fríos.</li>
+              <li>Geometría luminosa solo cuando tiene función filosófica.</li>
+              <li>Cada interacción significa algo: perturbar, diferenciar, acercarse, mezclar, actualizar.</li>
+              <li>Momentos de casi silencio visual.</li>
+            </ol>
+            <blockquote>No utilizar la tecnología para sustituir el asombro, sino para devolvernos a él con una mirada más profunda.</blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="or-end" aria-labelledby="orEndTitle">
+        <div class="kicker" id="orEndTitle">Conclusión · la forma como inteligibilidad de lo posible</div>
+        <p class="q3">Una corriente sobre arena parece profundamente aristotélica: la figura emerge de materia, condiciones, fuerzas y transformación. Pero cuando descubrimos que fenómenos distintos comparten las mismas estructuras matemáticas, reaparece la intuición platónica: algo sigue siendo inteligible más allá de cada caso concreto. La tensión no necesita resolverse. Es el motor.</p>
+        <p class="q1">¿La forma ha sido creada por la materia, o la materia ha revelado una forma que ya era posible?</p>
+        <p class="q2">Quizá la forma no esté ni antes de la materia ni simplemente después de ella. Quizá sea la manera en que <em>lo posible se hace inteligible</em> cuando se realiza.</p>
+        <div class="thw" aria-hidden="true">θαῦμα<small>el asombro sigue siendo el principio</small></div>
+        <div class="btnrow"><button type="button" class="chip orilla-go" data-or="forma" data-or-step="6">Última mirada al agua ↑</button><button type="button" class="chip" data-totop>Volver al comienzo del atlas ↑</button></div>
+        <p class="src-note"><b>Procedencia.</b> Texto base: <i>atlas_chronous_interludios_physis</i>, reflexión escrita para este atlas a partir de dos fotografías de la orilla (septiembre de 2026). Fragmentos presocráticos en traducción orientativa con numeración Diels–Kranz; Platón y Aristóteles con numeración Stephanus y Bekker. Pendiente de revisión editorial humana.</p>
+      </section>
+    </div>
+  </section>
+
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v0.7 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto.</p>
+    <p><b>Grecia Eterna</b> · prototipo v0.8 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -4384,6 +4625,403 @@ try{ GL=initGL(); }catch(err){ GL=null; view.classList.add("um-nogl"); if(window
 LY.show("causas",0);
 })();
 </script>
+<script>
+/* =================================================================
+   v0.8 · LA ORILLA · COLOFÓN
+   Un único mundo de partículas (simulación en CPU sobre un campo de
+   flujo analítico) + capa de cáusticas + estados conceptuales definidos
+   por parámetros. Dos recorridos: «La forma aparece» (siete lecturas) y
+   «Del logos al flujo» (seis estados). Cámara casi inmóvil; el cursor
+   perturba el flujo sin gobernarlo.
+   ================================================================= */
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const smooth=t=>t*t*(3-2*t);
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------------- 1. ESTADOS ---------------- */
+/* claves de parámetros: noise, vort, drift, split, emp, geo, agg, zoom, streak, caus, arrows, grid, quant, ts */
+const BASE={noise:0,vort:0,drift:0,split:0,emp:0,geo:0,agg:0,zoom:0,streak:.5,caus:.3,arrows:0,grid:0,quant:0,ts:1,trail:0};
+const TRACKS={
+ forma:{title:"La forma aparece", gr:"φύσις", cat:"Interludio · un mismo mundo", sub:"siete lecturas de una corriente",
+  arg:"Una misma imagen del mundo puede contener ontologías distintas. La escena es siempre esencialmente la misma: cambian sus reglas y nuestra interpretación.",
+  sense:"Se recorre en un orden conceptual, no cronológico: del devenir a lo indeterminado, de lo continuo a lo discreto, de la mezcla a las dos grandes respuestas sobre la forma, y de vuelta al agua.",
+  steps:[
+  {id:"heraclito", t:"Heráclito", gr:"Ἡράκλειτος · Éfeso", lema:"La forma no se opone al cambio. Puede nacer de él.",
+   x:"Las corrientes se cruzan, divergen y vuelven a condensarse; ninguna configuración dura. Y sin embargo reconoces patrones que regresan. No es solo que «todo fluye»: es que la identidad puede existir como patrón dentro del cambio.",
+   q:"A los que se bañan en los mismos ríos les llegan aguas distintas y distintas.", qref:"Heráclito, DK 22 B12 · traducción orientativa",
+   p:{noise:1,vort:1,drift:.15,streak:.95,caus:1}, go:"heraclito", goL:"Heráclito en el mapa", cue:true},
+  {id:"anaximandro", t:"Anaximandro", gr:"Ἀναξίμανδρος · Mileto", lema:"Antes de las figuras, la diferencia. Antes de la diferencia, lo indeterminado.",
+   x:"El campo empieza casi uniforme: el ápeiron, lo sin límite. Al diferenciar, surgen tensiones opuestas, cálido y frío, reposo y movimiento, y lo primero que aparece no son objetos sino fronteras. Si retrocedes, las diferencias vuelven a disolverse sin corte.",
+   q:"De donde las cosas se generan, hacia allí se produce también su destrucción, según la necesidad; pues se pagan unas a otras la pena por su injusticia según el orden del tiempo.", qref:"Anaximandro, DK 12 B1 · traducción orientativa",
+   p:{noise:.1,drift:0,split:"ctl",streak:.7,caus:.35}, ctl:{k:"split",label:"Diferenciación",v:.7,l:["ἄπειρον","fronteras","opuestos"]}, go:"anaximandro", goL:"Anaximandro en el mapa"},
+  {id:"democrito", t:"Demócrito", gr:"Δημόκριτος · Abdera", lema:"Lo que parece continuo puede estar hecho de discontinuidades.",
+   x:"Desde lejos, una corriente continua. Acércate: miles de unidades separadas por vacío, cada una con un movimiento mínimo. El patrón global solo existe estadísticamente. ¿Dónde reside la forma: en las partículas, en su disposición o en quien la percibe?",
+   q:"Por convención lo dulce, por convención lo amargo, por convención el color; en realidad, átomos y vacío.", qref:"Demócrito, DK 68 B9 · traducción orientativa",
+   p:{noise:.55,drift:.55,zoom:"ctl",streak:.35,caus:.25}, ctl:{k:"zoom",label:"Escala",v:0,l:["macro","","micro"]}, go:"democrito", goL:"Demócrito en el mapa"},
+  {id:"empedocles", t:"Empédocles", gr:"Ἐμπεδοκλῆς · Akragas", lema:"El mundo no necesita una materia única si las relaciones explican la mezcla y la separación.",
+   x:"Cuatro poblaciones con comportamientos distintos: la tierra densa y lenta, el agua fluida, el aire ligero y expansivo, el fuego rápido e inestable. Dos fuerzas gobiernan el campo: el Amor, que mezcla y vincula, y la Discordia, que separa. Un solo control transforma el mundo entero.",
+   q:"Unas veces todo se reúne en uno por el Amor; otras, cada cosa se separa por el odio de la Discordia.", qref:"Empédocles, DK 31 B17 · paráfrasis",
+   p:{noise:.12,emp:1,streak:.55,caus:.3}, ctl:{k:"amor",label:"Discordia · Amor",v:.25,l:["νεῖκος","","φιλότης"]}, go:"empedocles", goL:"Empédocles en el mapa"},
+  {id:"platon", t:"Platón", gr:"Πλάτων · Atenas", lema:"Lo visible cambia. La pregunta es si aquello que lo hace inteligible cambia con él.",
+   x:"El agua sigue fluyendo, pero debajo aparece lentamente una geometría estable que no pertenece al mismo régimen. No es un adorno: el flujo converge hacia sus nodos y aristas. Perturba la superficie con el cursor: la estructura reaparece y vuelve a organizarlo todo.",
+   q:"Hay que distinguir lo que siempre es y no deviene de lo que deviene y nunca es.", qref:"Platón, Timeo 27d–28a · paráfrasis",
+   p:{noise:.75,drift:.25,geo:1,streak:.6,caus:.35}, go:"platon", goL:"Platón en el mapa", cue:true},
+  {id:"aristoteles", t:"Aristóteles", gr:"Ἀριστοτέλης · Estagira", lema:"La forma no está fuera de la materia: aparece cuando una posibilidad se realiza.",
+   x:"Se retira la geometría. Nadie dibuja la forma: cambias las condiciones y el sistema actualiza una de sus posibilidades. Las partículas responden a reglas locales, a su vecindad y a su densidad; donde convergen, se encienden nodos. Es la forma que nace desde dentro.",
+   q:"La naturaleza es principio y causa del movimiento y del reposo en aquello en que se da primariamente.", qref:"Aristóteles, Física II 1, 192b21–23 · paráfrasis",
+   p:{noise:.3,drift:.1,agg:"ctl",streak:.5,caus:.25}, ctl:{k:"agg",label:"Condiciones",v:.75,l:["δύναμις","","ἐνέργεια"]}, go:"aristoteles", goL:"Aristóteles en el mapa"},
+  {id:"orilla", t:"La orilla", gr:"ἡ ἀκτή · hoy", lema:"¿La forma ha sido creada por la materia, o la materia ha revelado una forma que ya era posible?",
+   x:"Todas las reglas se retiran y queda otra vez el agua sobre la arena, con sus corrientes y su luz concentrada. Es la misma escena del principio, pero ya no la miramos igual: contiene a Heráclito y a Demócrito, la geometría de Platón y la potencia de Aristóteles.",
+   q:"En todas las cosas naturales hay algo digno de asombro.", qref:"Aristóteles, Partes de los animales I 5, 645a16–17 · paráfrasis",
+   p:{noise:.8,vort:.45,drift:.5,streak:.85,caus:1}, cue:true}
+ ]},
+ logos:{title:"Del logos al flujo", gr:"λόγος → ῥοή", cat:"Interludio · observación y simulación", sub:"phýsis → logos → medida → modelo → simulación → phýsis",
+  arg:"La escena empieza como naturaleza y termina como naturaleza, atravesando en medio la formalización. La cámara no se mueve: la transformación pertenece al sistema.",
+  sense:"Siglos después de los presocráticos, las ecuaciones de Navier–Stokes formularon buena parte de la dinámica de fluidos; su comportamiento general sigue guardando problemas abiertos. Métodos numéricos, aprendizaje automático y modelos híbridos permiten hoy aproximarlos, acelerarlos y visualizarlos.",
+  steps:[
+  {id:"A", t:"Phýsis", gr:"A · la corriente", lema:"Solo materia, luz y movimiento.", x:"Corrientes inspiradas en la orilla. Todavía no hay diagramas ni símbolos: el fenómeno antes de cualquier explicación.", p:{noise:.8,vort:.3,drift:.5,streak:.6,caus:1}},
+  {id:"B", t:"Logos", gr:"B · dar razón", lema:"Las trayectorias empiezan a dejar rastro.", x:"Al mirar con atención, el movimiento deja huella: aparecen direcciones dominantes y pequeñas regularidades. Dar razón (lógon didónai) empieza por notar lo que se repite.", p:{noise:.8,vort:.3,drift:.5,streak:.6,caus:.45,trail:1}},
+  {id:"C", t:"Medida", gr:"C · puntos y vectores", lema:"Una estructura que emerge del propio flujo.", x:"Surgen puntos de muestreo y vectores mínimos que indican dirección e intensidad del campo en cada lugar. No son una interfaz superpuesta: se derivan del mismo flujo que mueven las partículas.", p:{noise:.8,vort:.3,drift:.5,streak:.5,caus:.15,arrows:1}},
+  {id:"D", t:"Modelo", gr:"D · discretizar", lema:"El continuo revela su representación computacional.", x:"El campo se discretiza en celdas. Cada partícula se ajusta a su celda: así lo ve un modelo numérico, que no puede calcular infinitos puntos y sustituye el continuo por una malla.", p:{noise:.8,vort:.3,drift:.5,streak:.15,caus:0,arrows:.35,grid:1,quant:.9}},
+  {id:"E", t:"Simulación", gr:"E · el tiempo calculable", lema:"La máquina no sustituye el fenómeno: construye un espacio calculable de posibilidades.", x:"Ahora el sistema puede acelerarse, detenerse o invertir su tiempo. Prueba el control. Un modelo no es la naturaleza, sino un lugar donde explorar lo que la naturaleza podría hacer.", p:{noise:.8,vort:.3,drift:.5,streak:.45,caus:.1,arrows:.45,grid:.3,quant:.25,ts:"ctl"}, ctl:{k:"ts",label:"Tiempo de la simulación",v:.6,l:["invertir","pausa","acelerar"]}},
+  {id:"F", t:"Regreso", gr:"F · phýsis de nuevo", lema:"Del asombro nació el logos; del logos, el método; del método, la simulación; y de la simulación, un nuevo asombro ante la phýsis.", x:"Vectores y malla desaparecen. Queda otra vez la superficie fluida, y ahora reconoces en ella una complejidad que antes solo contemplabas.", p:{noise:.8,vort:.45,drift:.5,streak:.85,caus:1}}
+ ]}
+};
+const TRACK_ORDER=["forma","logos"];
+
+/* ---------------- 2. PANEL ---------------- */
+const st={track:"forma", step:0, ctl:{split:.7,zoom:0,amor:.25,agg:.75,ts:.6}};
+const panelIn=$("#orPanelIn"), tabs=[...document.querySelectorAll("#orTabs [role=tab]")];
+function tsFromCtl(v){ return v<.5?lerp(-1.2,0,v/.5):lerp(0,3,(v-.5)/.5); }
+function ctlHTML(s){
+  if(!s.ctl) return "";
+  const c=s.ctl, v=st.ctl[c.k];
+  return `<div class="or-ctrl"><label for="orCtl">${esc(c.label)}</label><input type="range" id="orCtl" data-k="${c.k}" min="0" max="100" value="${Math.round(v*100)}"><div class="sc">${c.l.map(x=>`<span${/[α-ω]/.test(x)?' lang="grc"':""}>${esc(x)}</span>`).join("")}</div></div>`;
+}
+function renderPanel(){
+  const T=TRACKS[st.track], s=T.steps[st.step], last=st.step===T.steps.length-1;
+  panelIn.innerHTML=`
+    <div class="um-cat"><span class="um-tag">${esc(T.cat)}</span><span>${esc(T.sub)}</span></div>
+    <div class="um-head"><h3>${esc(s.t)}</h3><div class="gr">${esc(s.gr)}</div></div>
+    <div class="um-steps">${T.steps.map((x,i)=>`<button type="button" data-step="${i}" aria-label="Paso ${i+1}: ${esc(x.t)}"${i===st.step?' aria-current="step"':""} class="${i<st.step?"done":""}"><i></i></button>`).join("")}</div>
+    ${ctlHTML(s)}
+    <div class="um-step or-late" key="${st.track}${st.step}">
+      <span class="n">Paso ${st.step+1} de ${T.steps.length}</span>
+      <p class="or-lema">${esc(s.lema)}</p>
+      <div class="or-body"><p>${esc(s.x)}</p>${s.q?`<p class="q">${esc(s.q)}<small>${esc(s.qref)}</small></p>`:""}</div>
+    </div>
+    <div class="um-nav">
+      <button type="button" class="ctl" data-nav="-1"${st.step===0?" disabled":""}>‹ Anterior</button>
+      <button type="button" class="ctl" data-nav="1">${last?(st.track==="forma"?"Del logos al flujo →":"Volver a la forma →"):"Siguiente ›"}</button>
+      ${s.go?`<button type="button" class="chip" data-fly-station="${s.go}">${esc(s.goL)} ↗</button>`:""}
+    </div>
+    <details class="um-more"><summary>Sobre este recorrido</summary><p>${esc(T.arg)}</p><p>${esc(T.sense)}</p></details>`;
+  tabs.forEach(t=>{ const on=t.dataset.track===st.track; t.setAttribute("aria-selected",String(on)); t.tabIndex=on?0:-1; });
+  $("#orPanel").setAttribute("aria-labelledby","orTab-"+st.track);
+  $("#orCue").style.opacity=s.cue?1:0;
+}
+panelIn.addEventListener("click",e=>{
+  const n=e.target.closest("[data-nav]");
+  if(n){ const d=+n.dataset.nav, T=TRACKS[st.track];
+    if(st.step+d>=T.steps.length) OR.show(st.track==="forma"?"logos":"forma",0); else OR.show(st.track,Math.max(0,st.step+d)); return; }
+  const s=e.target.closest("[data-step]"); if(s) OR.show(st.track,+s.dataset.step);
+});
+panelIn.addEventListener("input",e=>{ if(e.target.id!=="orCtl") return; st.ctl[e.target.dataset.k]=+e.target.value/100; });
+$("#orTabs").addEventListener("click",e=>{ const t=e.target.closest("[role=tab]"); if(t) OR.show(t.dataset.track,0); });
+$("#orTabs").addEventListener("keydown",e=>{ const i=tabs.findIndex(t=>t.dataset.track===st.track); let j=-1;
+  if(e.key==="ArrowRight"||e.key==="ArrowLeft") j=1-i; if(j<0) return; e.preventDefault(); OR.show(tabs[j].dataset.track,0); tabs[j].focus(); });
+document.addEventListener("click",e=>{
+  const g=e.target.closest("[data-or]"); if(g){ e.preventDefault(); OR.show(g.dataset.or,+(g.dataset.orStep||0)); $("#orStage").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); return; }
+  const o=e.target.closest("[data-orilla]"); if(o){ e.preventDefault(); $("#orilla").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); return; }
+  if(e.target.closest("[data-totop]")){ e.preventDefault(); window.scrollTo({top:0,behavior:reduced?"auto":"smooth"}); }
+});
+const OR={ show(track,step){ st.track=track; st.step=step; renderPanel(); if(W) W.enter(TRACKS[track].steps[step]); } };
+window.GreciaOrilla=OR;
+
+/* ---------------- 3. MUNDO ---------------- */
+const view=$("#orView"), canvas=$("#orGl"), labelsEl=$("#orLabels"), stageEl=$("#orStage");
+let W=null;
+function initWorld(){
+  if(typeof THREE==="undefined") throw new Error("three");
+  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:"high-performance"});
+  const hasBloom=!!(THREE.EffectComposer&&THREE.RenderPass&&THREE.UnrealBloomPass);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,hasBloom?1.5:2));
+  renderer.setClearColor(0x000000,1);
+  const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(38,1,.05,300);
+  let composer=null, bloom=null;
+  if(hasBloom){ try{ composer=new THREE.EffectComposer(renderer); composer.addPass(new THREE.RenderPass(scene,camera)); bloom=new THREE.UnrealBloomPass(new THREE.Vector2(512,512),.75,.5,.12); composer.addPass(bloom); }catch(e){ composer=null; bloom=null; } }
+  const FX=16, FZ=9, small=window.innerWidth<900||(navigator.hardwareConcurrency||8)<=4;
+  const N=small?6000:11000;
+  const ADD=o=>Object.assign({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending},o||{});
+  let seed=97; const R=()=>{ seed^=seed<<13; seed>>>=0; seed^=seed>>>17; seed^=seed<<5; seed>>>=0; return seed/4294967296; };
+
+  /* sustrato: grano de arena, fijo */
+  const gP=[], gC=[]; for(let i=0;i<(small?6000:12000);i++){ gP.push((R()*2-1)*FX*1.15,-.05,(R()*2-1)*FZ*1.2); const b=.25+R()*.5; gC.push(b*1.0,b*.86,b*.7); }
+  const gG=new THREE.BufferGeometry(); gG.setAttribute("position",new THREE.Float32BufferAttribute(gP,3)); gG.setAttribute("color",new THREE.Float32BufferAttribute(gC,3));
+  const grainM=new THREE.PointsMaterial(ADD({size:.035,vertexColors:true,opacity:.22})); scene.add(new THREE.Points(gG,grainM));
+
+  /* cáusticas: interferencia de tres ondas; luz concentrada en los cruces por cero */
+  const cU={uTime:{value:0},uO:{value:.3},uWarp:{value:1}};
+  const caus=new THREE.Mesh(new THREE.PlaneGeometry(FX*2.6,FZ*2.8,1,1),new THREE.ShaderMaterial(ADD({uniforms:cU,
+    vertexShader:`varying vec2 vP; void main(){ vP=position.xy; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader:`uniform float uTime; uniform float uO; uniform float uWarp; varying vec2 vP;
+      float band(vec2 p,vec2 d,float f,float s){ return sin(dot(p,d)*f+uTime*s); }
+      void main(){ vec2 p=vP*0.9; p+=uWarp*0.45*vec2(sin(p.y*0.7+uTime*0.3),cos(p.x*0.6-uTime*0.25));
+        float w=band(p,normalize(vec2(1.0,0.35)),1.7,0.9)+band(p,normalize(vec2(-0.5,1.0)),2.1,-0.7)+band(p,normalize(vec2(0.2,-1.0)),1.3,0.6);
+        float c=pow(1.0-abs(w)/3.0,14.0);
+        float w2=band(p*1.9,normalize(vec2(0.8,-0.6)),1.9,1.3)+band(p*1.9,normalize(vec2(0.3,0.9)),2.3,-1.1);
+        c+=0.45*pow(1.0-abs(w2)/2.0,12.0);
+        float edge=smoothstep(0.0,0.3,1.0-abs(vP.x)/${(FX*1.3).toFixed(1)})*smoothstep(0.0,0.3,1.0-abs(vP.y)/${(FZ*1.4).toFixed(1)});
+        gl_FragColor=vec4(vec3(1.0,0.86,0.62)*c,c*uO*edge*0.3); }`})));
+  caus.rotation.x=-Math.PI/2; caus.position.y=-.02; scene.add(caus);
+
+  /* partículas */
+  const pos=new Float32Array(N*2), vel=new Float32Array(N*2), pop=new Uint8Array(N), rr=new Float32Array(N);
+  for(let i=0;i<N;i++){ pos[i*2]=(R()*2-1)*FX; pos[i*2+1]=(R()*2-1)*FZ; pop[i]=i%4; rr[i]=R(); }
+  const P3=new Float32Array(N*3), COL=new Float32Array(N*3), SZ=new Float32Array(N);
+  for(let i=0;i<N;i++) SZ[i]=.6+rr[i]*.9;
+  const pG=new THREE.BufferGeometry(); pG.setAttribute("position",new THREE.BufferAttribute(P3,3)); pG.setAttribute("color",new THREE.BufferAttribute(COL,3)); pG.setAttribute("aS",new THREE.BufferAttribute(SZ,1));
+  const pU={uScale:{value:600},uSize:{value:.05},uO:{value:1}};
+  const pts=new THREE.Points(pG,new THREE.ShaderMaterial(ADD({uniforms:pU,vertexColors:true,
+    vertexShader:`attribute float aS; uniform float uScale; uniform float uSize; varying vec3 vC; void main(){ vC=color; vec4 mv=modelViewMatrix*vec4(position,1.0); gl_PointSize=max(1.0,uSize*aS*uScale/-mv.z); gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying vec3 vC; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; float a=smoothstep(0.5,0.1,d); gl_FragColor=vec4(vC,a*uO); }`})));
+  pts.frustumCulled=false; scene.add(pts);
+  /* estelas: un segmento por partícula (posición → posición − v·L) */
+  const S3=new Float32Array(N*6), SC=new Float32Array(N*6);
+  const sG=new THREE.BufferGeometry(); sG.setAttribute("position",new THREE.BufferAttribute(S3,3)); sG.setAttribute("color",new THREE.BufferAttribute(SC,3));
+  const streakM=new THREE.LineBasicMaterial(ADD({vertexColors:true,opacity:.6})); const streaks=new THREE.LineSegments(sG,streakM); streaks.frustumCulled=false; scene.add(streaks);
+  /* rastro largo (logos): capa de acumulación por historial corto */
+  const TRL=6, TR3=new Float32Array(N*TRL*6), TRC=new Float32Array(N*TRL*6), hist=new Float32Array(N*(TRL+1)*2);
+  for(let i=0;i<N;i++) for(let k=0;k<=TRL;k++){ hist[(i*(TRL+1)+k)*2]=pos[i*2]; hist[(i*(TRL+1)+k)*2+1]=pos[i*2+1]; }
+  const tG=new THREE.BufferGeometry(); tG.setAttribute("position",new THREE.BufferAttribute(TR3,3)); tG.setAttribute("color",new THREE.BufferAttribute(TRC,3));
+  const trailM=new THREE.LineBasicMaterial(ADD({vertexColors:true,opacity:0})); const trails=new THREE.LineSegments(tG,trailM); trails.frustumCulled=false; scene.add(trails);
+
+  /* geometría platónica: círculos, triángulo y radios */
+  const GEO=[]; const GR=5.6, GR2=2.8;
+  const tri=[0,1,2].map(k=>{ const a=-Math.PI/2+k*2*Math.PI/3; return [Math.cos(a)*GR,Math.sin(a)*GR]; });
+  const triI=[0,1,2].map(k=>{ const a=Math.PI/2+k*2*Math.PI/3; return [Math.cos(a)*GR,Math.sin(a)*GR]; });
+  for(let k=0;k<3;k++){ GEO.push([tri[k],tri[(k+1)%3]]); GEO.push([triI[k],triI[(k+1)%3]]); }
+  for(let k=0;k<6;k++){ const a=k*Math.PI/3+Math.PI/6; GEO.push([[0,0],[Math.cos(a)*GR,Math.sin(a)*GR]]); }
+  const geoL=[]; GEO.forEach(([a,b])=>geoL.push(a[0],.02,a[1],b[0],.02,b[1]));
+  for(const r of [GR,GR2]) for(let i=0;i<128;i++){ const t=i/128*Math.PI*2, u=(i+1)/128*Math.PI*2; geoL.push(Math.cos(t)*r,.02,Math.sin(t)*r,Math.cos(u)*r,.02,Math.sin(u)*r); }
+  const geoG=new THREE.BufferGeometry(); geoG.setAttribute("position",new THREE.Float32BufferAttribute(geoL,3));
+  const geoM=new THREE.LineBasicMaterial(ADD({color:0xe3b460,opacity:0})); scene.add(new THREE.LineSegments(geoG,geoM));
+  const geoNodes=[]; const gn=[[0,0],...tri,...triI]; gn.forEach(([x,z])=>{ const s=new THREE.Sprite(new THREE.SpriteMaterial(ADD({map:glowTex(),color:0xffd49a,opacity:0}))); s.scale.set(1.4,1.4,1); s.position.set(x,.05,z); scene.add(s); geoNodes.push(s); });
+  function nearestGeo(x,z,out){
+    let best=1e9, bx=0, bz=0;
+    const r=Math.hypot(x,z)||1e-4;
+    for(const R0 of [GR,GR2]){ const cx=x/r*R0, cz=z/r*R0, d=(cx-x)*(cx-x)+(cz-z)*(cz-z); if(d<best){ best=d; bx=cx; bz=cz; } }
+    for(const [a,b] of GEO){ const ex=b[0]-a[0], ez=b[1]-a[1], L=ex*ex+ez*ez; let t=((x-a[0])*ex+(z-a[1])*ez)/L; t=t<0?0:t>1?1:t; const px=a[0]+ex*t, pz=a[1]+ez*t, d=(px-x)*(px-x)+(pz-z)*(pz-z); if(d<best){ best=d; bx=px; bz=pz; } }
+    out[0]=bx; out[1]=bz; return Math.sqrt(best);
+  }
+
+  /* densidad para la lectura aristotélica */
+  const GX=48, GZ=28, dens=new Float32Array(GX*GZ), densS=new Float32Array(GX*GZ);
+  const cellX=x=>clamp(Math.floor((x+FX)/(2*FX)*GX),0,GX-1), cellZ=z=>clamp(Math.floor((z+FZ)/(2*FZ)*GZ),0,GZ-1);
+  const NODES=16, nodeS=[]; for(let k=0;k<NODES;k++){ const s=new THREE.Sprite(new THREE.SpriteMaterial(ADD({map:glowTex(),color:0xffc27a,opacity:0}))); s.scale.set(1.6,1.6,1); scene.add(s); nodeS.push({s,x:0,z:0,o:0}); }
+
+  /* medida: vectores y puntos de muestreo; modelo: malla */
+  const AX=30, AZ=17, AR=new Float32Array(AX*AZ*6*3); const arG=new THREE.BufferGeometry(); arG.setAttribute("position",new THREE.BufferAttribute(AR,3));
+  const arM=new THREE.LineBasicMaterial(ADD({color:0x8fc7d9,opacity:0})); const arrows=new THREE.LineSegments(arG,arM); arrows.frustumCulled=false; scene.add(arrows);
+  const smp=[]; for(let j=0;j<AZ;j++) for(let i=0;i<AX;i++) smp.push(-FX+(i+.5)*2*FX/AX,.03,-FZ+(j+.5)*2*FZ/AZ);
+  const smG=new THREE.BufferGeometry(); smG.setAttribute("position",new THREE.Float32BufferAttribute(smp,3));
+  const smM=new THREE.PointsMaterial(ADD({color:0xd7dcd9,size:.09,opacity:0})); scene.add(new THREE.Points(smG,smM));
+  const QX=40, QZ=22, gridL=[]; for(let i=0;i<=QX;i++){ const x=-FX+i*2*FX/QX; gridL.push(x,.01,-FZ,x,.01,FZ); } for(let j=0;j<=QZ;j++){ const z=-FZ+j*2*FZ/QZ; gridL.push(-FX,.01,z,FX,.01,z); }
+  const grG=new THREE.BufferGeometry(); grG.setAttribute("position",new THREE.Float32BufferAttribute(gridL,3));
+  const grM=new THREE.LineBasicMaterial(ADD({color:0x6f8a94,opacity:0})); scene.add(new THREE.LineSegments(grG,grM));
+
+  /* etiquetas mínimas */
+  const labels=[
+    {t:"ἄπειρον",s:"lo indeterminado",p:[-10,0,-6.5],when:()=>isStep("forma","anaximandro")&&st.ctl.split<.25,c:"min"},
+    {t:"frontera",s:"la primera forma",p:[9,0,-.9],when:()=>isStep("forma","anaximandro")&&st.ctl.split>.35,c:"min"},
+    {t:"γῆ",s:"tierra",p:[-9.5,0,5.6],when:()=>isStep("forma","empedocles")&&st.ctl.amor<.45,c:"earth"},
+    {t:"ὕδωρ",s:"agua",p:[9.5,0,5.6],when:()=>isStep("forma","empedocles")&&st.ctl.amor<.45,c:"water"},
+    {t:"ἀήρ",s:"aire",p:[9.5,0,-5.2],when:()=>isStep("forma","empedocles")&&st.ctl.amor<.45,c:"air"},
+    {t:"πῦρ",s:"fuego",p:[-9.5,0,-5.2],when:()=>isStep("forma","empedocles")&&st.ctl.amor<.45,c:"firec"},
+    {t:"εἶδος",s:"estructura estable",p:[0,0,-GR-.6],when:()=>isStep("forma","platon"),c:"min"},
+    {t:"ἐνέργεια",s:"una posibilidad realizada",p:[0,0,0],when:()=>isStep("forma","aristoteles")&&st.ctl.agg>.4,c:"min",dyn:true}
+  ];
+  labels.forEach(l=>{ const el=document.createElement("div"); el.className="um-lb off"; if(l.c) el.dataset.c=l.c; el.innerHTML=`<b>${esc(l.t)}</b><small>${esc(l.s)}</small>`; labelsEl.appendChild(el); l.el=el; l.v=new THREE.Vector3(...l.p); });
+  function isStep(tr,id){ return st.track===tr && TRACKS[tr].steps[st.step].id===id; }
+
+  /* parámetros vivos */
+  const P=Object.assign({},BASE,{noise:1,vort:1,drift:.15,streak:.9,caus:1,amor:.25}), G={};
+  let sT=0, pulse=0;
+  function enter(s){ sT=0; pulse=(s.id==="aristoteles"||s.id==="orilla"||s.id==="heraclito")?1:0; if(s.p.trail){ for(let i=0;i<N;i++) for(let k=0;k<=TRL;k++){ hist[(i*(TRL+1)+k)*2]=pos[i*2]; hist[(i*(TRL+1)+k)*2+1]=pos[i*2+1]; } }
+    Object.assign(G,BASE); for(const k in s.p){ G[k]=s.p[k]==="ctl"?"ctl":s.p[k]; } if(s.ctl&&s.ctl.k==="amor") G.amor="ctl"; kick(); }
+  function goal(k){ const g=G[k]; let v; if(g==="ctl"){ const c=st.ctl[k]; v=k==="ts"?tsFromCtl(c):c; } else v=g==null?BASE[k]:g;
+    if(pulse){ const f=1-smooth(clamp(sT/3.5,0,1)); if(k==="noise") v+=1.3*f; if(k==="agg") v*=smooth(clamp((sT-2)/2.5,0,1)); }
+    return v; }
+
+  /* cursor sobre el plano */
+  const ray=new THREE.Raycaster(), ndc=new THREE.Vector2(), plane=new THREE.Plane(new THREE.Vector3(0,1,0),0), hit=new THREE.Vector3();
+  const cur={x:0,z:0,px:0,pz:0,a:0,last:0};
+  canvas.addEventListener("pointermove",e=>{ const r=canvas.getBoundingClientRect(); ndc.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1); ray.setFromCamera(ndc,camera); if(ray.ray.intersectPlane(plane,hit)){ cur.px=cur.x; cur.pz=cur.z; cur.x=hit.x; cur.z=hit.z; cur.a=1; cur.last=performance.now(); kick(); } });
+  canvas.addEventListener("pointerleave",()=>{ cur.last=0; });
+
+  /* campo de flujo analítico (sin divergencia: derivado de una función de corriente) */
+  let T=0;
+  const out2=[0,0];
+  function flow(x,z,o){
+    let vx=0, vz=0;
+    if(P.noise>.001){ const n=P.noise;
+      let c=Math.cos(.23*x+.31*z+.40*T); vx+=n*1.1*.31*c; vz-=n*1.1*.23*c;
+      c=Math.cos(-.41*x+.17*z-.33*T+1.3); vx+=n*1.4*.17*c; vz-=n*1.4*-.41*c;
+      c=Math.cos(.61*x-.52*z+.57*T+2.1); vx+=n*.9*-.52*c; vz-=n*.9*.61*c;
+      c=Math.cos(.97*x+.83*z-.71*T+.4); vx+=n*.45*.83*c; vz-=n*.45*.97*c; }
+    if(P.vort>.001){ const cx1=-5+2.2*Math.sin(.13*T), cz1=1.2*Math.cos(.11*T), cx2=5+2*Math.cos(.12*T), cz2=-1.4*Math.sin(.09*T);
+      let dx=x-cx1, dz=z-cz1, r2=dx*dx+dz*dz+2.2; vx+=-P.vort*3.2*dz/r2; vz+=P.vort*3.2*dx/r2;
+      dx=x-cx2; dz=z-cz2; r2=dx*dx+dz*dz+2.2; vx+=P.vort*3.2*dz/r2; vz+=-P.vort*3.2*dx/r2; }
+    vx+=P.drift*.9;
+    if(P.split>.001){ const th=Math.tanh(z/(1.6-1.1*P.split)); vx+=P.split*1.7*th; vz+=P.split*.25*Math.sin(x*.8-T*1.2)*Math.exp(-z*z*.6); }
+    o[0]=vx; o[1]=vz;
+  }
+
+  const Q=[[-9.5,5],[9.5,5],[9.5,-5],[-9.5,-5]], POPC=[[.82,.55,.33],[.3,.62,1],[.86,.9,.94],[1,.38,.18]], POPSP=[.45,1,1.15,1.7];
+  const tmpG=[0,0];
+  function step(dt){
+    const ts=P.ts, dtt=dt*ts; T+=dtt;
+    /* densidad (Aristóteles) */
+    if(P.agg>.01){ dens.fill(0); for(let i=0;i<N;i++){ dens[cellZ(pos[i*2+1])*GX+cellX(pos[i*2])]+=1; }
+      for(let j=0;j<GZ;j++) for(let i=0;i<GX;i++){ let s=0,w=0; for(let b=-1;b<=1;b++) for(let a=-1;a<=1;a++){ const ii=i+a, jj=j+b; if(ii<0||jj<0||ii>=GX||jj>=GZ) continue; const k=(a===0&&b===0)?2:1; s+=dens[jj*GX+ii]*k; w+=k; } densS[j*GX+i]=s/w; } }
+    const mean=N/(GX*GZ);
+    const cActive=cur.last&&performance.now()-cur.last<1400; if(!cActive) cur.a*=Math.exp(-dt*1.5);
+    const cvx=(cur.x-cur.px)*4, cvz=(cur.z-cur.pz)*4;
+    const amor=P.amor, emp=P.emp;
+    for(let i=0;i<N;i++){
+      let x=pos[i*2], z=pos[i*2+1];
+      flow(x,z,out2); let vx=out2[0]*ts, vz=out2[1]*ts;
+      if(emp>.01){ const k=pop[i], sp=lerp(1,POPSP[k],emp);
+        vx*=sp; vz*=sp;
+        const q=Q[k]; const sx=(q[0]-x), sz=(q[1]-z);
+        /* Discordia: cada raíz busca su región; Amor: todo converge y gira mezclado */
+        const ne=(1-amor)*emp, am=amor*emp;
+        vx+=ne*sx*.55; vz+=ne*sz*.55;
+        const r=Math.hypot(x,z)+.5;
+        vx+=am*(-x*.18 - z/r*1.6); vz+=am*(-z*.18 + x/r*1.6);
+        if(k===3){ vx+=emp*(Math.sin(T*7+i)*.8); vz+=emp*(Math.cos(T*6.3+i*1.7)*.8); }
+        if(k===2){ vx+=emp*(x/r)*.3*(1-amor); vz+=emp*(z/r)*.3*(1-amor); }
+      }
+      if(P.geo>.01 && rr[i]<.8){ const d=nearestGeo(x,z,tmpG); const g=P.geo*Math.exp(-d*.18)*1.6; vx+=(tmpG[0]-x)*g; vz+=(tmpG[1]-z)*g; }
+      if(P.agg>.01){ const ci=cellX(x), cj=cellZ(z);
+        const l=densS[cj*GX+Math.max(0,ci-1)], r2=densS[cj*GX+Math.min(GX-1,ci+1)], d0=densS[Math.max(0,cj-1)*GX+ci], u0=densS[Math.min(GZ-1,cj+1)*GX+ci], c0=densS[cj*GX+ci];
+        const sat=clamp(1-c0/(mean*7),-.8,1);
+        vx+=P.agg*(r2-l)/mean*1.7*sat; vz+=P.agg*(u0-d0)/mean*1.7*sat; }
+      if(cur.a>.01){ const dx=x-cur.x, dz=z-cur.z, d2=dx*dx+dz*dz, f=cur.a*Math.exp(-d2/5);
+        vx+=f*(-dz*1.4+cvx*.6+dx*.5); vz+=f*(dx*1.4+cvz*.6+dz*.5); }
+      x+=vx*dt; z+=vz*dt;
+      let wrap=false;
+      if(x>FX){ x-=2*FX; wrap=true; } else if(x<-FX){ x+=2*FX; wrap=true; }
+      if(z>FZ){ z-=2*FZ; wrap=true; } else if(z<-FZ){ z+=2*FZ; wrap=true; }
+      pos[i*2]=x; pos[i*2+1]=z; vel[i*2]=wrap?0:vx; vel[i*2+1]=wrap?0:vz;
+      if(wrap){ const b=i*(TRL+1)*2; for(let k=0;k<=TRL;k++){ hist[b+k*2]=x; hist[b+k*2+1]=z; } }
+    }
+  }
+
+  let histT=0;
+  function write(dt){
+    const qn=P.quant, split=P.split, emp=P.emp, L=P.streak*.55, geo=P.geo, agg=P.agg, mean=N/(GX*GZ);
+    for(let i=0;i<N;i++){
+      let x=pos[i*2], z=pos[i*2+1];
+      if(qn>.001){ const sx=(Math.floor((x+FX)/(2*FX)*QX)+.5)*2*FX/QX-FX, sz=(Math.floor((z+FZ)/(2*FZ)*QZ)+.5)*2*FZ/QZ-FZ; x=lerp(x,sx,qn); z=lerp(z,sz,qn); }
+      P3[i*3]=x; P3[i*3+1]=.03; P3[i*3+2]=z;
+      /* color: mineral y ámbar; el ápeiron separa cálido/frío; Empédocles tiñe cada raíz */
+      const w=rr[i]; let r=lerp(.78,1,w), g=lerp(.8,.78,w), b=lerp(.8,.55,w);
+      if(w>.86){ r=.55; g=.78; b=.88; }
+      if(split>.01){ const s=Math.tanh(z*1.2)*split; if(s>0){ r=lerp(r,1,s); g=lerp(g,.62,s); b=lerp(b,.3,s); } else { r=lerp(r,.45,-s); g=lerp(g,.72,-s); b=lerp(b,.95,-s); } const lum=lerp(1,.35+.65*(1-Math.exp(-z*z*1.5)),split*.8); r*=lum; g*=lum; b*=lum; }
+      if(emp>.01){ const c=POPC[pop[i]]; r=lerp(r,c[0],emp); g=lerp(g,c[1],emp); b=lerp(b,c[2],emp); }
+      if(geo>.01 && w<.8){ const d=nearestGeo(pos[i*2],pos[i*2+1],tmpG), k=geo*Math.exp(-d*d*1.2)*.9; r=lerp(r,1,k); g=lerp(g,.85,k); b=lerp(b,.55,k); }
+      if(agg>.01){ const c=densS[cellZ(pos[i*2+1])*GX+cellX(pos[i*2])]/mean, k=agg*clamp((c-1.3)/4,0,1); r=lerp(r,1,k); g=lerp(g,.8,k); b=lerp(b,.5,k); }
+      { const ed=smooth(clamp((FX-Math.abs(pos[i*2]))/2.5,0,1))*smooth(clamp((FZ-Math.abs(pos[i*2+1]))/1.8,0,1)); r*=ed; g*=ed; b*=ed; }
+      COL[i*3]=r; COL[i*3+1]=g; COL[i*3+2]=b;
+      const vx=vel[i*2], vz=vel[i*2+1];
+      S3[i*6]=x; S3[i*6+1]=.03; S3[i*6+2]=z; S3[i*6+3]=x-vx*L; S3[i*6+4]=.03; S3[i*6+5]=z-vz*L;
+      SC[i*6]=r; SC[i*6+1]=g; SC[i*6+2]=b; SC[i*6+3]=0; SC[i*6+4]=0; SC[i*6+5]=0;
+    }
+    pG.attributes.position.needsUpdate=true; pG.attributes.color.needsUpdate=true; sG.attributes.position.needsUpdate=true; sG.attributes.color.needsUpdate=true;
+    /* rastro de logos */
+    if(P.trail>.01){ histT+=dt; if(histT>.12){ histT=0; for(let i=0;i<N;i++){ const bI=i*(TRL+1)*2; for(let k=TRL;k>0;k--){ hist[bI+k*2]=hist[bI+(k-1)*2]; hist[bI+k*2+1]=hist[bI+(k-1)*2+1]; } hist[bI]=pos[i*2]; hist[bI+1]=pos[i*2+1]; } }
+      for(let i=0;i<N;i++){ const bI=i*(TRL+1)*2, o=i*TRL*6; for(let k=0;k<TRL;k++){ const ax=hist[bI+k*2], az=hist[bI+k*2+1], bx=hist[bI+(k+1)*2], bz=hist[bI+(k+1)*2+1]; const jump=Math.abs(ax-bx)+Math.abs(az-bz)>3;
+        TR3[o+k*6]=ax; TR3[o+k*6+1]=.02; TR3[o+k*6+2]=az; TR3[o+k*6+3]=jump?ax:bx; TR3[o+k*6+4]=.02; TR3[o+k*6+5]=jump?az:bz;
+        const f=(1-k/TRL)*.8; TRC[o+k*6]=f; TRC[o+k*6+1]=f*.86; TRC[o+k*6+2]=f*.62; const f2=(1-(k+1)/TRL)*.8; TRC[o+k*6+3]=f2; TRC[o+k*6+4]=f2*.86; TRC[o+k*6+5]=f2*.62; } }
+      tG.attributes.position.needsUpdate=true; tG.attributes.color.needsUpdate=true; }
+    trailM.opacity=P.trail*.35; trails.visible=P.trail>.01;
+    /* vectores */
+    if(P.arrows>.01){ let o=0; for(let j=0;j<AZ;j++) for(let i=0;i<AX;i++){ const x=-FX+(i+.5)*2*FX/AX, z=-FZ+(j+.5)*2*FZ/AZ; flow(x,z,out2); const m=Math.hypot(out2[0],out2[1])+1e-5, s=Math.min(.75,.25+m*.25), ux=out2[0]/m*s, uz=out2[1]/m*s;
+        const ex=x+ux, ez=z+uz, hx=-uz*.35, hz=ux*.35;
+        AR[o++]=x;AR[o++]=.04;AR[o++]=z;AR[o++]=ex;AR[o++]=.04;AR[o++]=ez;
+        AR[o++]=ex;AR[o++]=.04;AR[o++]=ez;AR[o++]=ex-ux*.35+hx;AR[o++]=.04;AR[o++]=ez-uz*.35+hz;
+        AR[o++]=ex;AR[o++]=.04;AR[o++]=ez;AR[o++]=ex-ux*.35-hx;AR[o++]=.04;AR[o++]=ez-uz*.35-hz; }
+      arG.attributes.position.needsUpdate=true; }
+    arrows.visible=P.arrows>.01; arM.opacity=P.arrows*.55; smM.opacity=P.arrows*.6;
+    grM.opacity=P.grid*.28;
+    /* nodos de actualización */
+    if(P.agg>.01){ const idx=[]; for(let k=0;k<GX*GZ;k++) if(densS[k]>mean*2.4) idx.push(k); idx.sort((a,b)=>densS[b]-densS[a]);
+      const picked=[]; for(const k of idx){ const x=-FX+((k%GX)+.5)*2*FX/GX, z=-FZ+(Math.floor(k/GX)+.5)*2*FZ/GZ; if(picked.every(p=>Math.hypot(p[0]-x,p[1]-z)>2.2)) picked.push([x,z,densS[k]/mean]); if(picked.length>=NODES) break; }
+      nodeS.forEach((n,k)=>{ const p=picked[k]; const goalO=p?P.agg*clamp((p[2]-2.4)/4,0,1)*.9:0; if(p){ if(n.o<.05){ n.x=p[0]; n.z=p[1]; } else { n.x=lerp(n.x,p[0],.08); n.z=lerp(n.z,p[1],.08); } } n.o+= (goalO-n.o)*.06; n.s.position.set(n.x,.06,n.z); n.s.material.opacity=n.o; });
+      if(picked[0]){ const L0=labels[7]; L0.v.set(picked[0][0],0,picked[0][1]-1); } }
+    else nodeS.forEach(n=>{ n.o*=.9; n.s.material.opacity=n.o; });
+    geoM.opacity=P.geo*.42; geoNodes.forEach((s,k)=>{ s.material.opacity=P.geo*(.35+.15*Math.sin(T*1.3+k)); });
+  }
+
+  /* cámara: casi inmóvil; solo la escala de Demócrito la acerca */
+  let vw={w:1,h:1,pw:0};
+  function placeCamera(){
+    const a=vw.aspect||1.6, k=a<1?1.7:(a<1.4?1.25:1);
+    const z=P.zoom, d=lerp(30*k,4.2,smooth(z)), tx=lerp(0,2.4,z), tz=lerp(0,.8,z);
+    const pol=lerp(.62,.9,z), br=reduced?0:Math.sin(T*.05)*.03;
+    camera.position.set(tx+Math.sin(br)*d*Math.sin(pol),d*Math.cos(pol),tz+d*Math.sin(pol)*Math.cos(br));
+    camera.lookAt(tx,0,tz);
+  }
+  function resize(){
+    const r=view.getBoundingClientRect(), w=Math.max(1,Math.round(r.width)), h=Math.max(1,Math.round(r.height));
+    renderer.setSize(w,h,false); if(composer) composer.setSize(w,h);
+    const wide=window.innerWidth>900, pw=wide?($("#orPanel").offsetWidth+16):0;
+    vw={w,h,pw,aspect:(w-pw)/h};
+    if(pw) camera.setViewOffset(w,h,-pw/2,0,w,h); else camera.clearViewOffset();
+    camera.aspect=w/h; camera.updateProjectionMatrix();
+    pU.uScale.value=h*renderer.getPixelRatio()/(2*Math.tan(camera.fov*Math.PI/360));
+  }
+  let running=false, rafId=0, last=performance.now();
+  function kick(){ if(!rafId&&running&&!document.hidden){ last=performance.now(); rafId=requestAnimationFrame(frame); } }
+  new IntersectionObserver(es=>{ running=es[0].isIntersecting; kick(); },{threshold:0,rootMargin:"120px"}).observe(stageEl);
+  document.addEventListener("visibilitychange",kick);
+  const tv=new THREE.Vector3();
+  function frame(now){
+    rafId=0; if(!running||document.hidden) return;
+    const dt=Math.min(.05,(now-last)/1000); last=now; sT+=dt;
+    const k=reduced?1:1-Math.exp(-dt*1.2);
+    for(const key in BASE){ P[key]+=(goal(key)-P[key])*(key==="ts"?1-Math.exp(-dt*3):k); }
+    P.amor+=((G.amor==="ctl"?st.ctl.amor:P.amor)-P.amor)*k;
+    if(!reduced) step(dt); else if(!write.done){ for(let s=0;s<60;s++) step(1/30); write.done=true; }
+    if(!reduced) cU.uTime.value+=dt*P.ts; cU.uO.value=P.caus;
+    grainM.opacity=.14+.12*(1-P.zoom);
+    pU.uSize.value=lerp(.05,.022,P.zoom)*(1+P.quant*.6); pU.uO.value=lerp(.85,1,P.zoom);
+    streakM.opacity=P.streak*(1-P.zoom*.9)*.8; streaks.visible=streakM.opacity>.01;
+    write(dt); placeCamera();
+    if(bloom) bloom.strength=.65+.35*P.caus*.5+P.agg*.25+P.geo*.15;
+    if(composer) composer.render(); else renderer.render(scene,camera);
+    labels.forEach(l=>{ const on=l.when(); tv.copy(l.v).project(camera); const vis=on&&tv.z<1&&tv.z>-1;
+      if(vis){ l.el.style.transform=`translate(${((tv.x*.5+.5)*vw.w).toFixed(1)}px,${((-tv.y*.5+.5)*vw.h).toFixed(1)}px) translate(-50%,-100%)`; }
+      l.el.classList.toggle("off",!vis); });
+    rafId=requestAnimationFrame(frame);
+  }
+  new ResizeObserver(resize).observe(view); resize();
+  return {enter,kick};
+}
+let gTex=null;
+function glowTex(){ if(gTex) return gTex; const c=document.createElement("canvas"); c.width=c.height=64; const g=c.getContext("2d"); const r=g.createRadialGradient(32,32,0,32,32,32); r.addColorStop(0,"rgba(255,255,255,1)"); r.addColorStop(.2,"rgba(255,255,255,.6)"); r.addColorStop(.5,"rgba(255,255,255,.12)"); r.addColorStop(1,"rgba(255,255,255,0)"); g.fillStyle=r; g.fillRect(0,0,64,64); gTex=new THREE.CanvasTexture(c); return gTex; }
+
+try{ W=initWorld(); }catch(err){ W=null; view.classList.add("um-nogl"); const p=$("#orPoster"); p.src=(document.querySelector(".or-art img")||{}).src||""; p.alt="Hoja de contacto de los interludios de phýsis"; if(window.console) console.warn("La orilla sin WebGL:",err); }
+OR.show("forma",0);
+})();
+</script>
+
 
 </body>
 </html>
