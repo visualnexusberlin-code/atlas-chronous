@@ -1,5 +1,15 @@
 # Historial
 
+## v0.7 · El Liceo · 2026-09-30
+- Nueva sección bajo El Umbral, **El Liceo**, dedicada a Aristóteles, con la misma gramática: intro, escenario 3D con pestañas y panel, y sala de lectura.
+- Cuatro escenas en Three.js con resplandor UnrealBloom:
+  - **Las cuatro causas**: la duna de polvo se ordena en un cristal (potencia → acto), con haz eficiente y orbe final.
+  - **El silogismo**: corredor de las diez categorías y dos premisas que se cortan en el término medio; incluye un silogismo inválido para comparar.
+  - **El motor inmóvil**: los cuatro elementos, las 55 esferas de éter y un punto que mueve sin moverse.
+  - **Trama y catarsis**: colisión entre la columna turbulenta del páthos y el haz rectilíneo de la trama; lo que cruza el impacto sale en flujo laminar. Un único destello suave, sin estroboscopio.
+- En la sala inferior: el paseo biográfico, las diez categorías interactivas, las tres ramas del saber, el término medio, Platón frente a Aristóteles, aporías y sombras, la dirección de arte y el taller.
+- La estación de Aristóteles en el códice incluye un acceso directo a El Liceo.
+
 ## v0.6 · El Umbral · 2026-09-29
 - Nueva sección al final de la página, **El Umbral**, con Platón entre mito, alegoría y razón.
 - Tres escenas en Three.js con resplandor UnrealBloom:

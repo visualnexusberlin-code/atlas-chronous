@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="generator" content="Grecia Eterna v0.6">
+<meta name="generator" content="Grecia Eterna v0.7">
 <title>Grecia Eterna</title>
 <meta name="description" content="Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro sobre el mar color de vino.">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -582,6 +582,145 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .um-veil{position:absolute;inset:0;background:#000;opacity:0;pointer-events:none}
 .um-step .ln button{border:0;background:none;padding:0;color:var(--um-cyan);font-size:12px;text-decoration:underline;text-underline-offset:3px}
 .um-room>section{min-width:0}
+
+/* ---------- v0.7 · EL LICEO · ARISTÓTELES ---------- */
+/* Layout: a second full-bleed black chamber under El Umbral. Same grammar (intro, 3D stage with tabs and a narrating glass panel, reading room below), re-tuned from Plato's cyan to Aristotle's amber-gold and crystal. The stage reuses the .um-* classes; .liceo only changes the accent. */
+:root{--ly-amber:#f2b46a;--ly-amber-rgb:242,180,106;--ly-crystal:#a6f0e6;--ly-ember:#ff6a3d;--ly-lamina:#7fd8ff}
+.liceo{background:#000;border-top:1px solid rgba(var(--ly-amber-rgb),.18);position:relative}
+.liceo .um-intro{padding-block:96px 40px}
+.liceo .um-intro h2 span b{color:var(--ly-amber)}
+.liceo .um-intro h2 span em{color:var(--ly-crystal)}
+.liceo .um-stage{border-block:1px solid rgba(var(--ly-amber-rgb),.1)}
+.liceo .um-tabs button[aria-selected="true"]{background:rgba(var(--ly-amber-rgb),.13);box-shadow:inset 0 0 0 1px rgba(var(--ly-amber-rgb),.5)}
+.liceo .um-tabs button[aria-selected="true"] span{color:var(--ly-amber)}
+.liceo .um-tag{border-color:rgba(var(--ly-amber-rgb),.45);color:var(--ly-amber)}
+.liceo .um-head .gr{color:var(--ly-amber)}
+.liceo .um-steps button[aria-current="step"] i{background:var(--ly-amber)}
+.liceo .um-steps button.done i{background:rgba(var(--ly-amber-rgb),.5)}
+.liceo .um-step .q{border-left-color:var(--ly-amber)}
+.liceo .um-step .ln b{color:var(--ly-amber)}
+.liceo .um-step .ln button{color:var(--ly-crystal)}
+.liceo .um-more summary:before{color:var(--ly-amber)}
+.liceo .um-tools .ctl[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.15)}
+.liceo .ctl:hover{border-color:var(--ly-amber)}
+.um-lb[data-c="amber"] b{color:var(--ly-amber)}.um-lb[data-c="crystal"] b{color:var(--ly-crystal)}.um-lb[data-c="ember"] b{color:#ff8a66}.um-lb[data-c="lamina"] b{color:var(--ly-lamina)}.um-lb[data-c="white"] b{color:#fff}
+.ly-ctrl{display:grid;gap:8px;padding:12px 14px;border:1px solid rgba(var(--ly-amber-rgb),.28);border-radius:5px}
+.ly-ctrl label,.ly-ctrl .lbl{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.ly-ctrl input[type=range]{width:100%;accent-color:var(--ly-amber)}
+.ly-ctrl .sc{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
+.ly-ctrl .seg{display:flex;flex-wrap:wrap;gap:6px}
+.ly-ctrl .seg button{border:1px solid var(--line-strong);background:none;border-radius:999px;padding:5px 12px;font-size:12px;color:var(--dim)}
+.ly-ctrl .seg button:hover{border-color:var(--ly-amber);color:var(--ink)}
+.ly-ctrl .seg button[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.14);color:var(--ink)}
+.ly-ctrl p{margin:0;font-size:12.5px;color:var(--dim);line-height:1.5}
+.ly-ctrl p b{color:var(--ink);font-weight:500}
+.ly-ctrl.bad{border-color:rgba(255,106,61,.4)}
+
+/* el paseo: itinerario en la intro */
+.ly-walk{grid-column:1/-1;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0;margin-top:10px;border-top:1px solid var(--line)}
+.ly-walk li{list-style:none;padding:14px 14px 0 0;display:grid;gap:3px;align-content:start;position:relative}
+.ly-walk li:before{content:"";position:absolute;top:-4px;left:0;width:7px;height:7px;border-radius:50%;background:var(--ly-amber);box-shadow:0 0 10px rgba(var(--ly-amber-rgb),.7)}
+.ly-walk b{font-family:var(--f-display);font-weight:400;font-size:1.08rem;color:var(--ink)}
+.ly-walk span{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);font-variant-numeric:tabular-nums}
+.ly-walk p{margin:2px 0 0;font-size:12.5px;color:var(--dim);line-height:1.45}
+.ly-walk .chip{justify-self:start;margin-top:6px;font-size:11px;padding:3px 9px}
+.ly-walkt{grid-column:1/-1;margin:20px 0 -18px;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:600}
+
+.ly-room{padding-inline:var(--gutter);padding-block:80px 64px;display:grid;gap:88px;max-width:1180px;margin:0 auto}
+.ly-room>section{min-width:0}
+.ly-room .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+/* categorías */
+.cat-sent{margin:0 0 26px;font-family:var(--f-display);font-size:clamp(1.3rem,2.3vw,1.75rem);line-height:1.5;color:var(--dim);max-width:44ch}
+.cat-sent button{font:inherit;border:0;background:none;padding:0 2px;color:var(--ink);border-bottom:1px dashed rgba(var(--ly-amber-rgb),.45);border-radius:2px;transition:color .2s,background .2s}
+.cat-sent button:hover,.cat-sent button[aria-pressed="true"]{color:#000;background:var(--ly-amber);border-bottom-color:transparent}
+.cats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.cats button{border:1px solid var(--line);border-radius:5px;background:rgba(var(--ly-amber-rgb),.025);padding:12px 12px 10px;text-align:left;display:grid;gap:2px;min-width:0;transition:border-color .2s,background .2s}
+.cats button:hover{border-color:rgba(var(--ly-amber-rgb),.5)}
+.cats button[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.12)}
+.cats .n{font-size:10px;letter-spacing:.16em;color:var(--faint);font-variant-numeric:tabular-nums}
+.cats b{font-family:var(--f-display);font-weight:400;font-size:1.12rem;color:var(--ink)}
+.cats .g{font-family:var(--f-display);font-size:.9rem;color:var(--ly-amber)}
+.cats .qq{font-size:11.5px;color:var(--dim)}
+.cat-out{margin-top:18px;min-height:3.4em;padding:14px 16px;border-left:2px solid var(--ly-amber);background:rgba(var(--ly-amber-rgb),.04);font-size:14px;color:var(--ink);max-width:78ch}
+.cat-out small{display:block;color:var(--faint);font-size:11.5px;margin-top:4px}
+/* tres ramas */
+.ramas{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 28px}
+.rama{border-top:1px solid rgba(var(--ly-amber-rgb),.4);padding-top:14px;display:grid;gap:8px;align-content:start}
+.rama .g{font-family:var(--f-display);font-size:1.5rem;color:var(--ly-amber);line-height:1}
+.rama h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.rama .fin{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.rama p{margin:0;color:var(--dim);font-size:14px}
+.rama ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+.rama li{font-size:13px;color:var(--ink);display:flex;gap:8px}
+.rama li:before{content:"—";color:var(--faint)}
+.rama-note{margin:26px 0 0;font-size:13px;color:var(--dim);max-width:74ch}
+.rama-note b{color:var(--ly-amber);font-weight:600;font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin-right:6px}
+/* término medio */
+.meso{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:44px;align-items:start}
+.meso-v{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px}
+.meso-v button{border:1px solid var(--line-strong);background:none;border-radius:999px;padding:5px 12px;font-size:12.5px;color:var(--dim)}
+.meso-v button:hover{border-color:var(--ly-amber);color:var(--ink)}
+.meso-v button[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.14);color:var(--ink)}
+.meso-track{position:relative;height:74px;margin:6px 0 4px}
+.meso-bar{position:absolute;left:0;right:0;top:34px;pointer-events:none;height:4px;border-radius:2px;background:linear-gradient(90deg,#6b5f73,rgba(240,231,217,.25) 50%,var(--ly-ember))}
+.meso-zone{position:absolute;top:26px;height:20px;pointer-events:none;border-radius:10px;background:rgba(var(--ly-amber-rgb),.3);box-shadow:0 0 18px rgba(var(--ly-amber-rgb),.45);border:1px solid var(--ly-amber);transition:left .5s cubic-bezier(.2,.7,.2,1),width .5s}
+.meso-mid{position:absolute;top:18px;bottom:18px;left:50%;border-left:1px dashed var(--line-strong)}
+.meso-mid span{position:absolute;top:-16px;left:4px;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);white-space:nowrap}
+.meso-track input{position:absolute;left:0;top:26px;width:100%;height:20px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:pointer}
+.meso-track input::-webkit-slider-runnable-track{height:20px;background:transparent}
+.meso-track input::-moz-range-track{height:20px;background:transparent}
+.meso-track input::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;margin-top:1px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #000,0 0 14px rgba(var(--ly-amber-rgb),.9)}
+.meso-track input::-moz-range-thumb{width:18px;height:18px;border:0;border-radius:50%;background:#fff;box-shadow:0 0 0 3px #000,0 0 14px rgba(var(--ly-amber-rgb),.9)}
+.meso-track input:focus-visible{outline:2px solid var(--ly-amber);outline-offset:4px}
+.meso-ends{display:flex;justify-content:space-between;gap:12px;font-size:12px;color:var(--faint)}
+.meso-ends b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--ink)}
+.meso-ends span:last-child{text-align:right}
+.meso-out{margin-top:20px;padding:16px 18px;border:1px solid var(--line-strong);border-radius:6px;display:grid;gap:6px;min-height:6.5em}
+.meso-out h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.5rem}
+.meso-out p{margin:0;color:var(--dim);font-size:13.5px}
+.meso-out.ok{border-color:var(--ly-amber);box-shadow:0 0 30px rgba(var(--ly-amber-rgb),.08)}
+.milon{margin:0;padding-left:18px;border-left:1px solid var(--line-strong);display:grid;gap:10px}
+.milon blockquote{margin:0;font-family:var(--f-display);font-size:1.25rem;line-height:1.38;color:var(--ink)}
+.milon figcaption{font-size:12px;color:var(--faint)}
+.milon p{margin:0;color:var(--dim);font-size:14px}
+/* maestro y discípulo */
+.pa{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:44px;align-items:start}
+.pa-table{width:100%;border-collapse:collapse;font-size:13.5px}
+.pa-table th{font-family:var(--f-display);font-weight:400;font-size:1.15rem;text-align:left;padding:0 12px 10px 0;border-bottom:1px solid var(--line-strong)}
+.pa-table th:nth-child(2){color:var(--um-cyan)}
+.pa-table th:nth-child(3){color:var(--ly-amber)}
+.pa-table td{padding:10px 12px 10px 0;border-bottom:1px solid var(--line);color:var(--dim);vertical-align:top}
+.pa-table td:first-child{color:var(--faint);font-size:11px;letter-spacing:.12em;text-transform:uppercase;width:22%}
+.pa-table td:last-child{color:var(--ink)}
+.hands{margin:0;display:grid;gap:14px}
+.hands svg{width:100%;max-width:300px;height:auto;display:block;overflow:visible}
+.hands blockquote{margin:0;font-family:var(--f-display);font-size:1.3rem;line-height:1.35;color:var(--ink)}
+.hands figcaption{font-size:12px;color:var(--faint)}
+.hands p{margin:0;font-size:13.5px;color:var(--dim)}
+/* aporías */
+.liceo .dil .im b{color:var(--ly-amber)}
+.liceo .dil .choose button:hover{border-color:var(--ly-amber)}
+.liceo .dil .choose button[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.12)}
+.liceo .dil.shadow{border-color:rgba(255,106,61,.3);background:rgba(255,106,61,.03)}
+.liceo .dil.shadow .src{color:#ff8a66}
+/* concepto */
+.liceo .concept{grid-template-columns:repeat(4,minmax(0,1fr))}
+.liceo .concept figcaption code{color:var(--ly-crystal)}
+.liceo .concept .go:hover{border-color:var(--ly-amber)}
+.ly-taller b:before{color:var(--ly-amber)!important}
+.ly-taller .ref{color:var(--ly-amber)!important}
+.chip.liceo-go{border-color:rgba(var(--ly-amber-rgb),.5);color:var(--ink);justify-self:start}
+.chip.liceo-go:hover{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.08)}
+
+@media (max-width:1100px) and (min-width:901px){ .cats{grid-template-columns:repeat(3,minmax(0,1fr))} .liceo .concept{grid-template-columns:repeat(2,minmax(0,1fr))} .ly-walk{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px} }
+@media (max-width:900px){
+  .liceo .um-tabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ly-walk{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:18px}
+  .cats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ramas,.meso,.pa,.liceo .concept{grid-template-columns:minmax(0,1fr)}
+  .pa-table{font-size:12.5px}
+  .pa-table td:first-child{width:auto}
+}
 </style>
 </head>
 <body>
@@ -959,8 +1098,182 @@ body[data-lens="asombro"]{--lens:var(--gold)}
     </div>
   </section>
 
+
+  <section class="umbral liceo" id="liceo" aria-labelledby="lyTitle">
+    <div class="um-intro">
+      <div>
+        <div class="kicker">Aristóteles · Órganon, Física, Metafísica, Ética, Política, Poética</div>
+        <h2 id="lyTitle">El Liceo<span><b>δύναμις</b> · de la materia a la forma · <em>ἐνέργεια</em></span></h2>
+      </div>
+      <div class="um-lead">
+        <p>Aquí la forma no vive en otro mundo: está en las cosas, esperando.</p>
+        <p>Si Platón miraba hacia arriba, su alumno mira alrededor. Tras veinte años en la Academia, Aristóteles abre en 335 a.C. su propia escuela en un gimnasio junto al santuario de Apolo Liceo y enseña paseando bajo el pórtico, el <i>perípatos</i>. De ese paseo salen la lógica formal, la biología de campo, la física de las causas y la primera anatomía de la ficción.</p>
+        <p>Un polvo que se hace forma, un razonamiento que no puede fallar, un cielo que gira por amor y una trama que se rompe para curar. Cuatro máquinas de pensar, recorridas en luz.</p>
+      </div>
+      <p class="ly-walkt">El paseo · una vida en seis lugares</p>
+      <ol class="ly-walk">
+        <li><span>384 a.C.</span><b>Estagira</b><p>Hijo de Nicómaco, médico de la corte macedonia. Crece entre instrumentos y cuerpos.</p></li>
+        <li><span>367–347</span><b>Atenas · Academia</b><p>Llega con diecisiete años. Según la tradición, Platón lo llamaba «el lector».</p><button type="button" class="chip" data-fly-station="platon">Platón ↗</button></li>
+        <li><span>347–343</span><b>Asos y Lesbos</b><p>Disecciona, observa, clasifica: la laguna de Pirra como laboratorio.</p><button type="button" class="chip" data-fly-station="aristoteles">En el mapa ↗</button></li>
+        <li><span>343–335</span><b>Pela · Mieza</b><p>Preceptor del joven Alejandro durante unos años.</p></li>
+        <li><span>335–323</span><b>Atenas · Liceo</b><p>Funda su escuela: biblioteca, colecciones y enseñanza peripatética.</p></li>
+        <li><span>322 a.C.</span><b>Calcis</b><p>Huye tras la muerte de Alejandro «para que Atenas no peque dos veces contra la filosofía».</p></li>
+      </ol>
+    </div>
+
+    <div class="um-stage" id="lyStage">
+      <div class="um-tabs" role="tablist" aria-label="Escenas aristotélicas en tres dimensiones" id="lyTabs">
+        <button type="button" role="tab" id="lyTab-causas" aria-controls="lyPanel" aria-selected="true" data-scene="causas"><b>Las cuatro causas</b><span lang="grc">αἰτίαι</span></button>
+        <button type="button" role="tab" id="lyTab-silogismo" aria-controls="lyPanel" aria-selected="false" tabindex="-1" data-scene="silogismo"><b>El silogismo</b><span lang="grc">συλλογισμός</span></button>
+        <button type="button" role="tab" id="lyTab-motor" aria-controls="lyPanel" aria-selected="false" tabindex="-1" data-scene="motor"><b>El motor inmóvil</b><span lang="grc">τὸ κινοῦν ἀκίνητον</span></button>
+        <button type="button" role="tab" id="lyTab-catarsis" aria-controls="lyPanel" aria-selected="false" tabindex="-1" data-scene="catarsis"><b>Trama y catarsis</b><span lang="grc">κάθαρσις</span></button>
+      </div>
+      <div class="um-view" id="lyView">
+        <canvas id="lyGl" aria-hidden="true"></canvas>
+        <img class="um-poster" id="lyPoster" alt="">
+        <div class="um-labels" id="lyLabels" aria-hidden="true"></div>
+        <p class="um-hint">Arrastra para girar · Ctrl + rueda para acercar</p>
+        <div class="um-tools">
+          <button type="button" class="ctl" id="lyReplay" hidden>↺ Otra función</button>
+          <button type="button" class="ctl" id="lyReset" aria-label="Volver al encuadre del paso">◎</button>
+        </div>
+      </div>
+      <aside class="um-panel" id="lyPanel" role="tabpanel" aria-labelledby="lyTab-causas" aria-live="polite">
+        <div class="um-panel-in" id="lyPanelIn"></div>
+      </aside>
+    </div>
+
+    <div class="ly-room">
+      <section aria-labelledby="catTitle">
+        <div class="sec-head">
+          <div class="kicker">Categorías 4 · los diez modos de decir</div>
+          <h2 id="catTitle">Todo lo que se puede decir de Sócrates</h2>
+          <p>Aristóteles clasifica lo que puede decirse de algo en diez géneros. La sustancia es el sujeto; las otras nueve le suceden. Toca una palabra de la frase o una categoría: se encuentran entre sí.</p>
+        </div>
+        <p class="cat-sent" id="catSent"></p>
+        <div class="cats" id="cats" role="group" aria-label="Las diez categorías"></div>
+        <div class="cat-out" id="catOut" aria-live="polite"></div>
+        <p class="rama-note"><b>En el escenario</b>Los diez prismas del corredor lógico son estas diez categorías. <button type="button" class="chip liceo-go" data-ly="silogismo" data-ly-step="0">Verlos flotar ↑</button></p>
+      </section>
+
+      <section aria-labelledby="ramTitle">
+        <div class="sec-head">
+          <div class="kicker">Metafísica E 1 · Ética Nicomáquea VI</div>
+          <h2 id="ramTitle">Tres maneras de saber</h2>
+          <p>No todo conocimiento busca lo mismo. Aristóteles distingue tres familias según su fin: contemplar, obrar bien o producir algo fuera de uno.</p>
+        </div>
+        <div class="ramas">
+          <article class="rama"><span class="g" lang="grc">θεωρία</span><h3>Ciencias teóricas</h3><span class="fin">Fin · la verdad</span><p>Estudian lo que no depende de nosotros. Su valor está en sí mismas, como mirar.</p><ul><li>Física: lo que se mueve y cambia</li><li>Matemática: la cantidad abstraída</li><li>Filosofía primera: el ser en cuanto ser</li></ul></article>
+          <article class="rama"><span class="g" lang="grc">πρᾶξις</span><h3>Ciencias prácticas</h3><span class="fin">Fin · la acción recta</span><p>El fin es el obrar mismo. Nadie es justo por saber qué es la justicia, sino haciendo actos justos.</p><ul><li>Ética: la vida buena de cada cual</li><li>Política: la vida buena en común</li><li>Economía: el gobierno de la casa</li></ul></article>
+          <article class="rama"><span class="g" lang="grc">ποίησις</span><h3>Ciencias productivas</h3><span class="fin">Fin · la obra</span><p>El fin queda fuera de quien produce: una casa, una curación, un poema, un discurso persuasivo.</p><ul><li>Poética: la ficción</li><li>Retórica: la persuasión</li><li>Las técnicas: medicina, arquitectura…</li></ul></article>
+        </div>
+        <p class="rama-note"><b>Lectura del atlas</b>Este atlas es <i>poíesis</i> que habla de <i>theoría</i> para enseñar <i>práxis</i>: una obra hecha para que alguien, al leerla, mire y actúe de otra manera.</p>
+      </section>
+
+      <section aria-labelledby="mesoTitle">
+        <div class="sec-head">
+          <div class="kicker">Ética Nicomáquea II 6–9 · mesótes</div>
+          <h2 id="mesoTitle">El término medio no está en la mitad</h2>
+          <p>La virtud es un hábito que elige el medio entre dos vicios, uno por exceso y otro por defecto. Pero ese medio es «relativo a nosotros» y, en algunos casos, está más cerca de un extremo que del otro. Elige una virtud y busca su lugar.</p>
+        </div>
+        <div class="meso">
+          <div>
+            <div class="meso-v" id="mesoV" role="group" aria-label="Virtudes"></div>
+            <div class="meso-track"><div class="meso-bar"></div><div class="meso-zone" id="mesoZone"></div><div class="meso-mid"><span>mitad aritmética</span></div><input type="range" id="mesoIn" min="0" max="100" value="50" aria-label="Posición entre el defecto y el exceso"></div>
+            <div class="meso-ends"><span><b id="mesoD"></b>defecto</span><span><b id="mesoE"></b>exceso</span></div>
+            <div class="meso-out" id="mesoOut" aria-live="polite"></div>
+          </div>
+          <figure class="milon">
+            <blockquote>«Si diez minas de alimento son mucho para alguien y dos son poco, el entrenador no prescribirá seis: quizá sea poco para Milón y mucho para quien empieza.»</blockquote>
+            <figcaption>Ética Nicomáquea II 6, 1106a36–b4 · paráfrasis</figcaption>
+            <p>La mitad aritmética es la misma para todos; el medio de la virtud, no. Por eso la regla no basta: hace falta <i>phrónesis</i>, la prudencia de quien ve el caso concreto.</p>
+            <p>Y hay una asimetría que Aristóteles señala: la temeridad se parece más a la valentía que la cobardía, y la prodigalidad más a la liberalidad que la avaricia. El medio se inclina.</p>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="paTitle">
+        <div class="sec-head">
+          <div class="kicker">Maestro y discípulo · veinte años de conversación</div>
+          <h2 id="paTitle">Uno señala arriba, el otro alrededor</h2>
+          <p>Aristóteles no rompe con Platón: lo corrige desde dentro. La misma pregunta, dos direcciones de la mirada.</p>
+        </div>
+        <div class="pa">
+          <table class="pa-table">
+            <thead><tr><th scope="col"></th><th scope="col">Platón</th><th scope="col">Aristóteles</th></tr></thead>
+            <tbody>
+              <tr><td>Las formas</td><td>existen separadas, en un mundo inteligible</td><td>existen en las cosas, unidas a la materia</td></tr>
+              <tr><td>Conocer</td><td>recordar lo contemplado antes de nacer</td><td>partir de los sentidos y llegar a lo universal por inducción</td></tr>
+              <tr><td>El cambio</td><td>sombra y apariencia</td><td>paso de la potencia al acto: lo que la ciencia estudia</td></tr>
+              <tr><td>El bien</td><td>una Idea única del Bien</td><td>se dice de muchas maneras: hay que buscarlo en cada práctica</td></tr>
+              <tr><td>La poesía</td><td>copia de una copia; los poetas, fuera de la ciudad</td><td>más filosófica que la historia; la tragedia purifica</td></tr>
+              <tr><td>El alma</td><td>prisionera del cuerpo</td><td>forma del cuerpo vivo, como la visión lo es del ojo</td></tr>
+            </tbody>
+          </table>
+          <figure class="hands">
+            <svg viewBox="0 0 300 160" role="img" aria-label="Dos direcciones de la mirada: un vector vertical en cian hacia una estrella, sobre el libro del Timeo; un vector horizontal en ámbar sobre las cosas, sobre el libro de la Ética">
+              <defs><marker id="lyAu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#80d8ff"/></marker><marker id="lyAr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2b46a"/></marker></defs>
+              <g fill="none" stroke-linecap="round" stroke-width="1.5">
+                <path d="M16 132h268" stroke="var(--line-strong)"/>
+                <path d="M78 126V26" stroke="#80d8ff" marker-end="url(#lyAu)"/>
+                <path d="M160 108h116" stroke="#f2b46a" marker-end="url(#lyAr)"/>
+                <path d="M160 108v18" stroke="#f2b46a" opacity=".5"/>
+              </g>
+              <circle cx="78" cy="14" r="4" fill="#80d8ff"/><circle cx="78" cy="14" r="10" fill="#80d8ff" opacity=".15"/>
+              <g fill="#f2b46a"><circle cx="186" cy="124" r="3"/><circle cx="212" cy="120" r="4"/><circle cx="238" cy="125" r="2.5"/><circle cx="262" cy="121" r="3.5"/></g>
+              <text x="78" y="150" text-anchor="middle" style="font:11px var(--f-body);fill:var(--faint)">Platón · Timeo</text>
+              <text x="220" y="150" text-anchor="middle" style="font:11px var(--f-body);fill:var(--faint)">Aristóteles · Ética</text>
+            </svg>
+            <blockquote>«Siendo ambos amigos, es piadoso preferir la verdad.»</blockquote>
+            <figcaption>Ética Nicomáquea I 6, 1096a16 · la raíz del proverbio <i>amicus Plato, sed magis amica veritas</i></figcaption>
+            <p>Lo escribe justo antes de criticar la Idea del Bien de su maestro. La discrepancia, como forma de lealtad. Rafael fijó estas dos direcciones en <i>La escuela de Atenas</i>: uno con el <i>Timeo</i> y el dedo hacia el cielo; el otro con la <i>Ética</i> y la mano extendida sobre el mundo.</p>
+            <button type="button" class="chip umbral-go" data-umbral>Volver a El Umbral ↑</button>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="apTitle">
+        <div class="sec-head">
+          <div class="kicker">Aporías · nudos y sombras</div>
+          <h2 id="apTitle">Donde el paseo tropieza</h2>
+          <p>Aristóteles llama <i>aporía</i> a un camino sin salida que obliga a pensar. Cuatro nudos que dejó abiertos o desató a su manera, y dos sombras que conviene mirar sin disculpas.</p>
+        </div>
+        <div class="dilemmas" id="lyAp"></div>
+      </section>
+
+      <section aria-labelledby="lyConTitle">
+        <div class="sec-head">
+          <div class="kicker">Dirección de arte</div>
+          <h2 id="lyConTitle">Del concepto al código</h2>
+          <p>Las cuatro escenas parten de estas imágenes de concepto y de la misma gramática que El Umbral: negro absoluto, líneas de luz y resplandor (<i>bloom</i>). Aquí la paleta gira del cian platónico al oro del polvo y al cristal de la forma.</p>
+        </div>
+        <div class="concept">
+          <figure><img src="assets/img/causas.webp" alt="Imagen de concepto: duna de polvo dorado, un cristal de alambre que brota de ella, un haz lateral y, arriba, un orbe dorado con anillos" decoding="async" loading="lazy"><figcaption><b>Las cuatro causas</b><span>Duna de <code>Points</code> que migra hacia las aristas de un cristal en <code>LineSegments</code>; haz eficiente lateral; orbe final con anillos.</span><button type="button" class="go" data-ly="causas">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="assets/img/silogismo.webp" alt="Imagen de concepto: corredor de retícula azul con prismas ámbar flotando y un haz blanco en el punto de fuga" decoding="async" loading="lazy"><figcaption><b>El silogismo</b><span>Corredor ortogonal, diez prismas categoriales y dos planos que se cortan en el término medio; de ahí sale el láser de la conclusión.</span><button type="button" class="go" data-ly="silogismo">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="assets/img/motor.webp" alt="Imagen de concepto: anillos de polvo dorado alrededor de una esfera y un punto de luz inmóvil hacia el que convergen hilos" decoding="async" loading="lazy"><figcaption><b>El motor inmóvil</b><span>Cincuenta y cinco anillos de éter con velocidades propias, núcleo de cuatro elementos y un punto que no se mueve.</span><button type="button" class="go" data-ly="motor">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="assets/img/catarsis.webp" alt="Imagen de concepto: estallido de partículas rojas, un haz dorado horizontal y un flujo laminar cian" decoding="async" loading="lazy"><figcaption><b>Trama y catarsis</b><span>Dos fuerzas de distinta esencia: columna turbulenta de páthos en <code>Points</code> y haz rectilíneo de la trama. En la colisión, las partículas cambian de régimen y salen en flujo laminar cian. Un solo destello suave, sin estroboscopio.</span><button type="button" class="go" data-ly="catarsis">Abrir la escena ↑</button></figcaption></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="lyTalTitle">
+        <div class="sec-head">
+          <div class="kicker">Para el aula</div>
+          <h2 id="lyTalTitle">Sugerencias para el taller</h2>
+          <p>Cuatro ejercicios que llevan a Aristóteles al objeto, la pantalla y la campaña.</p>
+        </div>
+        <ol class="um-taller ly-taller">
+          <li><b>Las cuatro causas de tu teléfono</b><span class="ref">Física II 3</span><p>¿De qué está hecho, qué forma lo define, quién o qué lo produjo y para qué existe? Luego pregunta por la causa final de una aplicación concreta: ¿coincide la que declara con la que realmente persigue?</p></li>
+          <li><b>Silogismos del algoritmo</b><span class="ref">Primeros Analíticos I 4 · Refutaciones sofísticas</span><p>Recoge cinco titulares o anuncios. Reconstruye el silogismo implícito y localiza el término medio. ¿Cuántos esconden un término medio no distribuido?</p></li>
+          <li><b>Tu término medio</b><span class="ref">Ética Nicomáquea II 6</span><p>Elige un hábito digital, como el tiempo de pantalla o la exposición en redes. Nombra el vicio por exceso y por defecto, y describe dónde está tu medio, no el de todos.</p></li>
+          <li><b>Peripecia en sesenta segundos</b><span class="ref">Poética 10–11</span><p>Escribe el guion de una pieza breve de vídeo con nudo, peripecia y anagnórisis que coincidan. ¿Qué emoción queda al final? ¿Es catarsis o solo clic?</p></li>
+        </ol>
+        <p class="src-note"><b>Procedencia.</b> Categorías, Sobre la interpretación, Primeros Analíticos, Física, Sobre el cielo, Metafísica, Partes de los animales, Ética Nicomáquea, Política y Poética: paráfrasis propias y citas breves en traducción orientativa, con numeración Bekker. La anécdota de Calcis procede de la tradición biográfica antigua. Texto base del concepto: <i>gemini-code-1790759978095.md</i>. Pendiente de revisión editorial humana.</p>
+      </section>
+    </div>
+  </section>
+
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v0.6 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto.</p>
+    <p><b>Grecia Eterna</b> · prototipo v0.7 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -1758,6 +2071,7 @@ function renderCodex(keepScroll){
     </figure>
     ${s.note?`<p class="c-note">${esc(s.note)}</p>`:""}
     ${s.id==="platon"?`<button type="button" class="chip umbral-go" data-umbral>Entrar en El Umbral: la Caverna, Er y la Atlántida en 3D ↓</button>`:""}
+    ${s.id==="aristoteles"?`<button type="button" class="chip liceo-go" data-liceo>Entrar en El Liceo: causas, silogismo, motor inmóvil y catarsis en 3D ↓</button>`:""}
     ${state.mirada<0?ploBlock(s):""}
     ${dcBlock(s)}
     ${CITY[CITY_AT[s.id]]?`<div class="city"><p class="c-sub">La ciudad según De Crescenzo · ${esc(PLACES[CITY_AT[s.id]].es)}</p><p>${esc(CITY[CITY_AT[s.id]].t)}</p><span>${esc(CITY[CITY_AT[s.id]].ref)}</span></div>`:""}
@@ -3281,5 +3595,795 @@ try{ GL=initGL(); }catch(err){ GL=null; view.classList.add("um-nogl"); }
 UM.show("caverna",0);
 })();
 </script>
+<script>
+/* =================================================================
+   v0.7 · EL LICEO · ARISTÓTELES
+   Sección propia bajo El Umbral. Cuatro escenas en Three.js r128
+   (cuatro causas, silogismo, motor inmóvil, trama y catarsis) con
+   UnrealBloom cuando está disponible; categorías, término medio,
+   maestro y discípulo, aporías y taller en la sala inferior.
+   Sin estroboscopios: el quiebre trágico usa un único destello suave.
+   ================================================================= */
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const smooth=t=>t*t*(3-2*t);
+const lerp=(a,b,t)=>a+(b-a)*t;
+
+/* ---------------- 1. DATOS ---------------- */
+const SCENES={
+ causas:{id:"causas", title:"Las cuatro causas", gr:"αἱ τέσσαρες αἰτίαι", ref:"Física II 3, 194b16–195a3 · Metafísica Δ 2", cat:"Física · hilemorfismo", sub:"materia · forma · potencia · acto",
+  arg:"Conocer algo es conocer su porqué, y el porqué se dice de cuatro maneras: aquello de lo que está hecho, lo que es, lo que lo produjo y aquello para lo que existe. Ninguna basta sola. Aristóteles las aplica igual a una estatua que a un roble o a un ojo.",
+  sense:"Frente a Platón, la forma no está separada: es la organización de una materia concreta. El cambio deja de ser apariencia y se vuelve inteligible como paso de la potencia al acto. En Lesbos, Aristóteles lleva el método a la biología: en todo lo natural, escribe, hay algo digno de asombro, como Heráclito recibiendo a sus visitas junto al horno de la cocina (Partes de los animales I 5, 645a17).",
+  steps:[
+   {t:"La materia", k:"ὕλη · causa material", x:"¿De qué está hecho? El bronce de la estatua, la plata de la copa. Aquí, una duna de polvo dorado: puede llegar a ser muchas cosas y todavía no es ninguna. Es potencia (dýnamis) sin forma, un «todavía no» que brilla.", q:"Aquello de lo que algo se hace y que permanece en ello, como el bronce en la estatua.", qref:"Física II 3, 194b24 · paráfrasis"},
+   {t:"El agente", k:"ἀρχὴ τῆς κινήσεως · causa eficiente", x:"¿Qué lo pone en marcha? El escultor respecto de la estatua, el padre respecto del hijo, quien aconseja respecto de lo que se hace. El haz lateral es el agente: sin él, el polvo seguiría quieto. Mira cómo empieza a levantarse.", q:"Aquello de donde procede el primer principio del cambio o del reposo.", qref:"Física II 3, 194b29–30"},
+   {t:"La forma", k:"εἶδος · causa formal", x:"¿Qué es? La forma, la definición de su esencia. Las partículas no se convierten en otra cosa: se ordenan. El cristal estaba en el polvo como la estatua en el bronce, en potencia. Arrastra el control y verás que la forma no viene de fuera: se actualiza.", q:"La forma y el modelo, es decir, la definición de lo que es.", qref:"Física II 3, 194b26–27"},
+   {t:"El fin", k:"τέλος · causa final", x:"¿Para qué? La salud es la causa del paseo; la bellota tiende al roble y el ojo, a ver. El orbe no empuja: atrae. Cuando algo alcanza su forma plena, Aristóteles habla de entelequia, «tener el fin dentro». El haz vertical une la obra con aquello hacia lo que tiende.", q:"La naturaleza no hace nada en vano.", qref:"Sobre el cielo I 4, 271a33", go:"aristoteles", goL:"Aristóteles en Lesbos"}
+  ]},
+ silogismo:{id:"silogismo", title:"El silogismo", gr:"ὁ συλλογισμός", ref:"Categorías 4 · Primeros Analíticos I 1–4", cat:"Lógica · Órganon", sub:"categorías · premisas · término medio",
+  arg:"El Órganon, «instrumento», no es una ciencia más sino la herramienta de todas. Empieza por lo que se dice (las categorías), sigue por cómo se afirma o se niega (Sobre la interpretación) y culmina en el silogismo: la forma de razonamiento que no puede fallar si las premisas son verdaderas.",
+  sense:"Por primera vez alguien separa la forma de un argumento de su contenido y la escribe con letras, como un geómetra. Durante dos mil años, hasta Frege, la lógica será en lo esencial aristotélica. El célebre «Sócrates es mortal» no es suyo: lo añadió la tradición escolar.",
+  steps:[
+   {t:"Los diez modos de decir", k:"κατηγορίαι", x:"Antes de razonar hay que saber qué se dice. Aristóteles clasifica lo que puede predicarse de algo en diez géneros: sustancia, cantidad, cualidad, relación, lugar, tiempo, posición, estado, acción y pasión. La primera es la base, el individuo concreto; las otras nueve le suceden. Son los diez prismas del corredor.", q:"Lugar, por ejemplo, «en el Liceo»; tiempo, «ayer».", qref:"Categorías 4, 2a1–2", cats:true},
+   {t:"La premisa mayor", k:"Todo B es A", x:"Aristóteles no construye el sistema con ejemplos: usa letras. El primer plano de luz fija una relación universal entre dos términos. «Todo hombre es mortal»: el término mayor, mortal, abarca al medio, hombre.", q:"Si A se predica de todo B…", qref:"Primeros Analíticos I 4, 25b37"},
+   {t:"La premisa menor", k:"Todo C es B · término medio", x:"El segundo plano corta al primero. La línea donde se cruzan es el término medio: aparece en las dos premisas y desaparece en la conclusión. Sin ese cruce no hay inferencia. Prueba a separar los planos con el control del panel.", q:"… y B de todo C, es necesario que A se predique de todo C.", qref:"Primeros Analíticos I 4, 25b38–39"},
+   {t:"La conclusión", k:"Todo C es A", x:"Del cruce sale un haz rectilíneo, necesario, hacia ti: todo C es A. Los lógicos medievales llamarán Barbara a este modo. Con el término medio sin distribuir, los planos no se tocan y el haz no tiene de dónde salir, aunque las tres frases suenen verosímiles.", q:"Puestas ciertas cosas, se sigue necesariamente algo distinto de ellas por el hecho de ser tales.", qref:"Primeros Analíticos I 1, 24b18–20"}
+  ]},
+ motor:{id:"motor", title:"El motor inmóvil", gr:"τὸ πρῶτον κινοῦν ἀκίνητον", ref:"Física VIII · Sobre el cielo I–IV · Metafísica Λ 6–9", cat:"Cosmología · teología", sub:"elementos · éter · esferas · primer motor",
+  arg:"Un universo esférico, eterno y finito. Bajo la Luna, cuatro elementos que nacen, mueren y se mueven en línea recta hacia su lugar natural. Sobre la Luna, el éter, que solo gira. Y más allá de todo, un principio que mueve sin moverse, porque su única actividad es pensar.",
+  sense:"La cosmología que gobernará el cielo europeo y árabe hasta Copérnico, y la teología que Tomás de Aquino convertirá en la primera vía. Platón había imaginado en el mito de Er un huso de ocho torteras que giran; Aristóteles hace de las esferas una máquina física y las multiplica para salvar los fenómenos.",
+  steps:[
+   {t:"Bajo la Luna", k:"τὰ στοιχεῖα · los cuatro elementos", x:"Aquí todo nace y muere. Cuatro elementos, cada uno con su lugar natural: la tierra en el centro, luego el agua, el aire y, arriba, el fuego. Por eso la piedra cae y la llama sube. Movimiento rectilíneo, que empieza y acaba: ámbar hacia dentro, carmesí hacia fuera.", q:"Lo pesado se mueve hacia el centro; lo ligero, hacia el extremo.", qref:"Sobre el cielo IV 4 · paráfrasis"},
+   {t:"Las esferas de éter", k:"αἰθήρ · el quinto cuerpo", x:"Sobre la Luna, un quinto cuerpo, el éter, que ni nace ni perece y solo conoce el movimiento circular, perfecto porque no tiene contrario. Siguiendo a Eudoxo y a Calipo, Aristóteles encaja esferas dentro de esferas, cada una con su eje y su velocidad, para dar cuenta de los astros.", q:"El número de todas las esferas será de cincuenta y cinco.", qref:"Metafísica Λ 8, 1074a11–12", ctrl:true},
+   {t:"El primer motor", k:"κινεῖ ὡς ἐρώμενον", x:"Todo lo que se mueve es movido por otro. Para no retroceder al infinito, hace falta un primer motor que mueva sin ser movido. No empuja: atrae, como lo deseado atrae al que desea. Los hilos de luz no bajan de él; suben hacia él. Las esferas giran por amor a una perfección que no las mira.", q:"Mueve como lo amado.", qref:"Metafísica Λ 7, 1072b3"},
+   {t:"Pensamiento de pensamiento", k:"νόησις νοήσεως", x:"¿Qué hace el motor? Solo puede pensar lo mejor, y lo mejor es él mismo. Es el único punto de esta escena que no se mueve ni parpadea. Diecisiete siglos después, Dante cerrará la Comedia con su eco: «l’amor che move il sole e l’altre stelle».", q:"Su pensamiento es pensamiento de pensamiento.", qref:"Metafísica Λ 9, 1074b34"}
+  ]},
+ catarsis:{id:"catarsis", title:"Trama y catarsis", gr:"μῦθος καὶ κάθαρσις", ref:"Poética 6–11, 18", cat:"Poética · teoría de la ficción", sub:"páthos contra mythos · colisión · catarsis",
+  arg:"La tragedia imita una acción seria y completa. Su alma es la trama (mythos), la disposición de los hechos: principio, medio y fin, ligados por lo necesario o lo verosímil. Su efecto propio, mediante compasión y temor, es la catarsis de esas emociones.",
+  sense:"Es la respuesta a Platón, que en la República X expulsaba a los poetas por despertar las pasiones. Para Aristóteles, la ficción no es copia de una copia: construye lo posible y, al hacerlo, enseña lo universal. De aquí salen dos milenios de dramaturgia y buena parte del guion contemporáneo.",
+  steps:[
+   {t:"Dos fuerzas", k:"μίμησις · μῦθος", x:"Una tragedia pone frente a frente dos fuerzas de esencia distinta. Desde la derecha avanza la trama: una línea recta, dorada, que solo se mueve por necesidad o verosimilitud, con principio, medio y fin. A la izquierda, en el suelo, rescoldos: lo que la acción va a despertar en quien mira. No imita lo que pasó, construye lo que podría pasar: por eso la poesía es más filosófica que la historia.", q:"La poesía dice más bien lo general; la historia, lo particular.", qref:"Poética 9, 1451b5–7"},
+   {t:"El nudo · el páthos se levanta", k:"δέσις · ἔλεος καὶ φόβος", x:"Mientras la trama se acerca sin tocarla, el páthos sube en columna: compasión por quien sufre sin merecerlo, temor porque podría ser uno de nosotros. No tiene forma ni dirección, solo remolino. Todo lo que va del principio hasta el giro de fortuna es el nudo.", q:"La compasión es por el que no merece su desgracia; el temor, por el que es semejante a nosotros.", qref:"Poética 13, 1453a4–6"},
+   {t:"La colisión", k:"περιπέτεια · ἀναγνώρισις", x:"La trama alcanza al páthos. Peripecia: la acción gira hacia lo contrario. Anagnórisis: alguien pasa de la ignorancia al conocimiento. En Edipo rey coinciden: el mensajero llega para librarlo del miedo y, al revelar quién es, provoca lo contrario. En el punto de impacto el páthos salpica, y las primeras partículas empiezan a cambiar de naturaleza.", q:"El reconocimiento más bello es el que se da a la vez que la peripecia, como en el Edipo.", qref:"Poética 11, 1452a32–33"},
+   {t:"Catarsis", k:"λύσις · κάθαρσις", x:"Lo que atraviesa el punto de colisión ya no se dispersa: sale ordenado, laminar, en otro color. La emoción no desaparece; es la misma materia, pero con forma. Qué es exactamente la catarsis se discute desde hace siglos: purga médica, purificación moral, clarificación intelectual. La escena la dibuja como transformación y deja abierta la interpretación.", q:"… mediante compasión y temor lleva a cabo la purificación de tales afecciones.", qref:"Poética 6, 1449b27–28", replay:true}
+  ]}
+};
+const ORDER=["causas","silogismo","motor","catarsis"];
+
+const CATS=[
+ {id:"sus", es:"Sustancia", gr:"οὐσία", q:"¿qué es?", ex:"hombre, caballo", x:"Sócrates: este hombre concreto. Es la sustancia primera, lo único que existe por sí; todo lo demás se dice de ella o está en ella."},
+ {id:"can", es:"Cantidad", gr:"ποσόν", q:"¿cuánto?", ex:"de dos codos, de tres codos", x:"Bajo de estatura: una medida. Aristóteles pone el ejemplo de «dos codos»."},
+ {id:"cua", es:"Cualidad", gr:"ποιόν", q:"¿cómo es?", ex:"blanco, gramático", x:"Chato: una cualidad del cuerpo. La tradición lo describe con nariz chata y ojos saltones."},
+ {id:"rel", es:"Relación", gr:"πρός τι", q:"¿respecto de qué?", ex:"doble, mitad, mayor", x:"Más viejo que Platón: solo se entiende con otro término. Nadie es «más viejo» a secas."},
+ {id:"lug", es:"Lugar", gr:"ποῦ", q:"¿dónde?", ex:"en el Liceo, en el ágora", x:"En el ágora. El ejemplo de Aristóteles es su propia escuela: «en el Liceo»."},
+ {id:"tie", es:"Tiempo", gr:"πότε", q:"¿cuándo?", ex:"ayer, el año pasado", x:"Ayer: una ubicación en el tiempo."},
+ {id:"pos", es:"Posición", gr:"κεῖσθαι", q:"¿en qué postura?", ex:"está echado, está sentado", x:"De pie: la disposición de las partes del cuerpo."},
+ {id:"est", es:"Estado", gr:"ἔχειν", q:"¿qué tiene puesto?", ex:"está calzado, está armado", x:"Descalzo: el ejemplo aristotélico es justamente «está calzado». Sócrates, famoso por andar descalzo, cae en esta categoría por privación."},
+ {id:"acc", es:"Acción", gr:"ποιεῖν", q:"¿qué hace?", ex:"corta, quema", x:"Pregunta: una actividad que parte del sujeto."},
+ {id:"pas", es:"Pasión", gr:"πάσχειν", q:"¿qué padece?", ex:"es cortado, es quemado", x:"Es escuchado: algo que el sujeto recibe. Acción y pasión son dos caras del mismo cambio."}
+];
+const SENT=[["Sócrates","sus"],", ",["bajo de estatura","can"]," y ",["chato","cua"],", ",["más viejo que Platón","rel"],", ",["en el ágora","lug"],", ",["ayer","tie"],", ",["de pie","pos"]," y ",["descalzo","est"],", ",["pregunta","acc"]," y ",["es escuchado","pas"],"."];
+
+const VIRT=[
+ {v:"Valentía", d:"cobardía", e:"temeridad", m:58, n:"El medio se inclina hacia la temeridad: se parece más a la valentía que la cobardía (II 8, 1108b19–26)."},
+ {v:"Templanza", d:"insensibilidad", e:"intemperancia", m:40, n:"Aquí el vicio más opuesto es el exceso; por eso el medio queda más cerca de la insensibilidad, un vicio que Aristóteles considera raro (II 8, 1109a3–5)."},
+ {v:"Liberalidad", d:"avaricia", e:"prodigalidad", m:58, n:"El pródigo se parece más al liberal que el avaro, y es más fácil de curar (IV 1, 1121a19–30)."},
+ {v:"Magnanimidad", d:"pusilanimidad", e:"vanidad", m:56, n:"La pusilanimidad se opone más a la grandeza de alma que la vanidad (IV 3, 1125a32–34)."},
+ {v:"Mansedumbre", d:"indolencia", e:"irascibilidad", m:44, n:"El exceso es más frecuente y más opuesto; el medio se acerca al defecto sin tocarlo (IV 5, 1126a29–31)."},
+ {v:"Veracidad", d:"ironía", e:"jactancia", m:44, n:"El defecto se llama eirōneía, la falsa modestia; Aristóteles cita a Sócrates. El jactancioso es peor (IV 7, 1127b22–31)."}
+];
+
+const APOR=[
+ {t:"La batalla naval de mañana", src:"Sobre la interpretación 9, 18b–19b", p:"¿Es ya verdadero, o falso, hoy, que mañana habrá una batalla naval?", i:"Si lo fuera, todo estaría decidido y deliberar sería inútil. Aristóteles sostiene que es necesario que mañana haya o no haya batalla, pero no que la haya. El debate sobre los futuros contingentes llega hasta la lógica modal del siglo XX.",
+  ch:[["Sí, ya es verdad o mentira","Es la vía del fatalismo que Aristóteles quiere evitar: si ya es verdad, la batalla ocurrirá hagamos lo que hagamos."],["Todavía no lo es","Es su respuesta: la disyunción entera es necesaria, pero cada lado queda abierto hasta que el futuro se decida."]]},
+ {t:"Aquiles y el infinito", src:"Física III 6 · VI 9, 239b14–29", p:"Zenón dice que Aquiles nunca alcanzará a la tortuga: siempre le quedará medio camino por recorrer.", i:"Aristóteles distingue el infinito en potencia del infinito en acto. Un tramo puede dividirse sin fin, pero nunca está dividido en infinitas partes actuales. Aquiles recorre un continuo, no una lista.", go:"zenon", goL:"Zenón de Elea"},
+ {t:"La acrasia", src:"Ética Nicomáquea VII 2–3, 1145b21–1147b19", p:"¿Puede alguien saber qué es lo mejor y, aun así, hacer lo contrario?", i:"Aristóteles no niega el conocimiento: explica que el deseo puede dejarlo dormido, como en el borracho que recita versos de Empédocles sin entenderlos.",
+  ch:[["No: quien sabe, obra bien","Es la tesis de Sócrates: nadie hace el mal a sabiendas; el que falla, en realidad ignora."],["Sí, se puede saber y fallar","Es la posición de Aristóteles, que parte de «lo que parece» a todos: la debilidad de la voluntad existe y hay que explicarla."]]},
+ {t:"¿Por qué caen las piedras?", src:"Física IV 8, 215a–216a · Sobre el cielo I 6", p:"Si soltamos a la vez una piedra pesada y otra ligera, ¿cuál llega antes al suelo?", i:"Aristóteles sostuvo que el cuerpo más pesado cae más deprisa, en proporción a su peso, y que el vacío es imposible. Galileo lo refutó dos mil años después. También así avanza la ciencia: con un maestro al que corregir.",
+  ch:[["La más pesada","Es la respuesta de Aristóteles, coherente con su física de lugares naturales y con la experiencia en el aire o el agua."],["Las dos a la vez","Es la respuesta de Galileo: en el vacío, que Aristóteles negaba, todos los cuerpos caen con la misma aceleración."]]},
+ {t:"El esclavo «por naturaleza»", src:"Política I 4–6, 1254a–1255b", shadow:true, p:"Aristóteles defiende que hay seres humanos que son por naturaleza de otro, y que para ellos la esclavitud es justa.", i:"Una sombra, no un nudo. Él mismo recoge que otros ya la consideraban contraria a la naturaleza y fruto de la fuerza. Leerlo hoy exige las dos cosas a la vez: reconocer la grandeza del sistema y señalar dónde sirvió para justificar la injusticia."},
+ {t:"La mujer y la biología", src:"Política I 13, 1260a · Generación de los animales II 3, 737a", shadow:true, p:"El biólogo más atento de la Antigüedad describe a la hembra como un macho incompleto y concede a la mujer una deliberación «sin autoridad».", i:"La observación se detiene donde empiezan los prejuicios de su ciudad. Es un buen caso para el aula: ¿qué vieron sus ojos y qué pusieron sus supuestos?"}
+];
+
+/* ---------------- 2. SALA INFERIOR ---------------- */
+function toStage(){ $("#lyStage").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); }
+
+(function buildCats(){
+  const sent=$("#catSent"), host=$("#cats"), out=$("#catOut");
+  sent.innerHTML=SENT.map(p=>Array.isArray(p)?`<button type="button" data-cat="${p[1]}" aria-pressed="false">${esc(p[0])}</button>`:esc(p)).join("");
+  host.innerHTML=CATS.map((c,i)=>`<button type="button" data-cat="${c.id}" aria-pressed="false"><span class="n">${String(i+1).padStart(2,"0")}</span><b>${esc(c.es)}</b><span class="g" lang="grc">${c.gr}</span><span class="qq">${esc(c.q)}</span></button>`).join("");
+  function pick(id){
+    document.querySelectorAll("#catSent [data-cat],#cats [data-cat]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.cat===id)));
+    const c=CATS.find(x=>x.id===id);
+    out.innerHTML=`${esc(c.x)}<small>Ejemplos de Aristóteles: ${esc(c.ex)} · Categorías 4, 1b25–2a4</small>`;
+  }
+  sent.addEventListener("click",e=>{ const b=e.target.closest("[data-cat]"); if(b) pick(b.dataset.cat); });
+  host.addEventListener("click",e=>{ const b=e.target.closest("[data-cat]"); if(b) pick(b.dataset.cat); });
+  pick("sus");
+})();
+
+(function buildMeso(){
+  const vHost=$("#mesoV"), inp=$("#mesoIn"), zone=$("#mesoZone"), out=$("#mesoOut");
+  let cur=0; const W=12;
+  vHost.innerHTML=VIRT.map((v,i)=>`<button type="button" data-v="${i}" aria-pressed="${i===0}">${esc(v.v)}</button>`).join("");
+  function render(){
+    const v=VIRT[cur], x=+inp.value, lo=v.m-W/2, hi=v.m+W/2;
+    zone.style.left=lo+"%"; zone.style.width=W+"%";
+    $("#mesoD").textContent=v.d; $("#mesoE").textContent=v.e;
+    const inZone=x>=lo&&x<=hi;
+    out.classList.toggle("ok",inZone);
+    let h;
+    if(inZone) h=`<h3>${esc(v.v)}</h3><p>${esc(v.n)}</p>`;
+    else if(x<lo) h=`<h3>${x<lo-22?esc(v.d[0].toUpperCase()+v.d.slice(1)):"Todavía por defecto"}</h3><p>Demasiado cerca de la ${esc(v.d)}. Desliza hacia el exceso, pero no hasta la mitad: el medio está en el ${v.m}%.</p>`;
+    else h=`<h3>${x>hi+22?esc(v.e[0].toUpperCase()+v.e.slice(1)):"Ya por exceso"}</h3><p>Te acercas a la ${esc(v.e)}. El medio de la ${esc(v.v.toLowerCase())} no coincide con la mitad aritmética.</p>`;
+    out.innerHTML=h;
+    inp.setAttribute("aria-valuetext",inZone?v.v:(x<lo?v.d:v.e));
+  }
+  vHost.addEventListener("click",e=>{ const b=e.target.closest("[data-v]"); if(!b) return; cur=+b.dataset.v; vHost.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b))); inp.value=50; render(); });
+  inp.addEventListener("input",render);
+  render();
+})();
+
+$("#lyAp").innerHTML=APOR.map((d,k)=>`<article class="dil${d.shadow?" shadow":""}">
+  <span class="src">${esc(d.src)}</span><h3>${esc(d.t)}</h3><p class="pq">${esc(d.p)}</p>
+  ${d.ch?`<div class="choose" role="group" aria-label="Elige una respuesta">${d.ch.map((c,j)=>`<button type="button" data-a="${k}" data-c="${j}" aria-pressed="false">${esc(c[0])}</button>`).join("")}</div><p class="ans" id="lyAns${k}" aria-live="polite"></p>`:""}
+  <p class="im"><b>${d.shadow?"Lectura crítica":"Implicación"}</b>${esc(d.i)}</p>
+  ${d.go?`<button type="button" class="chip" data-fly-station="${d.go}">${esc(d.goL)} ↗</button>`:""}
+</article>`).join("");
+$("#lyAp").addEventListener("click",e=>{
+  const b=e.target.closest("[data-a]"); if(!b) return; const d=APOR[+b.dataset.a], j=+b.dataset.c;
+  b.parentElement.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  $("#lyAns"+b.dataset.a).textContent=d.ch[j][1];
+});
+
+document.addEventListener("click",e=>{
+  const l=e.target.closest("[data-liceo]"); if(l){ e.preventDefault(); $("#liceo").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); return; }
+  const g=e.target.closest("[data-ly]"); if(g){ e.preventDefault(); LY.show(g.dataset.ly,+(g.dataset.lyStep||0)); toStage(); }
+});
+
+/* ---------------- 3. PANEL Y PESTAÑAS ---------------- */
+const st={scene:"causas", step:0, morph:0, morphGoal:0, valid:true, validK:1, all55:true, allK:1, catP:0, catGoal:0, replaying:false};
+const panelIn=$("#lyPanelIn"), tabs=[...document.querySelectorAll("#lyTabs [role=tab]")];
+function ctrlHTML(S,s){
+  if(S.id==="causas") return `<div class="ly-ctrl"><label for="lyMorph">De la potencia al acto</label><input type="range" id="lyMorph" min="0" max="100" step="1" value="${Math.round(st.morphGoal*100)}" aria-valuetext="${Math.round(st.morphGoal*100)} %"><div class="sc"><span lang="grc">δύναμις</span><span>entelequia</span><span lang="grc">ἐνέργεια</span></div></div>`;
+  if(S.id==="silogismo" && st.step>0){
+    const v=st.valid;
+    return `<div class="ly-ctrl${v?"":" bad"}"><span class="lbl">Forma del razonamiento</span><div class="seg" role="group" aria-label="Forma del razonamiento"><button type="button" data-valid="1" aria-pressed="${v}">Barbara · válido</button><button type="button" data-valid="0" aria-pressed="${!v}">Término medio sin distribuir</button></div>
+      <p>${v?"<b>Todo hombre es mortal.</b> Sócrates es hombre. <b>Luego Sócrates es mortal.</b>":"<b>Todo perro es mamífero.</b> Todo gato es mamífero. <b>Luego todo gato es perro.</b>"}</p>
+      <p>${v?"El término medio, <i>hombre</i>, se toma universalmente en la mayor: los planos se cortan.":"<i>Mamífero</i> nunca se toma en toda su extensión: los planos quedan paralelos y la conclusión no se sigue."}</p></div>`;
+  }
+  if(S.id==="motor" && st.step>0) return `<div class="ly-ctrl"><span class="lbl">Esferas</span><div class="seg" role="group" aria-label="Número de esferas"><button type="button" data-all="1" aria-pressed="${st.all55}">Las 55 de Aristóteles</button><button type="button" data-all="0" aria-pressed="${!st.all55}">Solo los 8 cielos</button></div><p>Platón, en el mito de Er, imaginaba ocho torteras en el huso de la Necesidad.</p><p><button type="button" class="chip" data-er>Compararlo con el huso de Er ↑</button></p></div>`;
+  if(S.id==="catarsis") return `<div class="ly-ctrl"><span class="lbl">La función</span><p>Recorre la tragedia entera a su propio ritmo: la trama avanza, el páthos crece, chocan y se ordena.</p><p><button type="button" class="chip liceo-go" data-play>▶ Representar de principio a fin</button></p></div>`;
+  return "";
+}
+function renderPanel(){
+  const S=SCENES[st.scene], s=S.steps[st.step], last=st.step===S.steps.length-1;
+  panelIn.innerHTML=`
+    <div class="um-cat"><span class="um-tag">${esc(S.cat)}</span><span>${esc(S.sub)}</span></div>
+    <div class="um-head"><h3>${esc(S.title)}</h3><div class="gr" lang="grc">${esc(S.gr)}</div><div class="um-cat" style="margin-top:6px">${esc(S.ref)}</div></div>
+    <div class="um-steps">${S.steps.map((x,i)=>`<button type="button" data-step="${i}" aria-label="Paso ${i+1}: ${esc(x.t)}"${i===st.step?' aria-current="step"':""} class="${i<st.step?"done":""}"><i></i></button>`).join("")}</div>
+    <div class="um-step">
+      <span class="n">Paso ${st.step+1} de ${S.steps.length}${s.k?` · <span lang="grc" style="text-transform:none;letter-spacing:.02em">${esc(s.k)}</span>`:""}</span>
+      <h4>${esc(s.t)}</h4><p>${esc(s.x)}</p>
+      ${s.q?`<p class="q">${esc(s.q)}<small>${esc(s.qref)}</small></p>`:""}
+      ${s.cats?`<p class="ln"><b>Sala de lectura</b><button type="button" data-gocats>Todo lo que se puede decir de Sócrates ↓</button></p>`:""}
+    </div>
+    ${ctrlHTML(S,s)}
+    <div class="um-nav">
+      <button type="button" class="ctl" data-nav="-1"${st.step===0?" disabled":""}>‹ Anterior</button>
+      <button type="button" class="ctl" data-nav="1">${last?"Siguiente escena →":"Siguiente ›"}</button>
+      ${s.go?`<button type="button" class="chip" data-fly-station="${s.go}">${esc(s.goL)} ↗</button>`:""}
+    </div>
+    <details class="um-more"><summary>Argumento y sentido</summary><p><b>Argumento.</b> ${esc(S.arg)}</p><p><b>Cruce.</b> ${esc(S.sense)}</p></details>`;
+  tabs.forEach(t=>{ const on=t.dataset.scene===st.scene; t.setAttribute("aria-selected",String(on)); t.tabIndex=on?0:-1; });
+  $("#lyPanel").setAttribute("aria-labelledby","lyTab-"+st.scene);
+  $("#lyReplay").hidden=st.scene!=="catarsis";
+}
+panelIn.addEventListener("click",e=>{
+  const n=e.target.closest("[data-nav]");
+  if(n){ const d=+n.dataset.nav, S=SCENES[st.scene];
+    if(st.step+d>=S.steps.length) LY.show(ORDER[(ORDER.indexOf(st.scene)+1)%ORDER.length],0);
+    else LY.show(st.scene,Math.max(0,st.step+d)); return; }
+  const s=e.target.closest("[data-step]"); if(s){ LY.show(st.scene,+s.dataset.step); return; }
+  const v=e.target.closest("[data-valid]"); if(v){ st.valid=v.dataset.valid==="1"; renderPanel(); return; }
+  const a=e.target.closest("[data-all]"); if(a){ st.all55=a.dataset.all==="1"; renderPanel(); return; }
+  if(e.target.closest("[data-play]")){ replay(); return; }
+  if(e.target.closest("[data-er]")){ if(window.GreciaUmbral){ window.GreciaUmbral.show("er",1); $("#umStage").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); } return; }
+  if(e.target.closest("[data-gocats]")){ $("#catTitle").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); }
+});
+panelIn.addEventListener("input",e=>{ if(e.target.id!=="lyMorph") return; st.morphGoal=+e.target.value/100; e.target.setAttribute("aria-valuetext",e.target.value+" %"); });
+$("#lyTabs").addEventListener("click",e=>{ const t=e.target.closest("[role=tab]"); if(t) LY.show(t.dataset.scene,0); });
+$("#lyTabs").addEventListener("keydown",e=>{
+  const i=tabs.findIndex(t=>t.dataset.scene===st.scene); let j=-1;
+  if(e.key==="ArrowRight") j=(i+1)%tabs.length; if(e.key==="ArrowLeft") j=(i+tabs.length-1)%tabs.length;
+  if(j<0) return; e.preventDefault(); LY.show(tabs[j].dataset.scene,0); tabs[j].focus();
+});
+function replay(){ if(st.scene!=="catarsis"||st.step!==3){ LY.show("catarsis",3); } st.catP=0; st.catGoal=3; st.replaying=true; if(reduced) st.catP=3; if(GL) GL.kick(); }
+$("#lyReplay").addEventListener("click",replay);
+
+const MORPH=[0,.28,1,1];
+const LY={
+  show(scene,step){
+    const changed=scene!==st.scene;
+    st.scene=scene; st.step=step;
+    if(scene==="causas"){ st.morphGoal=MORPH[step]; if(reduced) st.morph=st.morphGoal; }
+    if(scene==="catarsis"){ st.replaying=false; if(changed){ st.catP=0; } }
+    renderPanel();
+    if(GL) GL.show(scene,step,changed); else posterFor(scene);
+  }
+};
+window.GreciaLiceo=LY;
+
+/* ---------------- 4. HERRAMIENTAS 3D ---------------- */
+const stageEl=$("#lyStage"), view=$("#lyView"), canvas=$("#lyGl"), labelsEl=$("#lyLabels");
+let GL=null;
+const POSTERS={}; document.querySelectorAll(".liceo .concept img").forEach((im,k)=>{ POSTERS[ORDER[k]]=im.getAttribute("src"); });
+function posterFor(scene){ const p=$("#lyPoster"); p.src=POSTERS[scene]||""; p.alt="Imagen de concepto de "+SCENES[scene].title; }
+let glowTex=null;
+function getGlow(){
+  if(glowTex) return glowTex;
+  const c=document.createElement("canvas"); c.width=c.height=128; const g=c.getContext("2d");
+  const r=g.createRadialGradient(64,64,0,64,64,64); r.addColorStop(0,"rgba(255,255,255,1)"); r.addColorStop(.18,"rgba(255,255,255,.75)"); r.addColorStop(.45,"rgba(255,255,255,.18)"); r.addColorStop(1,"rgba(255,255,255,0)");
+  g.fillStyle=r; g.fillRect(0,0,128,128); glowTex=new THREE.CanvasTexture(c); return glowTex;
+}
+function ADD(o){ return Object.assign({transparent:true,depthWrite:false,blending:THREE.AdditiveBlending},o||{}); }
+function lineMat(hex,op){ return new THREE.LineBasicMaterial(ADD({color:hex,opacity:op})); }
+function basic(hex,op){ return new THREE.MeshBasicMaterial(ADD({color:hex,opacity:op})); }
+function glow(hex,size,op){ const s=new THREE.Sprite(new THREE.SpriteMaterial(ADD({map:getGlow(),color:hex,opacity:op==null?1:op}))); s.scale.set(size,size,1); return s; }
+function holoMat(hex,op){
+  return new THREE.ShaderMaterial(ADD({uniforms:{uC:{value:new THREE.Color(hex)},uO:{value:op==null?1:op}},
+    vertexShader:`varying vec3 vN; varying vec3 vV; void main(){ vec4 mv=modelViewMatrix*vec4(position,1.0); vN=normalize(normalMatrix*normal); vV=normalize(-mv.xyz); gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform vec3 uC; uniform float uO; varying vec3 vN; varying vec3 vV; void main(){ float f=pow(1.0-abs(dot(normalize(vN),normalize(vV))),2.0); gl_FragColor=vec4(uC*(0.3+1.5*f),(0.08+0.92*f)*uO); }`}));
+}
+function tube(curve,r,hex,op,seg){ return new THREE.Mesh(new THREE.TubeGeometry(curve,seg||80,r,6,false),basic(hex,op)); }
+function segs(arr,hex,op){ const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(arr,3)); return new THREE.LineSegments(g,lineMat(hex,op)); }
+function circlePts(r,y,n){ const a=[]; for(let i=0;i<n;i++){ const t=i/n*Math.PI*2, u=(i+1)/n*Math.PI*2; a.push(Math.cos(t)*r,y,Math.sin(t)*r,Math.cos(u)*r,y,Math.sin(u)*r); } return a; }
+function rnd(seed){ let s=seed>>>0||1; return ()=>{ s^=s<<13; s>>>=0; s^=s>>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
+function V(x,y,z){ return new THREE.Vector3(x,y,z); }
+/* partícula redonda con halo, tamaño en unidades del mundo */
+const PT_FRAG=`varying vec3 vC; varying float vA; void main(){ float d=length(gl_PointCoord-0.5); if(d>0.5) discard; float a=smoothstep(0.5,0.0,d); gl_FragColor=vec4(vC*(0.6+0.8*a),a*vA); }`;
+function lineTube(a,b,r,hex,op){ return tube(new THREE.LineCurve3(a,b),r,hex,op,2); }
+
+/* ---------- ESCENA · LAS CUATRO CAUSAS ---------- */
+function buildCausas(U){
+  const G=new THREE.Group(), R=rnd(11);
+  const CY=1.95; /* altura del anillo del cristal */
+  const h=(x,z)=>1.55*Math.exp(-(x*x)/34-((z+.6)*(z+.6))/9)+.28*Math.sin(x*.55+z*.9)+.18*Math.sin(x*1.7-z*1.3)-.15;
+  /* cristal: anillo hexagonal, ápice alto y ápice bajo */
+  const ring=[]; for(let i=0;i<6;i++){ const a=i/6*Math.PI*2+.26; ring.push(V(Math.cos(a)*1.35,0,Math.sin(a)*1.35*.92)); }
+  const TOP=V(0,1.3,0), BOT=V(0,-.62,0);
+  const E=[]; for(let i=0;i<6;i++){ E.push([ring[i],ring[(i+1)%6]],[TOP,ring[i]],[BOT,ring[i]]); } E.push([ring[0],ring[3]],[ring[1],ring[4]],[ring[2],ring[5]],[TOP,BOT]);
+  const crys=new THREE.Group(); crys.position.set(0,CY,0); G.add(crys);
+  const cArr=[]; E.forEach(([a,b])=>cArr.push(a.x,a.y,a.z,b.x,b.y,b.z));
+  const crysL=segs(cArr,0xc8fff8,0); crys.add(crysL);
+  const crysL2=new THREE.Group(); const edgeMat=basic(0xc8fff8,0); E.forEach(([a,b])=>crysL2.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.LineCurve3(a,b),1,.022,5,false),edgeMat))); crys.add(crysL2);
+  const apexGlow=glow(0xe8fffb,1.8,0); apexGlow.position.copy(TOP); crys.add(apexGlow);
+  const heart=glow(0xa6f0e6,3.4,0); heart.position.set(0,.2,0); crys.add(heart);
+  /* duna: partículas pasivas + activas (que migran a las aristas) */
+  const N=11000, M=1700, pos=new Float32Array(N*3), tg=new Float32Array(N*3), k=new Float32Array(N*3);
+  const lens=E.map(([a,b])=>a.distanceTo(b)), tot=lens.reduce((s,x)=>s+x,0);
+  for(let i=0;i<N;i++){
+    const act=i<M; let x,z;
+    if(act){ const r=Math.sqrt(R())*6.5, a=R()*Math.PI*2; x=Math.cos(a)*r; z=Math.sin(a)*r*.7-.4; }
+    else { x=(R()*2-1)*17; z=-10+R()*16; }
+    const y=h(x,z)+(R()-.5)*.25*(1+Math.max(0,1-Math.abs(x)/8));
+    pos[i*3]=x; pos[i*3+1]=y; pos[i*3+2]=z;
+    if(act){ let t=R()*tot, e=0; while(t>lens[e]&&e<E.length-1){ t-=lens[e]; e++; } const [a,b]=E[e], p=a.clone().lerp(b,clamp(t/lens[e],0,1));
+      tg[i*3]=p.x; tg[i*3+1]=p.y+CY; tg[i*3+2]=p.z; }
+    else { tg[i*3]=x; tg[i*3+1]=y; tg[i*3+2]=z; }
+    k[i*3]=act?1:0; k[i*3+1]=R(); k[i*3+2]=R();
+  }
+  const dG=new THREE.BufferGeometry(); dG.setAttribute("position",new THREE.BufferAttribute(pos,3)); dG.setAttribute("aT",new THREE.BufferAttribute(tg,3)); dG.setAttribute("aK",new THREE.BufferAttribute(k,3));
+  const dU={uTime:U.uTime,uScale:U.uScale,uMorph:{value:0},uWind:{value:0}};
+  const dM=new THREE.ShaderMaterial(ADD({uniforms:dU,
+    vertexShader:`attribute vec3 aT; attribute vec3 aK; uniform float uTime; uniform float uScale; uniform float uMorph; uniform float uWind; varying vec3 vC; varying float vA;
+      void main(){ vec3 p=position; p.y+=sin(uTime*0.5+p.x*0.7+aK.y*6.28)*0.04;
+        float dC=length(p.xz); float w=uWind*exp(-dC*dC/38.0);
+        p.y+=w*(0.35+0.65*sin(uTime*1.3+aK.y*20.0))*0.7; p.x-=w*(0.6+0.4*sin(uTime*0.9+aK.y*30.0))*0.45; p.z+=w*sin(uTime*1.1+aK.z*25.0)*0.25;
+        float m=clamp(uMorph*1.35-aK.y*0.35,0.0,1.0)*aK.x; m=m*m*(3.0-2.0*m);
+        vec3 q=mix(p,aT,m); q.y+=sin(m*3.14159)*1.3*aK.x;
+        float tw=0.55+0.45*sin(uTime*2.0+aK.y*50.0);
+        vC=mix(vec3(1.0,0.66,0.32),vec3(0.72,1.0,0.96),m);
+        vA=mix((0.42+0.35*tw)*(0.75+0.25*aK.z),0.5+0.3*tw,m);
+        vec4 mv=modelViewMatrix*vec4(q,1.0); gl_PointSize=mix(0.026+0.042*aK.z,0.02+0.016*aK.z,aK.x*step(0.001,uMorph))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:PT_FRAG}));
+  const dune=new THREE.Points(dG,dM); dune.frustumCulled=false; G.add(dune);
+  /* causa eficiente: haz lateral y motas que viajan por él */
+  const EF0=V(24,6.4,-7), EF1=V(.9,CY+.5,.1);
+  const efCore=lineTube(EF0,EF1,.03,0xffffff,0), efHalo=lineTube(EF0,EF1,.28,0x9fdcd6,0);
+  G.add(efCore); G.add(efHalo);
+  const efN=260, efP=new Float32Array(efN*3), efK=new Float32Array(efN);
+  for(let i=0;i<efN;i++){ efK[i]=Math.random(); }
+  const efG=new THREE.BufferGeometry(); efG.setAttribute("position",new THREE.BufferAttribute(efP,3)); efG.setAttribute("aK",new THREE.BufferAttribute(efK,1));
+  const efU={uTime:U.uTime,uScale:U.uScale,uO:{value:0},uA:{value:EF0},uB:{value:EF1}};
+  const efPts=new THREE.Points(efG,new THREE.ShaderMaterial(ADD({uniforms:efU,
+    vertexShader:`attribute float aK; uniform float uTime; uniform float uScale; uniform float uO; uniform vec3 uA; uniform vec3 uB; varying vec3 vC; varying float vA;
+      void main(){ float t=fract(uTime*0.18+aK); vec3 p=mix(uA,uB,t); p+=vec3(sin(aK*91.0+uTime),cos(aK*57.0+uTime*1.3),sin(aK*33.0))*0.22*(1.0-t);
+        vC=vec3(0.85,1.0,0.97); vA=uO*smoothstep(0.0,0.1,t)*(1.0-smoothstep(0.85,1.0,t));
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.05+0.05*fract(aK*7.0))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG})));
+  efPts.frustumCulled=false; G.add(efPts);
+  /* causa final: orbe, anillos y haz vertical */
+  const ORB=V(0,12.2,0);
+  const orbCore=new THREE.Mesh(new THREE.SphereGeometry(.42,28,18),new THREE.MeshBasicMaterial({color:0xfff4df,transparent:true,opacity:.2})); orbCore.position.copy(ORB); G.add(orbCore);
+  const orbG=glow(0xffc27a,5.5,.2), orbC=glow(0xffa24d,11,.1); orbG.position.copy(ORB); orbC.position.copy(ORB); G.add(orbG); G.add(orbC);
+  const bands=[];
+  [[.9,4,.55],[4,7.2,.3],[7.2,10.5,.16]].forEach(([r0,r1,sp],bi)=>{
+    const P=[], Rr=rnd(40+bi); const nR=bi===0?7:8;
+    for(let j=0;j<nR;j++){ const r=r0+(r1-r0)*(j+Rr())/nR; const n=Math.round(90+r*42); for(let i=0;i<n;i++){ if(Rr()<.18) continue; const a=i/n*Math.PI*2+Rr()*.02; P.push(Math.cos(a)*r,(Rr()-.5)*.03,Math.sin(a)*r); } }
+    const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(P,3));
+    const m=new THREE.Points(g,new THREE.PointsMaterial(ADD({color:0xffc98a,size:.055,opacity:.0,sizeAttenuation:true}))); m.position.copy(ORB);
+    m.userData.sp=sp*(bi%2?-1:1); m.userData.op=.9-bi*.2; G.add(m); bands.push(m);
+  });
+  const halos=[]; for(let j=0;j<7;j++){ const r=2.6+j*.62; const l=segs(circlePts(r,0,120),0xd8a060,0); l.rotation.x=Math.PI/2; l.position.copy(ORB); l.userData.op=.14-j*.012; G.add(l); halos.push(l); }
+  const upCore=lineTube(V(0,CY+1.32,0),V(0,ORB.y-.4,0),.025,0xffffff,0), upHalo=lineTube(V(0,CY+1.32,0),V(0,ORB.y-.4,0),.22,0xffd9a8,0);
+  G.add(upCore); G.add(upHalo);
+  const upN=320, upP=new Float32Array(upN*3), upK=new Float32Array(upN); for(let i=0;i<upN;i++) upK[i]=Math.random();
+  const upG=new THREE.BufferGeometry(); upG.setAttribute("position",new THREE.BufferAttribute(upP,3)); upG.setAttribute("aK",new THREE.BufferAttribute(upK,1));
+  const upU={uTime:U.uTime,uScale:U.uScale,uO:{value:0},uY0:{value:CY+1.3},uY1:{value:ORB.y}};
+  const upPts=new THREE.Points(upG,new THREE.ShaderMaterial(ADD({uniforms:upU,
+    vertexShader:`attribute float aK; uniform float uTime; uniform float uScale; uniform float uO; uniform float uY0; uniform float uY1; varying vec3 vC; varying float vA;
+      void main(){ float t=fract(uTime*0.09+aK); float r=(0.05+0.55*fract(aK*13.0))*(1.0-t*0.6); float a=aK*40.0+uTime*0.6;
+        vec3 p=vec3(cos(a)*r,mix(uY0,uY1,t),sin(a)*r); vC=mix(vec3(0.8,1.0,0.96),vec3(1.0,0.8,0.5),t);
+        vA=uO*smoothstep(0.0,0.08,t)*(1.0-smoothstep(0.9,1.0,t))*0.8;
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.03+0.04*fract(aK*5.0))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG})));
+  upPts.frustumCulled=false; G.add(upPts);
+  const labels=[
+    {t:"Causa material",s:"ὕλη · el polvo",p:[-8,1.6,2.2],steps:[0],c:"amber"},
+    {t:"Causa eficiente",s:"el agente",p:[11,5.2,-3.6],steps:[1],c:"crystal"},
+    {t:"Causa formal",s:"εἶδος · el cristal",p:[0,CY+2.1,0],steps:[2],c:"crystal"},
+    {t:"Causa final",s:"τέλος · aquello para lo que",p:[4.2,ORB.y-1.2,0],steps:[3],c:"amber"},
+    {t:"Entelequia",s:"el fin dentro",p:[2.3,CY+.2,0],steps:[3],c:"white"}
+  ];
+  const cams=[
+    {t:[0,1.6,0],d:17,az:.35,pol:1.24},
+    {t:[3.5,2.8,-1.2],d:19,az:.78,pol:1.2},
+    {t:[0,CY+.4,0],d:9.5,az:.22,pol:1.16},
+    {t:[0,7.2,0],d:25,az:.1,pol:1.47}
+  ];
+  const EFF=[.12,1,.35,.18], WIND=[.12,1,.35,.2], FIN=[.12,.2,.35,1];
+  let step=0, eff=0, fin=0, wind=0;
+  return {group:G,labels,cams,
+    enter(i){ step=i; if(reduced){ eff=EFF[i]; fin=FIN[i]; wind=WIND[i]; } },
+    bloomBoost(){ return fin*.25; },
+    update(dt,time){
+      const kk=reduced?1:1-Math.exp(-dt*1.6);
+      st.morph+=(st.morphGoal-st.morph)*(reduced?1:1-Math.exp(-dt*1.5));
+      eff+=(EFF[step]-eff)*kk; fin+=(FIN[step]-fin)*kk; wind+=(WIND[step]-wind)*kk;
+      const m=st.morph, cm=smooth(clamp((m-.35)/.6,0,1));
+      dU.uMorph.value=m; dU.uWind.value=wind;
+      crysL.material.opacity=cm*.9; edgeMat.opacity=cm; apexGlow.material.opacity=cm*(.35+.35*fin); heart.material.opacity=cm*.22;
+      crys.rotation.y=time*.08;
+      efCore.material.opacity=eff*.9; efHalo.material.opacity=eff*.08; efU.uO.value=eff;
+      orbCore.material.opacity=.15+.85*fin; orbG.material.opacity=.15+.85*fin*(.9+.1*Math.sin(time*.8)); orbC.material.opacity=(.08+.3*fin)*(.8+.2*Math.sin(time*.5));
+      orbC.scale.setScalar(11+Math.sin(time*.5)*.8);
+      bands.forEach(b=>{ b.rotation.y+=dt*b.userData.sp*.25; b.material.opacity=(.12+.88*fin)*b.userData.op; });
+      halos.forEach(l=>{ l.material.opacity=l.userData.op*fin; });
+      upCore.material.opacity=fin*cm*.95; upHalo.material.opacity=fin*cm*.07; upU.uO.value=fin*cm;
+    }};
+}
+
+/* ---------- ESCENA · EL SILOGISMO ---------- */
+function buildSilogismo(U){
+  const G=new THREE.Group(), R=rnd(5);
+  const X=6, Y=8, Z0=-62, Z1=14, C=V(0,3.4,-10);
+  /* corredor: retícula con niebla por distancia */
+  const gl=[];
+  for(let x=-X;x<=X;x+=1){ gl.push(x,0,Z0,x,0,Z1, x,Y,Z0,x,Y,Z1); }
+  for(let y=1;y<Y;y+=1){ gl.push(-X,y,Z0,-X,y,Z1, X,y,Z0,X,y,Z1); }
+  for(let z=Z0;z<=Z1;z+=2){ gl.push(-X,0,z,X,0,z, -X,Y,z,X,Y,z, -X,0,z,-X,Y,z, X,0,z,X,Y,z); }
+  const gG=new THREE.BufferGeometry(); gG.setAttribute("position",new THREE.Float32BufferAttribute(gl,3));
+  const gridU={uO:{value:1}};
+  const gridM=new THREE.ShaderMaterial(ADD({uniforms:gridU,
+    vertexShader:`varying float vD; varying float vY; void main(){ vec4 mv=modelViewMatrix*vec4(position,1.0); vD=-mv.z; vY=position.y; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:`uniform float uO; varying float vD; varying float vY; void main(){ float f=exp(-vD*0.028)*(0.35+0.65*smoothstep(2.0,10.0,vD)); gl_FragColor=vec4(vec3(0.2,0.45,0.7),0.42*f*uO); }`}));
+  G.add(new THREE.LineSegments(gG,gridM));
+  /* polvo de datos sobre las paredes */
+  const dP=[]; for(let i=0;i<2600;i++){ const side=R(); let x,y; if(side<.36){ x=-X+R()*.2; y=R()*Y; } else if(side<.72){ x=X-R()*.2; y=R()*Y; } else { x=(R()*2-1)*X; y=R()<.5?R()*.2:Y-R()*.2; } dP.push(x,y,Z0+R()*(Z1-Z0)); }
+  const dG=new THREE.BufferGeometry(); dG.setAttribute("position",new THREE.Float32BufferAttribute(dP,3));
+  G.add(new THREE.Points(dG,new THREE.PointsMaterial(ADD({color:0x7fb8ff,size:.05,opacity:.55}))));
+  /* luz en el punto de fuga */
+  const far=glow(0xdcecff,10,.7); far.position.set(0,3.4,Z0+2); G.add(far);
+  const streak=glow(0xbfe3ff,1,.55); streak.scale.set(36,1.1,1); streak.position.set(0,3.4,Z0+3); G.add(streak);
+  /* los diez prismas categoriales */
+  const prisms=[]; const PX=[[-4.3,1.4],[4.1,5.6],[-3.6,6.2],[4.6,1.9],[-4.8,3.6],[3.4,3.3],[-3.2,1.1],[4.4,6.6],[-4.5,5.2],[3.8,1.2]];
+  CATS.forEach((c,i)=>{ const s=.55+R()*.8, g=new THREE.Group();
+    const box=new THREE.BoxGeometry(s*(.7+R()*.6),s*(.8+R()*.8),s*(.7+R()*.5));
+    const face=new THREE.Mesh(box,basic(0xffc27a,.1)); const edge=new THREE.LineSegments(new THREE.EdgesGeometry(box),lineMat(0xffd49a,.8)); const core=glow(0xffc27a,s*1.6,.35);
+    g.add(face); g.add(edge); g.add(core); g.position.set(PX[i][0],PX[i][1],-5-i*3.8); g.rotation.set(R()*.5,R()*3,R()*.3);
+    g.userData={face,edge,core,ph:R()*6,y:PX[i][1]}; G.add(g); prisms.push(g); });
+  /* planos de las premisas */
+  function premise(hex){
+    const g=new THREE.Group(), geo=new THREE.PlaneGeometry(8,18,8,18); geo.rotateX(-Math.PI/2);
+    const mat=new THREE.ShaderMaterial(ADD({side:THREE.DoubleSide,uniforms:{uO:{value:0},uC:{value:new THREE.Color(hex)},uTime:U.uTime},
+      vertexShader:`varying vec2 vU; void main(){ vU=uv; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+      fragmentShader:`uniform float uO; uniform vec3 uC; uniform float uTime; varying vec2 vU; void main(){ vec2 g=abs(fract(vU*vec2(8.0,18.0))-0.5); float line=smoothstep(0.47,0.5,max(g.x,g.y)); float edge=smoothstep(0.46,0.5,max(abs(vU.x-0.5),abs(vU.y-0.5))); float scan=0.5+0.5*sin(vU.y*40.0-uTime*2.0); gl_FragColor=vec4(uC,(0.06+0.2*line+0.6*edge+0.03*scan)*uO); }`}));
+    const m=new THREE.Mesh(geo,mat); g.add(m); g.position.copy(C); g.userData.mat=mat; G.add(g); return g;
+  }
+  const A=premise(0xbfe8ff), B=premise(0xa6f0e6);
+  /* término medio y conclusión */
+  const midCore=lineTube(V(0,C.y,C.z-9),V(0,C.y,C.z+9),.03,0xffffff,0), midHalo=lineTube(V(0,C.y,C.z-9),V(0,C.y,C.z+9),.2,0xa6f0e6,0);
+  G.add(midCore); G.add(midHalo);
+  const laser=new THREE.Group(); laser.position.set(0,C.y,C.z+9); G.add(laser);
+  const lzC=lineTube(V(0,0,0),V(0,0,1),.035,0xffffff,1), lzH=lineTube(V(0,0,0),V(0,0,1),.16,0xbfe8ff,.12), lzH2=lineTube(V(0,0,0),V(0,0,1),.5,0xffe7c2,.03);
+  laser.add(lzC); laser.add(lzH); laser.add(lzH2); laser.scale.set(1,1,.001);
+  const src=glow(0xffffff,1.4,0); src.position.set(0,C.y,C.z+9); G.add(src);
+  const fault=glow(0xff6a3d,3,0); fault.position.set(0,C.y+1.1,C.z+6); G.add(fault);
+  const catLabels=CATS.map((c,i)=>({t:c.es,s:c.gr,p:[PX[i][0],PX[i][1]+.95,-5-i*3.8],steps:[0],c:"amber"}));
+  const V_=()=>st.valid, F_=()=>!st.valid;
+  const labels=catLabels.concat([
+    {t:"Todo hombre es mortal",s:"premisa mayor · todo B es A",p:[3.6,C.y+1.7,C.z-4],steps:[1,2,3],c:"white",when:V_},
+    {t:"Sócrates es hombre",s:"premisa menor · todo C es B",p:[-3.6,C.y+1.7,C.z-4],steps:[2,3],c:"crystal",when:V_},
+    {t:"hombre",s:"término medio",p:[0,C.y+.55,C.z-7.5],steps:[2,3],c:"crystal",when:V_},
+    {t:"Sócrates es mortal",s:"conclusión necesaria",p:[0,C.y+.7,C.z+14],steps:[3],c:"white",when:V_},
+    {t:"Todo perro es mamífero",s:"premisa mayor",p:[3.6,C.y+1.7,C.z-4],steps:[1,2,3],c:"white",when:F_},
+    {t:"Todo gato es mamífero",s:"premisa menor",p:[-3.6,C.y+3.9,C.z-4],steps:[2,3],c:"crystal",when:F_},
+    {t:"¿Todo gato es perro?",s:"no se sigue",p:[0,C.y+2.2,C.z+6],steps:[3],c:"ember",when:F_}
+  ]);
+  const cams=[
+    {t:[0,3.6,-20],d:17,az:.5,pol:1.32},
+    {t:[0,3.4,-10],d:15,az:.62,pol:1.04},
+    {t:[0,3.6,-10],d:15.5,az:.3,pol:1.12},
+    {t:[0,3.6,-3],d:15,az:.34,pol:1.28}
+  ];
+  let step=0, aO=0, bO=0, midO=0, lz=0, catK=1;
+  return {group:G,labels,cams,
+    enter(i){ step=i; if(i<3){ lz=0; } if(reduced){ aO=i>=1?1:0; bO=i>=2?1:0; catK=i===0?1:.35; } },
+    bloomBoost(){ return step===3&&st.valid?lz*.35:0; },
+    update(dt,time){
+      const kk=reduced?1:1-Math.exp(-dt*2);
+      st.validK+=((st.valid?1:0)-st.validK)*(reduced?1:1-Math.exp(-dt*2.5));
+      const v=st.validK;
+      aO+=((step>=1?1:0)-aO)*kk; bO+=((step>=2?1:0)-bO)*kk; catK+=((step===0?1:.3)-catK)*kk;
+      A.userData.mat.uniforms.uO.value=aO; B.userData.mat.uniforms.uO.value=bO;
+      A.rotation.z=.42; B.rotation.z=lerp(.42,-.42,v); B.position.y=C.y+lerp(2.2,0,v);
+      midO+=((step>=2?v:0)-midO)*kk;
+      midCore.material.opacity=midO*.95; midHalo.material.opacity=midO*.09;
+      const lzGoal=step===3&&st.valid&&v>.9?1:0;
+      if(reduced) lz=lzGoal; else lz=lzGoal?Math.min(1,lz+dt*.9):Math.max(0,lz-dt*3);
+      laser.scale.z=Math.max(.001,smooth(lz)*16); laser.visible=lz>.002;
+      src.material.opacity=lz*(.55+.1*Math.sin(time*3)); src.scale.setScalar(1.2+lz*.6);
+      fault.material.opacity=(step===3?(1-v):0)*(.35+.15*Math.sin(time*1.6));
+      prisms.forEach((p,i)=>{ const u=p.userData; p.position.y=u.y+Math.sin(time*.6+u.ph)*.18; p.rotation.y+=dt*.12;
+        u.face.material.opacity=.1*catK; u.edge.material.opacity=.85*catK; u.core.material.opacity=.35*catK; });
+    }};
+}
+
+/* ---------- ESCENA · EL MOTOR INMÓVIL ---------- */
+function buildMotor(U){
+  const G=new THREE.Group(), R=rnd(17);
+  const MOTOR=V(-1.5,17,-2.5);
+  /* núcleo sublunar: tierra, agua, aire, fuego */
+  const earth=new THREE.Mesh(new THREE.SphereGeometry(.72,40,28),holoMat(0xf2b46a,.95)); G.add(earth);
+  const water=new THREE.LineSegments(new THREE.WireframeGeometry(new THREE.IcosahedronGeometry(1.06,2)),lineMat(0x4aa3ff,.28)); G.add(water);
+  function shell(n,r,jit){ const P=[]; for(let i=0;i<n;i++){ const u=R()*2-1, a=R()*Math.PI*2, s=Math.sqrt(1-u*u), rr=r+(R()-.5)*jit; P.push(Math.cos(a)*s*rr,u*rr,Math.sin(a)*s*rr); } const g=new THREE.BufferGeometry(); g.setAttribute("position",new THREE.Float32BufferAttribute(P,3)); return g; }
+  const air=new THREE.Points(shell(900,1.42,.14),new THREE.PointsMaterial(ADD({color:0xc9d2da,size:.035,opacity:.45}))); G.add(air);
+  const fire=new THREE.Points(shell(700,1.8,.18),new THREE.PointsMaterial(ADD({color:0xff3a4a,size:.045,opacity:.6}))); G.add(fire);
+  /* movimiento natural rectilíneo: tierra hacia dentro, fuego hacia fuera */
+  const nN=420, nD=new Float32Array(nN*3), nK=new Float32Array(nN*2);
+  for(let i=0;i<nN;i++){ const u=R()*2-1, a=R()*Math.PI*2, s=Math.sqrt(1-u*u); nD[i*3]=Math.cos(a)*s; nD[i*3+1]=u; nD[i*3+2]=Math.sin(a)*s; nK[i*2]=i%2; nK[i*2+1]=R(); }
+  const nG=new THREE.BufferGeometry(); nG.setAttribute("position",new THREE.BufferAttribute(nD,3)); nG.setAttribute("aK",new THREE.BufferAttribute(nK,2));
+  const nU={uTime:U.uTime,uScale:U.uScale,uO:{value:1}};
+  const nat=new THREE.Points(nG,new THREE.ShaderMaterial(ADD({uniforms:nU,
+    vertexShader:`attribute vec2 aK; uniform float uTime; uniform float uScale; uniform float uO; varying vec3 vC; varying float vA;
+      void main(){ float t=fract(uTime*0.22+aK.y); float r=aK.x>0.5?mix(0.8,2.45,t):mix(2.45,0.8,t);
+        vec3 p=position*r; vC=aK.x>0.5?vec3(1.0,0.25,0.3):vec3(1.0,0.72,0.36); vA=uO*sin(t*3.14159)*0.9;
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=0.05*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG})));
+  nat.frustumCulled=false; G.add(nat);
+  const lunar=segs(circlePts(2.65,0,160),0xe8d2b0,.5); G.add(lunar);
+  /* 55 esferas de éter: anillos de polvo con eje, inclinación y velocidad propios */
+  const NR=55, MAIN={2:"Luna",9:"Mercurio",15:"Venus",21:"Sol",29:"Marte",37:"Júpiter",45:"Saturno",54:"Estrellas fijas"};
+  const ringR=i=>3+i*.2, tilt=[], phi=[], omg=[];
+  for(let i=0;i<NR;i++){ tilt.push((R()-.5)*.16*(i===54?0:1)); phi.push(R()*Math.PI*2); omg.push((.03+.5/(1+i*.22))*(i%2?1:-.62)); }
+  const RP=[], RK=[], RT=[];
+  for(let i=0;i<NR;i++){ const n=Math.round(170+i*7), main=MAIN[i]!=null?1:0; for(let j=0;j<n;j++){ RP.push(i, j/n*Math.PI*2+R()*.03, (R()-.5)*.06); RK.push(main, R(), omg[i]); RT.push(tilt[i],phi[i]); } }
+  const rG=new THREE.BufferGeometry(); rG.setAttribute("position",new THREE.Float32BufferAttribute(RP,3)); rG.setAttribute("aK",new THREE.Float32BufferAttribute(RK,3)); rG.setAttribute("aT",new THREE.Float32BufferAttribute(RT,2));
+  const rU={uTime:U.uTime,uScale:U.uScale,uSpin:{value:0},uAll:{value:1},uO:{value:0}};
+  const rM=new THREE.ShaderMaterial(ADD({uniforms:rU,
+    vertexShader:`attribute vec3 aK; attribute vec2 aT; uniform float uTime; uniform float uScale; uniform float uSpin; uniform float uAll; uniform float uO; varying vec3 vC; varying float vA;
+      void main(){ float r=3.0+position.x*0.2; float a=position.y+uSpin*aK.z;
+        vec3 p=vec3(cos(a)*r,position.z,sin(a)*r);
+        float t=aT.x, ph=aT.y; vec3 ax=vec3(cos(ph),0.0,sin(ph)); float c=cos(t), s=sin(t);
+        p=p*c+cross(ax,p)*s+ax*dot(ax,p)*(1.0-c);
+        float tw=0.6+0.4*sin(uTime*1.5+aK.y*40.0);
+        vC=mix(vec3(0.95,0.72,0.45),vec3(1.0,0.9,0.72),aK.x); vA=uO*(aK.x>0.5?0.95:0.38*uAll)*tw*(0.7+0.3*position.x/54.0);
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.035+aK.x*0.03)*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG}));
+  const rings=new THREE.Points(rG,rM); rings.frustumCulled=false; G.add(rings);
+  /* planetas sobre sus esferas principales */
+  const planets=Object.keys(MAIN).filter(i=>+i!==54).map(i=>{ const s=glow(+i===21?0xfff0c0:0xffe2b0,+i===21?1.6:.7,0); G.add(s); return {i:+i,s}; });
+  /* hilos de atracción: suben desde las estrellas fijas hacia el motor */
+  const thP=[], thK=[]; const TN=64;
+  for(let k=0;k<TN;k++){ const a=k/TN*Math.PI*2; const p=V(Math.cos(a)*ringR(54),0,Math.sin(a)*ringR(54)); thP.push(p.x,p.y,p.z,MOTOR.x,MOTOR.y,MOTOR.z); }
+  const threads=segs(thP,0xffe0b0,0); G.add(threads);
+  const flN=900, flP=new Float32Array(flN*3), flK=new Float32Array(flN*2);
+  for(let i=0;i<flN;i++){ flK[i*2]=Math.floor(R()*TN); flK[i*2+1]=R(); }
+  const flG=new THREE.BufferGeometry(); flG.setAttribute("position",new THREE.BufferAttribute(flP,3)); flG.setAttribute("aK",new THREE.BufferAttribute(flK,2));
+  const flU={uTime:U.uTime,uScale:U.uScale,uO:{value:0},uM:{value:MOTOR},uR:{value:ringR(54)}};
+  const flow=new THREE.Points(flG,new THREE.ShaderMaterial(ADD({uniforms:flU,
+    vertexShader:`attribute vec2 aK; uniform float uTime; uniform float uScale; uniform float uO; uniform vec3 uM; uniform float uR; varying vec3 vC; varying float vA;
+      void main(){ float a=aK.x/64.0*6.2831853; vec3 b=vec3(cos(a)*uR,0.0,sin(a)*uR); float t=fract(uTime*0.05+aK.y); float e=t*t;
+        vec3 p=mix(b,uM,e); vC=mix(vec3(1.0,0.75,0.45),vec3(1.0,0.97,0.9),t); vA=uO*smoothstep(0.0,0.1,t)*(1.0-smoothstep(0.92,1.0,t))*0.75;
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.03+0.035*fract(aK.y*9.0))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG})));
+  flow.frustumCulled=false; G.add(flow);
+  /* estela en arco, como en la imagen de concepto */
+  const arcC=new THREE.CatmullRomCurve3([V(13.8,.1,3.2),V(10.5,3.2,.6),V(5.5,9,-1.8),V(MOTOR.x+.6,MOTOR.y-.8,MOTOR.z+.2),MOTOR],false,"centripetal");
+  const arcN=1600, arcP=[]; for(let i=0;i<arcN;i++){ const t=Math.pow(R(),.8), p=arcC.getPointAt(t), s=(1-t)*.9+.05; arcP.push(p.x+(R()-.5)*s,p.y+(R()-.5)*s*.5,p.z+(R()-.5)*s); }
+  const arcG=new THREE.BufferGeometry(); arcG.setAttribute("position",new THREE.Float32BufferAttribute(arcP,3));
+  const arc=new THREE.Points(arcG,new THREE.PointsMaterial(ADD({color:0xffd7a0,size:.045,opacity:0}))); G.add(arc);
+  /* el motor: no se mueve, no parpadea */
+  const mCore=new THREE.Mesh(new THREE.SphereGeometry(.16,20,14),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:0})); mCore.position.copy(MOTOR); G.add(mCore);
+  const mG=glow(0xfff4dc,3.2,0), mG2=glow(0xffc27a,9,0); mG.position.copy(MOTOR); mG2.position.copy(MOTOR); G.add(mG); G.add(mG2);
+  /* estrellas lejanas */
+  const sP=[]; for(let i=0;i<900;i++){ const u=R()*2-1, a=R()*Math.PI*2, s=Math.sqrt(1-u*u), r=60+R()*40; sP.push(Math.cos(a)*s*r,u*r,Math.sin(a)*s*r); }
+  const sG=new THREE.BufferGeometry(); sG.setAttribute("position",new THREE.Float32BufferAttribute(sP,3)); G.add(new THREE.Points(sG,new THREE.PointsMaterial(ADD({color:0xd9c7a8,size:.18,opacity:.35}))));
+  const RR=i=>ringR(i)+.4;
+  const labels=[
+    {t:"Tierra y agua",s:"γῆ · ὕδωρ",p:[0,-1.35,0],steps:[0],c:"amber"},
+    {t:"Aire y fuego",s:"ἀήρ · πῦρ",p:[0,2.35,0],steps:[0],c:"ember"},
+    {t:"Esfera de la Luna",s:"frontera sublunar",p:[2.65,.3,.9],steps:[0,1]},
+    {t:"El Sol",s:"en su esfera",p:[RR(21)*.7,.6,RR(21)*.7],steps:[1],c:"amber"},
+    {t:"Estrellas fijas",s:"la esfera exterior",p:[-RR(54)*.72,.7,RR(54)*.7],steps:[1,2],c:"amber"},
+    {t:"Éter",s:"αἰθήρ · el quinto cuerpo",p:[RR(40)*.1,.7,RR(40)],steps:[1]},
+    {t:"El primer motor",s:"mueve sin ser movido",p:[MOTOR.x,MOTOR.y+1.8,MOTOR.z],steps:[2,3],c:"white"},
+    {t:"νόησις νοήσεως",s:"pensamiento de pensamiento",p:[MOTOR.x+2.6,MOTOR.y-.9,MOTOR.z],steps:[3],c:"amber"}
+  ];
+  const cams=[
+    {t:[0,.4,0],d:8,az:.55,pol:1.22},
+    {t:[0,0,0],d:31,az:.42,pol:1.22},
+    {t:[0,6.5,0],d:40,az:.62,pol:1.4},
+    {t:[MOTOR.x*.5,8.5,MOTOR.z*.5],d:33,az:.35,pol:.95}
+  ];
+  const SPIN=[.25,1,1,.55], RO=[.35,1,1,1], NAT=[1,.25,.15,.1], MO=[0,.15,1,1];
+  let step=0, spin=0, ro=0, natO=1, mo=0, pos=0;
+  const tmp=V(0,0,0);
+  return {group:G,labels,cams,
+    enter(i){ step=i; if(reduced){ ro=RO[i]; natO=NAT[i]; mo=MO[i]; } },
+    bloomBoost(){ return mo*.2; },
+    update(dt,time){
+      const kk=reduced?1:1-Math.exp(-dt*1.5);
+      spin+=(SPIN[step]-spin)*kk; ro+=(RO[step]-ro)*kk; natO+=(NAT[step]-natO)*kk; mo+=(MO[step]-mo)*kk;
+      st.allK+=((st.all55?1:0)-st.allK)*(reduced?1:1-Math.exp(-dt*2));
+      if(!reduced) pos+=dt*spin;
+      rU.uSpin.value=pos; rU.uAll.value=st.allK; rU.uO.value=ro; nU.uO.value=natO;
+      earth.rotation.y+=dt*.05; water.rotation.y-=dt*.03; air.rotation.y+=dt*.08; fire.rotation.y-=dt*.11;
+      fire.material.opacity=.45+.15*Math.sin(time*7)+.05*Math.sin(time*17);
+      planets.forEach(p=>{ const i=p.i, r=ringR(i), a=1.3+pos*omg[i]; tmp.set(Math.cos(a)*r,0,Math.sin(a)*r);
+        const t=tilt[i], ph=phi[i], ax=V(Math.cos(ph),0,Math.sin(ph)); tmp.applyAxisAngle(ax,t); p.s.position.copy(tmp); p.s.material.opacity=ro*(.4+.5*(st.allK*.3+.7)); });
+      threads.material.opacity=mo*.07; flU.uO.value=mo; arc.material.opacity=mo*.55;
+      mCore.material.opacity=mo; mG.material.opacity=mo; mG2.material.opacity=mo*.35;
+    }};
+}
+
+/* ---------- ESCENA · TRAMA Y CATARSIS · colisión de fuerzas ----------
+   Dos fuerzas de esencia distinta. A la izquierda, el páthos: una columna
+   turbulenta de partículas rojas (compasión y temor) que sube desde el suelo.
+   Desde la derecha, la trama: un haz rectilíneo, dorado, necesario.
+   Chocan en C. Lo que atraviesa el punto de colisión cambia de naturaleza
+   y sale en flujo laminar cian: la catarsis. Una sola fase continua P (0–3)
+   gobierna todo, para poder recorrerla paso a paso o de principio a fin. */
+function buildCatarsis(U){
+  const G=new THREE.Group(), R=rnd(23);
+  const C=V(0,2.3,0), FAR=V(46,2.3,0);
+  const sheetY=(s)=>C.y-1.95*smooth(clamp(s/.32,0,1));
+  const sheetZ=(s,k)=>(k-.5)*(.25+5.5*s)+1.8*s;
+
+  /* suelo de polvo: rojo a la izquierda, cian a la derecha */
+  const fP=[], fC=[]; for(let i=0;i<11000;i++){ const x=(R()*2-1)*30, z=-16+R()*24; fP.push(x,-.2+(R()-.5)*.12+.1*Math.sin(x*.3+z*.4),z); const w=smooth(clamp((x+4)/14,0,1)); fC.push(lerp(1,.3,w),lerp(.38,.7,w),lerp(.2,.85,w)); }
+  const fG=new THREE.BufferGeometry(); fG.setAttribute("position",new THREE.Float32BufferAttribute(fP,3)); fG.setAttribute("color",new THREE.Float32BufferAttribute(fC,3));
+  const floorM=new THREE.PointsMaterial(ADD({size:.05,opacity:.3,vertexColors:true})); G.add(new THREE.Points(fG,floorM));
+
+  /* el páthos: columna turbulenta que, al ser alcanzada, cambia de naturaleza */
+  const N=12000, pos=new Float32Array(N*3), aK=new Float32Array(N*4);
+  for(let i=0;i<N;i++){ const r=Math.pow(R(),.8)*3.3, a=R()*Math.PI*2; pos[i*3]=-3.6+Math.cos(a)*r*1.1; pos[i*3+1]=-.1; pos[i*3+2]=Math.sin(a)*r*.8;
+    aK[i*4]=R(); aK[i*4+1]=R(); aK[i*4+2]=R(); aK[i*4+3]=R(); }
+  const pG=new THREE.BufferGeometry(); pG.setAttribute("position",new THREE.BufferAttribute(pos,3)); pG.setAttribute("aK",new THREE.BufferAttribute(aK,4));
+  const pU={uTime:U.uTime,uScale:U.uScale,uTurb:{value:.2},uCap:{value:0},uHit:{value:0},uO:{value:.3},uH:{value:.3},uC:{value:C}};
+  const pM=new THREE.ShaderMaterial(ADD({uniforms:pU,
+    vertexShader:`attribute vec4 aK; uniform float uTime; uniform float uScale; uniform float uTurb; uniform float uCap; uniform float uHit; uniform float uO; uniform float uH; uniform vec3 uC; varying vec3 vC; varying float vA;
+      vec3 swirl(vec3 p,float t){ return vec3(sin(p.y*1.3+t*1.1+p.z*.7)+.5*sin(p.y*3.1-t*1.7),
+                                                 .35*sin(p.x*1.9+t*.9),
+                                                 cos(p.y*1.1-t*1.3+p.x*.6)+.5*cos(p.y*2.7+t*2.1)); }
+      void main(){
+        float cap=step(aK.w,uCap);
+        float t=fract(uTime*(0.07+0.05*aK.z)+aK.x);
+        float rt=cap>0.5?clamp(t/0.52,0.0,1.0):t;
+        vec3 base=position;
+        vec3 top=cap>0.5?uC:vec3(-2.6+(aK.y-0.5)*3.2+sin(aK.x*12.0+uTime*0.3)*0.8,mix(0.6,uC.y+4.6+aK.z*3.4,uH),(aK.x-0.5)*2.2);
+        float e=cap>0.5?smoothstep(0.0,1.0,rt):pow(rt,0.8);
+        vec3 p=mix(base,top,e);
+        /* turbulencia: remolino que crece con la altura; los capturados se alinean al acercarse a C */
+        float calm=cap>0.5?smoothstep(0.55,1.0,rt):0.0;
+        float amp=uTurb*(0.15+1.15*rt*rt)*(1.0-calm);
+        float ang=uTime*0.9+rt*7.0+aK.y*6.2831;
+        p.x+=cos(ang)*amp*0.6; p.z+=sin(ang)*amp*0.6;
+        p+=swirl(p+aK.xyz*4.0,uTime)*amp*0.42;
+        /* choque: salpicadura hacia atrás y hacia arriba alrededor de C */
+        vec3 d=p-uC; float near=exp(-dot(d,d)/2.2);
+        p+=uHit*(1.0-cap)*near*(normalize(d+vec3(-0.6,0.5,0.0))*1.8);
+        vec3 red=mix(vec3(1.0,0.22,0.1),vec3(1.0,0.55,0.25),aK.z);
+        vec3 col=mix(red,vec3(1.0,0.85,0.6),near*uHit*0.8);
+        float alpha=smoothstep(0.0,0.06,rt)*(cap>0.5?1.0:(1.0-smoothstep(0.72,1.0,t)));
+        float sz=0.035+0.05*aK.z;
+        if(cap>0.5 && t>0.52){
+          float s=(t-0.52)/0.48; float dist=s*26.0;
+          float y=uC.y-1.95*smoothstep(0.0,0.32,s)+sin(dist*0.55-uTime*1.4+aK.y*3.0)*0.04*s;
+          float z=(aK.y-0.5)*(0.25+5.5*s)+1.8*s;
+          p=vec3(uC.x+dist,y,z);
+          col=mix(vec3(1.0,0.95,0.85),vec3(0.45,0.88,1.0),smoothstep(0.0,0.12,s));
+          alpha=1.0-smoothstep(0.8,1.0,s);
+          sz=0.025+0.02*aK.z;
+        }
+        vC=col; vA=alpha*uO*(0.7+0.3*sin(uTime*2.0+aK.y*40.0));
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=sz*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,
+    fragmentShader:PT_FRAG}));
+  const pathos=new THREE.Points(pG,pM); pathos.frustumCulled=false; G.add(pathos);
+
+  /* la trama: haz rectilíneo que avanza desde la derecha */
+  const beam=new THREE.Group(); beam.position.copy(FAR); beam.rotation.y=Math.PI; G.add(beam);
+  const bmC=lineTube(V(0,0,0),V(1,0,0),.05,0xfff1d8,1), bmH=lineTube(V(0,0,0),V(1,0,0),.34,0xffb35c,.1), bmH2=lineTube(V(0,0,0),V(1,0,0),1.1,0xff9a3d,.025);
+  beam.add(bmC); beam.add(bmH); beam.add(bmH2);
+  const tip=glow(0xffe6c0,2.4,1); G.add(tip);
+  const LEN=FAR.x-C.x;
+  /* chispas a lo largo del haz */
+  const sN=500, sP=new Float32Array(sN*3), sK=new Float32Array(sN); for(let i=0;i<sN;i++) sK[i]=R();
+  const sG=new THREE.BufferGeometry(); sG.setAttribute("position",new THREE.BufferAttribute(sP,3)); sG.setAttribute("aK",new THREE.BufferAttribute(sK,1));
+  const sU={uTime:U.uTime,uScale:U.uScale,uL:{value:0},uF:{value:FAR},uLen:{value:LEN}};
+  const sparks=new THREE.Points(sG,new THREE.ShaderMaterial(ADD({uniforms:sU,
+    vertexShader:`attribute float aK; uniform float uTime; uniform float uScale; uniform float uL; uniform vec3 uF; uniform float uLen; varying vec3 vC; varying float vA;
+      void main(){ float t=fract(uTime*0.12+aK); float x=uF.x-t*uLen*uL; vec3 p=vec3(x,uF.y+sin(aK*80.0+uTime*2.0)*0.12*(1.0-t),cos(aK*60.0)*0.25*(1.0-t));
+        vC=vec3(1.0,0.82,0.55); vA=smoothstep(0.0,0.1,t)*(1.0-smoothstep(0.85,1.0,t))*0.7*step(0.01,uL);
+        vec4 mv=modelViewMatrix*vec4(p,1.0); gl_PointSize=(0.03+0.03*fract(aK*7.0))*uScale/-mv.z; gl_Position=projectionMatrix*mv; }`,fragmentShader:PT_FRAG})));
+  sparks.frustumCulled=false; G.add(sparks);
+
+  /* impacto: núcleo persistente, un único destello suave y una onda de choque */
+  const core=glow(0xfff4e6,2.2,0), coreR=glow(0xff5a2a,6,0); core.position.copy(C); coreR.position.copy(C); G.add(coreR); G.add(core);
+  const flash=glow(0xfff0d8,1,0); flash.position.copy(C); G.add(flash);
+  const ring=segs(circlePts(1,0,96),0xffd0a0,0); ring.rotation.z=Math.PI/2; ring.position.copy(C); G.add(ring);
+  const ring2=segs(circlePts(1,0,96),0x9fe6ff,0); ring2.rotation.z=Math.PI/2; ring2.position.copy(C); G.add(ring2);
+
+  /* líneas de corriente del flujo laminar */
+  const stl=[]; for(let j=0;j<44;j++){ const k=(j+.5)/44; let px=C.x,py=C.y,pz=sheetZ(0,k);
+    for(let i=1;i<=70;i++){ const s=i/70, x=C.x+s*26, y=sheetY(s), z=sheetZ(s,k); stl.push(px,py,pz,x,y,z); px=x; py=y; pz=z; } }
+  const stG=new THREE.BufferGeometry(); stG.setAttribute("position",new THREE.Float32BufferAttribute(stl,3));
+  const stM=new THREE.ShaderMaterial(ADD({uniforms:{uO:{value:0},uTime:U.uTime,uX:{value:C.x}},
+    vertexShader:`varying float vS; void main(){ vS=(position.x-${C.x.toFixed(1)})/26.0; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader:`uniform float uO; uniform float uTime; varying float vS; void main(){ float pulse=0.6+0.4*sin(vS*40.0-uTime*3.0); gl_FragColor=vec4(0.5,0.88,1.0,uO*(1.0-vS)*smoothstep(0.0,0.03,vS)*pulse*0.22); }`}));
+  G.add(new THREE.LineSegments(stG,stM));
+
+  const inP=(a,b)=>()=>st.catP>=a&&st.catP<b;
+  const labels=[
+    {t:"La trama",s:"μῦθος · por necesidad o verosimilitud",p:[15,C.y+1.1,0],steps:[0,1,2,3],c:"amber",when:inP(0,1.6)},
+    {t:"Rescoldos",s:"lo que la acción despertará",p:[-3.6,.9,1.6],steps:[0,1,2,3],c:"ember",when:inP(0,.7)},
+    {t:"Compasión y temor",s:"ἔλεος καὶ φόβος · el páthos",p:[-4.6,6.4,0],steps:[0,1,2,3],c:"ember",when:inP(.7,2.9)},
+    {t:"Peripecia",s:"περιπέτεια · la colisión",p:[C.x-.6,C.y+2.4,0],steps:[0,1,2,3],c:"white",when:inP(1.95,2.8)},
+    {t:"Anagnórisis",s:"ἀναγνώρισις · ya no se puede no ver",p:[11,C.y+1,0],steps:[0,1,2,3],c:"amber",when:inP(1.95,2.8)},
+    {t:"Catarsis",s:"κάθαρσις · el mismo páthos, ordenado",p:[13,.9,4.5],steps:[0,1,2,3],c:"lamina",when:inP(2.6,3.1)}
+  ];
+  const cams=[
+    {t:[7,2,0],d:25,az:.1,pol:1.42},
+    {t:[-1.5,3.4,0],d:19,az:.14,pol:1.4},
+    {t:[.5,2.6,0],d:16,az:.1,pol:1.42},
+    {t:[4,2,0],d:23,az:.2,pol:1.34}
+  ];
+  const lerp4=(a,P)=>{ const i=Math.min(2,Math.floor(P)), f=P-i; return lerp(a[i],a[i+1],smooth(clamp(f,0,1))); };
+  const TURB=[.15,1,1.05,.5], CAP=[0,0,.3,.82], OP=[.35,1,1,.9], HGT=[.25,1,1,.7];
+  let flashT=-1, lastP=0;
+  return {group:G,labels,cams,
+    enter(i){ if(!st.replaying) st.catGoal=i; if(reduced){ st.catP=i; } },
+    focus(goal){ if(st.replaying){ const c=cams[Math.round(clamp(st.catP,0,3))]; goal.t.lerp(V(...c.t),.02); } },
+    bloomBoost(){ return (flashT>=0&&flashT<1.4?(1-flashT/1.4)*.7:0)+pU.uHit.value*.15; },
+    update(dt,time){
+      if(!reduced){ const sp=st.replaying?.14:.7; st.catP+=clamp(st.catGoal-st.catP,-sp*dt*2,sp*dt); }
+      const P=st.catP;
+      if(lastP<1.97 && P>=1.97 && !reduced) flashT=0;
+      if(P<1.9) flashT=-1;
+      lastP=P;
+      const L=P<1?lerp(.66,.87,smooth(clamp(P,0,1))):lerp(.87,1,smooth(clamp(P-1,0,1)));
+      const hit=smooth(clamp((P-1.95)/.12,0,1));
+      pU.uTurb.value=lerp4(TURB,P); pU.uCap.value=lerp4(CAP,P); pU.uO.value=lerp4(OP,P); pU.uH.value=lerp4(HGT,P);
+      pU.uHit.value=hit*(1-.55*smooth(clamp(P-2,0,1)));
+      beam.scale.x=Math.max(.001,L*LEN); sU.uL.value=L;
+      tip.position.set(FAR.x-L*LEN,C.y,0); tip.material.opacity=(1-hit)*(.8+.2*Math.sin(time*6)); tip.visible=L>.01;
+      bmC.material.opacity=.95; bmH.material.opacity=.1; bmH2.material.opacity=.025+.02*hit;
+      core.material.opacity=hit*(.75+.15*Math.sin(time*3)); coreR.material.opacity=hit*.28*(1-.4*smooth(clamp(P-2,0,1)));
+      if(flashT>=0){ flashT+=dt; const f=clamp(flashT/1.6,0,1);
+        flash.material.opacity=(1-f)*(1-f)*.85; flash.scale.setScalar(2+f*14);
+        ring.scale.setScalar(.3+f*7); ring.material.opacity=(1-f)*.5;
+        const f2=clamp((flashT-.25)/1.8,0,1); ring2.scale.setScalar(.3+f2*9); ring2.material.opacity=(1-f2)*.35*(f2>0?1:0); }
+      else { flash.material.opacity=0; ring.material.opacity=0; ring2.material.opacity=0; }
+      stM.uniforms.uO.value=smooth(clamp(P-2.1,0,.9)/.9);
+      if(st.replaying && Math.abs(st.catGoal-P)<.002) st.replaying=false;
+    }};
+}
+
+/* ---------------- 5. MOTOR ---------------- */
+function initGL(){
+  if(typeof THREE==="undefined") throw new Error("three");
+  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:"high-performance"});
+  const hasBloom=!!(THREE.EffectComposer&&THREE.RenderPass&&THREE.UnrealBloomPass);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,hasBloom?1.5:2));
+  renderer.setClearColor(0x000000,1);
+  const scene=new THREE.Scene();
+  const camera=new THREE.PerspectiveCamera(40,1,.05,400);
+  const U={uTime:{value:0},uScale:{value:600}};
+  let composer=null, bloom=null;
+  if(hasBloom){ try{ composer=new THREE.EffectComposer(renderer); composer.addPass(new THREE.RenderPass(scene,camera)); bloom=new THREE.UnrealBloomPass(new THREE.Vector2(512,512),1.0,.55,.1); composer.addPass(bloom); }catch(e){ composer=null; bloom=null; } }
+  const BUILD={causas:buildCausas,silogismo:buildSilogismo,motor:buildMotor,catarsis:buildCatarsis};
+  const BLOOM={causas:[1.05,.6,.05],silogismo:[.95,.5,.08],motor:[1.0,.6,.05],catarsis:[1.05,.55,.06]};
+  const built={}; let cur=null, curId=null;
+  function ensure(id){ if(built[id]) return built[id]; const s=BUILD[id](U); s.group.visible=false; scene.add(s.group); built[id]=s;
+    s.labels.forEach(l=>{ const el=document.createElement("div"); el.className="um-lb off"; if(l.c) el.dataset.c=l.c; el.innerHTML=`<b>${esc(l.t)}</b><small>${esc(l.s)}</small>`; labelsEl.appendChild(el); l.el=el; l.v=new THREE.Vector3(...l.p); });
+    return s; }
+  const rig={cur:{t:new THREE.Vector3(0,2,0),d:20,az:0,pol:1},goal:{t:new THREE.Vector3(0,2,0),d:20,az:0,pol:1}};
+  let vw={w:1,h:1,px:0,aspect:1.6};
+  function fitK(){ const a=vw.aspect||1.6; return a<1?1.55:(a<1.35?1.2:1); }
+  function setGoal(c){ rig.goal.t.set(...c.t); rig.goal.d=c.d*fitK(); rig.goal.az=c.az; rig.goal.pol=c.pol; }
+  let stepIdx=0, first=true;
+  function show(id,step,changed){
+    const s=ensure(id);
+    if(cur && curId!==id){ cur.group.visible=false; cur.labels.forEach(l=>l.el.classList.add("off")); }
+    cur=s; curId=id; stepIdx=step; s.group.visible=true; s.enter(step);
+    setGoal(s.cams[step]);
+    if(changed||reduced||first){ first=false; const c=s.cams[step]; rig.cur.t.set(...c.t); rig.cur.d=c.d*fitK()*1.25; rig.cur.az=c.az-.25; rig.cur.pol=c.pol-.1; if(reduced){ rig.cur.d=c.d*fitK(); rig.cur.az=c.az; rig.cur.pol=c.pol; } }
+    if(bloom){ const b=BLOOM[id]; bloom.strength=b[0]; bloom.radius=b[1]; bloom.threshold=b[2]; }
+    kick();
+  }
+  function resize(){
+    const r=view.getBoundingClientRect(), w=Math.max(1,Math.round(r.width)), h=Math.max(1,Math.round(r.height));
+    renderer.setSize(w,h,false); if(composer) composer.setSize(w,h);
+    const wide=window.innerWidth>900, pw=wide?($("#lyPanel").offsetWidth+16):0;
+    vw={w,h,px:pw,aspect:(w-pw)/h};
+    if(pw) camera.setViewOffset(w,h,-pw/2,0,w,h); else camera.clearViewOffset();
+    camera.aspect=w/h; camera.updateProjectionMatrix();
+    U.uScale.value=h*renderer.getPixelRatio()/(2*Math.tan(camera.fov*Math.PI/360));
+    if(cur) setGoal(cur.cams[stepIdx]);
+  }
+  let drag=null, moved=0; const ptrs=new Map();
+  canvas.addEventListener("pointerdown",e=>{ ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); moved=0; if(ptrs.size===1) drag={x:e.clientX,y:e.clientY,az:rig.goal.az,pol:rig.goal.pol}; try{ canvas.setPointerCapture(e.pointerId); }catch(_){ } });
+  canvas.addEventListener("pointermove",e=>{ if(!ptrs.has(e.pointerId)) return; const prev=ptrs.get(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(ptrs.size===2){ const [a,b]=[...ptrs.values()], o=[...ptrs.entries()].find(([id])=>id!==e.pointerId)[1]; const dn=Math.hypot(a.x-b.x,a.y-b.y), dp=Math.hypot(prev.x-o.x,prev.y-o.y); if(dp>0) rig.goal.d=clamp(rig.goal.d*dp/dn,3,80); moved=99; kick(); return; }
+    if(drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y; moved=Math.max(moved,Math.hypot(dx,dy)); if(moved>3){ rig.goal.az=drag.az-dx*.005; rig.goal.pol=clamp(drag.pol-dy*.004,.12,1.55); kick(); } } });
+  const end=e=>{ ptrs.delete(e.pointerId); if(!ptrs.size) drag=null; };
+  canvas.addEventListener("pointerup",end); canvas.addEventListener("pointercancel",end);
+  canvas.addEventListener("wheel",e=>{ if(!(e.ctrlKey||e.metaKey)) return; e.preventDefault(); rig.goal.d=clamp(rig.goal.d*Math.exp(e.deltaY*.004),3,80); kick(); },{passive:false});
+  $("#lyReset").addEventListener("click",()=>{ if(cur){ setGoal(cur.cams[stepIdx]); kick(); } });
+  let running=false, rafId=0, last=performance.now();
+  function kick(){ if(!rafId && running && !document.hidden){ last=performance.now(); rafId=requestAnimationFrame(frame); } }
+  new IntersectionObserver(es=>{ running=es[0].isIntersecting; kick(); },{threshold:0,rootMargin:"120px"}).observe(stageEl);
+  document.addEventListener("visibilitychange",kick);
+  const tmp=new THREE.Vector3();
+  function frame(now){
+    rafId=0; if(!running||document.hidden||!cur) return;
+    const dt=Math.min(.05,(now-last)/1000); last=now;
+    if(!reduced) U.uTime.value+=dt;
+    cur.update(dt,U.uTime.value);
+    if(cur.focus) cur.focus(rig.goal);
+    const k=reduced?1:1-Math.exp(-dt*2.4), c=rig.cur, g=rig.goal;
+    c.t.lerp(g.t,k); c.d+=(g.d-c.d)*k; c.az+=(g.az-c.az)*k; c.pol+=(g.pol-c.pol)*k;
+    const sp=Math.sin(c.pol); camera.position.set(c.t.x+c.d*sp*Math.sin(c.az),c.t.y+c.d*Math.cos(c.pol),c.t.z+c.d*sp*Math.cos(c.az)); camera.lookAt(c.t);
+    if(bloom){ const b=BLOOM[curId]; bloom.strength=b[0]+(cur.bloomBoost?cur.bloomBoost():0); }
+    if(composer) composer.render(); else renderer.render(scene,camera);
+    cur.labels.forEach(l=>{
+      const on=l.steps.includes(stepIdx) && (!l.when||l.when());
+      tmp.copy(l.v).project(camera);
+      const vis=on && tmp.z<1 && tmp.z>-1;
+      if(vis){ const x=(tmp.x*.5+.5)*vw.w, y=(-tmp.y*.5+.5)*vw.h; l.el.style.transform=`translate(${x.toFixed(1)}px,${y.toFixed(1)}px) translate(-50%,-100%)`; }
+      l.el.classList.toggle("off",!vis);
+    });
+    rafId=requestAnimationFrame(frame);
+  }
+  new ResizeObserver(resize).observe(view); resize();
+  return {show,kick};
+}
+
+/* ---------------- 6. ARRANQUE ---------------- */
+try{ GL=initGL(); }catch(err){ GL=null; view.classList.add("um-nogl"); if(window.console) console.warn("El Liceo sin WebGL:",err); }
+LY.show("causas",0);
+})();
+</script>
+
 </body>
 </html>
