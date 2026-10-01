@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="generator" content="Grecia Eterna v0.8">
+<meta name="generator" content="Grecia Eterna v0.9">
 <title>Grecia Eterna</title>
 <meta name="description" content="Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro sobre el mar color de vino.">
 <link rel="stylesheet" href="fonts/fonts.css">
@@ -824,6 +824,44 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .or-logos .or-big{margin:0;font-family:var(--f-display);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.35;color:var(--ink)}
 .or-two article .chip{justify-self:start}
 .or-end .kicker{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500}
+
+/* ---------- v0.9 · LAS RAÍCES · ICONOS DE ELEMENTO ---------- */
+/* Small living emblems: one particle system per arché, drawn on 2D canvas. In the codex they sit beside the station; in the reading room they gather as a table of the roots. */
+:root{--el-water:#6fb6ff;--el-air:#d9e4ec;--el-fire:#ff9a3d;--el-earth:#c9925a;--el-apeiron:#a99fbb}
+.el-card{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 16px;align-items:center;padding:12px 14px 12px 10px;border-radius:5px;border:1px solid color-mix(in srgb,var(--elc) 30%,transparent);background:radial-gradient(120% 140% at 0% 50%,color-mix(in srgb,var(--elc) 9%,transparent),transparent 65%)}
+.el-card canvas{width:96px;height:96px;display:block;grid-row:span 3}
+.el-card .el-k{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--elc);font-weight:600}
+.el-card .el-g{font-family:var(--f-display);font-size:1.25rem;line-height:1.1;color:var(--ink)}
+.el-card .el-g small{font-family:var(--f-body);font-size:11px;color:var(--faint);margin-left:6px;letter-spacing:.04em}
+.el-card .el-x{margin:0;font-size:12.5px;line-height:1.5;color:var(--dim)}
+.el-slot:empty{display:none}
+.el-card[data-el="water"],.el-tile[data-el="water"]{--elc:var(--el-water)}
+.el-card[data-el="air"],.el-tile[data-el="air"]{--elc:var(--el-air)}
+.el-card[data-el="fire"],.el-tile[data-el="fire"]{--elc:var(--el-fire)}
+.el-card[data-el="earth"],.el-tile[data-el="earth"]{--elc:var(--el-earth)}
+.el-card[data-el="roots"],.el-tile[data-el="roots"]{--elc:#e3b460}
+.el-card[data-el="apeiron"],.el-tile[data-el="apeiron"]{--elc:var(--el-apeiron)}
+.el-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.el-tile{display:grid;grid-template-columns:120px minmax(0,1fr);gap:6px 18px;padding:26px 24px 28px 0;border-bottom:1px solid var(--line);align-content:start;align-items:center}
+.el-tile:nth-child(3n+2),.el-tile:nth-child(3n+3){padding-left:24px;border-left:1px solid var(--line)}
+.el-tile canvas{width:120px;height:120px;display:block;grid-row:1/span 3;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--elc) 9%,transparent),transparent 70%)}
+.el-tile>:not(canvas):not(.el-k):not(h3):not(.el-g){grid-column:1/-1}
+.el-tile .el-k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--elc);font-weight:600;align-self:end}
+.el-tile h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.1}
+.el-tile .el-g{font-family:var(--f-display);font-size:1.1rem;color:var(--elc);align-self:start}
+.el-tile blockquote{margin:10px 0 0;font-family:var(--f-display);font-size:1.05rem;line-height:1.4;color:var(--ink)}
+.el-tile .el-ref{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:11px;color:var(--faint)}
+.el-tile .el-why{margin:4px 0 0;font-size:12.5px;line-height:1.55;color:var(--dim)}
+.el-tile .el-why b{font-weight:600;color:var(--elc);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;margin-right:5px}
+.el-tile .chip{justify-self:start;font-size:11px;padding:3px 9px;margin-top:4px}
+.el-note{margin:26px 0 0;max-width:78ch;font-size:13px;color:var(--dim)}
+.el-note b{color:var(--ink);font-weight:500}
+@media (max-width:1100px) and (min-width:901px){ .el-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .el-tile:nth-child(n){padding-left:0;border-left:0} .el-tile:nth-child(2n){padding-left:22px;border-left:1px solid var(--line)} }
+@media (max-width:900px){
+  .el-grid{grid-template-columns:minmax(0,1fr)}
+  .el-tile,.el-tile:nth-child(n){grid-template-columns:96px minmax(0,1fr);padding:20px 0;border-left:0}
+  .el-tile canvas{width:96px;height:96px}
+}
 </style>
 </head>
 <body>
@@ -919,6 +957,16 @@ body[data-lens="asombro"]{--lens:var(--gold)}
         <p>Cada pregunta enlaza estaciones a lo largo del tiempo. La posición horizontal de cada estrella es su fecha. Toca un nombre para volar hasta él.</p>
       </div>
       <div class="constellations" id="constellations"></div>
+    </section>
+
+    <section aria-labelledby="elTitle" id="raices">
+      <div class="sec-head">
+        <div class="kicker">ἀρχή · el principio de todo</div>
+        <h2 id="elTitle">Las raíces del mundo</h2>
+        <p>Antes de los átomos y de las formas, la pregunta fue material: ¿de qué está hecho todo? Cinco respuestas eligieron un elemento, o los cuatro; una se negó a elegir. Cada emblema no ilustra el elemento: se comporta como cada filósofo dijo que se comporta el mundo.</p>
+      </div>
+      <div class="el-grid" id="elGrid"></div>
+      <p class="el-note"><b>Cómo leerlos.</b> El agua de Tales sostiene un disco que flota; el aire de Anaxímenes respira y cambia de sustancia al condensarse; el fuego de Heráclito se enciende y se apaga con medida; la tierra de Jenófanes guarda conchas entre sus estratos; las raíces de Empédocles se reúnen y se separan; el ápeiron de Anaximandro no es ningún elemento, sino el fondo del que se separan los opuestos. Platón y Aristóteles heredarán los cuatro: uno como poliedros en el <i>Timeo</i>, el otro con un quinto cuerpo, el éter.</p>
     </section>
 
     <section aria-labelledby="psicoTitle">
@@ -1514,7 +1562,7 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
   </section>
 
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v0.8 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales.</p>
+    <p><b>Grecia Eterna</b> · prototipo v0.9 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -2299,6 +2347,7 @@ function renderCodex(keepScroll){
   codexIn.innerHTML=`
     <div class="c-date"><span>${esc(s.date)}</span><b>${esc(s.era.label)}</b></div>
     <div class="c-head"><h2>${esc(s.name)}</h2><div class="c-greek" lang="grc">${esc(s.gr)}</div><div class="c-epi">${esc(s.epi)}</div></div>
+    <div class="el-slot" data-st="${s.id}"></div>
     <p class="c-q">${esc(s.q)}</p>
     ${state.mirada>=0?ploBlock(s):""}
     <div class="facets">${order.map(k=>`
@@ -5021,6 +5070,200 @@ try{ W=initWorld(); }catch(err){ W=null; view.classList.add("um-nogl"); const p=
 OR.show("forma",0);
 })();
 </script>
+<script>
+/* =================================================================
+   v0.9 · LAS RAÍCES · iconos de elemento
+   Emblemas vivos de partículas (canvas 2D) para quienes hicieron de un
+   elemento, o de los cuatro, el principio (arché). Cada uno se comporta
+   según la doctrina de su autor. Aparecen en el códice de la estación
+   y juntos en la sala de lectura («Las raíces del mundo»).
+   ================================================================= */
+(function(){
+"use strict";
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), lerp=(a,b,t)=>a+(b-a)*t, sm=t=>t*t*(3-2*t);
+
+/* ---------------- 1. DATOS ---------------- */
+const ELEM={
+ tales:{el:"water", k:"Arché · agua", g:"ὕδωρ", name:"Tales de Mileto",
+  x:"Todo procede de lo húmedo, y la tierra flota sobre el agua como un leño.",
+  q:"Tales dice que el principio es el agua; por eso afirmaba también que la tierra está sobre el agua.", ref:"Aristóteles, Metafísica A 3, 983b20–22 · paráfrasis", s:"Testimonio",
+  why:"El agua sostiene un disco que flota y se mece con el oleaje; algunas gotas se levantan y vuelven: de lo húmedo nace y a lo húmedo regresa."},
+ anaximenes:{el:"air", k:"Arché · aire", g:"ἀήρ", name:"Anaxímenes",
+  x:"El aire respira: al enrarecerse se hace fuego; al condensarse, viento, nube, agua, tierra y piedra.",
+  q:"Así como nuestra alma, que es aire, nos mantiene unidos, así el aliento y el aire abarcan el mundo entero.", ref:"Anaxímenes, DK 13 B2 · autenticidad discutida", s:"Fragmento",
+  why:"El emblema se expande y se contrae. Al expandirse brilla como fuego; al contraerse, su núcleo pasa por nube, agua, tierra y piedra. Una sola sustancia, muchos estados: la primera explicación cuantitativa del cambio."},
+ heraclito:{el:"fire", k:"Arché · fuego", g:"πῦρ", name:"Heráclito",
+  x:"Un fuego siempre vivo que se enciende con medida y se apaga con medida.",
+  q:"Este cosmos, el mismo para todos, siempre fue, es y será fuego siempre vivo, que se enciende según medida y se apaga según medida.", ref:"Heráclito, DK 22 B30 · traducción orientativa", s:"Fragmento",
+  why:"La llama late con un ritmo regular, nunca desbocado: la medida importa tanto como el fuego. Las chispas que caen se vuelven mar, la primera de sus transformaciones (B31)."},
+ jenofanes:{el:"earth", k:"Arché · tierra (y agua)", g:"γῆ", name:"Jenófanes",
+  x:"De la tierra viene todo y en tierra acaba; las conchas de los montes prueban que antes hubo mar.",
+  q:"Pues de la tierra viene todo, y en tierra acaba todo.", ref:"Jenófanes, DK 21 B27 · con B33: «todos hemos nacido de tierra y agua»", s:"Fragmento",
+  why:"Las partículas se asientan en estratos; el agua llega, los disuelve en barro y la tierra vuelve a depositarse. Entre las capas permanece una concha fósil, la observación con la que Jenófanes razonaba (A33)."},
+ empedocles:{el:"roots", k:"Las cuatro raíces", g:"ῥιζώματα", name:"Empédocles",
+  x:"Tierra, agua, aire y fuego son eternos; el Amor los reúne y la Discordia los separa.",
+  q:"Oye primero las cuatro raíces de todas las cosas.", ref:"Empédocles, DK 31 B6 · traducción orientativa", s:"Fragmento",
+  why:"Cuatro poblaciones que nunca cambian de naturaleza. En un ciclo sin fin se funden en una esfera, el Sphairos, y vuelven a separarse en cuatro regiones."},
+ anaximandro:{el:"apeiron", k:"Ningún elemento · ápeiron", g:"τὸ ἄπειρον", name:"Anaximandro",
+  x:"El principio no es ninguno de los elementos, sino lo indeterminado, del que se separan lo caliente y lo frío.",
+  q:"Se pagan unas a otras pena y retribución por su injusticia, según el orden del tiempo.", ref:"Anaximandro, DK 12 B1 · traducción orientativa", s:"Fragmento",
+  why:"Una nube sin cualidad de la que se separan lo cálido y lo frío. Se alejan, y el tiempo los devuelve al fondo común. Si el principio fuera un elemento, razonaba, acabaría destruyendo a sus contrarios."}
+};
+const ORDER=["tales","anaximandro","anaximenes","jenofanes","heraclito","empedocles"];
+
+/* ---------------- 2. EMBLEMAS ---------------- */
+function rnd(seed){ let s=seed>>>0||1; return ()=>{ s^=s<<13; s>>>=0; s^=s>>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
+const KINDS={
+ water(R){
+  const P=[]; for(let i=0;i<260;i++) P.push({x:R()*2-1,d:Math.pow(R(),.8),v:.05+R()*.08,k:R()});
+  const drops=[]; for(let i=0;i<10;i++) drops.push({x:R()*1.2-.6,t:R()*3,k:R()});
+  const surf=(x,t)=>-.04+.06*Math.sin(3*x-1.8*t)+.025*Math.sin(7.3*x+2.6*t);
+  return (c,t,dt)=>{
+    for(const p of P){ p.x+=p.v*dt*(1+.5*Math.sin(t+p.k*6)); if(p.x>.86) p.x-=1.72;
+      const bot=Math.sqrt(Math.max(0,.86*.86-p.x*p.x))*.95, s=surf(p.x,t), y=s+p.d*(bot-s);
+      const sh=1-p.d; c.dot(p.x,y,1.1+sh*1.2,`rgb(${lerp(40,190,sh)|0},${lerp(110,230,sh)|0},255)`,.35+.55*sh); }
+    /* el disco de tierra que flota */
+    const s0=surf(0,t), sl=(surf(.05,t)-surf(-.05,t))/.1, ang=Math.atan(sl)*.8;
+    for(let i=0;i<34;i++){ const u=(i/33-.5)*.66, x=u*Math.cos(ang), y=s0-.075+u*Math.sin(ang); c.dot(x,y,1.5,"rgb(232,190,130)",.9); c.dot(x,y+.035,1.1,"rgb(170,120,80)",.55); }
+    for(const d of drops){ d.t+=dt; const T=2.6, u=(d.t%T)/T; if(u<.5){ const h=Math.sin(u/.5*Math.PI)*.32; c.dot(d.x,surf(d.x,t)-h,1.4,"rgb(200,236,255)",.8*Math.sin(u/.5*Math.PI)); } }
+  };
+ },
+ air(R){
+  const P=[]; for(let i=0;i<280;i++){ const a=R()*Math.PI*2, q=Math.sqrt(R()); P.push({a,q,w:(R()-.5)*.6,k:R()}); }
+  const COL=[[255,214,150],[220,232,242],[160,170,184],[90,150,220],[170,120,80],[110,96,90]];
+  const mix=(a,b,f)=>[lerp(a[0],b[0],f),lerp(a[1],b[1],f),lerp(a[2],b[2],f)];
+  return (c,t,dt)=>{
+    const B=.5+.5*Math.sin(t*2*Math.PI/6.5), R0=lerp(.3,.86,sm(B)), D=1-B;
+    for(const p of P){ p.a+=dt*(.15+p.w*.4)*(1.4-p.q);
+      const r=p.q*R0*(1+.06*Math.sin(t*2+p.k*9)), x=Math.cos(p.a)*r, y=Math.sin(p.a)*r*.92;
+      let idx=clamp(D*(1-p.q)*6.2-.4,0,5), lo=Math.floor(idx), f=idx-lo;
+      let col=mix(COL[lo],COL[Math.min(5,lo+1)],f);
+      if(B>.75&&p.q>.6) col=mix(col,COL[0],(B-.75)/.25*(p.q-.6)/.4*1.6>1?1:(B-.75)/.25*(p.q-.6)/.4*1.6);
+      c.dot(x,y,1+D*1.4*(1-p.q)+.5,`rgb(${col[0]|0},${col[1]|0},${col[2]|0})`,.35+.5*(1-p.q*.5)); }
+  };
+ },
+ fire(R){
+  const P=[]; for(let i=0;i<260;i++) P.push({l:R(),x0:(R()*2-1),sp:.35+R()*.4,k:R()});
+  return (c,t,dt)=>{
+    const ph=(t%4.4)/4.4, M=.32+.68*sm(clamp(Math.sin(ph*Math.PI)*1.25,0,1));
+    for(const p of P){ p.l+=dt*p.sp*(.55+.6*M); if(p.l>1){ p.l-=1; p.x0=(R()*2-1); }
+      const l=p.l;
+      if(l<.82){ const u=l/.82, w=.38*Math.pow(1-u,.9)*(.7+.3*M), x=p.x0*w+Math.sin(t*5+p.k*20+u*6)*.05*u, y=.62-u*1.25*M;
+        const col=u<.25?[255,248,220]:u<.55?[255,190,90]:[255,lerp(120,60,(u-.55)/.45)|0,40];
+        c.dot(x,y,1.2+1.6*(1-u),`rgb(${col[0]},${col[1]|0},${col[2]})`,(.35+.6*(1-u))*(.45+.55*M)); }
+      else { const u=(l-.82)/.18, x=p.x0*(.4+u*.35), y=.62-1.25*M*.95+u*(1.25*M*.95+.12);
+        c.dot(x,y,1.1,`rgb(${lerp(255,80,u)|0},${lerp(140,160,u)|0},${lerp(60,230,u)|0})`,.55*(1-u*.6)); }
+    }
+    c.dot(0,.6,10,"rgb(255,170,80)",.08+.12*M);
+  };
+ },
+ earth(R){
+  const P=[]; const L=6; for(let i=0;i<260;i++){ const k=i%L, y=.66-k*.13, half=Math.sqrt(Math.max(0,.84*.84-(y-.06)*(y-.06)))*.98; P.push({k,x:(R()*2-1)*half,y,yy:y,k2:R(),half}); }
+  const shell=[]; for(let i=0;i<46;i++){ const a=i/46*Math.PI*3.6, r=.012*Math.exp(.26*a); shell.push([.18+Math.cos(a)*r,.66-3*.13-.02+Math.sin(a)*r*.8]); }
+  const LC=[[150,98,60],[188,132,82],[120,84,58],[210,160,104],[160,112,72],[98,72,56]];
+  return (c,t,dt)=>{
+    const ph=(t%11)/11, flood=ph<.55?0:ph<.72?sm((ph-.55)/.17):1-sm(clamp((ph-.72)/.26,0,1));
+    for(const p of P){
+      const wet=flood, jit=wet*.05;
+      const fall=ph>.72?sm(clamp((ph-.72-p.k*.03)/.2,0,1)):1;
+      const y=ph>.72?lerp(-.7,p.yy,fall):p.y+Math.sin(t*3+p.k2*20)*jit, x=p.x+Math.sin(t*2+p.k2*9)*jit;
+      const col=LC[p.k]; const r=lerp(col[0],70,wet*.7), g=lerp(col[1],130,wet*.6), b=lerp(col[2],210,wet*.75);
+      c.dot(x,y,1.5,`rgb(${r|0},${g|0},${b|0})`,.75);
+    }
+    const sv=ph>.72?sm(clamp((ph-.9)/.1,0,1)):1-flood*.4;
+    for(const [x,y] of shell) c.dot(x,y,1.3,"rgb(246,226,180)",.85*sv);
+    if(flood>.01) c.dot(0,.2,40,"rgb(80,150,255)",.07*flood);
+  };
+ },
+ roots(R){
+  const CL=[[201,146,90],[111,182,255],[225,232,238],[255,110,60]];
+  const P=[]; for(let i=0;i<280;i++){ const g=i%4, a=R()*Math.PI*2, q=Math.sqrt(R()); P.push({g,a,q,s:[Math.cos(a)*q,Math.sin(a)*q],o:[(R()-.5),(R()-.5)],k:R()}); }
+  return (c,t,dt)=>{
+    const Lv=.5+.5*Math.sin(t*2*Math.PI/12-Math.PI/2), love=sm(Lv);
+    for(const p of P){
+      const ga=p.g*Math.PI/2+Math.PI/4, cx=Math.cos(ga)*.5, cy=Math.sin(ga)*.5;
+      const sx=cx+p.o[0]*.36, sy=cy+p.o[1]*.36;
+      const rot=t*.4*(p.g%2?1:-1)*love, a2=p.a+rot, mx=Math.cos(a2)*p.q*.62, my=Math.sin(a2)*p.q*.62;
+      const x=lerp(sx,mx,love)+Math.sin(t*(p.g===3?6:1.5)+p.k*20)*(p.g===3?.03:.012), y=lerp(sy,my,love)+Math.cos(t*(p.g===3?5:1.3)+p.k*17)*(p.g===3?.03:.012);
+      const c0=CL[p.g]; c.dot(x,y,p.g===0?1.8:1.3,`rgb(${c0[0]},${c0[1]},${c0[2]})`,.75);
+    }
+    if(love>.85){ const f=(love-.85)/.15; c.ring(0,0,.66,"rgba(227,180,96,"+(.35*f)+")"); }
+  };
+ },
+ apeiron(R){
+  const P=[]; for(let i=0;i<280;i++){ const a=R()*Math.PI*2, q=Math.sqrt(R())*.78; P.push({x:Math.cos(a)*q,y:Math.sin(a)*q,h:i%2,k:R()}); }
+  return (c,t,dt)=>{
+    const ph=(t%10)/10, S=ph<.15?0:ph<.5?sm((ph-.15)/.35):ph<.65?1:1-sm((ph-.65)/.3);
+    for(const p of P){
+      const dir=p.h?-1:1, x=p.x*(1-.35*S)+Math.sin(t*.7+p.k*30)*.03, y=lerp(p.y,p.y*.35+dir*.42,S)+Math.cos(t*.6+p.k*20)*.03;
+      const warm=[255,170,90], cold=[110,170,255], gray=[170,162,190], col=p.h?warm:cold;
+      c.dot(x,y,1.3,`rgb(${lerp(gray[0],col[0],S)|0},${lerp(gray[1],col[1],S)|0},${lerp(gray[2],col[2],S)|0})`,.5+.25*S);
+    }
+  };
+ }
+};
+
+/* ---------------- 3. ANIMADOR ---------------- */
+const items=new Set();
+function mount(canvas,kind,seed){
+  const dpr=Math.min(2,window.devicePixelRatio||1), css=canvas.clientWidth||canvas.width||96;
+  canvas.width=Math.round(css*dpr); canvas.height=Math.round(css*dpr);
+  const ctx=canvas.getContext("2d"), S=canvas.width, half=S/2, sc=css/96;
+  const c={ dot(x,y,r,col,a){ ctx.globalAlpha=clamp(a*.8,0,1); ctx.fillStyle=col; const rr=Math.max(.55,r*sc*dpr*.62); ctx.beginPath(); ctx.arc(half+x*half*.92,half+y*half*.92,rr,0,6.283); ctx.fill(); },
+            ring(x,y,r,col){ ctx.globalAlpha=1; ctx.strokeStyle=col; ctx.lineWidth=dpr; ctx.beginPath(); ctx.arc(half+x*half*.92,half+y*half*.92,r*half*.92,0,6.283); ctx.stroke(); } };
+  const it={canvas,ctx,c,draw:KINDS[kind](rnd(seed||7)),t:Math.random()*20,vis:false,S};
+  items.add(it);
+  if("IntersectionObserver" in window){ const io=new IntersectionObserver(es=>{ it.vis=es[0].isIntersecting; if(it.vis) kick(); }); io.observe(canvas); it.io=io; } else it.vis=true;
+  frameOne(it,0); return it;
+}
+function frameOne(it,dt){
+  const {ctx,S}=it; ctx.globalCompositeOperation="source-over"; ctx.globalAlpha=1; ctx.clearRect(0,0,S,S);
+  ctx.globalCompositeOperation="lighter"; it.t+=dt; it.draw(it.c,it.t,dt);
+}
+let raf=0, last=0;
+function kick(){ if(!raf&&!reduced){ last=performance.now(); raf=requestAnimationFrame(loop); } }
+function loop(now){
+  raf=0; const dt=Math.min(.05,(now-last)/1000); last=now; let any=false;
+  for(const it of items){ if(!it.canvas.isConnected){ if(it.io) it.io.disconnect(); items.delete(it); continue; } if(it.vis&&!document.hidden){ frameOne(it,dt); any=true; } }
+  if(any) raf=requestAnimationFrame(loop);
+}
+document.addEventListener("visibilitychange",kick);
+function staticFrame(it){ if(reduced){ it.t=3.2; frameOne(it,0); } }
+
+/* ---------------- 4. CÓDICE ---------------- */
+function cardHTML(id){ const e=ELEM[id];
+  return `<figure class="el-card" data-el="${e.el}" style="margin:0"><canvas width="96" height="96" role="img" aria-label="Emblema animado: ${esc(e.k)}"></canvas>
+    <span class="el-k">${esc(e.k)}</span><span class="el-g" lang="grc">${esc(e.g)}<small>${e.el==="apeiron"?"lo indeterminado":""}</small></span><p class="el-x">${esc(e.x)}</p></figure>`; }
+function fillSlots(root){
+  (root||document).querySelectorAll(".el-slot[data-st]").forEach(sl=>{
+    const id=sl.dataset.st; if(sl.dataset.done===id) return; sl.dataset.done=id;
+    if(!ELEM[id]){ sl.innerHTML=""; return; }
+    sl.innerHTML=cardHTML(id); const it=mount(sl.querySelector("canvas"),ELEM[id].el,ORDER.indexOf(id)+3); staticFrame(it); kick();
+  });
+}
+const codexIn=document.getElementById("codexIn");
+if(codexIn){ new MutationObserver(()=>fillSlots(codexIn)).observe(codexIn,{childList:true}); fillSlots(codexIn); }
+
+/* ---------------- 5. SALA DE LECTURA ---------------- */
+const grid=document.getElementById("elGrid");
+if(grid){
+  grid.innerHTML=ORDER.map(id=>{ const e=ELEM[id]; return `<article class="el-tile" data-el="${e.el}">
+    <canvas width="150" height="150" role="img" aria-label="Emblema animado de ${esc(e.name)}: ${esc(e.k)}"></canvas>
+    <span class="el-k">${esc(e.k)}</span><h3>${esc(e.name)}</h3><span class="el-g" lang="grc">${esc(e.g)}</span>
+    <blockquote>«${esc(e.q)}»</blockquote>
+    <span class="el-ref"><span class="status" data-s="${esc(e.s)}">${esc(e.s)}</span>${esc(e.ref)}</span>
+    <p class="el-why"><b>El emblema</b>${esc(e.why)}</p>
+    <button type="button" class="chip" data-fly-station="${id}">${esc(e.name)} en el mapa ↗</button>
+  </article>`; }).join("");
+  grid.querySelectorAll("canvas").forEach((cv,k)=>{ const it=mount(cv,ELEM[ORDER[k]].el,k+3); staticFrame(it); });
+  kick();
+}
+window.GreciaElementos={ELEM,mount};
+})();
+</script>
+
 
 
 </body>

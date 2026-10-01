@@ -1,5 +1,10 @@
 # Historial
 
+## v0.9 · Las raíces del mundo · 2026-10-01
+- Emblemas vivos de partículas (canvas 2D) para quienes hicieron de un elemento, o de los cuatro, el principio: Tales (agua), Anaxímenes (aire), Jenófanes (tierra y agua), Heráclito (fuego), Empédocles (las cuatro raíces) y Anaximandro (el ápeiron, ningún elemento).
+- Cada emblema se comporta según la doctrina: el disco que flota sobre el agua, el aire que se condensa en nube, agua, tierra y piedra, el fuego que se enciende y se apaga con medida, los estratos con concha fósil, el ciclo de Amor y Discordia y la separación de lo cálido y lo frío.
+- Aparecen en el códice de cada estación y juntos en una nueva sección de la sala de lectura, «Las raíces del mundo», con fragmento, fuente y acceso al mapa.
+
 ## v0.8 · La orilla (colofón) · 2026-09-30
 - Nueva sección final, **La orilla**: interludios de *phýsis* a partir de una reflexión y dos fotografías de la orilla.
 - Un único mundo de partículas (simulación en CPU sobre un campo de flujo sin divergencia) con capa de cáusticas; los estados se definen por parámetros, no por escenas.
