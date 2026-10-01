@@ -1,5 +1,10 @@
 # Historial
 
+## v0.9.1 · La herencia de los elementos · 2026-10-01
+- Dos emblemas más en «Las raíces del mundo» y en el códice:
+  - **Platón**: tetraedro, octaedro, icosaedro y cubo en rotación dentro del dodecaedro del cosmos; el agua se rompe en triángulos y rehace dos octaedros de aire y un tetraedro de fuego (20 = 8 + 8 + 4); la tierra nunca cambia (*Timeo* 53c–57c).
+  - **Aristóteles**: los cuatro elementos en el cuadrado de cualidades, con la materia circulando entre vecinos (Generación y corrupción II 4), y un anillo de éter que gira siempre igual (Sobre el cielo I 2).
+
 ## v0.9 · Las raíces del mundo · 2026-10-01
 - Emblemas vivos de partículas (canvas 2D) para quienes hicieron de un elemento, o de los cuatro, el principio: Tales (agua), Anaxímenes (aire), Jenófanes (tierra y agua), Heráclito (fuego), Empédocles (las cuatro raíces) y Anaximandro (el ápeiron, ningún elemento).
 - Cada emblema se comporta según la doctrina: el disco que flota sobre el agua, el aire que se condensa en nube, agua, tierra y piedra, el fuego que se enciende y se apaga con medida, los estratos con concha fósil, el ciclo de Amor y Discordia y la separación de lo cálido y lo frío.

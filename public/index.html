@@ -841,13 +841,16 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .el-card[data-el="earth"],.el-tile[data-el="earth"]{--elc:var(--el-earth)}
 .el-card[data-el="roots"],.el-tile[data-el="roots"]{--elc:#e3b460}
 .el-card[data-el="apeiron"],.el-tile[data-el="apeiron"]{--elc:var(--el-apeiron)}
-.el-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
-.el-tile{display:grid;grid-template-columns:120px minmax(0,1fr);gap:6px 18px;padding:26px 24px 28px 0;border-bottom:1px solid var(--line);align-content:start;align-items:center}
-.el-tile:nth-child(3n+2),.el-tile:nth-child(3n+3){padding-left:24px;border-left:1px solid var(--line)}
-.el-tile canvas{width:120px;height:120px;display:block;grid-row:1/span 3;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--elc) 9%,transparent),transparent 70%)}
+.el-card[data-el="solids"],.el-tile[data-el="solids"]{--elc:#e3b460}
+.el-card[data-el="aether"],.el-tile[data-el="aether"]{--elc:#ffe2a8}
+.el-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+.el-tile{display:grid;grid-template-columns:104px minmax(0,1fr);gap:6px 16px;padding:26px 20px 28px 0;border-bottom:1px solid var(--line);align-content:start;align-items:center}
+.el-tile:not(:nth-child(4n+1)){padding-left:22px;border-left:1px solid var(--line)}
+.el-tile:nth-child(n+7){background:linear-gradient(180deg,rgba(227,180,96,.035),transparent 60%)}
+.el-tile canvas{width:104px;height:104px;display:block;grid-row:1/span 3;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--elc) 9%,transparent),transparent 70%)}
 .el-tile>:not(canvas):not(.el-k):not(h3):not(.el-g){grid-column:1/-1}
-.el-tile .el-k{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--elc);font-weight:600;align-self:end}
-.el-tile h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.1}
+.el-tile .el-k{font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--elc);font-weight:600;align-self:end}
+.el-tile h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.3rem;line-height:1.1}
 .el-tile .el-g{font-family:var(--f-display);font-size:1.1rem;color:var(--elc);align-self:start}
 .el-tile blockquote{margin:10px 0 0;font-family:var(--f-display);font-size:1.05rem;line-height:1.4;color:var(--ink)}
 .el-tile .el-ref{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:11px;color:var(--faint)}
@@ -856,7 +859,7 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .el-tile .chip{justify-self:start;font-size:11px;padding:3px 9px;margin-top:4px}
 .el-note{margin:26px 0 0;max-width:78ch;font-size:13px;color:var(--dim)}
 .el-note b{color:var(--ink);font-weight:500}
-@media (max-width:1100px) and (min-width:901px){ .el-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .el-tile:nth-child(n){padding-left:0;border-left:0} .el-tile:nth-child(2n){padding-left:22px;border-left:1px solid var(--line)} }
+@media (max-width:1240px) and (min-width:901px){ .el-grid{grid-template-columns:repeat(2,minmax(0,1fr))} .el-tile:nth-child(n){padding-left:0;border-left:0} .el-tile:nth-child(2n){padding-left:22px;border-left:1px solid var(--line)} }
 @media (max-width:900px){
   .el-grid{grid-template-columns:minmax(0,1fr)}
   .el-tile,.el-tile:nth-child(n){grid-template-columns:96px minmax(0,1fr);padding:20px 0;border-left:0}
@@ -963,10 +966,10 @@ body[data-lens="asombro"]{--lens:var(--gold)}
       <div class="sec-head">
         <div class="kicker">ἀρχή · el principio de todo</div>
         <h2 id="elTitle">Las raíces del mundo</h2>
-        <p>Antes de los átomos y de las formas, la pregunta fue material: ¿de qué está hecho todo? Cinco respuestas eligieron un elemento, o los cuatro; una se negó a elegir. Cada emblema no ilustra el elemento: se comporta como cada filósofo dijo que se comporta el mundo.</p>
+        <p>Antes de los átomos y de las formas, la pregunta fue material: ¿de qué está hecho todo? Cinco respuestas eligieron un elemento, o los cuatro; una se negó a elegir. Después, Platón y Aristóteles heredaron los cuatro y los reordenaron: uno en geometría, el otro con un quinto cuerpo. Cada emblema no ilustra el elemento: se comporta como cada filósofo dijo que se comporta el mundo.</p>
       </div>
       <div class="el-grid" id="elGrid"></div>
-      <p class="el-note"><b>Cómo leerlos.</b> El agua de Tales sostiene un disco que flota; el aire de Anaxímenes respira y cambia de sustancia al condensarse; el fuego de Heráclito se enciende y se apaga con medida; la tierra de Jenófanes guarda conchas entre sus estratos; las raíces de Empédocles se reúnen y se separan; el ápeiron de Anaximandro no es ningún elemento, sino el fondo del que se separan los opuestos. Platón y Aristóteles heredarán los cuatro: uno como poliedros en el <i>Timeo</i>, el otro con un quinto cuerpo, el éter.</p>
+      <p class="el-note"><b>Cómo leerlos.</b> El agua de Tales sostiene un disco que flota; el aire de Anaxímenes respira y cambia de sustancia al condensarse; el fuego de Heráclito se enciende y se apaga con medida; la tierra de Jenófanes guarda conchas entre sus estratos; las raíces de Empédocles se reúnen y se separan; el ápeiron de Anaximandro no es ningún elemento, sino el fondo del que se separan los opuestos. Al final, la herencia: los poliedros del <i>Timeo</i>, donde la tierra es la única que no se transforma, y el cosmos de Aristóteles, con su ciclo de cualidades bajo la Luna y el éter que gira por encima.</p>
     </section>
 
     <section aria-labelledby="psicoTitle">
@@ -5098,7 +5101,7 @@ const ELEM={
   x:"Un fuego siempre vivo que se enciende con medida y se apaga con medida.",
   q:"Este cosmos, el mismo para todos, siempre fue, es y será fuego siempre vivo, que se enciende según medida y se apaga según medida.", ref:"Heráclito, DK 22 B30 · traducción orientativa", s:"Fragmento",
   why:"La llama late con un ritmo regular, nunca desbocado: la medida importa tanto como el fuego. Las chispas que caen se vuelven mar, la primera de sus transformaciones (B31)."},
- jenofanes:{el:"earth", k:"Arché · tierra (y agua)", g:"γῆ", name:"Jenófanes",
+ jenofanes:{el:"earth", k:"Arché · tierra y agua", g:"γῆ", name:"Jenófanes",
   x:"De la tierra viene todo y en tierra acaba; las conchas de los montes prueban que antes hubo mar.",
   q:"Pues de la tierra viene todo, y en tierra acaba todo.", ref:"Jenófanes, DK 21 B27 · con B33: «todos hemos nacido de tierra y agua»", s:"Fragmento",
   why:"Las partículas se asientan en estratos; el agua llega, los disuelve en barro y la tierra vuelve a depositarse. Entre las capas permanece una concha fósil, la observación con la que Jenófanes razonaba (A33)."},
@@ -5106,12 +5109,20 @@ const ELEM={
   x:"Tierra, agua, aire y fuego son eternos; el Amor los reúne y la Discordia los separa.",
   q:"Oye primero las cuatro raíces de todas las cosas.", ref:"Empédocles, DK 31 B6 · traducción orientativa", s:"Fragmento",
   why:"Cuatro poblaciones que nunca cambian de naturaleza. En un ciclo sin fin se funden en una esfera, el Sphairos, y vuelven a separarse en cuatro regiones."},
- anaximandro:{el:"apeiron", k:"Ningún elemento · ápeiron", g:"τὸ ἄπειρον", name:"Anaximandro",
+ anaximandro:{el:"apeiron", k:"Ningún elemento", g:"τὸ ἄπειρον", name:"Anaximandro",
   x:"El principio no es ninguno de los elementos, sino lo indeterminado, del que se separan lo caliente y lo frío.",
   q:"Se pagan unas a otras pena y retribución por su injusticia, según el orden del tiempo.", ref:"Anaximandro, DK 12 B1 · traducción orientativa", s:"Fragmento",
-  why:"Una nube sin cualidad de la que se separan lo cálido y lo frío. Se alejan, y el tiempo los devuelve al fondo común. Si el principio fuera un elemento, razonaba, acabaría destruyendo a sus contrarios."}
+  why:"Una nube sin cualidad de la que se separan lo cálido y lo frío. Se alejan, y el tiempo los devuelve al fondo común. Si el principio fuera un elemento, razonaba, acabaría destruyendo a sus contrarios."},
+ platon:{el:"solids", k:"Herencia · poliedros", g:"τὰ στοιχεῖα", name:"Platón",
+  x:"Los elementos son sólidos hechos de triángulos: fuego, aire y agua se rehacen unos en otros; la tierra, no.",
+  q:"Demos a la tierra la figura cúbica, pues es el más inmóvil de los cuatro géneros; al fuego, la pirámide, la más móvil y aguda.", ref:"Platón, Timeo 55d–56b · paráfrasis", s:"Texto conservado",
+  why:"Cuatro sólidos giran: tetraedro (fuego), octaedro (aire), icosaedro (agua) y cubo (tierra). Cada cierto tiempo el agua se rompe en sus triángulos, que rehacen dos octaedros de aire y un tetraedro de fuego (20 = 8 + 8 + 4), y luego se recompone. El cubo nunca cambia. Alrededor, el dodecaedro que el demiurgo usó «para el todo» (55c)."},
+ aristoteles:{el:"aether", k:"Herencia · cuatro y éter", g:"αἰθήρ", name:"Aristóteles",
+  x:"Bajo la Luna, cuatro elementos que se transforman por sus cualidades; arriba, el éter, que solo gira.",
+  q:"Hay otro cuerpo, distinto de los de aquí, más divino y anterior a todos ellos, cuyo movimiento natural es el circular.", ref:"Aristóteles, Sobre el cielo I 2, 269a30–32 · paráfrasis", s:"Texto conservado",
+  why:"Fuego (caliente y seco), aire (caliente y húmedo), agua (fría y húmeda) y tierra (fría y seca) ocupan los vértices de un cuadrado. Los vecinos comparten una cualidad y por eso la materia circula de uno a otro en ciclo (Generación y corrupción II 4). Fuera, un anillo de éter gira siempre igual: no nace, no muere, no cambia."}
 };
-const ORDER=["tales","anaximandro","anaximenes","jenofanes","heraclito","empedocles"];
+const ORDER=["tales","anaximandro","anaximenes","jenofanes","heraclito","empedocles","platon","aristoteles"];
 
 /* ---------------- 2. EMBLEMAS ---------------- */
 function rnd(seed){ let s=seed>>>0||1; return ()=>{ s^=s<<13; s>>>=0; s^=s>>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
@@ -5175,6 +5186,53 @@ const KINDS={
     const sv=ph>.72?sm(clamp((ph-.9)/.1,0,1)):1-flood*.4;
     for(const [x,y] of shell) c.dot(x,y,1.3,"rgb(246,226,180)",.85*sv);
     if(flood>.01) c.dot(0,.2,40,"rgb(80,150,255)",.07*flood);
+  };
+ },
+ solids(R){
+  const phi=(1+Math.sqrt(5))/2;
+  const perms=(a)=>{ const o=[]; for(const [x,y,z] of a){ o.push([x,y,z],[y,z,x],[z,x,y]); } return o; };
+  const signs=(v)=>{ const o=[]; const [x,y,z]=v; for(const sx of x?[-1,1]:[1]) for(const sy of y?[-1,1]:[1]) for(const sz of z?[-1,1]:[1]) o.push([x*sx,y*sy,z*sz]); return o; };
+  const uniq=a=>{ const m=new Map(); a.forEach(v=>m.set(v.map(n=>n.toFixed(4)).join(),v)); return [...m.values()]; };
+  const solid=V=>{ let mn=1e9; for(let i=0;i<V.length;i++) for(let j=i+1;j<V.length;j++){ const d=Math.hypot(V[i][0]-V[j][0],V[i][1]-V[j][1],V[i][2]-V[j][2]); if(d<mn) mn=d; }
+    const E=[]; for(let i=0;i<V.length;i++) for(let j=i+1;j<V.length;j++){ const d=Math.hypot(V[i][0]-V[j][0],V[i][1]-V[j][1],V[i][2]-V[j][2]); if(Math.abs(d-mn)<1e-3) E.push([V[i],V[j]]); }
+    const r=Math.hypot(...V[0]); return E.map(([a,b])=>[a.map(n=>n/r),b.map(n=>n/r)]); };
+  const TET=solid([[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]]);
+  const CUB=solid(uniq(signs([1,1,1])));
+  const OCT=solid(uniq(perms([[1,0,0]]).flatMap(signs)));
+  const ICO=solid(uniq(perms([[0,1,phi]]).flatMap(signs)));
+  const DOD=solid(uniq(signs([1,1,1]).concat(perms([[0,1/phi,phi]]).flatMap(signs))));
+  const S={fire:{E:TET,c:[0,-.5],col:[255,120,60],n:60},air:{E:OCT,c:[.5,0],col:[225,232,240],n:84},water:{E:ICO,c:[0,.5],col:[111,182,255],n:150},earth:{E:CUB,c:[-.5,0],col:[201,146,90],n:84},cosmos:{E:DOD,c:[0,0],col:[227,180,96],n:180}};
+  const onEdge=(E,k,t)=>{ const [a,b]=E[k%E.length]; return [lerp(a[0],b[0],t),lerp(a[1],b[1],t),lerp(a[2],b[2],t)]; };
+  const P=[]; for(const key in S){ const o=S[key]; for(let i=0;i<o.n;i++){ const p={key,loc:onEdge(o.E,i,R()),k:R()};
+      if(key==="water"){ const toFire=i%5===0; p.tk=toFire?"fire":"air"; p.tloc=onEdge(S[p.tk].E,Math.floor(R()*99),R()); }
+      P.push(p); } }
+  const rot=(v,ay,ax)=>{ let [x,y,z]=v; const cy=Math.cos(ay),sy=Math.sin(ay); [x,z]=[x*cy+z*sy,-x*sy+z*cy]; const cx=Math.cos(ax),sx=Math.sin(ax); [y,z]=[y*cx-z*sx,y*sx+z*cx]; return [x,y,z]; };
+  return (c,t,dt)=>{
+    const ph=(t%11)/11, m=ph<.35?0:ph<.52?sm((ph-.35)/.17):ph<.78?1:1-sm((ph-.78)/.22);
+    for(const p of P){
+      const o=S[p.key]; let sz=p.key==="cosmos"?.9:.25, ang=t*(p.key==="earth"?.25:p.key==="cosmos"?.08:.55)+p.key.length;
+      let v=rot(p.loc,ang,ang*.6+.4), x=o.c[0]+v[0]*sz, y=o.c[1]+v[1]*sz, z=v[2], col=o.col;
+      if(p.tk && m>0){ const T=S[p.tk], ang2=t*.55+p.tk.length, w=rot(p.tloc,ang2,ang2*.6+.4); const tx=T.c[0]+w[0]*.25, ty=T.c[1]+w[1]*.25;
+        const arc=Math.sin(m*Math.PI)*.12; x=lerp(x,tx,m)+arc*(p.k-.5); y=lerp(y,ty,m)-arc*.5; col=[lerp(col[0],T.col[0],m),lerp(col[1],T.col[1],m),lerp(col[2],T.col[2],m)]; z=lerp(z,w[2],m); }
+      const a=p.key==="cosmos"?.32+.14*z:.55+.35*(z*.5+.5);
+      c.dot(x,y,p.key==="cosmos"?.9:1.15,`rgb(${col[0]|0},${col[1]|0},${col[2]|0})`,a);
+    }
+  };
+ },
+ aether(R){
+  const C={fire:[0,-.42,[255,110,60]],air:[.42,0,[225,232,240]],water:[0,.42,[111,182,255]],earth:[-.42,0,[201,146,90]]};
+  const CYC=["fire","air","water","earth"];
+  const P=[]; CYC.forEach(k=>{ for(let i=0;i<42;i++){ const a=R()*6.283, r=Math.sqrt(R())*.13; P.push({k,dx:Math.cos(a)*r,dy:Math.sin(a)*r,q:R()}); } });
+  const T=[]; for(let i=0;i<70;i++) T.push({u:R()*4,sp:.18+R()*.08,j:(R()-.5)*.05});
+  const A=[]; for(let i=0;i<150;i++) A.push({a:i/150*6.283+R()*.02,r:.8+(i%3)*.035});
+  return (c,t,dt)=>{
+    for(const p of P){ const o=C[p.k]; const pull=p.k==="earth"||p.k==="water"?.02:-.02, cx=o[0]*(1+pull*Math.sin(t+p.q*9)), cy=o[1]*(1+pull*Math.sin(t+p.q*9));
+      c.dot(cx+p.dx+Math.sin(t*1.7+p.q*30)*.012,cy+p.dy+Math.cos(t*1.5+p.q*20)*.012,1.25,`rgb(${o[2][0]},${o[2][1]},${o[2][2]})`,.7); }
+    for(const q of T){ q.u=(q.u+dt*q.sp)%4; const i=Math.floor(q.u), f=q.u-i, a=C[CYC[i]], b=C[CYC[(i+1)%4]], e=sm(f);
+      const x=lerp(a[0],b[0],e)+q.j, y=lerp(a[1],b[1],e)+q.j; const col=[lerp(a[2][0],b[2][0],e),lerp(a[2][1],b[2][1],e),lerp(a[2][2],b[2][2],e)];
+      c.dot(x,y,1,`rgb(${col[0]|0},${col[1]|0},${col[2]|0})`,.55*Math.sin(f*Math.PI)+.15); }
+    for(const p of A){ const a=p.a+t*.22; c.dot(Math.cos(a)*p.r,Math.sin(a)*p.r*.96,1,"rgb(255,236,190)",.55); }
+    c.ring(0,0,.6,"rgba(215,220,217,.18)");
   };
  },
  roots(R){
