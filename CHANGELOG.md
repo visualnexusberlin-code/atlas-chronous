@@ -1,5 +1,12 @@
 # Historial
 
+## v1.0 · La Acrópolis · 2026-10-02
+- Nueva sección **La Acrópolis**, antes de El Umbral: el Partenón como montaje constructivo en Three.js, a la manera de un *kigumi*. Primero solo el plano de planta en trazo azul; después cada bloque cae a su sitio en orden de obra, unas 1.900 piezas animadas en el shader con un único uniforme de progreso.
+- Siete pasos con cámara propia: el plano, crepidoma, peristasis, naos y opistodomo (en corte), entablamento, frontones y cubierta, y Atenea Parthenos (en corte). Botón «Construir de principio a fin», deslizador de obra, giro, corte y «Curvaturas ×30» para ver los refinamientos ópticos.
+- Sala de lectura: «Lo que el templo pregunta» (medida, ciudad, belleza, palabra y ley, con enlaces a Pitágoras, los sofistas, Platón, Plotino, Sócrates y Anaxágoras), cronología del edificio y una nota crítica sobre la financiación con el tesoro de la liga de Delos (Plutarco, *Pericles* 12).
+- Acceso desde el códice en las estaciones de Anaxágoras, los sofistas, Sócrates y Platón.
+- Modelo simplificado: sin contracción de esquinas, número real de tambores ni escultura.
+
 ## v0.9.1 · La herencia de los elementos · 2026-10-01
 - Dos emblemas más en «Las raíces del mundo» y en el códice:
   - **Platón**: tetraedro, octaedro, icosaedro y cubo en rotación dentro del dodecaedro del cosmos; el agua se rompe en triángulos y rehace dos octaedros de aire y un tetraedro de fuego (20 = 8 + 8 + 4); la tierra nunca cambia (*Timeo* 53c–57c).

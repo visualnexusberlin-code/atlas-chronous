@@ -865,6 +865,61 @@ body[data-lens="asombro"]{--lens:var(--gold)}
   .el-tile,.el-tile:nth-child(n){grid-template-columns:96px minmax(0,1fr);padding:20px 0;border-left:0}
   .el-tile canvas{width:96px;height:96px}
 }
+
+/* ---------- v1.0 · LA ACRÓPOLIS · EL PARTENÓN ---------- */
+/* Layout: a black chamber before El Umbral. A drawing that becomes a building: blueprint lines on the ground, then marble pieces dropping into place, drawn as warm lines over dark solids. Accent: ivory marble and a cold blueprint trace. */
+:root{--ac-marble:#efe4cf;--ac-rgb:239,228,207;--ac-plan:#7fb8d9}
+.acro{background:#000;border-top:1px solid rgba(var(--ac-rgb),.14);position:relative;margin-top:24px}
+.acro .um-intro h2 span b{color:var(--gold)}
+.acro .um-intro h2 span em{color:var(--ac-plan)}
+.acro .um-stage{border-block:1px solid rgba(var(--ac-rgb),.08)}
+.acro .um-tag{border-color:rgba(var(--ac-rgb),.45);color:var(--ac-marble)}
+.acro .um-head .gr{color:var(--gold)}
+.acro .um-steps button[aria-current="step"] i{background:var(--ac-marble)}
+.acro .um-steps button.done i{background:rgba(var(--ac-rgb),.45)}
+.acro .um-step .q{border-left-color:var(--gold)}
+.acro .um-more summary:before{color:var(--ac-marble)}
+.acro .ctl:hover{border-color:var(--ac-marble)}
+.acro .um-tools .ctl[aria-pressed="true"]{border-color:var(--ac-marble);background:rgba(var(--ac-rgb),.14)}
+.um-lb[data-c="plan"] b{color:var(--ac-plan)}.um-lb[data-c="marble"] b{color:var(--ac-marble)}
+.ac-ctrl{display:grid;gap:8px;padding:12px 14px;border:1px solid rgba(var(--ac-rgb),.22);border-radius:5px}
+.ac-ctrl label{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.ac-ctrl input{width:100%;accent-color:var(--ac-marble)}
+.ac-ctrl .sc{display:flex;justify-content:space-between;font-size:11px;color:var(--faint)}
+.ac-dims{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 14px;margin:0;font-size:12.5px}
+.ac-dims dt{color:var(--faint);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;padding-top:2px}
+.ac-dims dd{margin:0;color:var(--ink)}
+.ac-room{padding-inline:var(--gutter);padding-block:80px 64px;display:grid;gap:80px;max-width:1180px;margin:0 auto}
+.ac-room>section{min-width:0}
+.ac-room .sec-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+.ac-temas{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border-top:1px solid rgba(var(--ac-rgb),.35)}
+.ac-temas article{padding:20px 22px 22px 0;display:grid;gap:8px;align-content:start}
+.ac-temas article+article{padding-left:22px;border-left:1px solid var(--line)}
+.ac-temas .g{font-family:var(--f-display);font-size:1.5rem;color:var(--gold);line-height:1}
+.ac-temas h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.3rem}
+.ac-temas p{margin:0;color:var(--dim);font-size:13.5px}
+.ac-temas .chips{margin-top:4px}
+.ac-temas .chip{font-size:11px;padding:3px 9px}
+.ac-hist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px}
+.ac-hist ol{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.ac-hist li{display:grid;grid-template-columns:86px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--line);font-size:13.5px;color:var(--dim)}
+.ac-hist li b{font-family:var(--f-display);font-weight:400;color:var(--ink);font-size:1rem;font-variant-numeric:tabular-nums}
+.ac-hist .crit{padding:18px 20px;border:1px dashed var(--line-strong);border-radius:6px;display:grid;gap:10px;align-content:start}
+.ac-hist .crit h3{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.35rem}
+.ac-hist .crit p{margin:0;color:var(--dim);font-size:13.5px}
+.ac-hist .crit blockquote{margin:0;font-family:var(--f-display);font-size:1.12rem;line-height:1.4;color:var(--ink);padding-left:14px;border-left:2px solid var(--gold)}
+.ac-hist .crit small{color:var(--faint);font-size:11.5px}
+.chip.acro-go{border-color:rgba(var(--ac-rgb),.5);color:var(--ink);justify-self:start}
+.chip.acro-go:hover{border-color:var(--ac-marble);background:rgba(var(--ac-rgb),.08)}
+@media (max-width:1100px) and (min-width:901px){ .ac-temas{grid-template-columns:repeat(2,minmax(0,1fr))} .ac-temas article:nth-child(3){padding-left:0;border-left:0} }
+@media (max-width:900px){
+  .ac-temas,.ac-hist{grid-template-columns:minmax(0,1fr)}
+  .ac-temas article,.ac-temas article+article{padding:18px 0;border-left:0;border-top:1px solid var(--line)}
+  .acro .um-tools{flex-wrap:wrap;justify-content:flex-end;max-width:70%}
+}
+.acro .um-lb{background:rgba(0,0,0,.62);padding:3px 9px 4px;border-radius:3px}
+.acro .um-lb[data-c="gold"] b{color:var(--gold)}
+@media (max-width:600px){ .acro .um-lb small{display:none} .acro .um-lb b{font-size:11px} }
 </style>
 </head>
 <body>
@@ -1104,6 +1159,80 @@ body[data-lens="asombro"]{--lens:var(--gold)}
     </section>
   </div>
 
+
+  <section class="umbral acro" id="acropolis" aria-labelledby="acTitle">
+    <div class="um-intro">
+      <div>
+        <div class="kicker">Atenas, 447–432 a.C. · Pericles, Ictino, Calícrates y Fidias</div>
+        <h2 id="acTitle">La Acrópolis<span><b>μέτρον</b> · la ciudad pensada en piedra · <em>πόλις</em></span></h2>
+      </div>
+      <div class="um-lead">
+        <p>«Amamos la belleza con sencillez y el saber sin molicie.»</p>
+        <p>Así describe Pericles a su ciudad en el discurso fúnebre que le atribuye Tucídides (II 40). Mientras lo pronunciaba, en la colina de la Acrópolis acababa de terminarse un templo que dice lo mismo en mármol: el Partenón. Lo levantaron Ictino y Calícrates bajo la dirección de Fidias, entre 447 y 432 a.C., con el tesoro de la liga de ciudades aliadas.</p>
+        <p>En esa Atenas conversan Anaxágoras y Protágoras con Pericles, enseña Sócrates, hijo de un cantero, y nace Platón. Antes de entrar en los mitos de Platón y en el Liceo de Aristóteles, el atlas se detiene aquí: en un edificio que es a la vez medida, ciudad, belleza y argumento. Primero el plano; después, pieza a pieza, la obra.</p>
+      </div>
+    </div>
+
+    <div class="um-stage" id="acStage">
+      <div class="um-view" id="acView">
+        <canvas id="acGl" aria-hidden="true"></canvas>
+        <img class="um-poster" id="acPoster" alt="">
+        <div class="um-labels" id="acLabels" aria-hidden="true"></div>
+        <p class="um-hint">Arrastra para girar · Ctrl + rueda para acercar</p>
+        <div class="um-tools">
+          <button type="button" class="ctl" id="acSpin" aria-pressed="false">↻ Girar</button>
+          <button type="button" class="ctl" id="acCut" aria-pressed="false">◧ Corte</button>
+          <button type="button" class="ctl" id="acCurve" aria-pressed="false">⌒ Curvaturas ×30</button>
+          <button type="button" class="ctl" id="acReset" aria-label="Volver al encuadre del paso">◎</button>
+        </div>
+      </div>
+      <aside class="um-panel" id="acPanel" aria-live="polite" aria-label="El Partenón, paso a paso">
+        <div class="um-panel-in" id="acPanelIn"></div>
+      </aside>
+    </div>
+
+    <div class="ac-room">
+      <section aria-labelledby="acTmTitle">
+        <div class="sec-head">
+          <div class="kicker">Pórtico · cuatro temas que nacen en esta colina</div>
+          <h2 id="acTmTitle">Lo que el templo pregunta</h2>
+          <p>El Partenón no es filosofía, pero hace visibles las preguntas que la filosofía ateniense va a perseguir. Cada una abre un camino por el resto del atlas.</p>
+        </div>
+        <div class="ac-temas">
+          <article><span class="g" lang="grc">μέτρον</span><h3>Medida</h3><p>La proporción 4:9 se repite del conjunto al detalle. Para los pitagóricos el número era la estructura del mundo; Platón hará de la geometría el lenguaje del demiurgo en el <i>Timeo</i>.</p><div class="chips"><button type="button" class="chip" data-fly-station="pitagoras">Pitágoras ↗</button><button type="button" class="chip" data-umbral>El Umbral ↓</button></div></article>
+          <article><span class="g" lang="grc">πόλις</span><h3>Ciudad</h3><p>Un templo pagado por la ciudad, para la ciudad. ¿Quién decide qué es justo construir? Protágoras dirá que el hombre es la medida; Platón soñará una ciudad gobernada por quien sabe.</p><div class="chips"><button type="button" class="chip" data-fly-station="sofistas">Los sofistas ↗</button><button type="button" class="chip" data-fly-station="platon">Platón ↗</button></div></article>
+          <article><span class="g" lang="grc">κάλλος</span><h3>Belleza</h3><p>Ninguna línea del templo es recta, y por eso parece perfectamente recto. La pregunta por lo bello, por si está en la proporción o en algo que la atraviesa, llega hasta Plotino.</p><div class="chips"><button type="button" class="chip" data-fly-station="plotino">Plotino ↗</button><button type="button" class="chip" data-liceo>El Liceo ↓</button></div></article>
+          <article><span class="g" lang="grc">λόγος</span><h3>Palabra y ley</h3><p>En el ágora, a los pies de la colina, se discute, se juzga y se vota. Allí Sócrates pregunta, y allí será condenado en 399 a.C. La ciudad más bella también puede equivocarse.</p><div class="chips"><button type="button" class="chip" data-fly-station="socrates">Sócrates ↗</button><button type="button" class="chip" data-fly-station="anaxagoras">Anaxágoras ↗</button></div></article>
+        </div>
+      </section>
+
+      <section aria-labelledby="acHiTitle">
+        <div class="sec-head">
+          <div class="kicker">Historia y sombra</div>
+          <h2 id="acHiTitle">Un edificio de veinticinco siglos</h2>
+        </div>
+        <div class="ac-hist">
+          <ol>
+            <li><b>480 a.C.</b><span>Los persas incendian la Acrópolis y el templo anterior, aún en obras.</span></li>
+            <li><b>447 a.C.</b><span>Empieza la construcción del Partenón, dentro del programa de Pericles.</span></li>
+            <li><b>438 a.C.</b><span>Se dedica la Atenea Parthenos de Fidias, de oro y marfil, de unos 12 m.</span></li>
+            <li><b>432 a.C.</b><span>Se terminan las esculturas de los frontones. Un año después estalla la guerra del Peloponeso.</span></li>
+            <li><b>s. VI d.C.</b><span>Se convierte en iglesia; en el siglo XV, en mezquita.</span></li>
+            <li><b>1687</b><span>Durante el asedio veneciano, una bomba hace estallar la pólvora que guardaban los otomanos dentro del templo.</span></li>
+            <li><b>1801–1812</b><span>Lord Elgin retira gran parte de las esculturas, hoy en el Museo Británico; Grecia reclama su devolución.</span></li>
+          </ol>
+          <div class="crit">
+            <h3>¿Quién pagó la belleza?</h3>
+            <p>El tesoro de la liga de Delos, reunido por las ciudades aliadas para defenderse de Persia, se trasladó a Atenas en 454 a.C. Con él se financiaron las obras de la Acrópolis. Plutarco recoge la acusación de los adversarios de Pericles:</p>
+            <blockquote>«Grecia se siente ultrajada al ver que, con lo que aportó para la guerra, nosotros doramos y engalanamos nuestra ciudad como a una mujer vanidosa.»</blockquote>
+            <small>Plutarco, Pericles 12 · paráfrasis</small>
+            <p>El templo de la medida es también el monumento de un imperio. Es una buena pregunta para empezar a leer la República.</p>
+          </div>
+        </div>
+        <p class="src-note"><b>Procedencia.</b> Medidas según los levantamientos habituales (estilóbato de 30,88 × 69,50 m; columnas de 10,43 m). Tucídides II 40 y Plutarco, Pericles 12–13, en traducción orientativa. El modelo es una reconstrucción simplificada para enseñar el orden constructivo: no reproduce el número exacto de tambores, la contracción de las esquinas ni la escultura. Pendiente de revisión editorial humana.</p>
+      </section>
+    </div>
+  </section>
 
   <section class="umbral" id="umbral" aria-labelledby="umTitle">
     <div class="um-intro">
@@ -1565,7 +1694,7 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
   </section>
 
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v0.9 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales.</p>
+    <p><b>Grecia Eterna</b> · prototipo v1.0 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales. Sección «La Acrópolis»: el Partenón como montaje constructivo en Three.js (reconstrucción simplificada, medidas según levantamientos habituales); Tucídides II 40 y Plutarco, <i>Pericles</i> 12–13, en traducción orientativa.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -2363,6 +2492,7 @@ function renderCodex(keepScroll){
       <footer><span class="status" data-s="${esc(s.frag.s)}">${esc(s.frag.s)}</span><span>${esc(s.frag.ref)}</span></footer>
     </figure>
     ${s.note?`<p class="c-note">${esc(s.note)}</p>`:""}
+    ${["anaxagoras","sofistas","socrates","platon"].includes(s.id)?`<button type="button" class="chip acro-go" data-acropolis>Subir a la Acrópolis: el Partenón en 3D ↓</button>`:""}
     ${s.id==="platon"?`<button type="button" class="chip umbral-go" data-umbral>Entrar en El Umbral: la Caverna, Er y la Atlántida en 3D ↓</button>`:""}
     ${s.id==="aristoteles"?`<button type="button" class="chip liceo-go" data-liceo>Entrar en El Liceo: causas, silogismo, motor inmóvil y catarsis en 3D ↓</button>`:""}
     ${state.mirada<0?ploBlock(s):""}
@@ -5321,6 +5451,325 @@ if(grid){
 window.GreciaElementos={ELEM,mount};
 })();
 </script>
+<script>
+/* =================================================================
+   v1.0 · LA ACRÓPOLIS · EL PARTENÓN EN CONSTRUCCIÓN
+   Un plano que se convierte en edificio, al modo de un montaje de
+   piezas (kigumi): cada bloque cae a su lugar en orden constructivo.
+   Todas las piezas viven en dos geometrías fusionadas (sólidos oscuros
+   + aristas), animadas en el shader con un solo uniforme de progreso.
+   ================================================================= */
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v)), sm=t=>t*t*(3-2*t);
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ---------------- 1. PASOS ---------------- */
+const STEPS=[
+ {t:"El plano", k:"ἴχνος · la planta", P:0, cut:false,
+  x:"Todo empieza en el suelo. Un rectángulo de 30,9 × 69,5 m, casi exactamente 4 : 9, rodeado por 8 × 17 columnas. Dentro, la cella dividida en dos salas: el naos, abierto al este, donde estaba la estatua de Atenea, y detrás la sala que dio nombre al templo, el parthenón, «el de las doncellas». Delante y detrás, dos pórticos: pronaos y opistodomo.",
+  q:"La misma razón, 4 : 9, se repite en la planta, en la fachada y en la relación entre el diámetro de la columna y la distancia entre columnas.", qref:"Lectura habitual de los levantamientos · medidas aproximadas",
+  cam:{t:[0,0,0],d:92,az:Math.PI/2,pol:.035}},
+ {t:"Crepidoma", k:"κρηπίς · tres gradas", P:.13, cut:false,
+  x:"Sobre una cimentación de piedra caliza se asientan tres gradas de mármol del Pentélico. La superior, el estilóbato, es la superficie sobre la que se levantan las columnas. No es plana: sube unos 11 cm en el centro de los lados largos y unos 6 cm en los cortos. Actívalo con «Curvaturas ×30».",
+  q:"Las gradas son demasiado altas para subirlas cómodamente: el templo no está hecho a escala humana, sino a escala de la diosa.", qref:"Nota del atlas",
+  cam:{t:[0,1,0],d:82,az:.95,pol:1.06}},
+ {t:"La peristasis", k:"περίστασις · 46 columnas dóricas", P:.45, cut:false,
+  x:"Las columnas se montan tambor a tambor, con espigas de madera de cedro en el centro, y se acanalan ya en pie: veinte estrías cada una. Miden 10,43 m y se estrechan hacia arriba con una leve curva, la éntasis. Todas se inclinan unos 7 cm hacia dentro; las de las esquinas son algo más gruesas, porque contra el cielo parecerían más finas.",
+  q:"Ninguna línea del Partenón es del todo recta, y precisamente por eso el ojo lo ve recto.", qref:"Nota del atlas · sobre los refinamientos ópticos",
+  cam:{t:[0,6,0],d:84,az:.78,pol:1.2}},
+ {t:"Naos y opistodomo", k:"ναός · ὀπισθόδομος", P:.645, cut:true,
+  x:"Dentro, los muros se levantan hilada a hilada. En el naos, una columnata de dos pisos en forma de Π enmarca el lugar de la estatua; en la sala de atrás, cuatro columnas jónicas sostenían el techo. El corte deja ver el interior que ningún ateniense común llegó a pisar: el templo se miraba desde fuera.",
+  q:"Era un tesoro tanto como un templo: allí se guardaban las ofrendas y la reserva de la ciudad.", qref:"Nota del atlas",
+  cam:{t:[0,6,-6],d:98,az:1.3,pol:.95}},
+ {t:"Entablamento", k:"ἐπιστύλιον · τρίγλυφοι · μετόπαι", P:.832, cut:false,
+  x:"Sobre las columnas, el arquitrabe; encima, el friso dórico: 92 metopas esculpidas (gigantes, amazonas, centauros, Troya) alternan con triglifos. Por dentro, sobre los muros de la cella, corría un friso jónico continuo de unos 160 m con la procesión de las Panateneas: la ciudad representándose a sí misma.",
+  q:"Por su belleza, cada obra parecía ya antigua desde el principio; por su vigor, aún hoy parece reciente.", qref:"Plutarco, Pericles 13 · paráfrasis",
+  cam:{t:[6,13,24],d:46,az:.55,pol:1.28}},
+ {t:"Frontones y cubierta", k:"ἀετός · κέραμος", P:.975, cut:false,
+  x:"Dos frontones cierran el tejado: al este, el nacimiento de Atenea de la cabeza de Zeus; al oeste, su disputa con Poseidón por el Ática. La cubierta, de vigas de madera, se cubría con tejas de mármol. Desde lejos, el edificio entero es una sola proporción.",
+  q:"Amamos la belleza con sencillez y el saber sin molicie.", qref:"Tucídides II 40 · discurso fúnebre de Pericles",
+  cam:{t:[0,9,0],d:96,az:.62,pol:1.16}},
+ {t:"Atenea Parthenos", k:"Ἀθηνᾶ Παρθένος · Fidias", P:1, cut:true,
+  x:"Al final, en la penumbra del naos, la estatua: unos 12 m de oro y marfil sobre madera, con la Victoria en la mano y el escudo a su lado. Fue dedicada en 438 a.C. Desde aquí el atlas sube a los mitos de Platón y al Liceo de Aristóteles: la misma pregunta por la medida, la ciudad y lo bello, hecha ahora con palabras.",
+  q:"El hombre es la medida de todas las cosas.", qref:"Protágoras, DK 80 B1 · amigo de Pericles",
+  cam:{t:[0,7.5,-1.6],d:44,az:1.38,pol:1.08}, go:true}
+];
+
+/* ---------------- 2. PANEL ---------------- */
+const st={step:0, P:0, Pgoal:0, cut:false, curve:false, spin:false, manual:false};
+const panelIn=$("#acPanelIn");
+function renderPanel(){
+  const s=STEPS[st.step], last=st.step===STEPS.length-1;
+  panelIn.innerHTML=`
+    <div class="um-cat"><span class="um-tag">Arquitectura · orden dórico</span><span>447–432 a.C.</span></div>
+    <div class="um-head"><h3>El Partenón</h3><div class="gr" lang="grc">ὁ Παρθενών</div></div>
+    <div class="um-steps">${STEPS.map((x,i)=>`<button type="button" data-step="${i}" aria-label="Paso ${i+1}: ${esc(x.t)}"${i===st.step?' aria-current="step"':""} class="${i<st.step?"done":""}"><i></i></button>`).join("")}</div>
+    <div class="um-step">
+      <span class="n">Paso ${st.step+1} de ${STEPS.length} · <span lang="grc" style="text-transform:none;letter-spacing:.02em">${esc(s.k)}</span></span>
+      <h4>${esc(s.t)}</h4><p>${esc(s.x)}</p>
+      <p class="q">${esc(s.q)}<small>${esc(s.qref)}</small></p>
+    </div>
+    <div class="ac-ctrl"><label for="acProg">Construcción</label><input type="range" id="acProg" min="0" max="100" value="${Math.round(st.Pgoal*100)}"><div class="sc"><span>plano</span><span>columnas</span><span>cubierta</span></div></div>
+    ${st.step===0?`<dl class="ac-dims"><dt>Estilóbato</dt><dd>30,88 × 69,50 m</dd><dt>Columnas</dt><dd>8 × 17 · 10,43 m de alto</dd><dt>Razón</dt><dd>≈ 4 : 9</dd></dl>`:""}
+    <div class="um-nav">
+      <button type="button" class="ctl" data-nav="-1"${st.step===0?" disabled":""}>‹ Anterior</button>
+      <button type="button" class="ctl" data-nav="1">${last?"Entrar en El Umbral ↓":"Siguiente ›"}</button>
+      ${st.step===0?`<button type="button" class="chip acro-go" data-play>▶ Construir de principio a fin</button>`:""}
+    </div>
+    <details class="um-more"><summary>Cómo está hecho este modelo</summary><p>Unas 1.900 piezas caen en el orden en que se levantaba un templo dórico: gradas, tambores, capiteles, muros, vigas, frisos, frontones y tejas. Es una reconstrucción simplificada para enseñar el proceso; no reproduce la contracción de las esquinas ni la escultura.</p></details>`;
+  $("#acCut").setAttribute("aria-pressed",String(st.cut));
+}
+panelIn.addEventListener("click",e=>{
+  const n=e.target.closest("[data-nav]");
+  if(n){ const d=+n.dataset.nav; if(st.step+d>=STEPS.length){ const u=$("#umbral"); if(u) u.scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); return; } AC.show(Math.max(0,st.step+d)); return; }
+  const s=e.target.closest("[data-step]"); if(s){ AC.show(+s.dataset.step); return; }
+  if(e.target.closest("[data-play]")){ AC.play(); }
+});
+panelIn.addEventListener("input",e=>{ if(e.target.id!=="acProg") return; st.Pgoal=+e.target.value/100; st.manual=true; if(W) W.kick(); });
+$("#acSpin").addEventListener("click",()=>{ st.spin=!st.spin; $("#acSpin").setAttribute("aria-pressed",String(st.spin)); if(W) W.kick(); });
+$("#acCut").addEventListener("click",()=>{ st.cut=!st.cut; $("#acCut").setAttribute("aria-pressed",String(st.cut)); if(W) W.kick(); });
+$("#acCurve").addEventListener("click",()=>{ st.curve=!st.curve; $("#acCurve").setAttribute("aria-pressed",String(st.curve)); if(W) W.kick(); });
+document.addEventListener("click",e=>{ const a=e.target.closest("[data-acropolis]"); if(a){ e.preventDefault(); $("#acropolis").scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); } });
+
+const AC={
+  show(i){ st.step=i; const s=STEPS[i]; st.Pgoal=s.P; st.manual=false; st.cut=s.cut; st.playing=false; if(reduced) st.P=s.P; renderPanel(); if(W) W.show(i); },
+  play(){ st.step=0; renderPanel(); st.P=0; st.Pgoal=1; st.playing=true; st.cut=false; $("#acCut").setAttribute("aria-pressed","false"); if(W) W.show(0,true); }
+};
+window.GreciaAcropolis=AC;
+
+/* ---------------- 3. MODELO ---------------- */
+const W_=30.88, L_=69.5, Y0=1.59;
+function buildModel(){
+  const fillP=[], fillN=[], fillA=[], lineP=[], lineA=[];
+  const m4=new THREE.Matrix4(), q=new THREE.Quaternion(), v=new THREE.Vector3(), e=new THREE.Euler(), sc=new THREE.Vector3(1,1,1);
+  const geoCache={};
+  function piece(geo,x,y,z,ry,rz,t0,kind,thr,dur){
+    e.set(0,ry||0,rz||0); q.setFromEuler(e); v.set(x,y,z); m4.compose(v,q,sc);
+    const key=geo.uuid+"|"+(thr||20);
+    let c=geoCache[key];
+    if(!c){ const ni=geo.index?geo.toNonIndexed():geo.clone(); ni.computeVertexNormals(); const ed=new THREE.EdgesGeometry(geo,thr||20); c=geoCache[key]={f:ni.attributes.position.array,n:ni.attributes.normal.array,l:ed.attributes.position.array}; }
+    const d=dur||.03, nm=new THREE.Matrix3().getNormalMatrix(m4);
+    const tv=new THREE.Vector3();
+    for(let i=0;i<c.f.length;i+=3){ tv.set(c.f[i],c.f[i+1],c.f[i+2]).applyMatrix4(m4); fillP.push(tv.x,tv.y,tv.z); tv.set(c.n[i],c.n[i+1],c.n[i+2]).applyMatrix3(nm).normalize(); fillN.push(tv.x,tv.y,tv.z); fillA.push(t0,d,kind); }
+    for(let i=0;i<c.l.length;i+=3){ tv.set(c.l[i],c.l[i+1],c.l[i+2]).applyMatrix4(m4); lineP.push(tv.x,tv.y,tv.z); lineA.push(t0,d,kind); }
+  }
+  const box=(w,h,d)=>{ const k="b"+w+"_"+h+"_"+d; return geoCache[k]||(geoCache[k]=new THREE.BoxGeometry(w,h,d)); };
+  const cyl=(rt,rb,h,n)=>{ const k="c"+rt+"_"+rb+"_"+h+"_"+n; return geoCache[k]||(geoCache[k]=new THREE.CylinderGeometry(rt,rb,h,n||20,1)); };
+  const span=(a,b,i,n)=>a+(b-a)*(n>1?i/(n-1):0);
+
+  /* — crepidoma: 3 gradas en bloques — */
+  for(let s=0;s<3;s++){ const o=(2-s)*.75, w=W_+2*o, l=L_+2*o, h=.53, y=s*h+h/2, nb=6;
+    for(let b=0;b<nb;b++){ const bl=l/nb; piece(box(w,h,bl),0,y,-l/2+bl*(b+.5),0,0,.01+s*.035+b*.004,0,20); } }
+  /* — columnas — */
+  const ex=1.1, sx=(W_-2*ex)/7, sz=(L_-2*ex)/16;
+  const cols=[]; for(let i=0;i<8;i++) for(let j=0;j<17;j++) if(i===0||i===7||j===0||j===16) cols.push([-W_/2+ex+i*sx,-L_/2+ex+j*sz]);
+  cols.sort((a,b)=>Math.atan2(a[0],a[1])-Math.atan2(b[0],b[1]));
+  function column(x,z,yb,Hs,Rb,Rt,nd,t0,tspan,kind,ion){
+    const dh=Hs/nd;
+    for(let k=0;k<nd;k++){ const u0=k/nd,u1=(k+1)/nd, ent=u=>.03*Math.sin(Math.PI*u);
+      const r0=Rb+(Rt-Rb)*u0+ent(u0)*Rb, r1=Rb+(Rt-Rb)*u1+ent(u1)*Rb;
+      piece(cyl(+r1.toFixed(3),+r0.toFixed(3),+dh.toFixed(3),20),x,yb+dh*(k+.5),z,0,0,t0+tspan*k/nd,kind,12); }
+    const tc=t0+tspan;
+    if(ion){ piece(box(Rt*2.6,.45,Rt*1.6),x,yb+Hs+.22,z,0,0,tc,kind,20); return yb+Hs+.45; }
+    piece(cyl(+(Rt*1.42).toFixed(3),+Rt.toFixed(3),.5,24),x,yb+Hs+.25,z,0,0,tc,kind,40);
+    piece(box(+(Rt*2.85).toFixed(3),.42,+(Rt*2.85).toFixed(3)),x,yb+Hs+.71,z,0,0,tc+.004,kind,20);
+    return yb+Hs+.92;
+  }
+  cols.forEach(([x,z],n)=>column(x,z,Y0,9.51,.95,.74,7,.13+n*.0016,.21,0));
+  /* — cella: plataforma, porches, muros — */
+  const CW=21.7, cx=CW/2-.6, zE=21.6, zW=-21.6, zX=-8.2, YC=Y0+.7, Ytop=Y0+10.43+1.35;
+  for(let s=0;s<2;s++) piece(box(CW+2-s*1,.35,58-s*1),0,Y0+.175+s*.35,0,0,0,.45+s*.008,0,20);
+  const porch=[]; for(let i=0;i<6;i++) porch.push([span(-cx-.2,cx+.2,i,6),zE+3.6],[span(-cx-.2,cx+.2,i,6),zW-3.6]);
+  porch.forEach(([x,z],n)=>column(x,z,YC,8.7,.82,.65,6,.465+n*.003,.07,0));
+  const nc=11, ch=(Ytop-YC)/nc;
+  for(let c=0;c<nc;c++){ const y=YC+ch*(c+.5), t=.47+c*.0115;
+    const segL=(zE-zW)/8; for(let b=0;b<8;b++){ const z=zW+segL*(b+.5); piece(box(1.2,ch,segL),-cx,y,z,0,0,t+b*.001,0,20); piece(box(1.2,ch,segL),cx,y,z,0,0,t+b*.001,0,20); }
+    const door=c<8; for(const zz of [zE,zW,zX]){ if(door){ const w=(2*cx-4.9)/2; piece(box(w,ch,1.2),-cx+w/2,y,zz,0,0,t+.002,0,20); piece(box(w,ch,1.2),cx-w/2,y,zz,0,0,t+.002,0,20); } else piece(box(2*cx,ch,1.2),0,y,zz,0,0,t+.002,0,20); }
+  }
+  /* — interior: columnata en Π de dos pisos y columnas jónicas — */
+  const ix=6.2, inner=[]; for(let j=0;j<9;j++){ const z=span(19,-5.3,j,9); inner.push([-ix,z],[ix,z]); } for(let i=1;i<4;i++) inner.push([span(-ix,ix,i,5),-5.3]);
+  inner.forEach(([x,z],n)=>{ const t=.53+n*.0014; const y1=column(x,z,YC,5.6,.5,.42,3,t,.03,1); piece(box(.9,.5,.9),x,y1+.25,z,0,0,t+.035,1,20); column(x,z,y1+.5,3.6,.4,.34,2,t+.04,.02,1); });
+  for(const [x,z] of [[-3.3,-11.8],[3.3,-11.8],[-3.3,-17.6],[3.3,-17.6]]) column(x,z,YC,9.6,.62,.55,4,.56,.03,1,true);
+  /* — entablamento exterior — */
+  const yA=Y0+10.43, hA=1.35, hF=1.35, hC=.62, zs=L_/2-ex, xs=W_/2-ex;
+  const order=(t0,fn)=>{ for(let i=0;i<7;i++){ const x=-xs+sx*(i+.5); fn(x,zs,sx,0,t0+i*.002); fn(x,-zs,sx,0,t0+i*.002); }
+    for(let j=0;j<16;j++){ const z=-zs+sz*(j+.5); fn(xs,z,sz,Math.PI/2,t0+.015+j*.002); fn(-xs,z,sz,Math.PI/2,t0+.015+j*.002); } };
+  order(.65,(x,z,len,ry,t)=>piece(box(len,hA,1.7),x,yA+hA/2,z,ry,0,t,0,20));
+  const yF=yA+hA;
+  order(.69,(x,z,len,ry,t)=>{ piece(box(len,hF,1.2),x,yF+hF/2,z,ry,0,t,0,20); });
+  const out=(x,z,ry,o)=>ry?[x+Math.sign(x)*o,z]:[x,z+Math.sign(z)*o];
+  order(.71,(x,z,len,ry,t)=>{ for(const f of [-.5,0]){ const off=f*len; const px=ry?x:x+off, pz=ry?z+off:z; const [ox,oz]=out(px,pz,ry,.65); piece(box(.84,hF,.3),ox,yF+hF/2,oz,ry,0,t,0,20); }
+    for(const f of [-.25,.25]){ const off=f*len; const px=ry?x:x+off, pz=ry?z+off:z; const [ox,oz]=out(px,pz,ry,.52); piece(box(len/2-.84,hF*.9,.18),ox,yF+hF/2,oz,ry,0,t+.004,4,20); } });
+  const yC=yF+hF;
+  order(.75,(x,z,len,ry,t)=>{ const [ox,oz]=out(x,z,ry,.55); piece(box(len+.02,hC,3.0),ox,yC+hC/2,oz,ry,0,t,0,20); });
+  /* friso jónico sobre la cella */
+  for(let b=0;b<8;b++){ const segL=(zE-zW)/8, z=zW+segL*(b+.5); piece(box(1.3,1,segL),-cx,Ytop+.5,z,0,0,.73+b*.002,4,20); piece(box(1.3,1,segL),cx,Ytop+.5,z,0,0,.73+b*.002,4,20); }
+  for(const zz of [zE+3.6,zW-3.6,zE,zW]) piece(box(2*cx+1.3,1,1.3),0,Ytop+.5,zz,0,0,.745,4,20);
+  /* — frontones — */
+  const yP=yC+hC, ang=13.5*Math.PI/180, halfW=W_/2+.9, Hp=halfW*Math.tan(ang);
+  const tri=new THREE.Shape(); tri.moveTo(-halfW+.6,0); tri.lineTo(halfW-.6,0); tri.lineTo(0,Hp-.3); tri.closePath();
+  const tym=new THREE.ExtrudeGeometry(tri,{depth:.9,bevelEnabled:false}); tym.translate(0,0,-.45);
+  const rl=Math.hypot(halfW,Hp);
+  for(const sgn of [1,-1]){ const z=sgn*(L_/2-.2), t=.835+(sgn>0?0:.02);
+    piece(tym,0,yP,z,0,0,t,0,20);
+    piece(box(rl,.55,1.6),-halfW/2,yP+Hp/2,z,0,ang,t+.008,0,20); piece(box(rl,.55,1.6),halfW/2,yP+Hp/2,z,0,-ang,t+.008,0,20);
+    for(let f=0;f<9;f++){ const fx=span(-8,8,f,9), fh=(Hp-.6)*(1-Math.abs(fx)/halfW)*.8; piece(box(1.1,fh,.6),fx,yP+fh/2+.1,z+sgn*.7,0,0,t+.012+f*.002,2,20); }
+  }
+  /* — cubierta: vigas y tejas — */
+  for(let b=0;b<10;b++){ const z=span(-L_/2+3,L_/2-3,b,10); piece(box(2*halfW-1,.35,.35),0,yP+.2,z,0,0,.865+b*.0015,0,20); }
+  piece(box(.5,.5,L_-.6),0,yP+Hp-.15,0,0,0,.882,0,20);
+  const rows=9, slope=rl/rows;
+  for(const side of [-1,1]) for(let r=0;r<rows;r++){ const u=(r+.5)/rows, x=side*halfW*(1-u), y=yP+Hp*u+.18;
+    for(let b=0;b<8;b++){ const sl=(L_+.4)/8, z=-L_/2-.2+sl*(b+.5); piece(box(slope+.02,.22,sl),x,y,z,0,side>0?ang:-ang,.885+r*.006+b*.001+(side>0?.002:0),3,20); } }
+  /* — Atenea Parthenos — */
+  const zA=-1.6;
+  piece(box(8.1,1,4.1),0,YC+.5,zA,0,0,.976,2,20,.02);
+  piece(cyl(1.0,2.0,7.4,16),0,YC+1+3.7,zA,0,0,.978,2,8,.02);
+  piece(cyl(.75,1.0,1.4,16),0,YC+1+8.1,zA,0,0,.98,2,8,.018);
+  piece(new THREE.SphereGeometry(.55,14,10),0,YC+1+9.4,zA,0,0,.982,2,40,.016);
+  piece(new THREE.TorusGeometry(1.7,.12,6,28),-2.6,YC+2.9,zA+.4,Math.PI/2.4,0,.981,2,40,.017);
+  piece(new THREE.SphereGeometry(.45,10,8),2.3,YC+7.2,zA+.6,0,0,.983,2,40,.016);
+  piece(box(.18,9.4,.18),-2.0,YC+1+4.7,zA-.3,0,0,.979,2,20,.02);
+  return {fillP,fillN,fillA,lineP,lineA};
+}
+
+/* plano: líneas de planta en el suelo */
+function buildPlan(){
+  const P=[]; const rect=(w,l,y)=>{ const a=[[-w/2,-l/2],[w/2,-l/2],[w/2,l/2],[-w/2,l/2]]; for(let i=0;i<4;i++){ const p=a[i],q=a[(i+1)%4]; P.push(p[0],y,p[1],q[0],y,q[1]); } };
+  const circ=(x,z,r,y,n)=>{ for(let i=0;i<n;i++){ const t=i/n*6.283,u=(i+1)/n*6.283; P.push(x+Math.cos(t)*r,y,z+Math.sin(t)*r,x+Math.cos(u)*r,y,z+Math.sin(u)*r); } };
+  const y=.03;
+  for(let s=0;s<3;s++) rect(W_+2*(2-s)*.75,L_+2*(2-s)*.75,y);
+  const ex=1.1, sx=(W_-2*ex)/7, sz=(L_-2*ex)/16;
+  for(let i=0;i<8;i++) for(let j=0;j<17;j++) if(i===0||i===7||j===0||j===16) circ(-W_/2+ex+i*sx,-L_/2+ex+j*sz,.95,y,24);
+  const cx=21.7/2-.6;
+  rect(2*cx+1.2,43.2+1.2,y); rect(2*cx-1.2,43.2-1.2,y);
+  P.push(-cx+.6,y,-8.2,cx-.6,y,-8.2);
+  for(let i=0;i<6;i++){ const x=-cx-.2+(2*cx+.4)*i/5; circ(x,21.6+3.6,.82,y,20); circ(x,-21.6-3.6,.82,y,20); }
+  for(let j=0;j<9;j++){ const z=19-(24.3)*j/8; circ(-6.2,z,.5,y,14); circ(6.2,z,.5,y,14); }
+  for(let i=1;i<4;i++) circ(-6.2+12.4*i/4,-5.3,.5,y,14);
+  for(const [x,z] of [[-3.3,-11.8],[3.3,-11.8],[-3.3,-17.6],[3.3,-17.6]]) circ(x,z,.62,y,16);
+  const shift=P.length; rect(8.1,4.1,y); for(let i=shift;i<P.length;i+=3) P[i+2]+=-1.6;
+  for(let k=-6;k<=6;k++){ P.push(-W_/2-6,y,k*6,-W_/2-4.5,y,k*6); }
+  P.push(0,y,-L_/2-6,0,y,L_/2+6);
+  return P;
+}
+
+/* ---------------- 4. MOTOR ---------------- */
+const stageEl=$("#acStage"), view=$("#acView"), canvas=$("#acGl"), labelsEl=$("#acLabels");
+let W=null;
+function initGL(){
+  if(typeof THREE==="undefined") throw new Error("three");
+  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:"high-performance"});
+  const hasBloom=!!(THREE.EffectComposer&&THREE.RenderPass&&THREE.UnrealBloomPass);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,hasBloom?1.5:2));
+  renderer.setClearColor(0x000000,1);
+  const scene=new THREE.Scene(), camera=new THREE.PerspectiveCamera(36,1,.5,800);
+  let composer=null, bloom=null;
+  if(hasBloom){ try{ composer=new THREE.EffectComposer(renderer); composer.addPass(new THREE.RenderPass(scene,camera)); bloom=new THREE.UnrealBloomPass(new THREE.Vector2(512,512),.55,.45,.25); composer.addPass(bloom); }catch(e){ composer=null; bloom=null; } }
+  const U={uP:{value:0},uDrop:{value:9},uCut:{value:999},uCurve:{value:0},uTime:{value:0}};
+  const SH=`uniform float uP; uniform float uDrop; uniform float uCut; uniform float uCurve; attribute vec3 aT; varying float vU; varying float vK; varying vec3 vW;
+    vec3 place(vec3 p){ float u=clamp((uP-aT.x)/aT.y,0.0,1.0); vU=u; vK=aT.z; float e=1.0-pow(1.0-u,3.0);
+      p.y+=(1.0-e)*uDrop*(0.6+0.4*fract(aT.x*97.0));
+      float lift=step(1.62,p.y); float c=0.11*(1.0-pow(2.0*p.z/69.5,2.0))+0.06*(1.0-pow(2.0*p.x/30.88,2.0));
+      p.y+=uCurve*max(c,0.0)*lift*0.6;
+      float hy=clamp((p.y-1.59)/10.43,0.0,1.6)*step(aT.z,0.5);
+      p.x-=uCurve*0.07*hy*sign(p.x)*smoothstep(10.5,14.5,abs(p.x));
+      p.z-=uCurve*0.07*hy*sign(p.z)*smoothstep(31.0,34.0,abs(p.z));
+      vW=p; return p; }`;
+  const M=buildModel();
+  const fG=new THREE.BufferGeometry(); fG.setAttribute("position",new THREE.Float32BufferAttribute(M.fillP,3)); fG.setAttribute("normal",new THREE.Float32BufferAttribute(M.fillN,3)); fG.setAttribute("aT",new THREE.Float32BufferAttribute(M.fillA,3));
+  const fM=new THREE.ShaderMaterial({uniforms:U,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:1.5,polygonOffsetUnits:2,
+    vertexShader:SH+`varying float vL; void main(){ vec3 p=place(position); vL=0.45+0.55*max(dot(normalize(normal),normalize(vec3(0.4,0.8,0.5))),0.0); gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.0); }`,
+    fragmentShader:`uniform float uCut; varying float vU; varying float vK; varying vec3 vW; varying float vL; void main(){ if(vU<=0.001||(vW.x>uCut&&!(vK>1.5&&vK<2.5&&abs(vW.z+1.6)<6.0))) discard; vec3 base=vK>1.5&&vK<2.5?vec3(0.2,0.14,0.05):vec3(0.055,0.05,0.06); gl_FragColor=vec4(base*vL*1.6,1.0); }`});
+  const fill=new THREE.Mesh(fG,fM); fill.frustumCulled=false; scene.add(fill);
+  const lG=new THREE.BufferGeometry(); lG.setAttribute("position",new THREE.Float32BufferAttribute(M.lineP,3)); lG.setAttribute("aT",new THREE.Float32BufferAttribute(M.lineA,3));
+  const lM=new THREE.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,
+    vertexShader:SH+`void main(){ vec3 p=place(position); gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.0); }`,
+    fragmentShader:`uniform float uCut; varying float vU; varying float vK; varying vec3 vW; void main(){ if(vU<=0.001||(vW.x>uCut&&!(vK>1.5&&vK<2.5&&abs(vW.z+1.6)<6.0))) discard;
+      vec3 c=vec3(0.94,0.89,0.81); if(vK>0.5&&vK<1.5) c=vec3(0.62,0.78,0.92); if(vK>1.5&&vK<2.5) c=vec3(1.0,0.78,0.38); if(vK>2.5&&vK<3.5) c=vec3(0.82,0.66,0.52); if(vK>3.5) c=vec3(0.9,0.8,0.62);
+      vec3 hot=vec3(1.0,0.8,0.45)*1.8; c=mix(hot,c,smoothstep(0.55,1.0,vU));
+      float a=0.25+0.6*vU; if(vK>2.5&&vK<3.5) a*=0.42; gl_FragColor=vec4(c,a); }`});
+  const lines=new THREE.LineSegments(lG,lM); lines.frustumCulled=false; scene.add(lines);
+  const pl=buildPlan(); const pG=new THREE.BufferGeometry(); pG.setAttribute("position",new THREE.Float32BufferAttribute(pl,3));
+  const pM=new THREE.LineBasicMaterial({color:0x7fb8d9,transparent:true,opacity:.9,depthWrite:false}); const plan=new THREE.LineSegments(pG,pM); scene.add(plan);
+  const gr=[]; for(let k=-14;k<=14;k++){ gr.push(-60,0,k*5,60,0,k*5,k*4.3,0,-62,k*4.3,0,62); }
+  const gG=new THREE.BufferGeometry(); gG.setAttribute("position",new THREE.Float32BufferAttribute(gr,3)); const gM=new THREE.LineBasicMaterial({color:0x2a3a46,transparent:true,opacity:.35,depthWrite:false}); scene.add(new THREE.LineSegments(gG,gM));
+  /* etiquetas */
+  const L=[
+    {t:"69,5 m",s:"estilóbato",p:[-W_/2-3,0,0],when:i=>i===0,c:"plan"},
+    {t:"30,9 m",s:"fachada este",p:[0,0,L_/2+4],when:i=>i===0,c:"plan"},
+    {t:"ναός",s:"naos · la estatua",p:[0,0,9],when:i=>i===0,c:"plan"},
+    {t:"παρθενών",s:"la sala de las doncellas",p:[0,0,-14.7],when:i=>i===0,c:"plan"},
+    {t:"πρόναος",s:"pórtico este",p:[W_/2+4,0,25.2],when:i=>i===0,c:"plan"},
+    {t:"ὀπισθόδομος",s:"pórtico oeste",p:[W_/2+4,0,-25.2],when:i=>i===0,c:"plan"},
+    {t:"Estilóbato",s:"tres gradas de mármol",p:[W_/2+1.5,1.6,10],when:i=>i===1,c:"marble"},
+    {t:"8 × 17",s:"46 columnas dóricas",p:[W_/2-1,12.5,L_/2-1],when:i=>i===2,c:"marble"},
+    {t:"Columnata en Π",s:"dos pisos",p:[6.2,11.5,8],when:i=>i===3,c:"plan"},
+    {t:"Columnas jónicas",s:"la sala de atrás",p:[3.3,12.5,-14.7],when:i=>i===3,c:"plan"},
+    {t:"Metopas",s:"92 relieves",p:[W_/2+.8,15.6,22],when:i=>i===4,c:"marble"},
+    {t:"Friso jónico",s:"Panateneas · 160 m",p:[10.5,15.8,8],when:i=>i===4,c:"marble"},
+    {t:"Frontón este",s:"nacimiento de Atenea",p:[0,20.4,L_/2],when:i=>i===5,c:"marble"},
+    {t:"Atenea Parthenos",s:"Fidias · oro y marfil",p:[0,13.8,-1.6],when:i=>i===6,c:"gold"}
+  ];
+  L.forEach(l=>{ const el=document.createElement("div"); el.className="um-lb off"; el.dataset.c=l.c; el.innerHTML=`<b>${esc(l.t)}</b><small>${esc(l.s)}</small>`; labelsEl.appendChild(el); l.el=el; l.v=new THREE.Vector3(...l.p); });
+  /* cámara */
+  const rig={cur:{t:new THREE.Vector3(0,0,0),d:92,az:Math.PI/2,pol:.035},goal:{t:new THREE.Vector3(),d:92,az:Math.PI/2,pol:.035}};
+  let vw={w:1,h:1,aspect:1.6};
+  const fitK=()=>{ const a=vw.aspect; return a<1.4?Math.min(2.5,1.45/a+.0):1; };
+  function setGoal(c){ rig.goal.t.set(...c.t); rig.goal.d=c.d*fitK(); rig.goal.az=c.az; rig.goal.pol=c.pol; }
+  function show(i,fromPlay){ setGoal(STEPS[i].cam); if(fromPlay){ setGoal(STEPS[0].cam); } kick(); }
+  function resize(){ const r=view.getBoundingClientRect(), w=Math.max(1,Math.round(r.width)), h=Math.max(1,Math.round(r.height));
+    renderer.setSize(w,h,false); if(composer) composer.setSize(w,h);
+    const wide=window.innerWidth>900, pw=wide?($("#acPanel").offsetWidth+16):0; vw={w,h,aspect:(w-pw)/h};
+    if(pw) camera.setViewOffset(w,h,-pw/2,0,w,h); else camera.clearViewOffset(); camera.aspect=w/h; camera.updateProjectionMatrix(); setGoal(STEPS[st.step].cam); }
+  let drag=null; const ptrs=new Map();
+  canvas.addEventListener("pointerdown",e=>{ ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY}); if(ptrs.size===1) drag={x:e.clientX,y:e.clientY,az:rig.goal.az,pol:rig.goal.pol}; try{ canvas.setPointerCapture(e.pointerId); }catch(_){ } });
+  canvas.addEventListener("pointermove",e=>{ if(!ptrs.has(e.pointerId)) return; const prev=ptrs.get(e.pointerId); ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(ptrs.size===2){ const [a,b]=[...ptrs.values()], o=[...ptrs.entries()].find(([id])=>id!==e.pointerId)[1]; const dn=Math.hypot(a.x-b.x,a.y-b.y), dp=Math.hypot(prev.x-o.x,prev.y-o.y); if(dp>0) rig.goal.d=clamp(rig.goal.d*dp/dn,18,180); kick(); return; }
+    if(drag){ const dx=e.clientX-drag.x, dy=e.clientY-drag.y; if(Math.hypot(dx,dy)>3){ rig.goal.az=drag.az-dx*.005; rig.goal.pol=clamp(drag.pol-dy*.004,.03,1.5); kick(); } } });
+  const end=e=>{ ptrs.delete(e.pointerId); if(!ptrs.size) drag=null; }; canvas.addEventListener("pointerup",end); canvas.addEventListener("pointercancel",end);
+  canvas.addEventListener("wheel",e=>{ if(!(e.ctrlKey||e.metaKey)) return; e.preventDefault(); rig.goal.d=clamp(rig.goal.d*Math.exp(e.deltaY*.004),18,180); kick(); },{passive:false});
+  $("#acReset").addEventListener("click",()=>{ setGoal(STEPS[st.step].cam); kick(); });
+  let running=false, rafId=0, last=performance.now();
+  function kick(){ if(!rafId&&running&&!document.hidden){ last=performance.now(); rafId=requestAnimationFrame(frame); } }
+  new IntersectionObserver(es=>{ running=es[0].isIntersecting; kick(); },{threshold:0,rootMargin:"120px"}).observe(stageEl);
+  document.addEventListener("visibilitychange",kick);
+  const tv=new THREE.Vector3(); let cutK=0, curveK=0;
+  function frame(now){
+    rafId=0; if(!running||document.hidden) return;
+    const dt=Math.min(.05,(now-last)/1000); last=now; U.uTime.value+=dt;
+    /* progreso de obra */
+    if(reduced) st.P=st.Pgoal; else { const sp=st.playing?.034:(st.manual?.6:.11); st.P+=clamp(st.Pgoal-st.P,-sp*dt*4,sp*dt); }
+    if(st.playing){ let k=0; for(let i=0;i<STEPS.length;i++) if(st.P>STEPS[i].P+.003) k=i+1; k=Math.min(k,STEPS.length-1); if(k!==st.step){ st.step=k; st.cut=STEPS[k].cut; $("#acCut").setAttribute("aria-pressed",String(st.cut)); renderPanel(); setGoal(STEPS[k].cam); } if(st.P>=.999) st.playing=false; }
+    U.uP.value=st.P;
+    cutK+=((st.cut?1:0)-cutK)*(reduced?1:1-Math.exp(-dt*2.5)); U.uCut.value=cutK>.01?(1-cutK)*40+(-.01)*cutK:999;
+    curveK+=((st.curve?30:0)-curveK)*(reduced?1:1-Math.exp(-dt*2)); U.uCurve.value=curveK;
+    pM.opacity=.15+.75*(1-sm(clamp((st.P-.02)/.2,0,1)))+(st.step===0?.1:0);
+    if(st.spin) rig.goal.az+=dt*.12;
+    const k=reduced?1:1-Math.exp(-dt*1.8), c=rig.cur, g=rig.goal;
+    c.t.lerp(g.t,k); c.d+=(g.d-c.d)*k; c.az+=(g.az-c.az)*k; c.pol+=(g.pol-c.pol)*k;
+    const sp=Math.sin(c.pol); camera.position.set(c.t.x+c.d*sp*Math.sin(c.az),c.t.y+c.d*Math.cos(c.pol),c.t.z+c.d*sp*Math.cos(c.az)); camera.lookAt(c.t);
+    if(composer) composer.render(); else renderer.render(scene,camera);
+    L.forEach(l=>{ const on=l.when(st.step)&&!(st.playing&&st.step===0&&st.P>.02); tv.copy(l.v).project(camera); const vis=on&&tv.z<1&&tv.z>-1;
+      if(vis) l.el.style.transform=`translate(${((tv.x*.5+.5)*vw.w).toFixed(1)}px,${((-tv.y*.5+.5)*vw.h).toFixed(1)}px) translate(-50%,-100%)`; l.el.classList.toggle("off",!vis); });
+    const moving=Math.abs(st.Pgoal-st.P)>1e-4||Math.abs(g.az-c.az)>1e-4||Math.abs(g.d-c.d)>1e-3||c.t.distanceToSquared(g.t)>1e-5||st.spin||Math.abs(cutK-(st.cut?1:0))>.002||Math.abs(curveK-(st.curve?30:0))>.01;
+    if(moving||U.uTime.value<2) rafId=requestAnimationFrame(frame); else { rafId=requestAnimationFrame(frame); }
+  }
+  new ResizeObserver(resize).observe(view); resize();
+  return {show,kick};
+}
+
+/* arranque perezoso: el modelo se construye cuando la sección se acerca */
+renderPanel();
+new IntersectionObserver((es,io)=>{ if(!es[0].isIntersecting) return; io.disconnect();
+  try{ W=initGL(); W.show(st.step); }catch(err){ W=null; view.classList.add("um-nogl"); if(window.console) console.warn("La Acrópolis sin WebGL:",err); }
+},{rootMargin:"600px"}).observe(stageEl);
+})();
+</script>
+
 
 
 
