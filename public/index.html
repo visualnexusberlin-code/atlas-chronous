@@ -920,6 +920,70 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .acro .um-lb{background:rgba(0,0,0,.62);padding:3px 9px 4px;border-radius:3px}
 .acro .um-lb[data-c="gold"] b{color:var(--gold)}
 @media (max-width:600px){ .acro .um-lb small{display:none} .acro .um-lb b{font-size:11px} }
+
+/* ---------- v1.1 · LA RUEDA DEL ASOMBRO ---------- */
+/* A Bauhaus-style teaching wheel (after Gropius, 1922) that lives in the empty space beside the long reference list. Read from the centre out: wonder → four domains → eight thinkers → eight gestures → the present. */
+.library{grid-template-areas:"a b c" "r r c";grid-template-rows:auto 1fr;align-items:start}
+.library>div:nth-child(1){grid-area:a}.library>div:nth-child(2){grid-area:b}
+.library>.lib-open{grid-area:c}
+.rueda{grid-area:r;position:sticky;top:20px;margin-top:24px;padding-top:22px;border-top:1px solid var(--line);display:grid;gap:14px;min-width:0}
+.rueda-head{display:grid;gap:4px}
+.rueda-head .kicker{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.rueda-head h3{all:unset;font-family:var(--f-display);font-size:clamp(1.5rem,2.4vw,1.9rem);line-height:1.1;color:var(--ink)}
+.rueda-body{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:22px;align-items:center}
+.rueda-svg{width:100%;height:auto;display:block;touch-action:manipulation;overflow:hidden}
+.rueda-svg text{font-family:var(--f-body);fill:var(--ink);pointer-events:none;user-select:none}
+.rueda-svg .rw-seg{fill:#0b0a0c;stroke:var(--line-strong);stroke-width:1;transition:fill .35s,opacity .35s}
+.rueda-svg .rw-dom .rw-seg{fill:rgba(227,180,96,.86);stroke:#000;stroke-width:1.5}
+.rueda-svg .rw-dom text{fill:#140f08}
+.rueda-svg .rw-hilo .rw-seg{fill:rgba(227,180,96,.62);stroke:#000;stroke-width:1}
+.rueda-svg .rw-hilo text{fill:#140f08;font-style:italic;font-size:14px;letter-spacing:.03em}
+.rueda-svg .rw-ring{transition:opacity .4s calc(var(--r,0)*70ms)}
+.rueda-svg .rw-hit{cursor:pointer;outline:none}
+.rueda-svg .rw-hit:hover .rw-seg{fill:#17141a}
+.rueda-svg .rw-dom .rw-hit:hover .rw-seg{fill:rgba(240,196,118,.95)}
+.rueda-svg .rw-hit:focus-visible .rw-seg{stroke:var(--gold);stroke-width:2.5}
+.rueda-svg .is-on .rw-seg{fill:#1d1912}
+.rueda-svg .rw-dom .is-on .rw-seg{fill:#f2c574}
+.rueda-svg .rw-hilo .is-on .rw-seg{fill:#f2c574}
+.rueda-svg .is-off{opacity:.24;transition:opacity .4s calc(var(--r,0)*70ms)}
+.rueda-svg .is-on{opacity:1;transition:opacity .4s calc(var(--r,0)*70ms)}
+.rueda-svg .rw-core circle{fill:#000;stroke:var(--gold);stroke-width:1.5}
+.rueda-svg .rw-core text.big{font-family:var(--f-display);font-size:38px;letter-spacing:.04em}
+.rueda-svg .rw-core text.gr{font-family:var(--f-display);font-size:17px;fill:var(--gold)}
+.rueda-svg .rw-core text.sm{font-size:11.5px;letter-spacing:.14em;fill:var(--dim);text-transform:uppercase}
+.rueda-svg .rw-title text{font-size:14.5px;letter-spacing:.24em;fill:var(--dim);font-weight:500}
+.rueda-svg .rw-title circle{fill:none;stroke:var(--line-strong)}
+.rueda-svg .t-dom{font-size:24px;font-weight:600;letter-spacing:.08em}
+.rueda-svg .t-domg{font-family:var(--f-display);font-size:15px}
+.rueda-svg .t-who{font-family:var(--f-display);font-size:24px}
+.rueda-svg .t-con{font-size:13px;letter-spacing:.16em;fill:var(--dim);font-weight:500}
+.rueda-svg .t-verb{font-size:22px;font-weight:600;letter-spacing:.1em}
+.rueda-svg .t-field{font-size:17px;letter-spacing:.14em;fill:var(--dim);font-weight:500}
+.rueda-svg .is-on .t-con,.rueda-svg .is-on .t-field{fill:var(--ink)}
+.rueda-svg .is-on .t-verb,.rueda-svg .is-on .t-who{fill:var(--gold)}
+.rueda-panel{display:grid;gap:9px;align-content:start;min-height:280px;font-size:13.5px}
+.rueda-panel .rp-k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.rueda-panel h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.1}
+.rueda-panel h4 small{display:block;font-family:var(--f-body);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-top:5px}
+.rueda-panel .rp-path{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:11.5px;color:var(--dim);letter-spacing:.04em}
+.rueda-panel .rp-path i{font-style:normal;color:var(--faint)}
+.rueda-panel p{margin:0;color:var(--dim)}
+.rueda-panel .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+.rueda-panel .chip{font-size:11px;padding:3px 9px}
+.rueda-note{margin:0;font-size:11.5px;color:var(--faint)}
+.rueda-back{display:none}
+@media (max-height:760px) and (min-width:901px){ .rueda{position:static} }
+@media (max-width:1100px) and (min-width:901px){ .rueda-body{grid-template-columns:minmax(0,1fr)} .rueda-panel{min-height:0} }
+@media (max-width:900px){
+  .library{grid-template-areas:none;grid-template-rows:none}
+  .library>div:nth-child(n),.library>.lib-open,.library>.rueda{grid-area:auto}
+  .rueda{position:static;margin-top:8px}
+  .rueda-body{grid-template-columns:minmax(0,1fr);gap:14px}
+  .rueda-panel{min-height:0}
+  .rueda-back{display:inline-flex}
+  .rueda[data-zoom="0"] .rueda-back{display:none}
+}
 </style>
 </head>
 <body>
@@ -1154,7 +1218,18 @@ body[data-lens="asombro"]{--lens:var(--gold)}
       <div class="library">
         <div><h3>Biblioteca del proyecto</h3><div id="libProject"></div></div>
         <div><h3>Ediciones y lecturas</h3><div id="libDC"></div></div>
-        <div><h3>Referencias abiertas</h3><div id="libOpen"></div></div>
+        <div class="rueda" id="rueda" data-zoom="0">
+          <div class="rueda-head">
+            <div class="kicker">Rueda del asombro · a la manera de la Bauhaus</div>
+            <h3>Del asombro al mundo actual</h3>
+          </div>
+          <div class="rueda-body">
+            <svg class="rueda-svg" id="ruedaSvg" viewBox="-410 -410 820 820" role="group" aria-label="Rueda del asombro: del centro hacia fuera, asombro, cuatro dominios, ocho pensadores, ocho gestos y ocho campos del presente"></svg>
+            <div class="rueda-panel" id="ruedaPanel" aria-live="polite"></div>
+          </div>
+          <p class="rueda-note">Se lee de dentro afuera, como un curso: cada radio une un dominio, un pensador, un gesto y un campo de hoy. Toca un sector para seguir su camino.</p>
+        </div>
+        <div class="lib-open"><h3>Referencias abiertas</h3><div id="libOpen"></div></div>
       </div>
     </section>
   </div>
@@ -1694,7 +1769,7 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
   </section>
 
   <footer class="colophon">
-    <p><b>Grecia Eterna</b> · prototipo v1.0 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales. Sección «La Acrópolis»: el Partenón como montaje constructivo en Three.js (reconstrucción simplificada, medidas según levantamientos habituales); Tucídides II 40 y Plutarco, <i>Pericles</i> 12–13, en traducción orientativa.</p>
+    <p><b>Grecia Eterna</b> · prototipo v1.1 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales. Sección «La Acrópolis»: el Partenón como montaje constructivo en Three.js (reconstrucción simplificada, medidas según levantamientos habituales); Tucídides II 40 y Plutarco, <i>Pericles</i> 12–13, en traducción orientativa. «Rueda del asombro»: diagrama didáctico a la manera de la rueda de la Bauhaus (Gropius, 1922), a partir de un boceto propio del proyecto.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
   </footer>
@@ -5769,6 +5844,157 @@ new IntersectionObserver((es,io)=>{ if(!es[0].isIntersecting) return; io.disconn
 },{rootMargin:"600px"}).observe(stageEl);
 })();
 </script>
+<script>
+/* =================================================================
+   v1.1 · LA RUEDA DEL ASOMBRO
+   Rueda didáctica al modo de la Bauhaus (Gropius, 1922), leída de
+   dentro afuera. Todos los anillos comparten la misma división
+   (4 dominios × 2 = 8 radios), así cada radio es un camino legible.
+   ================================================================= */
+(function(){
+"use strict";
+const svg=document.getElementById("ruedaSvg"), panel=document.getElementById("ruedaPanel"), box=document.getElementById("rueda");
+if(!svg) return;
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const NS="http://www.w3.org/2000/svg";
+
+const DOM=[
+ {t:"PHÝSIS",gr:"φύσις",sub:"la naturaleza que crece y cambia",go:"#raices",goT:"Las raíces del mundo ↓"},
+ {t:"LÓGOS",gr:"λόγος",sub:"la razón que mide y explica",go:"#liceo",goT:"El Liceo ↓"},
+ {t:"PÓLIS",gr:"πόλις",sub:"la ciudad que conversa y decide",go:"#acropolis",goT:"La Acrópolis ↓"},
+ {t:"ÉTHOS",gr:"ἦθος",sub:"el carácter que imagina y elige",go:"#umbral",goT:"El Umbral ↓"}];
+const SEC=[
+ {who:"Heráclito",st:"heraclito",c:"devenir",v:"observar",f:"ecología",h:"experiencia",
+  q:"«No es posible bañarse dos veces en el mismo río.»",qr:"DK 22 B 91",
+  x:"Mirar el mundo como proceso y no como cosa. La ecología hereda esa mirada: ciclos, flujos y equilibrios que se rompen cuando se ignora la medida."},
+ {who:"Demócrito",st:"democrito",c:"átomo",v:"modelar",f:"ciencia",h:"método",
+  q:"«Por convención lo dulce, por convención lo amargo; en realidad, átomos y vacío.»",qr:"DK 68 B 9",
+  x:"Explicar lo visible por lo invisible. La ciencia moderna repite el gesto: construir un modelo y ponerlo a prueba contra los fenómenos."},
+ {who:"Pitágoras",st:"pitagoras",c:"número",v:"medir",f:"IA",h:"proporción",
+  q:"«Todas las cosas son número.»",qr:"Aristóteles, Metafísica 985b, sobre los pitagóricos",
+  x:"Si todo es número, todo puede medirse y calcularse. La inteligencia artificial lleva esa intuición al extremo; la pregunta griega es qué queda fuera de la medida."},
+ {who:"Aristóteles",st:"aristoteles",c:"causa",v:"explicar",f:"tecnología",h:"oficio",
+  q:"«Creemos conocer algo cuando conocemos su causa.»",qr:"Analíticos segundos 71b",
+  x:"Las cuatro causas nacen del taller: materia, forma, agente y fin. Toda técnica responde a un para qué, y preguntarlo es el primer deber de quien diseña."},
+ {who:"Sócrates",st:"socrates",c:"diálogo",v:"dialogar",f:"educación",h:"examen",
+  q:"«Una vida sin examen no merece ser vivida.»",qr:"Platón, Apología 38a",
+  x:"Enseñar no es llenar a alguien de respuestas, sino preguntar hasta que piense por sí mismo. La mayéutica es todavía el mejor modelo de aula."},
+ {who:"Sofistas",st:"sofistas",c:"medida",v:"argumentar",f:"política",h:"mundo común",
+  q:"«El hombre es la medida de todas las cosas.»",qr:"Protágoras, DK 80 B 1",
+  x:"En la asamblea cada razón tiene su contraria. La democracia exige aprender a argumentar y, sobre todo, a escuchar el argumento ajeno."},
+ {who:"Platón",st:"platon",c:"forma",v:"imaginar",f:"arte",h:"crítica",
+  q:"«Semejantes a nosotros», dice Sócrates de los prisioneros de la caverna.",qr:"República 515a",
+  x:"La caverna es una imagen que enseña a desconfiar de las imágenes. El arte puede encadenar a las sombras o ayudar a girar la cabeza hacia la luz."},
+ {who:"Estoa",st:"epicteto",c:"juicio",v:"discernir",f:"ética",h:"responsabilidad",
+  q:"«No nos inquietan las cosas, sino nuestros juicios sobre las cosas.»",qr:"Epicteto, Manual 5",
+  x:"Separar lo que depende de nosotros de lo que no. De ese primer discernimiento nace toda responsabilidad, también ante las máquinas que juzgan por nosotros."}];
+const CORE={k:"θαῦμα · el centro",t:"Pensar",s:"asombro · atención · pregunta",
+  q:"«Es muy propio del filósofo el asombro: no hay otro origen de la filosofía.»",qr:"Platón, Teeteto 155d; cf. Aristóteles, Metafísica 982b",
+  x:"La rueda se lee de dentro afuera, como el curso de la Bauhaus pero al revés: del asombro a cuatro dominios, de ocho pensadores a ocho gestos y de ahí a ocho campos del mundo actual."};
+
+/* radios: núcleo, dominio, pensador, hilo, gesto, campo, título */
+const R=[0,88,148,226,254,310,366,404];
+const rad=a=>a*Math.PI/180, pt=(r,a)=>[r*Math.cos(rad(a)),r*Math.sin(rad(a))];
+const f=n=>n.toFixed(2);
+function ann(r0,r1,a0,a1){ const L=(a1-a0)>180?1:0, [x0,y0]=pt(r1,a0),[x1,y1]=pt(r1,a1),[x2,y2]=pt(r0,a1),[x3,y3]=pt(r0,a0);
+  return r0<=0?`M0 0L${f(x0)} ${f(y0)}A${r1} ${r1} 0 ${L} 1 ${f(x1)} ${f(y1)}Z`:`M${f(x0)} ${f(y0)}A${r1} ${r1} 0 ${L} 1 ${f(x1)} ${f(y1)}L${f(x2)} ${f(y2)}A${r0} ${r0} 0 ${L} 0 ${f(x3)} ${f(y3)}Z`; }
+let pid=0; const defs=document.createElementNS(NS,"defs"); svg.appendChild(defs);
+function arcText(g,txt,r,a0,a1,cls,fs){ const mid=(a0+a1)/2, m=((mid%360)+360)%360, low=m>0.5&&m<179.5;
+  const rr=low? r+fs*.34 : r-fs*.34, id="rwp"+(pid++), [x0,y0]=pt(rr,low?a1:a0),[x1,y1]=pt(rr,low?a0:a1), L=(a1-a0)>180?1:0;
+  const p=document.createElementNS(NS,"path"); p.setAttribute("id",id); p.setAttribute("d",`M${f(x0)} ${f(y0)}A${rr} ${rr} 0 ${L} ${low?0:1} ${f(x1)} ${f(y1)}`); p.setAttribute("fill","none"); defs.appendChild(p);
+  const t=document.createElementNS(NS,"text"); if(cls) t.setAttribute("class",cls);
+  const tp=document.createElementNS(NS,"textPath"); tp.setAttribute("href","#"+id); tp.setAttribute("startOffset","50%"); tp.setAttribute("text-anchor","middle"); tp.textContent=txt; t.appendChild(tp); g.appendChild(t); }
+const mk=(tag,attrs,parent)=>{ const e=document.createElementNS(NS,tag); for(const k in attrs) e.setAttribute(k,attrs[k]); if(parent) parent.appendChild(e); return e; };
+
+/* título exterior */
+const gT=mk("g",{class:"rw-title"},svg);
+mk("circle",{r:R[6]},gT); mk("circle",{r:R[7]},gT);
+arcText(gT,"TRADICIÓN GRIEGA Y PENSAMIENTO LIBRE",(R[6]+R[7])/2,-170,-10,"",14.5);
+arcText(gT,"DEL ASOMBRO AL PENSAMIENTO CRÍTICO PARA EL MUNDO ACTUAL",(R[6]+R[7])/2,10,170,"",14.5);
+
+/* anillos */
+const rings=[]; const A0=-90;
+function ring(cls,ri,n,fill){ const g=mk("g",{class:"rw-ring "+cls,style:`--r:${ri}`},svg); rings.push(g);
+  for(let i=0;i<n;i++){ const a0=A0+i*360/n, a1=a0+360/n;
+    const h=mk("g",{class:"rw-hit",tabindex:"0",role:"button"},g);
+    if(n===4){ h.dataset.d=i; } else { h.dataset.s=i; h.dataset.d=Math.floor(i/2); }
+    mk("path",{class:"rw-seg",d:ann(R[ri],R[ri+1],a0,a1)},h); fill(h,i,a0,a1); } }
+ring("rw-dom",1,4,(h,i,a0,a1)=>{ const d=DOM[i]; h.setAttribute("aria-label",`${d.t}, ${d.sub}`);
+  arcText(h,d.t,(R[1]+R[2])/2+8,a0,a1,"t-dom",24); arcText(h,d.gr,(R[1]+R[2])/2-15,a0,a1,"t-domg",15); });
+ring("rw-who",2,8,(h,i,a0,a1)=>{ const s=SEC[i]; h.setAttribute("aria-label",`${s.who}, ${s.c}: ${s.v}, ${s.f}`);
+  arcText(h,s.who,(R[2]+R[3])/2+10,a0,a1,"t-who",24); arcText(h,s.c.toUpperCase(),(R[2]+R[3])/2-18,a0,a1,"t-con",13); });
+ring("rw-hilo",3,8,(h,i,a0,a1)=>{ h.setAttribute("aria-hidden","true"); h.removeAttribute("tabindex"); h.removeAttribute("role"); arcText(h,SEC[i].h,(R[3]+R[4])/2,a0,a1,"",14); });
+ring("rw-verb",4,8,(h,i,a0,a1)=>{ h.setAttribute("aria-hidden","true"); h.removeAttribute("tabindex"); h.removeAttribute("role"); arcText(h,SEC[i].v.toUpperCase(),(R[4]+R[5])/2,a0,a1,"t-verb",22); });
+ring("rw-field",5,8,(h,i,a0,a1)=>{ h.setAttribute("aria-hidden","true"); h.removeAttribute("tabindex"); h.removeAttribute("role"); arcText(h,SEC[i].f.toUpperCase(),(R[5]+R[6])/2,a0,a1,"t-field",17); });
+/* núcleo */
+const core=mk("g",{class:"rw-ring rw-core rw-hit",tabindex:"0",role:"button","aria-label":"Pensar: asombro, atención, pregunta. Volver al centro",style:"--r:0"},svg);
+mk("circle",{r:R[1]},core);
+mk("text",{class:"gr","text-anchor":"middle",y:-30},core).textContent="θαῦμα";
+mk("text",{class:"big","text-anchor":"middle",y:12},core).textContent="PENSAR";
+mk("text",{class:"sm","text-anchor":"middle",y:36},core).textContent="asombro · atención";
+mk("text",{class:"sm","text-anchor":"middle",y:52},core).textContent="pregunta";
+
+/* estado */
+const st={s:-1,d:-1,zoom:false};
+const narrow=()=>window.innerWidth<=900;
+function paint(){
+  svg.querySelectorAll(".rw-hit").forEach(h=>{ if(h===core) return;
+    let on=false;
+    if(st.s>=0) on= h.dataset.s!==undefined ? +h.dataset.s===st.s : +h.dataset.d===Math.floor(st.s/2);
+    else if(st.d>=0) on=+h.dataset.d===st.d;
+    const any=st.s>=0||st.d>=0; h.classList.toggle("is-on",any&&on); h.classList.toggle("is-off",any&&!on);
+    if(h.hasAttribute("tabindex")) h.setAttribute("aria-pressed",String(any&&on)); });
+  const ri=n=>{ const g=svg.querySelector(`.rw-${n}`); return g; };
+  ["dom","who","hilo","verb","field"].forEach((n,k)=>ri(n).style.setProperty("--r",k+1));
+  renderPanel(); zoomTo(); }
+function chips(s){ const d=DOM[Math.floor(SEC.indexOf(s)/2)]; return `<div class="chips"><button type="button" class="chip" data-fly-station="${s.st}">${esc(s.who)} en el mapa ↗</button><button type="button" class="chip" data-rw-go="${d.go}">${esc(d.goT)}</button></div>`; }
+function renderPanel(){
+  let h;
+  if(st.s>=0){ const s=SEC[st.s], d=DOM[Math.floor(st.s/2)];
+    h=`<div class="rp-k">${esc(d.gr)} · ${esc(d.t.charAt(0)+d.t.slice(1).toLowerCase())}</div>
+      <h4>${esc(s.who)}<small>${esc(s.c)} · hilo: ${esc(s.h)}</small></h4>
+      <div class="rp-path"><span>asombro</span><i>→</i><span>${esc(s.c)}</span><i>→</i><b>${esc(s.v)}</b><i>→</i><span>${esc(s.f)}</span></div>
+      <p><span style="font-family:var(--f-display);color:var(--ink);font-size:1.02rem">${esc(s.q)}</span><br><small style="color:var(--faint);font-size:11px">${esc(s.qr)}</small></p>
+      <p>${esc(s.x)}</p>${chips(s)}`; }
+  else if(st.d>=0){ const d=DOM[st.d], a=SEC[st.d*2], b=SEC[st.d*2+1];
+    h=`<div class="rp-k">dominio</div><h4>${esc(d.gr)}<small>${esc(d.t)} · ${esc(d.sub)}</small></h4>
+      <p>Dos caminos salen de aquí: <b>${esc(a.who)}</b> (${esc(a.c)} → ${esc(a.v)} → ${esc(a.f)}) y <b>${esc(b.who)}</b> (${esc(b.c)} → ${esc(b.v)} → ${esc(b.f)}).</p>
+      <div class="chips"><button type="button" class="chip" data-rw-s="${st.d*2}">${esc(a.who)}</button><button type="button" class="chip" data-rw-s="${st.d*2+1}">${esc(b.who)}</button><button type="button" class="chip" data-rw-go="${d.go}">${esc(d.goT)}</button></div>`; }
+  else { h=`<div class="rp-k">${esc(CORE.k)}</div><h4>${esc(CORE.t)}<small>${esc(CORE.s)}</small></h4>
+      <p><span style="font-family:var(--f-display);color:var(--ink);font-size:1.02rem">${esc(CORE.q)}</span><br><small style="color:var(--faint);font-size:11px">${esc(CORE.qr)}</small></p><p>${esc(CORE.x)}</p>`; }
+  if(st.zoom) h+=`<div class="chips"><button type="button" class="chip rueda-back" data-rw-all>◎ Ver la rueda completa</button></div>`;
+  panel.innerHTML=h; box.dataset.zoom=st.zoom?"1":"0"; }
+
+/* zoom en móvil: el viewBox viaja hacia el radio elegido */
+const FULL=[-410,-410,820,820]; let vb=FULL.slice(), vbGoal=FULL.slice(), raf=0;
+function sectorBox(a0,a1){ const xs=[0],ys=[0]; for(let k=0;k<=8;k++){ const a=a0+(a1-a0)*k/8; for(const r of [R[6]+8]){ const [x,y]=pt(r,a); xs.push(x); ys.push(y);} }
+  let x0=Math.min(...xs)-14,x1=Math.max(...xs)+14,y0=Math.min(...ys)-14,y1=Math.max(...ys)+14; const w=x1-x0,h=y1-y0,s=Math.max(w,h); return [x0-(s-w)/2,y0-(s-h)/2,s,s]; }
+function zoomTo(){
+  st.zoom=narrow()&&(st.s>=0||st.d>=0);
+  if(!st.zoom) vbGoal=FULL.slice(); else if(st.s>=0){ const a0=A0+st.s*45; vbGoal=sectorBox(a0-6,a0+51); } else { const a0=A0+st.d*90; vbGoal=sectorBox(a0-4,a0+94); }
+  box.dataset.zoom=st.zoom?"1":"0";
+  if(reduced){ vb=vbGoal.slice(); svg.setAttribute("viewBox",vb.map(f).join(" ")); return; }
+  if(!raf) raf=requestAnimationFrame(step); }
+function step(){ let done=true; for(let i=0;i<4;i++){ const d=vbGoal[i]-vb[i]; if(Math.abs(d)>.3){ vb[i]+=d*.16; done=false; } else vb[i]=vbGoal[i]; }
+  svg.setAttribute("viewBox",vb.map(f).join(" ")); raf=done?0:requestAnimationFrame(step); }
+
+function pick(h){ if(h===core){ st.s=-1; st.d=-1; }
+  else if(h.dataset.s!==undefined){ const s=+h.dataset.s; if(st.s===s){ st.s=-1; st.d=-1; } else { st.s=s; st.d=-1; } }
+  else { const d=+h.dataset.d; if(st.d===d&&st.s<0){ st.d=-1; } else { st.d=d; st.s=-1; } }
+  paint(); }
+svg.addEventListener("click",e=>{ const h=e.target.closest(".rw-hit"); if(h) pick(h); });
+svg.addEventListener("keydown",e=>{ if(e.key!=="Enter"&&e.key!==" ") return; const h=e.target.closest(".rw-hit"); if(h){ e.preventDefault(); pick(h); } });
+panel.addEventListener("click",e=>{
+  const s=e.target.closest("[data-rw-s]"); if(s){ st.s=+s.dataset.rwS; st.d=-1; paint(); return; }
+  if(e.target.closest("[data-rw-all]")){ st.s=-1; st.d=-1; paint(); svg.scrollIntoView({behavior:reduced?"auto":"smooth",block:"center"}); return; }
+  const g=e.target.closest("[data-rw-go]"); if(g){ const t=document.querySelector(g.dataset.rwGo); if(t) t.scrollIntoView({behavior:reduced?"auto":"smooth",block:"start"}); } });
+let lastNarrow=narrow(); window.addEventListener("resize",()=>{ if(narrow()!==lastNarrow){ lastNarrow=narrow(); zoomTo(); } });
+window.GreciaRueda={show(i){ st.s=i; st.d=-1; paint(); }, domain(i){ st.d=i; st.s=-1; paint(); }, reset(){ st.s=-1; st.d=-1; paint(); }};
+paint();
+})();
+</script>
+
 
 
 

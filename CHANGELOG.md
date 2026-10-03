@@ -1,5 +1,11 @@
 # Historial
 
+## v1.1 · Rueda del asombro · 2026-10-03
+- Nueva **Rueda del asombro** en «Método», en el espacio vacío junto a las referencias abiertas: diagrama didáctico a la manera de la rueda de la Bauhaus (Gropius, 1922), a partir de un boceto propio.
+- Se lee de dentro afuera: θαῦμα / pensar → cuatro dominios (phýsis, lógos, pólis, éthos) → ocho pensadores con su concepto → ocho hilos → ocho gestos → ocho campos del presente. Todos los anillos comparten la misma división, así cada radio es un camino.
+- Al tocar un sector se ilumina el radio completo y el panel muestra cita con fuente, lectura breve y enlaces a la estación del mapa y a la sección correspondiente.
+- Escritorio: rueda fija mientras se recorre la lista larga. Móvil: la rueda va entre las listas y se acerca al sector elegido.
+
 ## v1.0 · La Acrópolis · 2026-10-02
 - Nueva sección **La Acrópolis**, antes de El Umbral: el Partenón como montaje constructivo en Three.js, a la manera de un *kigumi*. Primero solo el plano de planta en trazo azul; después cada bloque cae a su sitio en orden de obra, unas 1.900 piezas animadas en el shader con un único uniforme de progreso.
 - Siete pasos con cámara propia: el plano, crepidoma, peristasis, naos y opistodomo (en corte), entablamento, frontones y cubierta, y Atenea Parthenos (en corte). Botón «Construir de principio a fin», deslizador de obra, giro, corte y «Curvaturas ×30» para ver los refinamientos ópticos.
