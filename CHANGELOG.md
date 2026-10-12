@@ -1,5 +1,11 @@
 # Historial
 
+## v1.2 · Deutsche Fassung · 2026-10-12
+- Nueva versión en **alemán** en `/de` (`public/de.html`): todos los textos visibles, datos de las estaciones, escenas 3D, sala de lectura, Rueda del asombro y colofón traducidos; nombres y lugares en su forma alemana (Platon, Heraklit, Milet, Athen…).
+- **Botón de idioma ES · DE** bajo el título y en el colofón de ambas páginas; al cambiar de idioma se conserva la estación o sección abierta (`#hash`).
+- Rutas de tipografías, imágenes y Three.js pasan a absolutas para que ambas versiones compartan los mismos archivos; `hreflang` en las dos páginas.
+- Transparencia (Reglamento UE de IA, art. 50): la versión alemana indica que es una traducción asistida por IA del original español, pendiente de revisión humana.
+
 ## v1.1 · Rueda del asombro · 2026-10-03
 - Nueva **Rueda del asombro** en «Método», en el espacio vacío junto a las referencias abiertas: diagrama didáctico a la manera de la rueda de la Bauhaus (Gropius, 1922), a partir de un boceto propio.
 - Se lee de dentro afuera: θαῦμα / pensar → cuatro dominios (phýsis, lógos, pólis, éthos) → ocho pensadores con su concepto → ocho hilos → ocho gestos → ocho campos del presente. Todos los anillos comparten la misma división, así cada radio es un camino.

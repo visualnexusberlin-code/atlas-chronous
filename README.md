@@ -2,13 +2,14 @@
 
 Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro, de Troya a Plotino, con capas de lectura de Luciano De Crescenzo y de Plotino y, desde la v0.6, **El Umbral**: la Caverna, el mito de Er y la Atlántida de Platón en Three.js.
 
-**Sitio:** https://atlas-chronous.web.app
+**Sitio:** https://atlas-chronous.web.app · **Deutsch:** https://atlas-chronous.web.app/de
 
 ## Estructura
 
 ```
 public/
-  index.html                 la web completa (HTML + CSS + JS en un archivo)
+  index.html                 la web completa en español (HTML + CSS + JS en un archivo)
+  de.html                    versión alemana (se sirve en /de)
   assets/img/                imágenes de concepto de El Umbral
   fonts/                     tipografías autoalojadas (Commissioner, Courier Prime, GFS Didot · OFL)
   vendor/three/r128/         Three.js r128 y los pases de postprocesado (bloom)

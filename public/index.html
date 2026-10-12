@@ -7,7 +7,9 @@
 <meta name="generator" content="Grecia Eterna v0.9">
 <title>Grecia Eterna</title>
 <meta name="description" content="Atlas 3D del origen de la filosofía griega: un hilo cronológico de descubrimiento, creatividad y asombro sobre el mar color de vino.">
-<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="alternate" hreflang="es" href="https://atlas-chronous.web.app/">
+<link rel="alternate" hreflang="de" href="https://atlas-chronous.web.app/de">
+<link rel="stylesheet" href="/fonts/fonts.css">
 <style>
 /* Layout: a night stage over the wine-dark Aegean; the codex floats right, the chronology river runs along the bottom; the page continues below as a quiet reading room. */
 :root{
@@ -984,6 +986,12 @@ body[data-lens="asombro"]{--lens:var(--gold)}
   .rueda-back{display:inline-flex}
   .rueda[data-zoom="0"] .rueda-back{display:none}
 }
+.lang-switch{pointer-events:auto;justify-self:start;display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line-strong);border-radius:999px;background:var(--glass);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:11px;letter-spacing:.14em;font-weight:600}
+.lang-switch a{display:inline-flex;align-items:center;min-height:28px;padding:0 11px;border-radius:999px;color:var(--dim);text-decoration:none;transition:background .25s,color .25s}
+.lang-switch a:hover{color:var(--ink)}
+.lang-switch a[aria-current="page"]{background:var(--ink);color:var(--night)}
+.lang-switch a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.colophon .lang-switch{margin-top:6px}
 </style>
 </head>
 <body>
@@ -999,6 +1007,7 @@ body[data-lens="asombro"]{--lens:var(--gold)}
       <header class="masthead">
         <div class="kicker">Atlas del asombro · 1184 a.C. – 270 d.C.</div>
         <h1>Grecia Eterna<span>θαῦμα · el hilo de oro</span></h1>
+        <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page">ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch">DE</a></nav>
       </header>
 
       <div class="map-tools">
@@ -1433,9 +1442,9 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <p>Las tres escenas nacen de imágenes de concepto y de una guía técnica: fondo negro absoluto, líneas de luz, halos, mallas de alambre y partículas con resplandor (<i>bloom</i>). Nada de texturas: solo geometría que brilla.</p>
         </div>
         <div class="concept">
-          <figure><img src="assets/img/cueva.webp" alt="Imagen de concepto: caverna de alambre, fuego naranja, prisioneros encadenados, portadores con objetos y un camino de luz hacia un sol blanco" decoding="async"><figcaption><b>La Caverna</b><span>Caverna en <code>wireframe</code> azul pizarra, fuego de partículas, sombras proyectadas en tiempo real sobre el muro y haces láser hacia el Sol.</span><button type="button" class="go" data-um="caverna">Abrir la escena ↑</button></figcaption></figure>
-          <figure><img src="assets/img/er.webp" alt="Imagen de concepto: huso de luz vertical, ocho anillos concéntricos, río de almas en partículas, tres portales de las Moiras y el vórtice del Leteo" decoding="async"><figcaption><b>El mito de Er</b><span>Huso de luz, ocho anillos con sus velocidades platónicas, río de almas sobre una <code>CatmullRomCurve3</code>, tres Moiras y el vórtice del Leteo.</span><button type="button" class="go" data-um="er">Abrir la escena ↑</button></figcaption></figure>
-          <figure><img src="assets/img/atlantis.webp" alt="Imagen de concepto: ciudad concéntrica dorada y cian, núcleo con agujas y halos rojos, vórtices azules que la devoran" decoding="async"><figcaption><b>La Atlántida</b><span>Anillos con las medidas del <i>Critias</i>, murallas de bronce, estaño y oricalco, y un colapso por <code>vertex displacement</code>.</span><button type="button" class="go" data-um="atlantida">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/cueva.webp" alt="Imagen de concepto: caverna de alambre, fuego naranja, prisioneros encadenados, portadores con objetos y un camino de luz hacia un sol blanco" decoding="async"><figcaption><b>La Caverna</b><span>Caverna en <code>wireframe</code> azul pizarra, fuego de partículas, sombras proyectadas en tiempo real sobre el muro y haces láser hacia el Sol.</span><button type="button" class="go" data-um="caverna">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/er.webp" alt="Imagen de concepto: huso de luz vertical, ocho anillos concéntricos, río de almas en partículas, tres portales de las Moiras y el vórtice del Leteo" decoding="async"><figcaption><b>El mito de Er</b><span>Huso de luz, ocho anillos con sus velocidades platónicas, río de almas sobre una <code>CatmullRomCurve3</code>, tres Moiras y el vórtice del Leteo.</span><button type="button" class="go" data-um="er">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/atlantis.webp" alt="Imagen de concepto: ciudad concéntrica dorada y cian, núcleo con agujas y halos rojos, vórtices azules que la devoran" decoding="async"><figcaption><b>La Atlántida</b><span>Anillos con las medidas del <i>Critias</i>, murallas de bronce, estaño y oricalco, y un colapso por <code>vertex displacement</code>.</span><button type="button" class="go" data-um="atlantida">Abrir la escena ↑</button></figcaption></figure>
         </div>
       </section>
 
@@ -1606,10 +1615,10 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <p>Las cuatro escenas parten de estas imágenes de concepto y de la misma gramática que El Umbral: negro absoluto, líneas de luz y resplandor (<i>bloom</i>). Aquí la paleta gira del cian platónico al oro del polvo y al cristal de la forma.</p>
         </div>
         <div class="concept">
-          <figure><img src="assets/img/causas.webp" alt="Imagen de concepto: duna de polvo dorado, un cristal de alambre que brota de ella, un haz lateral y, arriba, un orbe dorado con anillos" decoding="async" loading="lazy"><figcaption><b>Las cuatro causas</b><span>Duna de <code>Points</code> que migra hacia las aristas de un cristal en <code>LineSegments</code>; haz eficiente lateral; orbe final con anillos.</span><button type="button" class="go" data-ly="causas">Abrir la escena ↑</button></figcaption></figure>
-          <figure><img src="assets/img/silogismo.webp" alt="Imagen de concepto: corredor de retícula azul con prismas ámbar flotando y un haz blanco en el punto de fuga" decoding="async" loading="lazy"><figcaption><b>El silogismo</b><span>Corredor ortogonal, diez prismas categoriales y dos planos que se cortan en el término medio; de ahí sale el láser de la conclusión.</span><button type="button" class="go" data-ly="silogismo">Abrir la escena ↑</button></figcaption></figure>
-          <figure><img src="assets/img/motor.webp" alt="Imagen de concepto: anillos de polvo dorado alrededor de una esfera y un punto de luz inmóvil hacia el que convergen hilos" decoding="async" loading="lazy"><figcaption><b>El motor inmóvil</b><span>Cincuenta y cinco anillos de éter con velocidades propias, núcleo de cuatro elementos y un punto que no se mueve.</span><button type="button" class="go" data-ly="motor">Abrir la escena ↑</button></figcaption></figure>
-          <figure><img src="assets/img/catarsis.webp" alt="Imagen de concepto: estallido de partículas rojas, un haz dorado horizontal y un flujo laminar cian" decoding="async" loading="lazy"><figcaption><b>Trama y catarsis</b><span>Dos fuerzas de distinta esencia: columna turbulenta de páthos en <code>Points</code> y haz rectilíneo de la trama. En la colisión, las partículas cambian de régimen y salen en flujo laminar cian. Un solo destello suave, sin estroboscopio.</span><button type="button" class="go" data-ly="catarsis">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/causas.webp" alt="Imagen de concepto: duna de polvo dorado, un cristal de alambre que brota de ella, un haz lateral y, arriba, un orbe dorado con anillos" decoding="async" loading="lazy"><figcaption><b>Las cuatro causas</b><span>Duna de <code>Points</code> que migra hacia las aristas de un cristal en <code>LineSegments</code>; haz eficiente lateral; orbe final con anillos.</span><button type="button" class="go" data-ly="causas">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/silogismo.webp" alt="Imagen de concepto: corredor de retícula azul con prismas ámbar flotando y un haz blanco en el punto de fuga" decoding="async" loading="lazy"><figcaption><b>El silogismo</b><span>Corredor ortogonal, diez prismas categoriales y dos planos que se cortan en el término medio; de ahí sale el láser de la conclusión.</span><button type="button" class="go" data-ly="silogismo">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/motor.webp" alt="Imagen de concepto: anillos de polvo dorado alrededor de una esfera y un punto de luz inmóvil hacia el que convergen hilos" decoding="async" loading="lazy"><figcaption><b>El motor inmóvil</b><span>Cincuenta y cinco anillos de éter con velocidades propias, núcleo de cuatro elementos y un punto que no se mueve.</span><button type="button" class="go" data-ly="motor">Abrir la escena ↑</button></figcaption></figure>
+          <figure><img src="/assets/img/catarsis.webp" alt="Imagen de concepto: estallido de partículas rojas, un haz dorado horizontal y un flujo laminar cian" decoding="async" loading="lazy"><figcaption><b>Trama y catarsis</b><span>Dos fuerzas de distinta esencia: columna turbulenta de páthos en <code>Points</code> y haz rectilíneo de la trama. En la colisión, las partículas cambian de régimen y salen en flujo laminar cian. Un solo destello suave, sin estroboscopio.</span><button type="button" class="go" data-ly="catarsis">Abrir la escena ↑</button></figcaption></figure>
         </div>
       </section>
 
@@ -1668,8 +1677,8 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <h2 id="orOrTitle">Una observación de ayer</h2>
         </div>
         <div class="or-origen">
-          <figure><img src="assets/img/orilla1.webp" alt="Fotografía cenital de la orilla: sobre la arena, una lámina finísima de agua dibuja crestas y nodos de luz que convergen en una intersección" loading="lazy" decoding="async"><figcaption>Orilla 01 · intersección de corrientes</figcaption></figure>
-          <figure><img src="assets/img/orilla2.webp" alt="Fotografía cenital de la orilla: dos corrientes mínimas se cruzan sobre la arena y forman un nodo del que salen ramificaciones" loading="lazy" decoding="async"><figcaption>Orilla 02 · nodo y ramificación</figcaption></figure>
+          <figure><img src="/assets/img/orilla1.webp" alt="Fotografía cenital de la orilla: sobre la arena, una lámina finísima de agua dibuja crestas y nodos de luz que convergen en una intersección" loading="lazy" decoding="async"><figcaption>Orilla 01 · intersección de corrientes</figcaption></figure>
+          <figure><img src="/assets/img/orilla2.webp" alt="Fotografía cenital de la orilla: dos corrientes mínimas se cruzan sobre la arena y forman un nodo del que salen ramificaciones" loading="lazy" decoding="async"><figcaption>Orilla 02 · nodo y ramificación</figcaption></figure>
           <div class="txt">
             <p>Una película mínima de agua sobre arena, atravesada por corrientes que se encuentran, se separan y vuelven a cruzarse. La luz del sol, refractada por una superficie en movimiento, se concentra en líneas y nodos; el microrrelieve de la arena la desvía. El resultado dura segundos y, sin embargo, parece tener estructura.</p>
             <blockquote>¿Cómo puede aparecer orden dentro de algo que no deja de cambiar?</blockquote>
@@ -1740,7 +1749,7 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
           <p>Un único campo de partículas, un único campo de flujo y una capa de cáusticas. Siete estados conceptuales definidos por parámetros, no siete escenas: la historia de las ideas se ve como la transformación de un mismo mundo.</p>
         </div>
         <div class="or-art">
-          <figure><img src="assets/img/physis-hoja-contacto.webp" alt="Hoja de contacto con seis estudios sobre fondo oscuro: dos vórtices de líneas doradas, un campo casi uniforme de trazos, una ola de partículas que se vuelve discreta, geometría y árbol sobre corrientes, cuatro nubes de colores que se encuentran en un punto y un haz de líneas que atraviesa círculos concéntricos" loading="lazy" decoding="async"><figcaption>Hoja de contacto de los interludios: devenir, ápeiron, átomos, dos ontologías, cuatro raíces y phýsis.</figcaption></figure>
+          <figure><img src="/assets/img/physis-hoja-contacto.webp" alt="Hoja de contacto con seis estudios sobre fondo oscuro: dos vórtices de líneas doradas, un campo casi uniforme de trazos, una ola de partículas que se vuelve discreta, geometría y árbol sobre corrientes, cuatro nubes de colores que se encuentran en un punto y un haz de líneas que atraviesa círculos concéntricos" loading="lazy" decoding="async"><figcaption>Hoja de contacto de los interludios: devenir, ápeiron, átomos, dos ontologías, cuatro raíces y phýsis.</figcaption></figure>
           <div class="or-rules">
             <blockquote>No representar la filosofía. Hacer que el sistema se comporte filosóficamente.</blockquote>
             <p>Heráclito no necesita una cita flotando sobre el agua; Platón no necesita una estatua; Aristóteles no necesita un diagrama. Si el comportamiento encarna la idea, el concepto se entiende antes de ser nombrado. Por eso, en el panel, el texto llega después del fenómeno.</p>
@@ -1772,10 +1781,11 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
     <p><b>Grecia Eterna</b> · prototipo v1.1 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales. Sección «La Acrópolis»: el Partenón como montaje constructivo en Three.js (reconstrucción simplificada, medidas según levantamientos habituales); Tucídides II 40 y Plutarco, <i>Pericles</i> 12–13, en traducción orientativa. «Rueda del asombro»: diagrama didáctico a la manera de la rueda de la Bauhaus (Gropius, 1922), a partir de un boceto propio del proyecto.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
+    <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page">ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch">DE</a></nav>
   </footer>
 </main>
 
-<script src="vendor/three/r128/three.min.js"></script>
+<script src="/vendor/three/r128/three.min.js"></script>
 <script>
 (function(){
 "use strict";
@@ -3240,12 +3250,12 @@ renderTrack();
 if(GL){ GL.select(startI,-1,{fly:fromHash?true:false}); GL.start(); } else if(FB) FB.update();
 })();
 </script>
-<script src="vendor/three/r128/examples/js/shaders/CopyShader.js"></script>
-<script src="vendor/three/r128/examples/js/shaders/LuminosityHighPassShader.js"></script>
-<script src="vendor/three/r128/examples/js/postprocessing/EffectComposer.js"></script>
-<script src="vendor/three/r128/examples/js/postprocessing/RenderPass.js"></script>
-<script src="vendor/three/r128/examples/js/postprocessing/ShaderPass.js"></script>
-<script src="vendor/three/r128/examples/js/postprocessing/UnrealBloomPass.js"></script>
+<script src="/vendor/three/r128/examples/js/shaders/CopyShader.js"></script>
+<script src="/vendor/three/r128/examples/js/shaders/LuminosityHighPassShader.js"></script>
+<script src="/vendor/three/r128/examples/js/postprocessing/EffectComposer.js"></script>
+<script src="/vendor/three/r128/examples/js/postprocessing/RenderPass.js"></script>
+<script src="/vendor/three/r128/examples/js/postprocessing/ShaderPass.js"></script>
+<script src="/vendor/three/r128/examples/js/postprocessing/UnrealBloomPass.js"></script>
 <script>
 /* =================================================================
    v0.6 · EL UMBRAL · PLATÓN
@@ -5999,5 +6009,8 @@ paint();
 
 
 
+<script>/* idioma · Sprache: conserva la estación o sección (#hash) al cambiar */
+document.querySelectorAll(".lang-switch a").forEach(function(a){a.addEventListener("click",function(e){if(a.getAttribute("aria-current"))return;if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});
+</script>
 </body>
 </html>
