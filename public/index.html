@@ -992,6 +992,169 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .lang-switch a[aria-current="page"]{background:var(--ink);color:var(--night)}
 .lang-switch a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .colophon .lang-switch{margin-top:6px}
+/* ---------- GERSON · ¿FUE PLATÓN PLATÓNICO? ---------- */
+.gs{display:grid;gap:64px}
+.gs .sec-head{margin-bottom:0}
+.gs-src{font-size:11px;color:var(--um-cyan);letter-spacing:.04em}
+.gs-h3{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.4vw,1.9rem);line-height:1.1;color:var(--ink);text-wrap:balance}
+.gs-k{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:8px}
+.gs-lead{margin:0;max-width:66ch;color:var(--dim)}
+.gs-lead + .gs-lead{margin-top:10px}
+.gs-gadamer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.gs-gadamer > div{padding:22px 24px;display:grid;gap:8px;align-content:start}
+.gs-gadamer > div + div{border-left:1px solid var(--line);background:linear-gradient(135deg,rgba(128,216,255,.06),rgba(0,0,0,0) 60%)}
+.gs-gadamer blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.35rem,2.4vw,1.8rem);line-height:1.2;color:var(--ink)}
+.gs-gadamer small{font-size:11.5px;color:var(--faint)}
+.gs-gadamer p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-gadamer .yes{color:var(--um-cyan)}
+.gs-three{list-style:none;margin:22px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.gs-three li{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;align-content:start}
+.gs-three b{font-family:var(--f-display);font-weight:400;font-size:1.18rem;color:var(--ink)}
+.gs-three b i{font-style:normal;color:var(--um-cyan);font-size:.85rem;margin-right:6px}
+.gs-three p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-three li.on{border-top-color:var(--um-cyan)}
+.gs-thesis{margin:22px 0 0;max-width:66ch;font-family:var(--f-display);font-size:1.22rem;line-height:1.42;color:var(--ink);padding-left:16px;border-left:2px solid var(--gold)}
+
+/* pentágono */
+.gs-ur{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:34px;align-items:start;margin-top:26px}
+.gs-pent{margin:0;position:relative}
+.gs-pent svg{width:100%;height:auto;display:block;overflow:visible}
+.gs-pent .ed{stroke:rgba(236,219,196,.16);stroke-width:1;fill:none}
+.gs-pent .sp{stroke:rgba(128,216,255,.32);stroke-width:1;transition:stroke .35s,opacity .35s}
+.gs-pent .sp.off{stroke:rgba(255,138,42,.18);stroke-dasharray:2 4}
+.gs-pent .dep{fill:none;stroke:rgba(128,216,255,.55);stroke-width:1.4;transition:stroke .35s}
+.gs-pent .dep.t{stroke:#ff4d6d;stroke-width:2;stroke-dasharray:5 4;animation:gsDash 1.2s linear infinite}
+.gs-pent .dep.x{stroke:rgba(236,219,196,.08)}
+@keyframes gsDash{to{stroke-dashoffset:-18}}
+.gs-pent .nd{cursor:pointer}
+.gs-pent .nd circle.r{fill:#000;stroke:var(--um-cyan);stroke-width:1.5;transition:fill .3s,stroke .3s}
+.gs-pent .nd circle.h{fill:rgba(128,216,255,.18);transition:opacity .3s}
+.gs-pent .nd.off circle.r{stroke:var(--um-fire);fill:rgba(255,138,42,.12)}
+.gs-pent .nd.off circle.h{opacity:0}
+.gs-pent .nd.sel circle.r{stroke-width:3}
+.gs-pent .nd text{font-family:var(--f-body);font-size:11px;fill:var(--ink);letter-spacing:.02em}
+.gs-pent .nd text.g{font-family:var(--f-display);font-size:12px;fill:var(--faint)}
+.gs-pent .nd.off text{fill:#ffb266}
+.gs-pent .core{transition:opacity .5s}
+.gs-pent .core text{font-family:var(--f-display);fill:var(--ink);text-anchor:middle}
+.gs-pent .core text.s{font-family:var(--f-body);font-size:9.5px;letter-spacing:.18em;fill:var(--faint);text-transform:uppercase}
+.gs-pent figcaption{font-size:11.5px;color:var(--faint);margin-top:6px;display:flex;gap:16px;flex-wrap:wrap}
+.gs-pent figcaption i{display:inline-block;width:16px;height:0;border-top:1.5px solid var(--um-cyan);vertical-align:middle;margin-right:6px}
+.gs-pent figcaption i.t{border-top:2px dashed #ff4d6d}
+.gs-side{display:grid;gap:16px;min-width:0}
+.gs-sw{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.gs-sw li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:4px;padding:6px 6px 6px 12px;transition:border-color .2s,background .2s}
+.gs-sw li.sel{border-color:rgba(128,216,255,.55);background:rgba(128,216,255,.05)}
+.gs-sw .nm{background:none;border:0;color:var(--ink);text-align:left;padding:4px 0;font-family:var(--f-display);font-size:1.08rem;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;cursor:pointer}
+.gs-sw .nm span{font-family:var(--f-body);font-size:11.5px;color:var(--faint)}
+.gs-tg{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden}
+.gs-tg button{background:none;border:0;color:var(--dim);font-size:11.5px;padding:5px 11px;cursor:pointer;white-space:nowrap}
+.gs-tg button[aria-pressed="true"]{background:rgba(128,216,255,.16);color:var(--ink)}
+.gs-tg button.c[aria-pressed="true"]{background:rgba(255,138,42,.18);color:#ffd1a6}
+.gs-card{border:1px solid var(--line);border-radius:4px;padding:18px 20px;display:grid;gap:10px;background:rgba(255,255,255,.015)}
+.gs-card h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.45rem;line-height:1.1;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.gs-card h4 span{font-size:1rem;color:var(--um-cyan)}
+.gs-card dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:7px 14px}
+.gs-card dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--um-cyan);font-weight:600;padding-top:3px}
+.gs-card dd{margin:0;color:var(--dim);font-size:13.5px}
+.gs-card dd b{color:var(--ink);font-weight:500}
+.gs-verdict{border-left:2px solid var(--gold);padding:4px 0 4px 16px;display:grid;gap:6px}
+.gs-verdict h5{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.3rem;color:var(--ink)}
+.gs-verdict p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-verdict ul{margin:4px 0 0;padding:0 0 0 18px;color:var(--dim);font-size:13px;display:grid;gap:5px}
+.gs-verdict ul li::marker{color:#ff4d6d}
+.gs-verdict.t{border-left-color:#ff4d6d}
+.gs-verdict.n{border-left-color:var(--um-fire)}
+.gs-row{display:flex;gap:8px;flex-wrap:wrap}
+
+/* de arriba abajo */
+.gs-td{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:34px;align-items:start;margin-top:26px}
+.gs-helen{display:grid;gap:14px}
+.gs-helen > div{border:1px solid var(--line);border-radius:4px;padding:16px 18px;display:grid;gap:6px}
+.gs-helen .up{border-color:rgba(128,216,255,.4)}
+.gs-helen b{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--um-fire)}
+.gs-helen .up b{color:var(--um-cyan)}
+.gs-helen p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-ladder{list-style:none;margin:0;padding:0;position:relative;display:grid;gap:0}
+.gs-ladder:before{content:"";position:absolute;left:15px;top:14px;bottom:14px;width:1px;background:linear-gradient(180deg,var(--gold),var(--um-cyan) 45%,rgba(255,138,42,.6))}
+.gs-ladder li button{width:100%;display:grid;grid-template-columns:32px minmax(0,1fr) auto;gap:12px;align-items:center;background:none;border:0;border-bottom:1px solid var(--line);padding:10px 4px 10px 0;color:var(--ink);text-align:left;cursor:pointer}
+.gs-ladder li button i{width:11px;height:11px;border-radius:50%;justify-self:center;background:#000;border:1.5px solid var(--um-cyan);transition:box-shadow .3s,background .3s}
+.gs-ladder li:first-child button i{border-color:var(--gold);background:var(--gold);box-shadow:0 0 16px rgba(227,180,96,.8)}
+.gs-ladder li button span{font-family:var(--f-display);font-size:1.12rem}
+.gs-ladder li button small{font-family:var(--f-display);font-size:.95rem;color:var(--faint)}
+.gs-ladder li button[aria-expanded="true"] i{background:var(--um-cyan);box-shadow:0 0 14px rgba(128,216,255,.75)}
+.gs-ladder li button[aria-expanded="true"] span{color:var(--um-cyan)}
+.gs-ladder li:first-child button[aria-expanded="true"] span{color:var(--gold)}
+.gs-ladder li p{margin:0;padding:10px 0 14px 44px;color:var(--dim);font-size:13.5px;border-bottom:1px solid var(--line)}
+.gs-ladder li p[hidden]{display:none}
+.gs-axis{display:flex;justify-content:space-between;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin:8px 0 0 44px}
+
+/* tradición */
+.gs-line{position:relative;margin-top:26px}
+.gs-line ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:14px;position:relative}
+.gs-line ol:before{content:"";position:absolute;left:0;right:0;top:7px;height:1px;background:linear-gradient(90deg,var(--gold),var(--um-cyan))}
+.gs-line li{position:relative;padding-top:24px;display:grid;gap:6px;align-content:start}
+.gs-line li:before{content:"";position:absolute;top:2px;left:0;width:11px;height:11px;border-radius:50%;background:#000;border:1.5px solid var(--um-cyan)}
+.gs-line li:first-child:before{background:var(--gold);border-color:var(--gold);box-shadow:0 0 14px rgba(227,180,96,.7)}
+.gs-line .d{font-size:11px;color:var(--um-cyan);font-variant-numeric:tabular-nums}
+.gs-line h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.12rem;line-height:1.15;color:var(--ink)}
+.gs-line .r{font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.gs-line p{margin:0;color:var(--dim);font-size:12.8px}
+.gs-line .chip{justify-self:start;font-size:11px;padding:3px 9px}
+.gs-under{margin:30px 0 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.gs-under > div{border-top:1px solid var(--line);padding-top:14px}
+.gs-under h4{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:1.2rem}
+.gs-under p{margin:0;color:var(--dim);font-size:13.5px}
+
+/* huida */
+.gs-flight{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start;margin-top:26px}
+.gs-flight blockquote{margin:0;font-family:var(--f-display);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.32;color:var(--ink);padding-left:16px;border-left:2px solid var(--um-cyan)}
+.gs-flight blockquote small{display:block;font-family:var(--f-body);font-size:11.5px;color:var(--faint);margin-top:10px}
+.gs-flight .gs-lead{margin-top:16px}
+.gs-echo{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.gs-echo li{border:1px solid var(--line);border-radius:4px;padding:14px 16px;display:grid;gap:6px}
+.gs-echo b{font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--ink)}
+.gs-echo p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-echo button{justify-self:start}
+.gs-anthro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid var(--line);border-radius:4px;margin-top:18px}
+.gs-anthro > div{padding:14px 16px;display:grid;gap:4px}
+.gs-anthro > div + div{border-left:1px solid var(--line)}
+.gs-anthro b{font-family:var(--f-display);font-weight:400;font-size:1.1rem;color:var(--ink)}
+.gs-anthro b span{color:var(--um-cyan);font-size:.9rem;margin-left:6px}
+.gs-anthro p{margin:0;color:var(--dim);font-size:13px}
+
+/* hoy */
+.gs-now{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.gs-now li{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;align-content:start}
+.gs-now b{font-family:var(--f-display);font-weight:400;font-size:1.2rem;color:var(--ink)}
+.gs-now p{margin:0;color:var(--dim);font-size:13.5px}
+.gs-now li.atlas{border-top-color:var(--gold)}
+.gs-now li.atlas .tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+
+@media (max-width:1100px) and (min-width:901px){ .gs-line ol{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:26px} .gs-line ol:before{display:none} }
+@media (max-width:900px){
+  .gs-gadamer,.gs-ur,.gs-td,.gs-flight,.gs-under,.gs-anthro{grid-template-columns:minmax(0,1fr)}
+  .gs-gadamer > div + div,.gs-anthro > div + div{border-left:0;border-top:1px solid var(--line)}
+  .gs-three,.gs-now{grid-template-columns:minmax(0,1fr)}
+  .gs-line ol{grid-template-columns:minmax(0,1fr);gap:18px;padding-left:22px}
+  .gs-line ol:before{left:5px;right:auto;top:0;bottom:0;width:1px;height:auto;background:linear-gradient(180deg,var(--gold),var(--um-cyan))}
+  .gs-line li{padding-top:0}
+  .gs-line li:before{left:-22px;top:4px}
+  .gs-pent{max-width:440px;margin:0 auto;width:100%}
+}
+@media (prefers-reduced-motion:reduce){ .gs-pent .dep.t{animation:none} }
+
+/* banderas y conmutador flotante */
+.lang-switch a{gap:7px}
+.lang-switch .flag{width:16px;height:11px;border-radius:2px;display:block;flex:none;box-shadow:0 0 0 1px rgba(240,231,217,.25)}
+.lang-switch a[aria-current="page"] .flag{box-shadow:0 0 0 1px rgba(14,10,18,.35)}
+.masthead .lang-switch{font-size:12px}
+.masthead .lang-switch a{min-height:32px;padding:0 13px}
+.lang-float{position:fixed;top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right));z-index:60;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .3s,transform .3s}
+.lang-float.on{opacity:1;transform:none}
+.lang-float.on .lang-switch{pointer-events:auto}
+.lang-float .lang-switch{box-shadow:0 6px 24px rgba(0,0,0,.45)}
+@media (prefers-reduced-motion:reduce){.lang-float{transition:none}}
 </style>
 </head>
 <body>
@@ -1007,7 +1170,7 @@ body[data-lens="asombro"]{--lens:var(--gold)}
       <header class="masthead">
         <div class="kicker">Atlas del asombro · 1184 a.C. – 270 d.C.</div>
         <h1>Grecia Eterna<span>θαῦμα · el hilo de oro</span></h1>
-        <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page">ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch">DE</a></nav>
+        <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch"><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>DE</a></nav>
       </header>
 
       <div class="map-tools">
@@ -1448,6 +1611,137 @@ body[data-lens="asombro"]{--lens:var(--gold)}
         </div>
       </section>
 
+
+      <section aria-labelledby="gsTitle" id="gerson">
+       <div class="gs" id="gsIn">
+        <div class="sec-head">
+          <div class="kicker">Lectura contemporánea · Lloyd P. Gerson</div>
+          <h2 id="gsTitle">¿Fue Platón platónico?</h2>
+          <p>Después de los mitos, una pregunta que parece un juego de palabras y no lo es. <i>From Plato to Platonism</i> (Cornell, 2013) recorre ocho siglos de lectores de Platón para sostener algo hoy poco habitual: que la tradición platónica no traicionó a Platón, sino que lo prolongó.</p>
+          <span class="gs-src">Gerson, <i>From Plato to Platonism</i>, caps. 1–11 y Conclusión</span>
+        </div>
+
+        <div>
+          <div class="gs-gadamer">
+            <div>
+              <div class="gs-k">La sospecha moderna</div>
+              <blockquote lang="de">«Platon war kein Platoniker.»</blockquote>
+              <small>Hans-Georg Gadamer, 1985</small>
+              <p>Para buena parte del siglo XX, el «platonismo» es lo que otros hicieron con Platón: un sistema rígido que el autor de los diálogos, irónico y abierto, nunca habría firmado. Las etiquetas lo delatan: «platonismo medio» y «neoplatonismo» nacieron para marcar esa distancia, y la segunda fue al principio un insulto.</p>
+            </div>
+            <div>
+              <div class="gs-k">La respuesta de Gerson</div>
+              <blockquote><span class="yes">Sí</span>, con una condición.</blockquote>
+              <small>Conclusión, p. 305</small>
+              <p>Si llamamos «platonismo» a una posición filosófica y no a la suma literal de los diálogos, Platón es su mejor exponente, aunque no el único. Ni siquiera haría falta que fuera el primero. Sustituye «platonismo» por «la verdad sobre el mundo» y la paradoja desaparece.</p>
+            </div>
+          </div>
+
+          <ol class="gs-three" aria-label="Tres usos del término platonismo">
+            <li><b><i>I</i>En la filosofía de hoy</b><p>Una tesis de la filosofía de las matemáticas: los números existen fuera del espacio y del tiempo. Apenas guarda relación con la historia.</p></li>
+            <li><b><i>II</i>Lo que dicen los diálogos</b><p>Lo que Platón dijo, o se deduce de lo que dicen sus personajes. Aquí discuten los <em>evolutivos</em>, para quienes Platón cambió de idea, y los <em>unitarios</em>, para quienes no la cambió.</p></li>
+            <li class="on"><b><i>III</i>La posición de sus seguidores</b><p>La que defienden los discípulos desde la Academia hasta Plotino. Desde el siglo I a.C. se llaman <i>platónicos</i>; antes, <i>académicos</i>. Creen que el platonismo desborda los diálogos: está también en el testimonio de Aristóteles y en la enseñanza oral.</p></li>
+          </ol>
+          <p class="gs-thesis">La tesis central: los diálogos son la mejor prueba de la filosofía de Platón, pero no marcan su límite. No se llega a ella sumando los diálogos.</p>
+        </div>
+
+        <div>
+          <div class="gs-k">Vía negativa</div>
+          <h3 class="gs-h3">Lo que Platón rechaza dice lo que Platón es</h3>
+          <p class="gs-lead">Gerson reconstruye un <b>ur-platonismo</b>, un platonismo de origen, a partir de lo que los diálogos rechazan de los filósofos anteriores, no de lo que afirman. Salen cinco negaciones: el suelo que comparten todos los platónicos. Lo que cada uno levanta encima es su versión.</p>
+          <p class="gs-lead">Las cinco se sostienen entre sí. <b>Concede una al rival</b> y verás qué se tensa.</p>
+
+          <div class="gs-ur">
+            <figure class="gs-pent">
+              <svg id="gsPent" viewBox="-50 0 480 350" role="img" aria-label="Pentágono de las cinco negaciones del ur-platonismo con el Bien en el centro"></svg>
+              <figcaption><span><i></i>apoyo mutuo</span><span><i class="t"></i>tensión: has concedido una premisa que arrastra a otra</span></figcaption>
+            </figure>
+            <div class="gs-side">
+              <ul class="gs-sw" id="gsSw" aria-label="Las cinco negaciones"></ul>
+              <div class="gs-card" id="gsCard" aria-live="polite"></div>
+              <div class="gs-verdict" id="gsVerdict" aria-live="polite"></div>
+              <div class="gs-row"><button type="button" class="ctl" id="gsAll">Todo platónico</button><button type="button" class="ctl" id="gsNone">Todo naturalista</button></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gs-k">Explicar desde arriba</div>
+          <h3 class="gs-h3">Lo que se explica por otro pide algo que se explique por sí mismo</h3>
+          <p class="gs-lead">Unificar las cinco negaciones tiene una consecuencia inmediata: la explicación se vuelve jerárquica. Lo que necesita explicación por otra cosa (lo <i>heteroexplicable</i>) remite a lo que no la necesita (lo <i>autoexplicable</i>), y esto último va primero también en el orden del ser. Gerson llama a esto <b>antinaturalismo</b>: las explicaciones «desde abajo» nunca bastan.</p>
+
+          <div class="gs-td">
+            <div class="gs-helen">
+              <div>
+                <b>Desde abajo · naturalismo</b>
+                <p>La belleza de Helena se explica por su cuerpo. Pero los cuerpos solo se distinguen por sus propiedades: o seguimos explicando propiedades con propiedades, o la belleza de Helena acaba explicada igual que la virtud de Sócrates. Naufragio.</p>
+              </div>
+              <div class="up">
+                <b>Desde arriba · platonismo</b>
+                <p>Helena es bella por la Belleza misma. Lo que explica ha de ser distinto de lo explicado: el principio del número, el uno, no es un número. Y la Forma no es la última palabra: la justicia es deseable porque es buena.</p>
+              </div>
+              <p class="gs-lead" style="font-size:13px">El escalón final es lo que <i>República</i> llama el Bien, «más allá del ser» (509b), y lo que la Academia, según Aristóteles, llamaba <b>lo Uno</b>.</p>
+            </div>
+            <div>
+              <ol class="gs-ladder" id="gsLadder" aria-label="Jerarquía de lo unificado a lo disperso"></ol>
+              <div class="gs-axis"><span>↑ más simple, más unificado</span><span>más complejo, más disperso ↓</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gs-k">Una casa con muchas habitaciones</div>
+          <h3 class="gs-h3">Ocho siglos de discípulos que discrepan</h3>
+          <p class="gs-lead">Si todos querían ser fieles al maestro, ¿por qué hay tantos platonismos? Porque los principios <b>infradeterminan</b> sus consecuencias: cuanto más se aleja el razonamiento del primer principio, menos obligada es la conclusión. Dos platónicos pueden coincidir sobre lo Uno y discrepar sobre el alma. Y un estoico puede llegar a una ética casi platónica partiendo de principios opuestos.</p>
+          <div class="gs-line">
+            <ol id="gsLine"></ol>
+          </div>
+          <div class="gs-under">
+            <div>
+              <h4>Aristóteles, el protestante</h4>
+              <p>La comparación es de Gerson. Lutero chocó con Roma en mil aplicaciones y, sin embargo, compartía con ella los principios de fondo. Aristóteles critica a Platón casi siempre desde premisas platónicas. Por eso los antiguos lo leyeron en «armonía» con su maestro, y por eso su testimonio es imprescindible para saber qué era el platonismo.</p>
+            </div>
+            <div>
+              <h4>El gran proyecto inacabado</h4>
+              <p>Hasta la muerte de Platón, la Academia discutió si lo Uno y la Díada indefinida bastaban para dar una explicación <i>matemática</i> de todo lo inteligible. No hubo una palabra definitiva, y los platónicos posteriores no mostraron entusiasmo. Para Gerson, el papel de las matemáticas sigue siendo el gran proyecto inacabado del platonismo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gs-k">Antropología platónica</div>
+          <h3 class="gs-h3">Hacerse semejante al dios</h3>
+          <div class="gs-flight">
+            <div>
+              <blockquote>«Hay que intentar huir de aquí hacia allá lo antes posible. Y la huida es asemejarse al dios en lo posible; y asemejarse es hacerse justo y piadoso con sabiduría.»<small>Teeteto 176a–b · traducción orientativa</small></blockquote>
+              <p class="gs-lead">Para los platónicos antiguos, este pasaje era el corazón del platonismo. La filología moderna lo dejó de lado durante décadas porque su tono de otro mundo encajaba mal con un Sócrates más «terrenal». Gerson lo recupera para mostrar que, en Platón, ética y metafísica son inseparables: no hay ninguna prueba de que quisiera aislar una de la otra.</p>
+              <div class="gs-anthro">
+                <div><b>Ser humano<span lang="grc">ἄνθρωπος</span></b><p>El compuesto de cuerpo y alma. Mortal (<i>Fedro</i> 246c).</p></div>
+                <div><b>Persona<span lang="grc">ψυχή</span></b><p>El yo es el alma. El ser humano «no es otra cosa que el alma» (<i>Alcibíades I</i> 130c).</p></div>
+              </div>
+            </div>
+            <ul class="gs-echo" aria-label="Ecos en los tres mitos">
+              <li><b>La Caverna: la subida es la huida</b><p>Salir hacia la luz no es cambiar de sitio, sino de semejanza: el prisionero se vuelve como lo que contempla.</p><button type="button" class="chip umbral-go" data-gs-scene="caverna">Ver la Caverna ↑</button></li>
+              <li><b>Er: elegir una vida es elegir una semejanza</b><p>Las almas eligen su modelo de vida, y la elección retrata cuánto se parecen ya a lo justo. La ética se vuelve cosmología.</p><button type="button" class="chip umbral-go" data-gs-scene="er">Ver el mito de Er ↑</button></li>
+              <li><b>La Atlántida: la desemejanza</b><p>La isla cae cuando «la parte divina» de sus reyes se diluye, mezclada una y otra vez con lo mortal (<i>Critias</i> 121a–b). La hibris es lo contrario de la <i lang="grc">ὁμοίωσις</i>.</p><button type="button" class="chip umbral-go" data-gs-scene="atlantida">Ver la Atlántida ↑</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <div class="gs-k">Por qué importa hoy</div>
+          <h3 class="gs-h3">Platón frente al naturalismo</h3>
+          <p class="gs-lead">Lo exactamente opuesto al ur-platonismo es el suelo del que crece lo que hoy llamamos <b>naturalismo</b>. Desde el siglo XVII casi no hay casos puros de ninguno de los dos: la mayor parte de la filosofía son naturalistas que acomodan alguna tesis platónica, o al revés.</p>
+          <ul class="gs-now">
+            <li><b>El reto doble</b><p>A los platónicos les toca ofrecer una construcción positiva convincente e integrada. A los naturalistas, demostrar que aceptar uno de los cinco contrarios arrastra a los demás. Gerson sospecha que muchas disputas actuales vienen de creer que las cinco piezas son independientes.</p></li>
+            <li><b>Contra Schleiermacher</b><p>Desde el siglo XIX se lee cada diálogo como un drama cerrado: un avance indudable. Pero, para los antiguos, ningún diálogo se entiende como filosofía sin apoyarse en los demás. Richard Rorty vio con claridad la otra orilla: ligó sus esperanzas sociales a su oposición al platonismo.</p></li>
+            <li class="atlas"><span class="tag">Lectura del atlas</span><b>Conocer o representar</b><p>Para Gerson, el antiescepticismo exige que lo real esté <i>presente</i> a quien conoce, no solo representado con una exactitud que nadie puede comprobar. Ante un modelo de IA que solo maneja representaciones, la vieja frontera vuelve a ser una pregunta de aula. Conecta con el ejercicio de Theuth.</p></li>
+          </ul>
+          <p class="src-note"><b>Procedencia.</b> Lloyd P. Gerson, <i>From Plato to Platonism</i>, Ithaca y Londres, Cornell University Press, 2013: cap. 1 (ur-platonismo y las cinco negaciones), cap. 3 (Platón artista y filósofo), cap. 4 (Aristóteles), caps. 5–8 (Academia Antigua, escépticos académicos, platonismo medio, Numenio), caps. 9–11 (Plotino), Conclusión. Paráfrasis propias. Las citas de Platón van en traducción orientativa con numeración Stephanus. La tarjeta «Lectura del atlas» es una extrapolación nuestra, no de Gerson. Pendiente de revisión editorial humana.</p>
+        </div>
+       </div>
+      </section>
+
       <section aria-labelledby="utTitle">
         <div class="sec-head">
           <div class="kicker">Para el aula</div>
@@ -1781,7 +2075,7 @@ fenómeno cambiante</pre><button type="button" class="chip" data-or="forma" data
     <p><b>Grecia Eterna</b> · prototipo v1.1 · estructura de datos heredada del Atlas de la Filosofía Griega v0.2 (eras, lugares, problemas, fuentes). Capa interpretativa: Luciano De Crescenzo, <i>Historia de la filosofía griega</i> (1983 y 1987), resumida y parafraseada capítulo a capítulo; ningún pasaje del libro se reproduce literalmente salvo expresiones breves citadas entre comillas. Capa retrospectiva: Plotino, <i>Enéadas</i> (III–IV cotejadas con la traducción de Jesús Igal, Gredos 1985; el resto, traducción libre propia desde el griego) y Porfirio, <i>Vida de Plotino</i>. Sección «El Umbral»: Platón, <i>República</i>, <i>Timeo</i>, <i>Critias</i>, <i>Fedro</i> y <i>Banquete</i>, en paráfrasis y citas breves de traducción orientativa; escenas 3D en Three.js r128 a partir de las imágenes de concepto del proyecto. Sección «El Liceo»: Aristóteles, <i>Órganon</i>, <i>Física</i>, <i>Sobre el cielo</i>, <i>Metafísica</i>, <i>Ética Nicomáquea</i>, <i>Política</i> y <i>Poética</i>, en paráfrasis y citas breves de traducción orientativa con numeración Bekker; cuatro escenas 3D a partir de las imágenes de concepto del proyecto. Colofón «La orilla»: interludios de <i>phýsis</i> a partir de una reflexión y dos fotografías propias de la orilla; fragmentos presocráticos con numeración Diels–Kranz; un único sistema de partículas con estados conceptuales. Sección «La Acrópolis»: el Partenón como montaje constructivo en Three.js (reconstrucción simplificada, medidas según levantamientos habituales); Tucídides II 40 y Plutarco, <i>Pericles</i> 12–13, en traducción orientativa. «Rueda del asombro»: diagrama didáctico a la manera de la rueda de la Bauhaus (Gropius, 1922), a partir de un boceto propio del proyecto.</p>
     <p><b>Transparencia (Reglamento UE de IA, art. 50).</b> Textos, traducciones orientativas y código elaborados con asistencia de IA (Claude, Anthropic) a partir del corpus del proyecto. Pendiente de revisión editorial humana antes de su uso docente o publicación.</p>
     <p><b>Datos.</b> Costas: Natural Earth (dominio público), simplificadas. Sin cookies, sin analítica, sin formularios. Tipografías (OFL) y Three.js alojados en el propio sitio: ninguna petición a terceros desde el navegador.</p>
-    <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page">ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch">DE</a></nav>
+    <nav class="lang-switch" aria-label="Idioma"><a href="/" lang="es" hreflang="es" title="Español" aria-current="page"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch"><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>DE</a></nav>
   </footer>
 </main>
 
@@ -6011,6 +6305,241 @@ paint();
 
 <script>/* idioma · Sprache: conserva la estación o sección (#hash) al cambiar */
 document.querySelectorAll(".lang-switch a").forEach(function(a){a.addEventListener("click",function(e){if(a.getAttribute("aria-current"))return;if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});
+</script>
+
+<script>
+/* ---------------- GERSON · ¿FUE PLATÓN PLATÓNICO? / WAR PLATON PLATONIKER? (ES · DE) ---------------- */
+(function(){
+const q=s=>document.querySelector(s);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+const go=el=>el&&el.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
+
+const T={
+es:{
+ ui:{hold:"Sostener",cede:"Conceder",map:"en el mapa ↗",mapShort:"En el mapa ↗",core:"el Bien · lo Uno",noCore:"sin unificar",
+   k:{niega:"Niega",afirma:"Afirma",rival:"Rival",hoy:"Hoy"}, plotino:"La mirada de Plotino ↑", langLabel:"Idioma de la sección"},
+ anti:{
+  mat:{n:"Antimaterialismo",short:"no todo es cuerpo",rival:"Materialismo",
+   niega:"Que solo existan los cuerpos y sus propiedades.",
+   afirma:"Hay realidades que no son cuerpos y existen con independencia de ellos. «¿Es el alma un cuerpo?» deja de tener una respuesta obvia.",
+   quien:"Los «hijos de la tierra» de la gigantomaquia del <i>Sofista</i> (246a–248a); detrás, probablemente, los atomistas, a los que Platón nunca nombra.",
+   hoy:"El fisicalismo en filosofía de la mente.",stn:"Demócrito"},
+  mec:{n:"Antimecanicismo",short:"las causas físicas no bastan",rival:"Mecanicismo",
+   niega:"Que las causas materiales sean necesarias y suficientes para todo lo que ocurre en el mundo físico. En términos actuales: el cierre causal de lo físico.",
+   afirma:"Lo que explica ha de ser de otra naturaleza que lo explicado. En el <i>Timeo</i> (47e–48a), el intelecto «persuade» a la necesidad.",
+   quien:"Anaxágoras prometió un Intelecto ordenador y luego lo explicó todo con aire, agua y éter (<i>Fedón</i> 97b–99d): un antimecanicista que fracasó por ser materialista.",
+   hoy:"Los debates sobre el cierre causal y la emergencia.",stn:"Anaxágoras"},
+  esc:{n:"Antiescepticismo",short:"el conocimiento es posible",rival:"Escepticismo",
+   niega:"Que el conocimiento sea imposible.",
+   afirma:"En la <i>epistēmē</i>, lo real está «presente» a quien conoce. No es una representación cuya exactitud nadie pueda comprobar.",
+   quien:"Sofistas, retóricos y demagogos, despreocupados del saber. Más tarde, Pirrón.",
+   hoy:"El representacionalismo; la pregunta por lo que «sabe» una máquina.",stn:"Protágoras y Gorgias"},
+  rel:{n:"Antirrelativismo",short:"no somos la medida",rival:"Relativismo",
+   niega:"«El hombre es la medida de todas las cosas, de las que son en cuanto que son y de las que no son en cuanto que no son» (<i>Teeteto</i> 152a).",
+   afirma:"Lo que es no se reduce a lo que es <i>para</i> alguien. Si se redujera, el conocimiento sería imposible (<i>Teeteto</i> 186a–e).",
+   quien:"Protágoras, a través del retrato del <i>Teeteto</i>.",
+   hoy:"La posverdad; el «cada cual tiene su verdad».",stn:"Protágoras y Gorgias"},
+  nom:{n:"Antinominalismo",short:"lo mismo sin ser idéntico",rival:"Nominalismo",
+   niega:"Que solo existan individuos únicos, cada uno en su lugar y su tiempo.",
+   afirma:"Dos cosas pueden ser «lo mismo» sin dejar de ser dos: mismidad sin identidad. Y esa mismidad pide una explicación causal, que son las Formas.",
+   quien:"El monismo eleático (<i>Parménides</i> 127d–128d): si dos cosas fueran cada una «una», ya serían lo mismo. Nominalismo extremo.",
+   hoy:"Universales frente a etiquetas: ¿qué es una categoría en una base de datos o un clasificador?",stn:"Parménides"}
+ },
+ dep:{
+  "mat-esc":"Has concedido el materialismo pero sostienes que el conocimiento es posible. Según los diálogos, si todo es cuerpo, lo real no puede estar presente a nadie: solo quedan representaciones (<i>Timeo</i> 51b–e).",
+  "nom-esc":"Has concedido el nominalismo pero sostienes que el conocimiento es posible. Sin mismidad entre individuos no hay nada universal que conocer, solo casos sueltos.",
+  "rel-esc":"Has concedido el relativismo pero sostienes que el conocimiento es posible. Si lo que es se reduce a lo que es para cada cual, el <i>Teeteto</i> concluye que el conocimiento es imposible (186a–e).",
+  "mat-mec":"Has concedido el materialismo pero niegas el mecanicismo. Sin realidades incorpóreas, ¿con qué causas no físicas contradices el cierre causal? Gerson considera que el antimecanicismo se deriva del antimaterialismo."
+ },
+ v:{
+  all:`<h5>Ur-platonismo completo</h5><p>Las cinco negaciones se sostienen entre sí. Falta lo más difícil, la construcción positiva: un primer principio que lo unifique todo. La <i>República</i> lo llama el Bien; la Academia, lo Uno. Cada platónico propone su versión.</p>`,
+  none:`<h5>Naturalismo puro</h5><p>Es la contradicción exacta del ur-platonismo y el suelo de lo que hoy llamamos naturalismo. Gerson le plantea un reto: demostrar que aceptar uno de los cinco contrarios obliga a aceptar los demás. Aquí, al menos, la posición es coherente.</p>`,
+  tens:n=>`<h5>Posición mixta, con ${n===1?"una tensión":n+" tensiones"}</h5><p>Como casi toda la filosofía desde el siglo XVII: un naturalista que acomoda tesis platónicas, o al revés. Gerson sospecha que muchas disputas actuales nacen de creer que estas piezas son independientes.</p>`,
+  calm:`<h5>Posición mixta, sin tensiones visibles</h5><p>Lo que has concedido no arrastra, según los argumentos de los diálogos, a lo que sostienes. Pero sin las cinco piezas no hay unificación posible: el centro no se enciende.</p>`
+ },
+ lad:[
+  {t:"Lo Uno · el Bien",x:"El primer principio de todo: el único punto donde la explicación se detiene. Por eso la <i>República</i> lo llama «no hipotético». Nada se le puede añadir sin introducir una complejidad que le restaría poder explicativo."},
+  {t:"La Díada indefinida",x:"El segundo principio, según el testimonio de Aristóteles sobre la enseñanza oral de Platón. Plotino explica por qué es el primer producto: es lo mínimamente complejo. Con ella aparece el criterio de toda la jerarquía: cuanto menos complejo, más cerca del principio."},
+  {t:"Formas · números ideales",x:"La Forma de la Justicia explica que un acto sea justo, pero solo de manera condicional: la justicia es deseable porque es buena. Si las Formas son números fue la gran apuesta matemática de la Academia, y quedó sin resolver."},
+  {t:"Intelecto",x:"En Plotino, el pensamiento que es uno con todo lo inteligible. Es la primera unidad en la que ya hay multiplicidad."},
+  {t:"Alma",x:"El alma es la persona. En Plotino, una parte de ella no desciende nunca al cuerpo: una tesis que él mismo reconoce minoritaria."},
+  {t:"Cuerpos",x:"Imágenes, «entre lo realmente real y la nada». La belleza de Helena es real, pero su fórmula incluye rasgos corporales que la Belleza misma no tiene."},
+  {t:"Materia",x:"El límite inferior de la dispersión. Para Plotino es lo más alejado del Bien, y por eso tiene que ver con el mal."}
+ ],
+ line:[
+  {d:"c. 428–348 a.C.",n:"Platón",r:"La versión coronada",x:"Diálogos y enseñanza en la Academia. Para todos sus seguidores, su versión del platonismo es la mejor, aunque no la única posible."},
+  {d:"384–322 a.C.",n:"Aristóteles",r:"El disidente",x:"Critica a Platón desde premisas platónicas. Su testimonio es la mejor fuente sobre lo Uno y la Díada."},
+  {d:"347–314 a.C.",n:"Espeusipo y Jenócrates",r:"Academia Antigua",x:"Los primeros en construir sistemas propios. Discuten si las Formas son números, si sobran o qué lugar ocupa el Bien."},
+  {d:"s. III–II a.C.",n:"Arcesilao y Carnéades",r:"Escépticos académicos",x:"La Academia duda. Para Gerson, su escepticismo inquisitivo apunta sobre todo contra el dogmatismo antiplatónico de los estoicos."},
+  {d:"s. I a.C.–II d.C.",n:"Antíoco, Plutarco, Alcínoo",r:"«Platonismo medio»",x:"Una etiqueta «casi vacía», según Gerson. Antíoco acerca Platón al estoicismo, y su influencia es escasa. Alcínoo escribe un manual de doctrina."},
+  {d:"s. II d.C.",n:"Numenio de Apamea",r:"Sobre el Bien",x:"Un primer dios, que es el Bien, y un segundo, demiurgo. «¿Qué es Platón sino un Moisés que habla ático?»"},
+  {d:"204/5–270",n:"Plotino",r:"Exégeta de la revelación platónica",x:"Así lo llama Proclo, y Gerson le da la razón: Plotino es quien expone el platonismo como sistema."}
+ ]
+},
+de:{
+ ui:{hold:"Festhalten",cede:"Zugestehen",map:"auf der Karte ↗",mapShort:"Auf der Karte ↗",core:"das Gute · das Eine",noCore:"nicht geeint",
+   k:{niega:"Verneint",afirma:"Behauptet",rival:"Gegner",hoy:"Heute"}, plotino:"Plotins Blick ↑", langLabel:"Sprache des Abschnitts"},
+ anti:{
+  mat:{n:"Antimaterialismus",short:"nicht alles ist Körper",rival:"Materialismus",
+   niega:"Dass nur Körper und ihre Eigenschaften existieren.",
+   afirma:"Es gibt Wirklichkeiten, die keine Körper sind und unabhängig von ihnen existieren. «Ist die Seele ein Körper?» hat keine selbstverständliche Antwort mehr.",
+   quien:"Die «Erdgeborenen» der Gigantomachie im <i>Sophistes</i> (246a–248a); dahinter wohl die Atomisten, die Platon nie beim Namen nennt.",
+   hoy:"Der Physikalismus in der Philosophie des Geistes.",stn:"Demokrit"},
+  mec:{n:"Antimechanismus",short:"physische Ursachen reichen nicht",rival:"Mechanismus",
+   niega:"Dass materielle Ursachen für alles, was in der physischen Welt geschieht, notwendig und hinreichend sind. Heute: die kausale Geschlossenheit des Physischen.",
+   afirma:"Was erklärt, muss anderer Natur sein als das Erklärte. Im <i>Timaios</i> (47e–48a) «überredet» die Vernunft die Notwendigkeit.",
+   quien:"Anaxagoras versprach einen ordnenden Geist und erklärte dann alles mit Luft, Wasser und Äther (<i>Phaidon</i> 97b–99d): ein Antimechanist, der scheiterte, weil er Materialist war.",
+   hoy:"Die Debatten über kausale Geschlossenheit und Emergenz.",stn:"Anaxagoras"},
+  esc:{n:"Antiskeptizismus",short:"Erkenntnis ist möglich",rival:"Skeptizismus",
+   niega:"Dass Erkenntnis unmöglich ist.",
+   afirma:"In der <i>epistēmē</i> ist das Wirkliche dem Erkennenden «gegenwärtig». Sie ist keine Darstellung, deren Genauigkeit niemand prüfen kann.",
+   quien:"Sophisten, Rhetoren und Demagogen, denen am Wissen nichts liegt. Später Pyrrhon.",
+   hoy:"Der Repräsentationalismus; die Frage, was eine Maschine «weiß».",stn:"Protagoras und Gorgias"},
+  rel:{n:"Antirelativismus",short:"wir sind nicht das Maß",rival:"Relativismus",
+   niega:"«Der Mensch ist das Maß aller Dinge, der seienden, dass sie sind, der nichtseienden, dass sie nicht sind» (<i>Theaitetos</i> 152a).",
+   afirma:"Was ist, lässt sich nicht auf das reduzieren, was <i>für</i> jemanden ist. Ließe es sich, wäre Erkenntnis unmöglich (<i>Theaitetos</i> 186a–e).",
+   quien:"Protagoras, im Porträt des <i>Theaitetos</i>.",
+   hoy:"Die Postfaktizität; das «jeder hat seine Wahrheit».",stn:"Protagoras und Gorgias"},
+  nom:{n:"Antinominalismus",short:"dasselbe, ohne identisch zu sein",rival:"Nominalismus",
+   niega:"Dass nur einzigartige Individuen existieren, jedes an seinem Ort und in seiner Zeit.",
+   afirma:"Zwei Dinge können «dasselbe» sein und doch zwei bleiben: Selbigkeit ohne Identität. Und diese Selbigkeit verlangt eine kausale Erklärung: die Formen.",
+   quien:"Der eleatische Monismus (<i>Parmenides</i> 127d–128d): Wäre jedes von zwei Dingen «eines», wären sie schon dasselbe. Extremer Nominalismus.",
+   hoy:"Universalien gegen Etiketten: Was ist eine Kategorie in einer Datenbank oder einem Klassifikator?",stn:"Parmenides"}
+ },
+ dep:{
+  "mat-esc":"Du hast den Materialismus zugestanden, hältst aber Erkenntnis für möglich. Nach den Dialogen kann, wenn alles Körper ist, das Wirkliche niemandem gegenwärtig sein: Es bleiben nur Darstellungen (<i>Timaios</i> 51b–e).",
+  "nom-esc":"Du hast den Nominalismus zugestanden, hältst aber Erkenntnis für möglich. Ohne Selbigkeit zwischen Individuen gibt es nichts Allgemeines zu erkennen, nur lose Einzelfälle.",
+  "rel-esc":"Du hast den Relativismus zugestanden, hältst aber Erkenntnis für möglich. Wenn das, was ist, sich auf das reduziert, was für jeden ist, folgert der <i>Theaitetos</i>, dass Erkenntnis unmöglich ist (186a–e).",
+  "mat-mec":"Du hast den Materialismus zugestanden, verneinst aber den Mechanismus. Ohne unkörperliche Wirklichkeiten: Mit welchen nichtphysischen Ursachen widersprichst du der kausalen Geschlossenheit? Für Gerson folgt der Antimechanismus aus dem Antimaterialismus."
+ },
+ v:{
+  all:`<h5>Vollständiger Ur-Platonismus</h5><p>Die fünf Verneinungen stützen sich gegenseitig. Es fehlt das Schwierigste, die positive Konstruktion: ein erstes Prinzip, das alles eint. Die <i>Politeia</i> nennt es das Gute, die Akademie das Eine. Jeder Platoniker legt seine Version vor.</p>`,
+  none:`<h5>Reiner Naturalismus</h5><p>Er ist das genaue Gegenteil des Ur-Platonismus und der Boden dessen, was wir heute Naturalismus nennen. Gerson stellt ihm eine Aufgabe: zu zeigen, dass die Annahme eines der fünf Gegenteile zur Annahme der übrigen zwingt. Hier ist die Position zumindest stimmig.</p>`,
+  tens:n=>`<h5>Gemischte Position, mit ${n===1?"einer Spannung":n+" Spannungen"}</h5><p>Wie fast die gesamte Philosophie seit dem 17. Jahrhundert: ein Naturalist, der platonische Thesen einbaut, oder umgekehrt. Gerson vermutet, dass viele heutige Debatten aus dem Glauben entstehen, diese Teile seien unabhängig.</p>`,
+  calm:`<h5>Gemischte Position, ohne sichtbare Spannungen</h5><p>Was du zugestanden hast, reißt nach den Argumenten der Dialoge nicht mit, was du festhältst. Doch ohne alle fünf Teile ist keine Einigung möglich: Die Mitte leuchtet nicht.</p>`
+ },
+ lad:[
+  {t:"Das Eine · das Gute",x:"Das erste Prinzip von allem: der einzige Punkt, an dem die Erklärung zur Ruhe kommt. Darum nennt die <i>Politeia</i> es «voraussetzungslos». Nichts lässt sich ihm hinzufügen, ohne eine Komplexität einzuführen, die seine Erklärungskraft mindern würde."},
+  {t:"Die unbestimmte Zweiheit",x:"Das zweite Prinzip, nach dem Zeugnis des Aristoteles über Platons mündliche Lehre. Plotin erklärt, warum sie das erste Erzeugnis ist: Sie ist das minimal Komplexe. Mit ihr entsteht das Kriterium der ganzen Hierarchie: je weniger komplex, desto näher am Prinzip."},
+  {t:"Formen · Idealzahlen",x:"Die Form der Gerechtigkeit erklärt, dass eine Handlung gerecht ist, aber nur bedingt: Gerechtigkeit ist erstrebenswert, weil sie gut ist. Ob die Formen Zahlen sind, war die große mathematische Wette der Akademie, und sie blieb offen."},
+  {t:"Geist",x:"Bei Plotin das Denken, das eins ist mit allem Intelligiblen. Die erste Einheit, in der es schon Vielheit gibt."},
+  {t:"Seele",x:"Die Seele ist die Person. Bei Plotin steigt ein Teil von ihr nie in den Körper hinab: eine These, die er selbst als Minderheitsmeinung anerkennt."},
+  {t:"Körper",x:"Abbilder, «zwischen dem wirklich Seienden und dem Nichts». Helenas Schönheit ist wirklich, doch ihre Formel enthält körperliche Züge, die das Schöne selbst nicht hat."},
+  {t:"Materie",x:"Die untere Grenze der Zerstreuung. Für Plotin das vom Guten am weitesten Entfernte, und darum hat sie mit dem Bösen zu tun."}
+ ],
+ line:[
+  {d:"um 428–348 v. Chr.",n:"Platon",r:"Die gekrönte Version",x:"Dialoge und Lehre in der Akademie. Für alle seine Anhänger ist seine Version des Platonismus die beste, wenn auch nicht die einzig mögliche."},
+  {d:"384–322 v. Chr.",n:"Aristoteles",r:"Der Abweichler",x:"Kritisiert Platon von platonischen Prämissen aus. Sein Zeugnis ist die beste Quelle über das Eine und die Zweiheit."},
+  {d:"347–314 v. Chr.",n:"Speusipp und Xenokrates",r:"Alte Akademie",x:"Die ersten, die eigene Systeme bauen. Sie streiten, ob die Formen Zahlen sind, ob man sie braucht und welchen Platz das Gute hat."},
+  {d:"3.–2. Jh. v. Chr.",n:"Arkesilaos und Karneades",r:"Akademische Skeptiker",x:"Die Akademie zweifelt. Für Gerson richtet sich ihr suchender Skeptizismus vor allem gegen den antiplatonischen Dogmatismus der Stoiker."},
+  {d:"1. Jh. v. – 2. Jh. n. Chr.",n:"Antiochos, Plutarch, Alkinoos",r:"«Mittelplatonismus»",x:"Ein «fast leeres» Etikett, sagt Gerson. Antiochos nähert Platon der Stoa an, und sein Einfluss bleibt gering. Alkinoos schreibt ein Lehrbuch."},
+  {d:"2. Jh. n. Chr.",n:"Numenios von Apameia",r:"Über das Gute",x:"Ein erster Gott, der das Gute ist, und ein zweiter, der Demiurg. «Was ist Platon anderes als ein attisch sprechender Moses?»"},
+  {d:"204/5–270",n:"Plotin",r:"Ausleger der platonischen Offenbarung",x:"So nennt ihn Proklos, und Gerson gibt ihm recht: Plotin legt den Platonismus als System dar."}
+ ]
+}};
+const ORDER=["mat","mec","esc","rel","nom"];
+const GR={mat:"ἀσώματον",mec:"νοῦς / ἀνάγκη",esc:"ἐπιστήμη",rel:"μέτρον",nom:"ταὐτόν"};
+const ST={mat:"democrito",mec:"anaxagoras",esc:"sofistas",rel:"sofistas",nom:"parmenides"};
+const DEP=[["mat","esc"],["nom","esc"],["rel","esc"],["mat","mec"]];
+const LADGR=["τὸ ἕν","ἀόριστος δυάς","εἴδη · ἀριθμοί","νοῦς","ψυχή","σώματα","ὕλη"];
+const LINEST=["platon","aristoteles",null,"carneades",null,null,"plotino"];
+
+const host=q("#gsIn"), tpl=q("#gsTplDe");
+if(!host) return;
+const SRC={es:host.innerHTML, de:tpl?tpl.innerHTML:host.innerHTML};
+const held={mat:true,mec:true,esc:true,rel:true,nom:true};
+let sel="mat", lang=null;
+
+function mount(L){
+  if(L===lang) return; lang=L; const t=T[L];
+  host.innerHTML=SRC[L].replace("<!--GSLANG-->",`<div class="gs-lang" role="group" aria-label="${t.ui.langLabel}"><button type="button" data-gs-lang="es" lang="es" aria-pressed="${L==="es"}">ES</button><button type="button" data-gs-lang="de" lang="de" aria-pressed="${L==="de"}">DE</button></div>`);
+  host.setAttribute("lang",L);
+
+  const svg=q("#gsPent"), cx=190, cy=172, R=128, P={};
+  ORDER.forEach((id,i)=>{ const a=(-90+i*72)*Math.PI/180; P[id]={x:cx+R*Math.cos(a),y:cy+R*Math.sin(a),t:a}; });
+  function draw(){
+    let h=`<defs><radialGradient id="gsCore"><stop offset="0" stop-color="#fff6de"/><stop offset=".35" stop-color="#e3b460" stop-opacity=".75"/><stop offset="1" stop-color="#e3b460" stop-opacity="0"/></radialGradient></defs>`;
+    h+=`<polygon class="ed" points="${ORDER.map(id=>P[id].x.toFixed(1)+","+P[id].y.toFixed(1)).join(" ")}"/>`;
+    ORDER.forEach(id=>{ h+=`<line class="sp${held[id]?"":" off"}" x1="${cx}" y1="${cy}" x2="${P[id].x.toFixed(1)}" y2="${P[id].y.toFixed(1)}"/>`; });
+    DEP.forEach(([a,b])=>{
+      const A=P[a],B=P[b], mx=(A.x+B.x)/2, my=(A.y+B.y)/2, k=.28, qx=mx+(cx-mx)*k, qy=my+(cy-my)*k;
+      const cls=(!held[a]&&held[b])?"t":(!held[a]||!held[b])?"x":"";
+      h+=`<path class="dep ${cls}" d="M${A.x.toFixed(1)} ${A.y.toFixed(1)} Q${qx.toFixed(1)} ${qy.toFixed(1)} ${B.x.toFixed(1)} ${B.y.toFixed(1)}"/>`;
+    });
+    const n=ORDER.filter(id=>held[id]).length, all=n===5;
+    h+=`<g class="core" style="opacity:${(.15+.85*n/5).toFixed(2)}"><circle cx="${cx}" cy="${cy}" r="${all?46:30}" fill="url(#gsCore)" opacity="${all?1:.45}"/>
+        <text x="${cx}" y="${cy-2}" font-size="${all?20:16}" lang="grc">τὸ ἀγαθόν</text><text class="s" x="${cx}" y="${cy+16}">${E(all?t.ui.core:t.ui.noCore)}</text></g>`;
+    ORDER.forEach(id=>{
+      const p=P[id], c=Math.cos(p.t), anc=c>.3?"start":c<-.3?"end":"middle", lx=p.x+c*20, ly=p.y+Math.sin(p.t)*22+(Math.sin(p.t)<-.5?-8:4);
+      const a=t.anti[id];
+      h+=`<g class="nd${held[id]?"":" off"}${sel===id?" sel":""}" data-gs="${id}">
+        <circle class="h" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="16"/><circle class="r" cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="8"/>
+        <text x="${lx.toFixed(1)}" y="${ly.toFixed(1)}" text-anchor="${anc}">${E(held[id]?a.n:a.rival)}</text>
+        <text class="g" x="${lx.toFixed(1)}" y="${(ly+14).toFixed(1)}" text-anchor="${anc}" lang="grc">${GR[id]}</text></g>`;
+    });
+    svg.innerHTML=h;
+  }
+  const sw=q("#gsSw");
+  function render(){
+    draw();
+    sw.innerHTML=ORDER.map(id=>{ const a=t.anti[id]; return `<li class="${sel===id?"sel":""}">
+      <button type="button" class="nm" data-pick="${id}" aria-pressed="${sel===id}">${E(a.n)}<span>${E(a.short)}</span></button>
+      <span class="gs-tg" role="group" aria-label="${E(a.n)}"><button type="button" data-hold="${id}" data-v="1" aria-pressed="${held[id]}">${t.ui.hold}</button><button type="button" class="c" data-hold="${id}" data-v="0" aria-pressed="${!held[id]}">${t.ui.cede}</button></span></li>`; }).join("");
+    const a=t.anti[sel], K=t.ui.k;
+    q("#gsCard").innerHTML=`<h4>${E(a.n)}<span lang="grc">${GR[sel]}</span></h4>
+      <dl><dt>${K.niega}</dt><dd>${a.niega}</dd><dt>${K.afirma}</dt><dd>${a.afirma}</dd><dt>${K.rival}</dt><dd>${a.quien}</dd><dt>${K.hoy}</dt><dd>${a.hoy}</dd></dl>
+      <div class="gs-row"><button type="button" class="chip" data-fly-station="${ST[sel]}">${E(a.stn)} ${t.ui.map}</button></div>`;
+    const n=ORDER.filter(id=>held[id]).length, TS=DEP.filter(([x,y])=>!held[x]&&held[y]);
+    const v=q("#gsVerdict"); v.className="gs-verdict"+(TS.length?" t":n===0?" n":"");
+    v.innerHTML = n===5?t.v.all : n===0?t.v.none : TS.length? t.v.tens(TS.length)+`<ul>${TS.map(([x,y])=>`<li>${t.dep[x+"-"+y]}</li>`).join("")}</ul>` : t.v.calm;
+  }
+  svg.addEventListener("click",e=>{ const g=e.target.closest("[data-gs]"); if(!g) return; sel=g.dataset.gs; render(); });
+  sw.addEventListener("click",e=>{
+    const p=e.target.closest("[data-pick]"); if(p){ sel=p.dataset.pick; render(); return; }
+    const b=e.target.closest("[data-hold]"); if(b){ held[b.dataset.hold]=b.dataset.v==="1"; sel=b.dataset.hold; render(); }
+  });
+  q("#gsAll").addEventListener("click",()=>{ ORDER.forEach(id=>held[id]=true); render(); });
+  q("#gsNone").addEventListener("click",()=>{ ORDER.forEach(id=>held[id]=false); render(); });
+  render();
+
+  const lad=q("#gsLadder");
+  lad.innerHTML=t.lad.map((l,i)=>`<li><button type="button" aria-expanded="${i===0}" aria-controls="gsL${i}" data-l="${i}"><i></i><span>${E(l.t)}</span><small lang="grc">${LADGR[i]}</small></button><p id="gsL${i}"${i===0?"":" hidden"}>${l.x}${i===3?` <button type="button" class="chip" data-gs-jump="#mirada">${t.ui.plotino}</button>`:""}</p></li>`).join("");
+  lad.addEventListener("click",e=>{
+    const b=e.target.closest("[data-l]"); if(!b) return;
+    const open=b.getAttribute("aria-expanded")!=="true";
+    b.setAttribute("aria-expanded",String(open)); q("#gsL"+b.dataset.l).hidden=!open;
+  });
+
+  q("#gsLine").innerHTML=t.line.map((l,i)=>`<li><span class="d">${E(l.d)}</span><h4>${E(l.n)}</h4><span class="r">${E(l.r)}</span><p>${E(l.x)}</p>${LINEST[i]?`<button type="button" class="chip" data-fly-station="${LINEST[i]}">${t.ui.mapShort}</button>`:""}</li>`).join("");
+}
+
+/* idioma: lo decide <html lang> (index.html = es, de.html = de) */
+const pageLang=()=>((document.documentElement.getAttribute("lang")||"es").toLowerCase().startsWith("de")?"de":"es");
+mount(pageLang());
+new MutationObserver(()=>mount(pageLang())).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+document.addEventListener("gs:lang",e=>mount(e.detail==="de"?"de":"es"));
+
+document.addEventListener("click",e=>{
+  const s=e.target.closest("[data-gs-scene]");
+  if(s){ e.preventDefault(); const tb=q("#umTab-"+s.dataset.gsScene); if(tb) tb.click(); go(q("#umStage")); return; }
+  const j=e.target.closest("[data-gs-jump]");
+  if(j){ e.preventDefault(); go(q(j.dataset.gsJump)); }
+});
+})();
+</script>
+
+<script>
+/* conmutador de idioma flotante: aparece cuando el título sale de la pantalla */
+(function(){
+  var src=document.querySelector(".masthead .lang-switch"); if(!src) return;
+  var box=document.createElement("div"); box.className="lang-float"; box.setAttribute("aria-hidden","true");
+  var nav=src.cloneNode(true); nav.querySelectorAll("a").forEach(function(a){a.tabIndex=-1;});
+  box.appendChild(nav); document.body.appendChild(box);
+  nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(e){if(a.getAttribute("aria-current")){e.preventDefault();return;}if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});
+  function set(on){box.classList.toggle("on",on);box.setAttribute("aria-hidden",String(!on));nav.querySelectorAll("a").forEach(function(a){a.tabIndex=on?0:-1;});}
+  if("IntersectionObserver" in window){ new IntersectionObserver(function(es){ set(!es[0].isIntersecting); }).observe(src); }
+})();
 </script>
 </body>
 </html>

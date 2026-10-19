@@ -1,5 +1,12 @@
 # Historial
 
+## v1.3 · ¿Fue Platón platónico? · 2026-10-19
+- Nueva sección en El Umbral, justo después de «Del concepto al código»: lectura de Lloyd P. Gerson, *From Plato to Platonism* (Cornell, 2013), en español y alemán (`War Platon Platoniker?`).
+- Pentágono interactivo del ur-platonismo (antimaterialismo, antimecanicismo, antinominalismo, antirrelativismo, antiescepticismo): se puede «conceder» cada negación y se ven las tensiones que señala Gerson; veredicto platonismo / naturalismo / posición mixta.
+- Escalera de lo Uno a la materia, línea de la tradición (Platón → Plotino), «hacerse semejante al dios» (*Teeteto* 176a–b) con enlaces a la Caverna, Er y la Atlántida, y «por qué importa hoy».
+- Versión alemana: título **Ewiges Hellas** (pestaña, cabecera y colofón).
+- Botón de idioma con banderas y conmutador flotante ES · DE que aparece en la esquina superior derecha al bajar por la página.
+
 ## v1.2 · Deutsche Fassung · 2026-10-12
 - Nueva versión en **alemán** en `/de` (`public/de.html`): todos los textos visibles, datos de las estaciones, escenas 3D, sala de lectura, Rueda del asombro y colofón traducidos; nombres y lugares en su forma alemana (Platon, Heraklit, Milet, Athen…).
 - **Botón de idioma ES · DE** bajo el título y en el colofón de ambas páginas; al cambiar de idioma se conserva la estación o sección abierta (`#hash`).
