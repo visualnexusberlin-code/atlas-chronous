@@ -1155,6 +1155,177 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 .lang-float.on .lang-switch{pointer-events:auto}
 .lang-float .lang-switch{box-shadow:0 6px 24px rgba(0,0,0,.45)}
 @media (prefers-reduced-motion:reduce){.lang-float{transition:none}}
+
+/* título y botón de idioma en la misma línea */
+.masthead{max-width:min(660px,calc(100vw - var(--codex-w) - 3*var(--gutter)))}
+.mast-row{display:flex;align-items:flex-start;gap:14px 22px;flex-wrap:wrap}
+.mast-row h1{flex:0 1 auto}
+.mast-row .lang-switch{margin-top:clamp(.5rem,1.1vw,.95rem);flex:none}
+@media (max-width:900px){ .masthead{max-width:calc(100vw - 2*var(--gutter))} .mast-row{gap:10px 16px} }
+
+/* ---------- RETÓRICA · el arte de ver lo convincente (El Liceo) ---------- */
+:root{--rt-e:#f2b46a;--rt-l:#a6f0e6;--rt-p:#ff6a3d}
+.rt{display:grid;gap:72px}
+.rt .sec-head{margin-bottom:0}
+.rt-src{font-size:11px;color:var(--ly-amber);letter-spacing:.04em}
+.rt-k{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:8px}
+.rt-h3{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.4vw,1.9rem);line-height:1.1;color:var(--ink);text-wrap:balance}
+.rt-lead{margin:0;max-width:66ch;color:var(--dim)}
+.rt-lead + .rt-lead{margin-top:10px}
+.rt-q{margin:22px 0 0;max-width:62ch;font-family:var(--f-display);font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.32;color:var(--ink);padding-left:16px;border-left:2px solid var(--ly-amber)}
+.rt-q small{display:block;font-family:var(--f-body);font-size:11.5px;color:var(--faint);margin-top:8px}
+.rt .chip.rt-go{border-color:rgba(var(--ly-amber-rgb),.5);color:var(--ink)}
+.rt .chip.rt-go:hover{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.08)}
+
+/* tres grados del logos */
+.rt-deg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:4px;margin-top:26px;position:relative}
+.rt-deg > div{padding:20px 22px;display:grid;gap:7px;align-content:start}
+.rt-deg > div + div{border-left:1px solid var(--line)}
+.rt-deg .mid{background:linear-gradient(180deg,rgba(var(--ly-amber-rgb),.08),rgba(0,0,0,0) 70%);box-shadow:inset 0 2px 0 var(--ly-amber)}
+.rt-deg .t{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.rt-deg .mid .t{color:var(--ly-amber)}
+.rt-deg h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.4rem;line-height:1.1;color:var(--ink)}
+.rt-deg h4 span{display:block;font-size:.95rem;color:var(--faint);margin-top:3px}
+.rt-deg p{margin:0;color:var(--dim);font-size:13.5px}
+.rt-deg .w{font-size:12px;color:var(--ly-crystal)}
+.rt-deg .mid .w{color:var(--ly-amber)}
+
+/* triángulo */
+.rt-tri{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;align-items:start;margin-top:26px}
+.rt-fig{margin:0;display:grid;gap:10px}
+.rt-fig svg{width:100%;height:auto;display:block;touch-action:none;user-select:none;-webkit-user-select:none;overflow:visible}
+.rt-fig .tri{fill:rgba(255,255,255,.012);stroke:rgba(236,219,196,.2);stroke-width:1}
+.rt-fig .grid line{stroke:rgba(236,219,196,.06)}
+.rt-fig .v text{font-family:var(--f-display);font-size:17px;fill:var(--ink);text-anchor:middle}
+.rt-fig .v text.g{font-size:13px;fill:var(--faint)}
+.rt-fig .v text.s{font-family:var(--f-body);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.rt-fig .ray{stroke-width:1.6;stroke-linecap:round;opacity:.85}
+.rt-fig .hd{cursor:grab}
+.rt-fig .hd:active{cursor:grabbing}
+.rt-fig .hd:focus{outline:none}
+.rt-fig .hd:focus-visible circle.o{stroke:var(--ink);stroke-width:2}
+.rt-fig .hd circle.o{fill:#000;stroke:var(--ink);stroke-width:1.4}
+.rt-fig .hd circle.i{fill:var(--ink)}
+.rt-bars{display:grid;gap:7px}
+.rt-bar{display:grid;grid-template-columns:76px minmax(0,1fr) 40px;gap:10px;align-items:center;font-size:12px;color:var(--dim)}
+.rt-bar i{display:block;height:4px;border-radius:2px;background:rgba(236,219,196,.1);position:relative;overflow:hidden}
+.rt-bar i b{position:absolute;inset:0 auto 0 0;border-radius:2px;transition:width .15s}
+.rt-bar span:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.rt-pre{display:flex;flex-wrap:wrap;gap:6px}
+.rt-side{display:grid;gap:16px;min-width:0}
+.rt-out{border-left:2px solid var(--ly-amber);padding:4px 0 4px 16px;display:grid;gap:7px;min-height:9.5em}
+.rt-out h5{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.35rem;color:var(--ink)}
+.rt-out p{margin:0;color:var(--dim);font-size:13.5px}
+.rt-out .x{font-size:12.5px;color:var(--faint)}
+.rt-out .x b{color:var(--ly-amber);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.rt-vx{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.rt-vx li{border:1px solid var(--line);border-radius:4px;padding:12px 14px;display:grid;gap:4px}
+.rt-vx b{font-family:var(--f-display);font-weight:400;font-size:1.12rem;color:var(--ink);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.rt-vx b span{font-size:.9rem}
+.rt-vx p{margin:0;color:var(--dim);font-size:13px}
+.rt-vx .e span{color:var(--rt-e)} .rt-vx .l span{color:var(--rt-l)} .rt-vx .p span{color:var(--rt-p)}
+
+/* géneros */
+.rt-gen{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:26px}
+.rt-gen article{border:1px solid var(--line);border-radius:4px;padding:18px 20px;display:grid;gap:10px;align-content:start;transition:border-color .3s,background .3s}
+.rt-gen article.hit{border-color:rgba(var(--ly-amber-rgb),.7);background:rgba(var(--ly-amber-rgb),.06)}
+.rt-gen h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.4rem;color:var(--ink);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.rt-gen h4 span{font-size:.95rem;color:var(--ly-amber)}
+.rt-gen dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 12px}
+.rt-gen dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:600;padding-top:3px}
+.rt-gen dd{margin:0;color:var(--dim);font-size:13.5px}
+.rt-gen dd b{color:var(--ink);font-weight:500}
+.rt-game{margin-top:22px;border:1px dashed var(--line-strong);border-radius:4px;padding:18px 20px;display:grid;gap:12px}
+.rt-game .ph{margin:0;font-family:var(--f-display);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.3;color:var(--ink)}
+.rt-game .row{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.rt-game .row button[aria-pressed="true"]{border-color:var(--ly-amber);background:rgba(var(--ly-amber-rgb),.14);color:var(--ink)}
+.rt-game .row button.ok{border-color:var(--ly-crystal);background:rgba(166,240,230,.12);color:var(--ink)}
+.rt-game .row button.no{border-color:var(--ly-ember);background:rgba(255,106,61,.1)}
+.rt-game .fb{margin:0;color:var(--dim);font-size:13.5px;min-height:2.6em}
+.rt-game .meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:11.5px;color:var(--faint)}
+
+/* entimema */
+.rt-ent{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:26px}
+.rt-ent article{border:1px solid var(--line);border-radius:4px;padding:18px 20px;display:grid;gap:9px;align-content:start}
+.rt-ent .tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ly-amber);font-weight:600}
+.rt-ent .said{margin:0;font-family:var(--f-display);font-size:1.18rem;line-height:1.32;color:var(--ink)}
+.rt-ent .hid{margin:0;padding:10px 12px;border-radius:3px;background:rgba(166,240,230,.06);border:1px dashed rgba(166,240,230,.4);color:var(--ly-crystal);font-size:13.5px}
+.rt-ent .hid[hidden]{display:none}
+.rt-ent p.n{margin:0;color:var(--dim);font-size:13px}
+.rt-ent .ref{font-size:11px;color:var(--faint)}
+.rt-ent button{justify-self:start}
+
+/* pasiones */
+.rt-pa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:34px;align-items:start;margin-top:26px}
+.rt-pairs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.rt-pairs li{display:grid;grid-template-columns:minmax(0,1fr) 22px minmax(0,1fr);align-items:stretch;gap:6px}
+.rt-pairs i{align-self:center;justify-self:center;width:14px;height:1px;background:var(--line-strong)}
+.rt-pairs button{background:none;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-align:left;padding:10px 12px;font-family:var(--f-display);font-size:1.06rem;cursor:pointer;display:grid;gap:2px;transition:border-color .2s,background .2s}
+.rt-pairs button small{font-family:var(--f-display);font-size:.85rem;color:var(--faint)}
+.rt-pairs button:hover{border-color:rgba(255,106,61,.5)}
+.rt-pairs button[aria-pressed="true"]{border-color:var(--ly-ember);background:rgba(255,106,61,.08)}
+.rt-pcard{border:1px solid rgba(255,106,61,.35);border-radius:4px;padding:20px 22px;display:grid;gap:12px;background:linear-gradient(160deg,rgba(255,106,61,.06),rgba(0,0,0,0) 55%)}
+.rt-pcard h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.7rem;line-height:1.05;color:var(--ink);display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.rt-pcard h4 span{font-size:1.05rem;color:#ff9a76}
+.rt-pcard .def{margin:0;font-family:var(--f-display);font-size:1.12rem;line-height:1.38;color:var(--ink)}
+.rt-pcard .def small{display:block;font-family:var(--f-body);font-size:11px;color:var(--faint);margin-top:4px}
+.rt-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rt-three div{border-top:1px solid rgba(255,106,61,.4);padding-top:8px;display:grid;gap:3px}
+.rt-three b{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#ff9a76;font-weight:600}
+.rt-three span{color:var(--dim);font-size:13px}
+.rt-pcard .hoy{margin:0;color:var(--dim);font-size:13px}
+.rt-pcard .hoy b{color:var(--ly-amber);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+
+/* metáfora */
+.rt-met{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:34px;align-items:start;margin-top:26px}
+.rt-anal{border:1px solid var(--line);border-radius:4px;padding:20px 22px;display:grid;gap:16px}
+.rt-anal svg{width:100%;height:auto;display:block}
+.rt-anal svg text{font-family:var(--f-display);fill:var(--ink);text-anchor:middle}
+.rt-anal svg text.s{font-family:var(--f-body);font-size:10px;letter-spacing:.14em;fill:var(--faint);text-transform:uppercase}
+.rt-anal .res{margin:0;font-family:var(--f-display);font-size:clamp(1.2rem,2.2vw,1.55rem);line-height:1.3;color:var(--ink);text-align:center}
+.rt-anal .res em{font-style:normal;color:var(--ly-amber)}
+.rt-anal .src{margin:0;text-align:center;font-size:11.5px;color:var(--faint)}
+.rt-act{display:grid;gap:12px}
+.rt-act .sw{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;justify-self:start}
+.rt-act .sw button{background:none;border:0;color:var(--dim);font-size:12px;padding:6px 13px;cursor:pointer}
+.rt-act .sw button[aria-pressed="true"]{background:rgba(var(--ly-amber-rgb),.18);color:var(--ink)}
+.rt-act blockquote{margin:0;font-family:var(--f-display);font-size:1.3rem;line-height:1.3;color:var(--ink);padding-left:14px;border-left:2px solid var(--ly-amber);transition:opacity .3s}
+.rt-act blockquote small{display:block;font-family:var(--f-body);font-size:11px;color:var(--faint);margin-top:6px}
+.rt-act p{margin:0;color:var(--dim);font-size:13.5px}
+
+/* partes del discurso */
+.rt-taxis{margin-top:26px;display:grid;gap:14px}
+.rt-strip{display:grid;grid-template-columns:1fr 1.3fr 1.6fr 1fr;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.rt-strip div{padding:14px 16px;display:grid;gap:5px;align-content:start;opacity:.55;transition:opacity .3s,background .3s}
+.rt-strip div + div{border-left:1px solid var(--line)}
+.rt-strip div.nec{opacity:1;background:rgba(var(--ly-amber-rgb),.07)}
+.rt-strip b{font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--ink)}
+.rt-strip b span{display:block;font-size:.85rem;color:var(--faint)}
+.rt-strip p{margin:0;font-size:12.8px;color:var(--dim)}
+.rt-strip .nec b span{color:var(--ly-amber)}
+.rt-taxis .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.rt-end{margin:12px 0 0;text-align:center;font-family:var(--f-display);font-size:clamp(1.4rem,3vw,2.2rem);line-height:1.2;color:var(--ink);letter-spacing:.01em}
+.rt-end small{display:block;font-family:var(--f-body);font-size:11.5px;color:var(--faint);margin-top:10px;letter-spacing:0}
+
+/* legado */
+.rt-leg{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.rt-leg li{border-top:1px solid var(--line);padding-top:14px;display:grid;gap:6px;align-content:start}
+.rt-leg .d{font-size:11px;color:var(--ly-amber);font-variant-numeric:tabular-nums}
+.rt-leg b{font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--ink)}
+.rt-leg p{margin:0;color:var(--dim);font-size:13.5px}
+.rt-leg li.atlas{border-top-color:var(--ly-amber)}
+.rt-leg li.atlas .d{color:var(--ly-amber);letter-spacing:.14em;text-transform:uppercase;font-size:10px;font-weight:600}
+
+@media (max-width:1100px) and (min-width:901px){ .rt-gen,.rt-leg{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:900px){
+  .rt-deg,.rt-tri,.rt-gen,.rt-ent,.rt-pa,.rt-met,.rt-leg{grid-template-columns:minmax(0,1fr)}
+  .rt-deg > div + div{border-left:0;border-top:1px solid var(--line)}
+  .rt-strip{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .rt-strip div:nth-child(3){border-left:0}
+  .rt-strip div:nth-child(n+3){border-top:1px solid var(--line)}
+  .rt-three{grid-template-columns:minmax(0,1fr)}
+  .rt-fig{max-width:440px;width:100%;margin:0 auto}
+}
 </style>
 </head>
 <body>
@@ -1169,8 +1340,10 @@ body[data-lens="asombro"]{--lens:var(--gold)}
 
       <header class="masthead">
         <div class="kicker">Atlas des Staunens · 1184 v. Chr. – 270 n. Chr.</div>
-        <h1>Ewiges Hellas<span>θαῦμα · der goldene Faden</span></h1>
-        <nav class="lang-switch" aria-label="Sprache"><a href="/" lang="es" hreflang="es" title="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch" aria-current="page"><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>DE</a></nav>
+        <div class="mast-row">
+          <h1>Ewiges Hellas<span>θαῦμα · der goldene Faden</span></h1>
+          <nav class="lang-switch" aria-label="Sprache"><a href="/" lang="es" hreflang="es" title="Español"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#c60b1e"/><rect y=".5" width="3" height="1" fill="#ffc400"/></svg>ES</a><a href="/de" lang="de" hreflang="de" title="Deutsch" aria-current="page"><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg>DE</a></nav>
+        </div>
       </header>
 
       <div class="map-tools">
@@ -1912,6 +2085,196 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <figure><img src="/assets/img/silogismo.webp" alt="Konzeptbild: ein Korridor aus blauem Raster mit schwebenden bernsteinfarbenen Prismen und einem weißen Strahl im Fluchtpunkt" decoding="async" loading="lazy"><figcaption><b>Der Syllogismus</b><span>Orthogonaler Korridor, zehn Kategorienprismen und zwei Ebenen, die sich im Mittelbegriff schneiden; von dort geht der Laser der Konklusion aus.</span><button type="button" class="go" data-ly="silogismo">Szene öffnen ↑</button></figcaption></figure>
           <figure><img src="/assets/img/motor.webp" alt="Konzeptbild: Ringe aus goldenem Staub um eine Kugel und ein unbewegter Lichtpunkt, auf den Fäden zulaufen" decoding="async" loading="lazy"><figcaption><b>Der unbewegte Beweger</b><span>Fünfundfünfzig Ätherringe mit eigenen Geschwindigkeiten, ein Kern aus vier Elementen und ein Punkt, der sich nicht bewegt.</span><button type="button" class="go" data-ly="motor">Szene öffnen ↑</button></figcaption></figure>
           <figure><img src="/assets/img/catarsis.webp" alt="Konzeptbild: eine Explosion roter Partikel, ein waagerechter goldener Strahl und ein laminarer cyanfarbener Strom" decoding="async" loading="lazy"><figcaption><b>Handlung und Katharsis</b><span>Zwei Kräfte verschiedenen Wesens: eine turbulente Säule des Páthos aus <code>Points</code> und der geradlinige Strahl der Handlung. Beim Zusammenstoß wechseln die Partikel ihr Regime und treten als laminarer cyanfarbener Strom aus. Ein einziges sanftes Aufleuchten, ohne Stroboskop.</span><button type="button" class="go" data-ly="catarsis">Szene öffnen ↑</button></figcaption></figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="rtTitle" id="retorica" class="rt">
+        <div class="sec-head">
+          <div class="kicker">Lektüre · Rhetorik</div>
+          <h2 id="rtTitle">Die Kunst, das Überzeugende zu sehen</h2>
+          <p>Die <i>Rhetorik</i> ist die praktischste Schrift des Aristoteles und eine der lebendigsten. Sie entstand für eine Stadt, die redend entschied, in der Versammlung, vor Gericht und beim Fest, und hinterließ eine Methode, die Redner, Werber, Gestalter und Wissenschaftler bis heute nutzen, wenn sie überzeugen müssen.</p>
+          <span class="rt-src">Aristoteles, <i>Rhetorik</i>, Bücher I–III · span. Übers. Alberto Bernabé (Alianza, 1998)</span>
+        </div>
+
+        <div>
+          <div class="rt-k">Gegenstück der Dialektik</div>
+          <h3 class="rt-h3">Weder exakte Wissenschaft noch Täuschung</h3>
+          <p class="rt-lead">Das Buch beginnt mit einem musikalischen Wort: Die Rhetorik ist die <i lang="grc">ἀντίστροφος</i>, die Gegenstrophe der Dialektik (1354a). Wie die zweite Strophe eines Chors der ersten antwortet, so antwortet die Rhetorik der Dialektik: Beide denken über das nach, was sich auch anders verhalten könnte, und keine gehört zu einer bestimmten Wissenschaft.</p>
+          <p class="rt-q">»Die Rhetorik sei die Fähigkeit, bei jedem Gegenstand das möglicherweise Überzeugende zu sehen.«<small>Rhetorik I 2, 1355b · Arbeitsübersetzung</small></p>
+
+          <div class="rt-deg" aria-label="Drei Stufen des Denkens">
+            <div>
+              <span class="t">Die Wissenschaft</span>
+              <h4>Beweis<span lang="grc">ἀπόδειξις</span></h4>
+              <p>Sie geht von notwendigen Prämissen aus und gelangt zu Schlüssen, die nicht anders sein können. Ihr Handbuch sind die <i>Analytiken</i>.</p>
+              <span class="w">Was immer ist</span>
+            </div>
+            <div class="mid">
+              <span class="t">Die Rhetorik</span>
+              <h4>Enthymem<span lang="grc">ἐνθύμημα</span></h4>
+              <p>Sie denkt über menschliche Dinge nach, die entschieden werden: über das, was »meistens« geschieht (1357a). Ihr Beweis ist das Wahrscheinliche, ihr Richter ein Hörer, der langen Ketten von Gründen nicht folgen kann.</p>
+              <span class="w">Was gewöhnlich ist</span>
+            </div>
+            <div>
+              <span class="t">Die Kunst</span>
+              <h4>Mimesis<span lang="grc">μίμησις</span></h4>
+              <p>Der Dichter erzählt nicht, was geschehen ist, sondern was geschehen könnte (<i>Poetik</i> 9). Mit der <i>Rhetorik</i> teilt sie das Nachdenken über Ausdruck, Metapher und Gefühle.</p>
+              <span class="w">Was sein könnte</span>
+            </div>
+          </div>
+          <p class="rt-lead" style="margin-top:16px">Die Rhetorik steht in der Mitte: Von der Wissenschaft nimmt sie die Form des Schließens, von der Kunst die Aufmerksamkeit für Sprache und Publikum. Darum bereitet diese Schrift den Boden, auf dem Jahrhunderte später sowohl die Methoden wissenschaftlicher Argumentation als auch die Theorien von Kunst und Kommunikation formuliert werden.</p>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch I · Kapitel 2</div>
+          <h3 class="rt-h3">Drei Beweismittel: wer spricht, wer zuhört, was gesagt wird</h3>
+          <p class="rt-lead">Aristoteles unterscheidet drei Arten von Beweismitteln, die die Rede selbst hervorbringt (1356a): den <b>Charakter</b> des Redners, die <b>Stimmung</b>, in die der Hörer versetzt wird, und das <b>Argument</b> selbst. Zieh den Punkt im Dreieck und sieh, welche Art von Rede entsteht.</p>
+          <div class="rt-tri">
+            <figure class="rt-fig">
+              <svg id="rtTri" viewBox="0 0 400 360" role="group" aria-label="Dreieck der Überzeugung: Ethos, Logos und Pathos"></svg>
+              <div class="rt-bars" id="rtBars"></div>
+              <div class="rt-pre" id="rtPre" role="group" aria-label="Beispiele"></div>
+            </figure>
+            <div class="rt-side">
+              <div class="rt-out" id="rtOut" aria-live="polite"></div>
+              <ul class="rt-vx">
+                <li class="e"><b>Ethos<span lang="grc">ἦθος</span></b><p>Der Charakter, den die Rede zeigt. Vertrauen wecken Klugheit, Tugend und Wohlwollen gegenüber dem Hörer (II 1, 1378a). Es ist »beinahe das wirksamste Beweismittel«, muss aber aus dem Gesagten entstehen, nicht aus dem Ruf, den einer schon hat.</p></li>
+                <li class="p"><b>Pathos<span lang="grc">πάθος</span></b><p>Die Stimmung des Hörers: Betrübt entscheiden wir nicht wie froh, als Freunde nicht wie als Feinde (1356a). Die Lehrbuchschreiber seiner Zeit lehrten nur dies.</p></li>
+                <li class="l"><b>Logos<span lang="grc">λόγος</span></b><p>Die Rede selbst, wenn sie beweist oder zu beweisen scheint: Enthymeme und Beispiele.</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch I · Kapitel 3</div>
+          <h3 class="rt-h3">Drei Hörer, drei Zeiten</h3>
+          <p class="rt-lead">Der Hörer bestimmt das Ziel der Rede. Entweder urteilt er über Künftiges, oder über Geschehenes, oder er schaut nur zu. Daraus ergeben sich die drei Gattungen.</p>
+          <div class="rt-gen" id="rtGen">
+            <article data-g="del">
+              <h4>Beratend<span lang="grc">συμβουλευτικόν</span></h4>
+              <dl><dt>Hörer</dt><dd>Das Mitglied der Versammlung</dd><dt>Zeit</dt><dd><b>Zukunft</b></dd><dt>Tut</dt><dd>Rät zu oder ab</dd><dt>Sucht</dt><dd>Das Nützliche oder das Schädliche</dd></dl>
+            </article>
+            <article data-g="jud">
+              <h4>Gerichtlich<span lang="grc">δικανικόν</span></h4>
+              <dl><dt>Hörer</dt><dd>Der Richter</dd><dt>Zeit</dt><dd><b>Vergangenheit</b></dd><dt>Tut</dt><dd>Klagt an oder verteidigt</dd><dt>Sucht</dt><dd>Das Gerechte oder das Ungerechte</dd></dl>
+            </article>
+            <article data-g="epi">
+              <h4>Epideiktisch<span lang="grc">ἐπιδεικτικόν</span></h4>
+              <dl><dt>Hörer</dt><dd>Der Zuschauer</dd><dt>Zeit</dt><dd><b>Gegenwart</b></dd><dt>Tut</dt><dd>Lobt oder tadelt</dd><dt>Sucht</dt><dd>Das Schöne oder das Schändliche</dd></dl>
+            </article>
+          </div>
+          <div class="rt-game" id="rtGame" aria-live="polite"></div>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch I · Kapitel 2 · Buch II · Kapitel 20–22</div>
+          <h3 class="rt-h3">Der Schluss, dem eine Prämisse fehlt</h3>
+          <p class="rt-lead">Das Enthymem ist der Syllogismus der Rhetorik. Es geht vom Wahrscheinlichen aus und verschweigt meist die Prämisse, die alle kennen: Sie auszusprechen, würde langweilen. Das Beispiel ist seine Induktion, von einem Fall zu einem ähnlichen. Entdecke, was jeder Satz ungesagt lässt.</p>
+          <div class="rt-ent" id="rtEnt">
+            <article>
+              <span class="tag">Enthymem</span>
+              <p class="said">»Dorieus hat in Olympia gesiegt.«</p>
+              <p class="hid" hidden>Verschwiegene Prämisse: Der Preis von Olympia ist ein Kranz. Schluss: Dorieus hat einen Kranz gewonnen.</p>
+              <p class="n">Was alle wissen, muss man nicht hinzufügen (1357a). Der Hörer ergänzt den Schluss und hat Freude daran.</p>
+              <button type="button" class="chip rt-go" data-rt-hid aria-expanded="false" data-show="Zeigen, was verschwiegen wird" data-hide="Verbergen">Zeigen, was verschwiegen wird</button>
+            </article>
+            <article>
+              <span class="tag">Notwendiges und widerlegbares Zeichen</span>
+              <p class="said">»Sie hat Milch: Sie hat geboren.« · »Er keucht: Er hat Fieber.«</p>
+              <p class="hid" hidden>Das erste ist ein <i lang="grc">τεκμήριον</i>, ein Zeichen, das keine Widerlegung zulässt. Das zweite ist nur wahrscheinlich: Man keucht auch ohne Fieber (1357b).</p>
+              <p class="n">Die Rhetorik wägt die Kraft jedes Indizes. Dieselbe Frage stellt sich heute ein Gutachter oder eine Datenwissenschaftlerin.</p>
+              <button type="button" class="chip rt-go" data-rt-hid aria-expanded="false" data-show="Den Unterschied zeigen" data-hide="Verbergen">Den Unterschied zeigen</button>
+            </article>
+            <article>
+              <span class="tag">Sentenz</span>
+              <p class="said">»Hege keinen unsterblichen Zorn, du, der du sterblich bist.«</p>
+              <p class="hid" hidden>Verschwiegene Prämisse: Das Sterbliche soll nichts Unsterbliches in sich tragen. Die Sentenz ist Schluss oder Prämisse eines Enthymems, allgemein ausgesprochen (II 21, 1394b).</p>
+              <p class="n">Sentenzen gefallen, weil der Hörer in ihnen wiedererkennt, was er schon dachte.</p>
+              <button type="button" class="chip rt-go" data-rt-hid aria-expanded="false" data-show="Den Schluss zeigen" data-hide="Verbergen">Den Schluss zeigen</button>
+            </article>
+            <article>
+              <span class="tag">Beispiel · rhetorische Induktion</span>
+              <p class="said">»Dionysios verlangt eine Leibwache: Er will Tyrann werden.«</p>
+              <p class="hid" hidden>Denn Peisistratos in Athen und Theagenes in Megara verlangten eine Leibwache und wurden, als sie sie hatten, Tyrannen. Allgemeiner Grundsatz: Wer nach der Tyrannis strebt, verlangt eine Leibwache (1357b).</p>
+              <p class="n">Vom Einzelnen zum Einzelnen, über einen Grundsatz, der nicht ausgesprochen wird.</p>
+              <button type="button" class="chip rt-go" data-rt-hid aria-expanded="false" data-show="Die Fälle zeigen" data-hide="Verbergen">Die Fälle zeigen</button>
+            </article>
+          </div>
+          <div class="rt-pre" style="margin-top:16px"><button type="button" class="chip liceo-go" data-rt-scene="silogismo">Den Syllogismus in 3D sehen ↑</button></div>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch II · Kapitel 1–11</div>
+          <h3 class="rt-h3">Eine Karte der Leidenschaften</h3>
+          <p class="rt-lead">Buch II ist die erste systematische Abhandlung über die Gefühle im Abendland. Aristoteles stellt sie paarweise vor und verlangt für jedes drei Fragen (1378a): <b>in welchem Zustand</b> sich befindet, wer es fühlt, <b>gegenüber wem</b> und <b>aus welchen Gründen</b>. Fehlt eine, entsteht das Gefühl nicht.</p>
+          <div class="rt-pa">
+            <ul class="rt-pairs" id="rtPairs" aria-label="Leidenschaften in Paaren"></ul>
+            <div class="rt-pcard" id="rtPcard" aria-live="polite"></div>
+          </div>
+          <div class="rt-pre" style="margin-top:16px"><button type="button" class="chip liceo-go" data-rt-scene="catarsis">Mitleid und Furcht in der Tragödie: Handlung und Katharsis ↑</button></div>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch III · Kapitel 2–11</div>
+          <h3 class="rt-h3">Vor Augen stellen</h3>
+          <p class="rt-lead">Buch III handelt vom sprachlichen Ausdruck. Seine erste Tugend ist die Klarheit, angemessen zur Sache: weder niedrig noch feierlicher, als es sich gehört (1404b). Sein Juwel ist die Metapher, denn »leicht zu lernen ist von Natur aus allen angenehm« (1410b): Die Metapher lehrt in einem Augenblick etwas Neues.</p>
+          <div class="rt-met">
+            <div class="rt-anal">
+              <div class="rt-pre" id="rtAnalBtns" role="group" aria-label="Metaphern nach Analogie"></div>
+              <svg id="rtAnal" viewBox="0 0 440 190" role="img" aria-label="Schema der Metapher nach Analogie"></svg>
+              <p class="res" id="rtAnalRes" aria-live="polite"></p>
+              <p class="src" id="rtAnalSrc"></p>
+            </div>
+            <div class="rt-act">
+              <div class="rt-k" style="margin:0">Metapher im Vollzug · <span lang="grc">ἐνέργεια</span></div>
+              <div class="sw" role="group" aria-label="Ohne oder mit Handlung"><button type="button" data-act="0" aria-pressed="true">Ohne Handlung</button><button type="button" data-act="1" aria-pressed="false">In Handlung</button></div>
+              <blockquote id="rtActQ"></blockquote>
+              <p id="rtActP"></p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="rt-k">Buch III · Kapitel 13–19</div>
+          <h3 class="rt-h3">Zwei Teile genügen</h3>
+          <p class="rt-lead">Die Handbücher seiner Zeit teilten die Rede in viele Teile. Aristoteles spottet über diese »lächerlichen Einteilungen« (1414a): Notwendig sind zwei, die Sache darlegen und sie beweisen. Höchstens vier.</p>
+          <div class="rt-taxis">
+            <div class="rt-strip" id="rtStrip">
+              <div data-k="pro"><b>Proömium<span lang="grc">προοίμιον</span></b><p>Bahnt den Weg, wie das Präludium in der Musik.</p></div>
+              <div data-k="exp" class="nec"><b>Darlegung<span lang="grc">πρόθεσις</span></b><p>Sagt, worum es geht. Das Problem.</p></div>
+              <div data-k="pru" class="nec"><b>Beweis<span lang="grc">πίστις</span></b><p>Beweist es. Die Lösung.</p></div>
+              <div data-k="epi"><b>Epilog<span lang="grc">ἐπίλογος</span></b><p>Stimmt den Hörer, steigert, bewegt und fasst zusammen.</p></div>
+            </div>
+            <div class="rt-act"><div class="sw" role="group" aria-label="Redeteile"><button type="button" data-tx="2" aria-pressed="true">Das Notwendige</button><button type="button" data-tx="4" aria-pressed="false">Höchstens</button></div></div>
+            <p class="rt-end">»Ich habe gesprochen, ihr habt gehört, ihr habt es: urteilt.«<small>Schluss ohne Bindewörter, damit es ein Epilog ist und kein Argument (III 19, 1420b)</small></p>
+          </div>
+        </div>
+
+        <div>
+          <div class="rt-k">Erbe</div>
+          <h3 class="rt-h3">Von der Rhetorik zu den Künsten und Wissenschaften</h3>
+          <p class="rt-lead">Die Schrift wurde zwei Jahrtausende lang zum Stamm des Unterrichts. Im 20. Jahrhundert kehrte sie mit Wucht zurück: in Argumentationstheorie, Semiotik, Gestaltung und Kognitionswissenschaft.</p>
+          <ul class="rt-leg">
+            <li><span class="d">55 v. Chr. · um 95 n. Chr.</span><b>Cicero und Quintilian</b><p>Sie ordnen die Kunst in fünf Aufgaben: Auffindung, Anordnung, sprachliche Gestaltung, Gedächtnis und Vortrag. Die ersten drei stehen schon bei Aristoteles, der zudem das Gewicht des Vortrags betont: Stimme und Gebärde (III 1).</p></li>
+            <li><span class="d">1958</span><b>Perelman und Toulmin</b><p>Die »neue Rhetorik« und <i>The Uses of Argument</i> holen das Enthymem zurück: Fast alles, was in Recht, Politik oder angewandter Wissenschaft argumentiert wird, ist Denken über das Wahrscheinliche vor einem Publikum.</p></li>
+            <li><span class="d">1964 · 1965</span><b>Barthes und Bonsiepe</b><p>»Rhetorik des Bildes« liest eine Nudelwerbung als Rede. An der Hochschule für Gestaltung Ulm veröffentlicht Gui Bonsiepe <i>Visuell-verbale Rhetorik</i>: die rhetorischen Figuren, angewandt auf Grafikdesign und Werbung.</p></li>
+            <li><span class="d">1975 · 1980</span><b>Ricœur, Lakoff und Johnson</b><p><i>Die lebendige Metapher</i> geht von <i>Rhetorik</i> und <i>Poetik</i> aus. <i>Leben in Metaphern</i> zeigt, dass wir in Metaphern denken, wie Aristoteles ahnte, als er sagte, dass sie lehren.</p></li>
+            <li><span class="d">20.–21. Jh.</span><b>Psychologie der Gefühle</b><p>Die Methode der drei Fragen (Zustand, Gegenstand, Grund) nimmt die kognitiven Emotionstheorien vorweg: Wir zürnen nicht im Allgemeinen, sondern jemandem und wegen etwas.</p></li>
+            <li class="atlas"><span class="d">Lesart des Atlas</span><b>Redner aus Wissen oder Redner aus Absicht</b><p>Für Aristoteles ist die Technik beim Dialektiker und beim Sophisten dieselbe: Es ändert sich der Vorsatz (1355b). Vor der automatisierten Überzeugung durch Kampagnen und Algorithmen ist das wieder die ethische Frage.</p></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="rt-k">Für den Unterricht</div>
+          <h3 class="rt-h3">Vier Übungen angewandter Rhetorik</h3>
+          <ol class="um-taller ly-taller">
+            <li><b>Eine Anzeige prüfen</b><span class="ref">I 2, 1356a</span><p>Wähle eine Kampagne und setze sie ins Dreieck. Wie viel ist Ethos, Pathos, Logos? Was würde sich ändern, wenn wir den Punkt zur Mitte schöben?</p></li>
+            <li><b>Das Enthymem des Slogans</b><span class="ref">I 2, 1357a</span><p>Schreib die Prämisse auf, die ein bekannter Slogan verschweigt. Würde das Publikum sie annehmen, wenn sie laut ausgesprochen würde?</p></li>
+            <li><b>Die drei Fragen eines Gefühls</b><span class="ref">II 1, 1378a</span><p>Beantworte für ein Kampagnenmotiv: In welchem Zustand ist das Publikum, auf wen richtet sich das Gefühl, und aus welchem Grund? Fehlt eine Antwort, funktioniert das Motiv nicht.</p></li>
+            <li><b>Eine Metapher nach Analogie für eine Marke</b><span class="ref">III 4 und 10–11</span><p>Bilde eine Proportion A : B :: C : D für ein eigenes Projekt. Dann setze sie »in Handlung«: Gib ihr ein Verb, das Bewegung zeigt.</p></li>
+          </ol>
+          <p class="src-note"><b>Herkunft.</b> Aristoteles, <i>Retórica</i>, Einleitung, Übersetzung und Anmerkungen von Alberto Bernabé, Madrid, Alianza, 1998. Eigene Paraphrasen und kurze Zitate in Arbeitsübersetzung mit Bekker-Zählung. Verweise auf <i>Poetik</i> und <i>Analytiken</i> dienen dem Vergleich. Die Karte »Lesart des Atlas« ist unsere Weiterführung. Redaktionelle Prüfung durch Menschen steht noch aus.</p>
         </div>
       </section>
 
@@ -6538,6 +6901,265 @@ document.addEventListener("click",e=>{
   nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(e){if(a.getAttribute("aria-current")){e.preventDefault();return;}if(location.hash){e.preventDefault();location.href=a.getAttribute("href")+location.hash;}});});
   function set(on){box.classList.toggle("on",on);box.setAttribute("aria-hidden",String(!on));nav.querySelectorAll("a").forEach(function(a){a.tabIndex=on?0:-1;});}
   if("IntersectionObserver" in window){ new IntersectionObserver(function(es){ set(!es[0].isIntersecting); }).observe(src); }
+})();
+</script>
+
+<script>
+/* ---------------- RETÓRICA · el arte de ver lo convincente (ES · DE según <html lang>) ---------------- */
+(function(){
+const root=document.getElementById("retorica"); if(!root) return;
+const q=s=>root.querySelector(s), qa=s=>[...root.querySelectorAll(s)];
+const E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const RM=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+const L=(document.documentElement.getAttribute("lang")||"es").toLowerCase().startsWith("de")?"de":"es";
+
+const T={
+es:{
+ tri:{e:"Ethos",l:"Logos",p:"Pathos",es:"carácter",ls:"argumento",ps:"emoción",hd:"Punto de equilibrio entre ethos, logos y pathos. Usa las flechas para moverlo."},
+ pre:[["Peritaje",{e:.2,l:.75,p:.05}],["Arenga",{e:.2,l:.1,p:.7}],["Testimonio",{e:.72,l:.14,p:.14}],["Influencer",{e:.5,l:.05,p:.45}],["Medida aristotélica",{e:.34,l:.33,p:.33}]],
+ hoy:"Hoy",
+ v:{
+  l:["Demostración desnuda","Convence a quien ya sabe. Ante ciertos públicos, ni la ciencia más exacta persuade (1355a): hay que partir de lo que todos admiten.","el informe técnico sin relato."],
+  p:["La regla torcida","Es lo único que enseñaban los manuales de su tiempo. Aristóteles lo compara con torcer la regla antes de medir (1354a): mueve, pero no deja juzgar.","el clickbait, la propaganda."],
+  e:["El crédito del orador","Casi la prueba más eficaz (1356a). Pero si no la sostiene lo que se dice, es solo fama prestada.","el embajador de marca."],
+  el:["Autoridad que razona","Convence a la cabeza, pero no mueve a decidir: no decidimos lo mismo afligidos que alegres.","la conferencia del experto."],
+  ep:["Carisma","Confiamos en quien nos emociona sin pedirle razones. Funciona en la asamblea, pero es frágil ante un buen contradictor.","el influencer, el líder populista."],
+  lp:["Argumento con emoción, sin crédito","El público sospecha: ¿quién me lo dice, y con qué intención?","el anuncio anónimo bien hecho."],
+  eq:["La medida aristotélica","Las tres pruebas a la vez, cada una en su punto. No es la mitad aritmética: el centro depende del asunto y del oyente, como el término medio de la <i>Ética</i>.","una buena charla, una buena campaña."]
+ },
+ g:{del:"Deliberativo",jud:"Judicial",epi:"Epidíctico",ask:"¿A qué género pertenece?",next:"Otra frase →",score:(a,b)=>`${a} de ${b} aciertos`,ok:"Exacto.",no:"No del todo.",n:(i,n)=>`Frase ${i} de ${n}`,done:"Ronda completa. Vuelve a empezar para repasar.",again:"Empezar de nuevo"},
+ game:[
+  ["Si aprobamos el carril bici, el barrio respirará mejor en cinco años.","del","Habla del futuro y aconseja: busca lo conveniente."],
+  ["La constructora conocía el defecto y lo ocultó en 2019.","jud","Acusa por un hecho pasado: busca lo justo."],
+  ["Nadie ha mirado la luz de Berlín como esta fotógrafa.","epi","Elogia ante un público que contempla: busca lo bello."],
+  ["No compres hoy: espera a que baje el precio.","del","Disuade sobre lo que va a pasar. La publicidad es casi siempre deliberativa."],
+  ["El acusado estaba en Potsdam esa noche: aquí está el billete.","jud","Defensa sobre el pasado. El billete es una prueba «no técnica»: el orador no la inventa, la usa (1355b)."],
+  ["Este puente es la vergüenza de la ciudad.","epi","Censura en presente: lo vergonzoso es el reverso de lo bello."]
+ ],
+ pa:[
+  [["ira","Ira","ὀργή","Deseo, acompañado de pesar, de una venganza visible por un desprecio visible e injustificado contra uno mismo o los suyos.","II 2, 1378a","Quien sufre o desea algo y se ve contrariado.","Alguien concreto: Cleón, no «el ser humano» en general.","El desprecio, el desdén, el ultraje.","la indignación en redes contra un responsable con nombre y apellido."],
+   ["calma","Calma","πραότης","El apaciguamiento de la ira.","II 3, 1380a","En el juego, la risa, la fiesta, el éxito, la esperanza fundada.","Quien reconoce su error y se arrepiente, quien se humilla, quien nos teme o respeta.","El tiempo transcurrido, un castigo ya sufrido.","la disculpa pública que funciona."]],
+  [["amistad","Amistad","φιλία","Querer para alguien lo que se cree bueno, por él y no por uno mismo, y procurarlo en la medida de lo posible.","II 4, 1380b","Quien comparte con otro alegrías y penas.","Quienes nos hacen bien, los semejantes, los que no guardan rencor.","Los favores, la confianza, el trato.","la comunidad en torno a un proyecto."],
+   ["odio","Odio","μῖσος","Desear el mal del otro, incluso sin ofensa propia. La ira se cura con el tiempo; el odio, no.","II 4, 1382a","No hace falta un agravio personal.","Tipos de personas (el ladrón, el delator), no solo individuos.","El vicio que se atribuye al otro.","el enemigo genérico de la propaganda."]],
+  [["temor","Temor","φόβος","Pesar o turbación al imaginar un mal inminente, destructivo o doloroso.","II 5, 1382a","Quien cree que puede sufrir algo, y de alguien, y pronto.","Los poderosos, los agraviados, los rivales.","La cercanía del peligro.","las campañas de seguridad o de salud, y su abuso."],
+   ["confianza","Confianza","θάρσος","Esperanza de lo que salva, imaginado cercano, mientras lo temible está lejos o no existe.","II 5, 1383a","Quien ha tenido éxito, no ha sufrido o tiene aliados.","Quienes no son temibles o están de nuestra parte.","Los recursos, la ayuda, la experiencia.","la garantía, la reseña, el respaldo."]],
+  [["verguenza","Vergüenza","αἰσχύνη","Pesar y turbación por males presentes, pasados o futuros que parecen llevar al descrédito.","II 6, 1383b","Cuando somos vistos, sobre todo por quienes estimamos.","Los que admiramos, los que nos admiran, aquellos cuya opinión cuenta.","Actos viles, carecer de lo que tienen nuestros iguales.","la presión de las métricas visibles."],
+   ["desverguenza","Desvergüenza","ἀναισχυντία","Desprecio e indiferencia ante esos mismos males.","II 6, 1383b","Quien no teme la opinión ajena.","Desconocidos, aquellos a quienes no se estima.","Los mismos actos, vividos sin pesar.","la provocación calculada."]],
+  [["favor","Favor","χάρις","Servicio a quien lo necesita, sin esperar nada a cambio ni en provecho propio.","II 7, 1385a","Quien tiene una gran necesidad.","Quien ayuda primero, solo o más que nadie.","La urgencia y la gratuidad.","la ayuda que no pasa factura."],
+   ["ingratitud","Sin favor","ἀχαριστία","Para borrar un favor basta mostrar que se hizo por interés propio, por azar o a la fuerza.","II 7, 1385b","Quien sospecha del que da.","El que «ayuda» y cobra después.","El interés oculto.","el regalo con letra pequeña."]],
+  [["compasion","Compasión","ἔλεος","Pesar por un mal destructivo o doloroso que sufre quien no lo merece, y que podríamos sufrir nosotros o alguno de los nuestros, cuando parece cercano.","II 8, 1385b","Quien se cree vulnerable: ni los del todo arruinados ni los muy afortunados.","Los parecidos a nosotros. Ante los muy cercanos ya no es compasión: es como sufrir uno mismo.","Males inmerecidos y próximos, puestos «ante la vista».","la fotografía que acerca el sufrimiento lejano."],
+   ["indignacion","Indignación","νέμεσις","Pesar por el éxito inmerecido de otro.","II 9, 1386b","Los que merecen y han obtenido bienes; las personas honradas.","Quien obtiene lo que no le corresponde.","Bienes inmerecidos.","el agravio comparativo."]],
+  [["envidia","Envidia","φθόνος","Pesar por el éxito visible de nuestros iguales en bienes estimados, no para tenerlos uno, sino porque los tienen ellos.","II 10, 1387b","Quien se cree igual o está cerca de lograrlo.","Los parecidos en edad, oficio o fama: «el alfarero, al alfarero».","Los bienes que el otro exhibe.","la comparación constante en redes."],
+   ["emulacion","Emulación","ζῆλος","Pesar por ver en nuestros semejantes bienes estimados que podríamos tener, no porque ellos los tengan, sino porque nosotros no. Es propia de gente digna; la envidia, de gente vil.","II 11, 1388a","Los jóvenes, los magnánimos, quien se cree digno.","Quienes tienen virtud, honra o amigos.","Bienes alcanzables.","el modelo que empuja a mejorar."]]
+ ],
+ pk:{st:"Estado",who:"Hacia quién",why:"Por qué"},
+ an:[
+  ["Copa y escudo",["copa","Dioniso","escudo","Ares"],"El escudo, <em>copa de Ares</em>; la copa, <em>escudo de Dioniso</em>.","Retórica III 4, 1407a · Poética 21"],
+  ["La tarde de la vida",["vejez","vida","tarde","día"],"La vejez, <em>tarde de la vida</em>.","Poética 21, 1457b"],
+  ["La primavera de Pericles",["juventud","ciudad","primavera","año"],"Los jóvenes caídos: «como si al año le hubieran quitado <em>la primavera</em>».","Retórica I 7, 1365a · III 10, 1411a"],
+  ["El rastrojo",["vejez","vida","rastrojo","cosecha"],"La vejez, <em>rastrojo</em>: algo que ya floreció y se ha secado.","Retórica III 10, 1410b · Odisea XIV 214"]
+ ],
+ anS:{is:"es a",as:"como"},
+ act:[
+  ["«El hombre bueno es un cuadrado.»","III 11, 1411b","Es una metáfora correcta: los dos son algo acabado y perfecto. Pero no se mueve; no pone nada ante los ojos."],
+  ["«Saltó la flecha, ávida de volar entre la multitud.»","Ilíada IV 126 · citado en III 11, 1412a","Homero da alma y deseo a lo inanimado. Eso es <i lang=\"grc\">ἐνέργεια</i>: mostrar las cosas en acto. Por eso «poner ante los ojos» es significar las cosas en actividad."]
+ ]
+},
+de:{
+ tri:{e:"Ethos",l:"Logos",p:"Pathos",es:"Charakter",ls:"Argument",ps:"Gefühl",hd:"Gleichgewichtspunkt zwischen Ethos, Logos und Pathos. Mit den Pfeiltasten verschieben."},
+ pre:[["Gutachten",{e:.2,l:.75,p:.05}],["Brandrede",{e:.2,l:.1,p:.7}],["Zeugnis",{e:.72,l:.14,p:.14}],["Influencer",{e:.5,l:.05,p:.45}],["Aristotelisches Maß",{e:.34,l:.33,p:.33}]],
+ hoy:"Heute",
+ v:{
+  l:["Nackter Beweis","Er überzeugt den, der schon Bescheid weiß. Vor manchem Publikum überzeugt nicht einmal das genaueste Wissen (1355a): Man muss bei dem ansetzen, was alle zugeben.","der technische Bericht ohne Erzählung."],
+  p:["Das verbogene Lineal","Nur das lehrten die Handbücher seiner Zeit. Aristoteles vergleicht es damit, das Lineal zu verbiegen, bevor man misst (1354a): Es bewegt, aber es lässt nicht urteilen.","Clickbait, Propaganda."],
+  e:["Die Glaubwürdigkeit des Redners","Beinahe das wirksamste Beweismittel (1356a). Doch wenn das Gesagte es nicht trägt, ist es nur geliehener Ruhm.","der Markenbotschafter."],
+  el:["Autorität, die argumentiert","Sie überzeugt den Kopf, bewegt aber nicht zur Entscheidung: Betrübt entscheiden wir nicht wie froh.","der Expertenvortrag."],
+  ep:["Charisma","Wir vertrauen dem, der uns bewegt, ohne Gründe zu verlangen. In der Versammlung wirkt das; vor einem guten Gegenredner ist es zerbrechlich.","der Influencer, der populistische Anführer."],
+  lp:["Argument mit Gefühl, ohne Glaubwürdigkeit","Das Publikum wird misstrauisch: Wer sagt mir das, und in welcher Absicht?","die gut gemachte anonyme Anzeige."],
+  eq:["Das aristotelische Maß","Alle drei Beweismittel zugleich, jedes am rechten Punkt. Es ist nicht die arithmetische Hälfte: Die Mitte hängt von Sache und Hörer ab, wie die Mitte der <i>Ethik</i>.","ein guter Vortrag, eine gute Kampagne."]
+ },
+ g:{del:"Beratend",jud:"Gerichtlich",epi:"Epideiktisch",ask:"Zu welcher Gattung gehört der Satz?",next:"Nächster Satz →",score:(a,b)=>`${a} von ${b} richtig`,ok:"Genau.",no:"Nicht ganz.",n:(i,n)=>`Satz ${i} von ${n}`,done:"Runde beendet. Neu beginnen zum Wiederholen.",again:"Neu beginnen"},
+ game:[
+  ["Wenn wir den Radweg beschließen, atmet das Viertel in fünf Jahren besser.","del","Spricht über die Zukunft und rät zu: Es sucht das Nützliche."],
+  ["Die Baufirma kannte den Mangel und hat ihn 2019 verschwiegen.","jud","Klagt wegen einer vergangenen Tat an: Es sucht das Gerechte."],
+  ["Niemand hat das Berliner Licht so angesehen wie diese Fotografin.","epi","Lobt vor einem Publikum, das betrachtet: Es sucht das Schöne."],
+  ["Kauf heute nicht: Warte, bis der Preis fällt.","del","Rät von etwas Künftigem ab. Werbung ist fast immer beratend."],
+  ["Der Angeklagte war in jener Nacht in Potsdam: Hier ist die Fahrkarte.","jud","Verteidigung über die Vergangenheit. Die Fahrkarte ist ein »untechnisches« Beweismittel: Der Redner erfindet sie nicht, er benutzt sie (1355b)."],
+  ["Diese Brücke ist die Schande der Stadt.","epi","Tadel in der Gegenwart: Das Schändliche ist die Kehrseite des Schönen."]
+ ],
+ pa:[
+  [["ira","Zorn","ὀργή","Mit Schmerz verbundenes Verlangen nach sichtbarer Vergeltung für eine sichtbare, unverdiente Herabsetzung der eigenen Person oder der Seinen.","II 2, 1378a","Wer leidet oder etwas begehrt und sich gehindert sieht.","Ein bestimmter Mensch: Kleon, nicht »der Mensch« im Allgemeinen.","Verachtung, Kränkung, Übermut.","die Empörung in sozialen Netzwerken gegen einen Verantwortlichen mit Namen."],
+   ["calma","Besänftigung","πραότης","Das Abklingen des Zorns.","II 3, 1380a","Im Spiel, beim Lachen, beim Fest, im Erfolg, in begründeter Hoffnung.","Wer seinen Fehler zugibt und bereut, wer sich demütigt, wer uns fürchtet oder achtet.","Die verstrichene Zeit, eine schon erlittene Strafe.","die öffentliche Entschuldigung, die wirkt."]],
+  [["amistad","Freundschaft","φιλία","Einem anderen wünschen, was man für gut hält, um seinetwillen und nicht um der eigenen Person willen, und es nach Kräften verschaffen.","II 4, 1380b","Wer mit dem anderen Freude und Leid teilt.","Die uns Gutes tun, die Ähnlichen, die nicht nachtragen.","Gefälligkeiten, Vertrauen, Umgang.","die Gemeinschaft um ein Projekt."],
+   ["odio","Hass","μῖσος","Dem anderen Böses wünschen, auch ohne eigene Kränkung. Zorn heilt die Zeit, Hass nicht.","II 4, 1382a","Es braucht keine persönliche Kränkung.","Menschentypen (den Dieb, den Denunzianten), nicht nur Einzelne.","Das Laster, das man dem anderen zuschreibt.","das allgemeine Feindbild der Propaganda."]],
+  [["temor","Furcht","φόβος","Schmerz oder Verwirrung aus der Vorstellung eines bevorstehenden Übels, das vernichtet oder schmerzt.","II 5, 1382a","Wer glaubt, er könne etwas erleiden, durch jemanden, und bald.","Die Mächtigen, die Gekränkten, die Rivalen.","Die Nähe der Gefahr.","Sicherheits- und Gesundheitskampagnen, und ihr Missbrauch."],
+   ["confianza","Zuversicht","θάρσος","Hoffnung auf das Rettende, das man nahe glaubt, während das Furchtbare fern ist oder nicht besteht.","II 5, 1383a","Wer Erfolg hatte, nicht gelitten hat oder Verbündete hat.","Die nicht furchtbar sind oder auf unserer Seite stehen.","Mittel, Hilfe, Erfahrung.","die Garantie, die Bewertung, die Rückendeckung."]],
+  [["verguenza","Scham","αἰσχύνη","Schmerz und Verwirrung über gegenwärtige, vergangene oder künftige Übel, die in Verruf zu bringen scheinen.","II 6, 1383b","Wenn wir gesehen werden, vor allem von denen, die wir schätzen.","Die wir bewundern, die uns bewundern, deren Urteil zählt.","Niedrige Taten; das Fehlen dessen, was unsere Gleichen haben.","der Druck sichtbarer Kennzahlen."],
+   ["desverguenza","Schamlosigkeit","ἀναισχυντία","Verachtung und Gleichgültigkeit gegenüber denselben Übeln.","II 6, 1383b","Wer das Urteil anderer nicht fürchtet.","Unbekannte, die man nicht schätzt.","Dieselben Taten, ohne Schmerz erlebt.","die kalkulierte Provokation."]],
+  [["favor","Gunst","χάρις","Ein Dienst an jemandem, der ihn braucht, ohne Gegenleistung und nicht zum eigenen Vorteil.","II 7, 1385a","Wer in großer Not ist.","Wer als Erster, allein oder mehr als alle hilft.","Die Dringlichkeit und die Unentgeltlichkeit.","die Hilfe, die keine Rechnung stellt."],
+   ["ingratitud","Keine Gunst","ἀχαριστία","Um eine Gunst zu tilgen, genügt der Nachweis, dass sie aus Eigennutz, aus Zufall oder unter Zwang geschah.","II 7, 1385b","Wer dem Gebenden misstraut.","Wer »hilft« und später kassiert.","Das versteckte Interesse.","das Geschenk mit Kleingedrucktem."]],
+  [["compasion","Mitleid","ἔλεος","Schmerz über ein vernichtendes oder schmerzliches Übel, das jemanden trifft, der es nicht verdient, und das auch uns oder die Unseren treffen könnte, wenn es nahe scheint.","II 8, 1385b","Wer sich für verletzlich hält: weder die ganz Ruinierten noch die sehr Glücklichen.","Die uns Ähnlichen. Bei sehr Nahestehenden ist es kein Mitleid mehr: Es ist, als litte man selbst.","Unverdiente, nahe Übel, »vor Augen« gestellt.","das Foto, das fernes Leid nahebringt."],
+   ["indignacion","Unwille","νέμεσις","Schmerz über das unverdiente Glück eines anderen.","II 9, 1386b","Wer Güter verdient und erlangt hat; die Rechtschaffenen.","Wer erhält, was ihm nicht zusteht.","Unverdiente Güter.","das Gefühl der ungleichen Behandlung."]],
+  [["envidia","Neid","φθόνος","Schmerz über das sichtbare Glück unserer Gleichen an geschätzten Gütern, nicht um sie selbst zu haben, sondern weil jene sie haben.","II 10, 1387b","Wer sich für gleich hält oder nahe daran ist.","Die an Alter, Beruf oder Ruf Ähnlichen: »der Töpfer dem Töpfer«.","Die Güter, die der andere zeigt.","der ständige Vergleich in sozialen Netzwerken."],
+   ["emulacion","Nacheiferung","ζῆλος","Schmerz darüber, an Ähnlichen geschätzte Güter zu sehen, die auch wir haben könnten, nicht weil jene sie haben, sondern weil wir sie nicht haben. Sie gehört zu edlen Menschen, der Neid zu niedrigen.","II 11, 1388a","Die Jungen, die Großgesinnten, wer sich für würdig hält.","Wer Tugend, Ehre oder Freunde hat.","Erreichbare Güter.","das Vorbild, das zum Bessermachen antreibt."]]
+ ],
+ pk:{st:"Zustand",who:"Gegenüber wem",why:"Warum"},
+ an:[
+  ["Becher und Schild",["Becher","Dionysos","Schild","Ares"],"Der Schild, <em>Becher des Ares</em>; der Becher, <em>Schild des Dionysos</em>.","Rhetorik III 4, 1407a · Poetik 21"],
+  ["Der Abend des Lebens",["Alter","Leben","Abend","Tag"],"Das Alter, <em>Abend des Lebens</em>.","Poetik 21, 1457b"],
+  ["Der Frühling des Perikles",["Jugend","Stadt","Frühling","Jahr"],"Die gefallenen jungen Männer: »als hätte man dem Jahr <em>den Frühling</em> genommen«.","Rhetorik I 7, 1365a · III 10, 1411a"],
+  ["Die Stoppeln",["Alter","Leben","Stoppeln","Ernte"],"Das Alter, <em>Stoppeln</em>: etwas, das schon geblüht hat und verdorrt ist.","Rhetorik III 10, 1410b · Odyssee XIV 214"]
+ ],
+ anS:{is:"verhält sich zu",as:"wie"},
+ act:[
+  ["»Der gute Mensch ist ein Quadrat.«","III 11, 1411b","Eine richtige Metapher: Beides ist vollendet und vollkommen. Aber sie bewegt sich nicht; sie stellt nichts vor Augen."],
+  ["»Und der Pfeil sprang, begierig, in die Menge zu fliegen.«","Ilias IV 126 · zitiert in III 11, 1412a","Homer gibt dem Unbelebten Seele und Begehren. Das ist <i lang=\"grc\">ἐνέργεια</i>: die Dinge im Vollzug zeigen. Darum heißt »vor Augen stellen«, die Dinge in Tätigkeit zu bezeichnen."]
+ ]
+}};
+const t=T[L];
+
+/* ---- 1. triángulo ---- */
+const svg=q("#rtTri");
+const V={e:{x:200,y:66},l:{x:46,y:312},p:{x:354,y:312}};
+const COL={e:"var(--rt-e)",l:"var(--rt-l)",p:"var(--rt-p)"};
+let w={e:.34,l:.33,p:.33};
+const pt=()=>({x:w.e*V.e.x+w.l*V.l.x+w.p*V.p.x, y:w.e*V.e.y+w.l*V.l.y+w.p*V.p.y});
+function bary(x,y){
+  const a=V.e,b=V.l,c=V.p, d=(b.y-c.y)*(a.x-c.x)+(c.x-b.x)*(a.y-c.y);
+  let we=((b.y-c.y)*(x-c.x)+(c.x-b.x)*(y-c.y))/d, wl=((c.y-a.y)*(x-c.x)+(a.x-c.x)*(y-c.y))/d, wp=1-we-wl;
+  we=Math.max(0,we); wl=Math.max(0,wl); wp=Math.max(0,wp); const s=we+wl+wp||1;
+  return {e:we/s,l:wl/s,p:wp/s};
+}
+function key(){
+  const arr=Object.entries(w).sort((a,b)=>b[1]-a[1]);
+  if(arr[0][1]>=.6) return arr[0][0];
+  if(arr[2][1]<.18){ const k=[arr[0][0],arr[1][0]].sort((a,b)=>"elp".indexOf(a)-"elp".indexOf(b)).join(""); return k; }
+  return "eq";
+}
+function drawTri(){
+  const P=pt();
+  let h=`<defs><radialGradient id="rtGlow"><stop offset="0" stop-color="#fff6de" stop-opacity=".9"/><stop offset=".4" stop-color="#f2b46a" stop-opacity=".35"/><stop offset="1" stop-color="#f2b46a" stop-opacity="0"/></radialGradient></defs>`;
+  h+=`<polygon class="tri" points="${V.e.x},${V.e.y} ${V.l.x},${V.l.y} ${V.p.x},${V.p.y}"/>`;
+  h+=`<g class="grid">`; for(let k=1;k<4;k++){ const f=k/4;
+    const m=(A,B)=>({x:A.x+(B.x-A.x)*f,y:A.y+(B.y-A.y)*f});
+    const a1=m(V.e,V.l),a2=m(V.e,V.p),b1=m(V.l,V.e),b2=m(V.l,V.p),c1=m(V.p,V.e),c2=m(V.p,V.l);
+    h+=`<line x1="${a1.x}" y1="${a1.y}" x2="${a2.x}" y2="${a2.y}"/><line x1="${b1.x}" y1="${b1.y}" x2="${b2.x}" y2="${b2.y}"/><line x1="${c1.x}" y1="${c1.y}" x2="${c2.x}" y2="${c2.y}"/>`; }
+  h+=`</g>`;
+  ["e","l","p"].forEach(k=>{ h+=`<line class="ray" x1="${P.x.toFixed(1)}" y1="${P.y.toFixed(1)}" x2="${V[k].x}" y2="${V[k].y}" stroke="${COL[k]}" stroke-opacity="${(.15+w[k]*.85).toFixed(2)}" stroke-width="${(1+w[k]*4).toFixed(2)}"/>`;
+    h+=`<circle cx="${V[k].x}" cy="${V[k].y}" r="${(5+w[k]*10).toFixed(1)}" fill="${COL[k]}" fill-opacity="${(.15+w[k]*.6).toFixed(2)}"/>`; });
+  const lab=(k,dx,dy,anc)=>`<g class="v"><text x="${V[k].x+dx}" y="${V[k].y+dy}" style="fill:${COL[k]}" text-anchor="${anc}">${t.tri[k]}</text><text class="s" x="${V[k].x+dx}" y="${V[k].y+dy+15}" text-anchor="${anc}" style="fill:var(--faint)">${t.tri[k+"s"]}</text></g>`;
+  h+=lab("e",0,-42,"middle")+lab("l",-4,30,"middle")+lab("p",4,30,"middle");
+  h+=`<circle cx="${P.x.toFixed(1)}" cy="${P.y.toFixed(1)}" r="34" fill="url(#rtGlow)" pointer-events="none"/>`;
+  h+=`<g class="hd" id="rtHd" tabindex="0" role="slider" aria-label="${E(t.tri.hd)}" aria-valuetext="Ethos ${Math.round(w.e*100)} %, Logos ${Math.round(w.l*100)} %, Pathos ${Math.round(w.p*100)} %"><circle class="o" cx="${P.x.toFixed(1)}" cy="${P.y.toFixed(1)}" r="11"/><circle class="i" cx="${P.x.toFixed(1)}" cy="${P.y.toFixed(1)}" r="3.5"/></g>`;
+  svg.innerHTML=h;
+}
+function out(){
+  q("#rtBars").innerHTML=["e","l","p"].map(k=>`<div class="rt-bar"><span>${t.tri[k]}</span><i><b style="width:${(w[k]*100).toFixed(0)}%;background:${COL[k]}"></b></i><span>${Math.round(w[k]*100)} %</span></div>`).join("");
+  const v=t.v[key()];
+  q("#rtOut").innerHTML=`<h5>${v[0]}</h5><p>${v[1]}</p><p class="x"><b>${t.hoy}</b>${v[2]}</p>`;
+}
+function render(focus){ drawTri(); out(); if(focus){ const hd=q("#rtHd"); hd&&hd.focus({preventScroll:true}); } }
+function toSvg(e){ const r=svg.getBoundingClientRect(), vb=svg.viewBox.baseVal; return {x:(e.clientX-r.left)*vb.width/r.width, y:(e.clientY-r.top)*vb.height/r.height}; }
+let drag=false;
+svg.addEventListener("pointerdown",e=>{ drag=true; try{ svg.setPointerCapture(e.pointerId); }catch(_){ } const p=toSvg(e); w=bary(p.x,p.y); render(); });
+svg.addEventListener("pointermove",e=>{ if(!drag) return; const p=toSvg(e); w=bary(p.x,p.y); render(); });
+const end=()=>{ drag=false; }; svg.addEventListener("pointerup",end); svg.addEventListener("pointercancel",end);
+svg.addEventListener("keydown",e=>{
+  const d={ArrowUp:[0,-8],ArrowDown:[0,8],ArrowLeft:[-8,0],ArrowRight:[8,0]}[e.key]; if(!d) return; e.preventDefault();
+  const P=pt(); w=bary(P.x+d[0],P.y+d[1]); render(true);
+});
+q("#rtPre").innerHTML=t.pre.map((p,i)=>`<button type="button" class="chip" data-pre="${i}">${E(p[0])}</button>`).join("");
+q("#rtPre").addEventListener("click",e=>{ const b=e.target.closest("[data-pre]"); if(!b) return; w={...t.pre[+b.dataset.pre][1]}; render(); });
+render();
+
+/* ---- 2. géneros: juego ---- */
+const game=q("#rtGame"); let gi=0, score=0, answered=false;
+function gameDraw(){
+  if(gi>=t.game.length){ game.innerHTML=`<p class="ph">${E(t.g.done)}</p><div class="meta"><span>${E(t.g.score(score,t.game.length))}</span></div><div class="row"><button type="button" class="ctl" data-again>${E(t.g.again)}</button></div>`; return; }
+  const it=t.game[gi]; answered=false;
+  qa("#rtGen article").forEach(a=>a.classList.remove("hit"));
+  game.innerHTML=`<div class="meta"><span>${E(t.g.n(gi+1,t.game.length))}</span><span>${E(t.g.score(score,t.game.length))}</span></div>
+    <p class="ph">${L==="de"?"»":"«"}${E(it[0])}${L==="de"?"«":"»"}</p><div class="row" role="group" aria-label="${E(t.g.ask)}">${["del","jud","epi"].map(g=>`<button type="button" class="chip" data-gg="${g}" aria-pressed="false">${E(t.g[g])}</button>`).join("")}</div><p class="fb"></p>`;
+}
+game.addEventListener("click",e=>{
+  if(e.target.closest("[data-again]")){ gi=0; score=0; gameDraw(); return; }
+  if(e.target.closest("[data-next]")){ gi++; gameDraw(); return; }
+  const b=e.target.closest("[data-gg]"); if(!b||answered) return; answered=true;
+  const it=t.game[gi], ok=b.dataset.gg===it[1]; if(ok) score++;
+  game.querySelectorAll("[data-gg]").forEach(x=>{ x.setAttribute("aria-pressed",String(x===b)); if(x.dataset.gg===it[1]) x.classList.add("ok"); else if(x===b) x.classList.add("no"); });
+  const art=q(`#rtGen article[data-g="${it[1]}"]`); art&&art.classList.add("hit");
+  game.querySelector(".fb").innerHTML=`<b style="color:var(--ink)">${E(ok?t.g.ok:t.g.no)}</b> ${E(it[2])}`;
+  game.querySelector(".meta span:last-child").textContent=t.g.score(score,t.game.length);
+  game.querySelector(".row").insertAdjacentHTML("beforeend",`<button type="button" class="ctl" data-next style="margin-left:auto">${E(t.g.next)}</button>`);
+});
+gameDraw();
+
+/* ---- 3. entimemas ---- */
+q("#rtEnt").addEventListener("click",e=>{
+  const b=e.target.closest("[data-rt-hid]"); if(!b) return;
+  const hid=b.parentElement.querySelector(".hid"), open=hid.hidden;
+  hid.hidden=!open; b.setAttribute("aria-expanded",String(open)); b.textContent=open?b.dataset.hide:b.dataset.show;
+});
+
+/* ---- 4. pasiones ---- */
+const pairs=q("#rtPairs"); let sel="ira";
+const flat={}; t.pa.forEach(pr=>pr.forEach(p=>flat[p[0]]=p));
+pairs.innerHTML=t.pa.map(pr=>`<li><button type="button" data-pa="${pr[0][0]}" aria-pressed="false">${E(pr[0][1])}<small lang="grc">${pr[0][2]}</small></button><i aria-hidden="true"></i><button type="button" data-pa="${pr[1][0]}" aria-pressed="false">${E(pr[1][1])}<small lang="grc">${pr[1][2]}</small></button></li>`).join("");
+function paDraw(){
+  pairs.querySelectorAll("[data-pa]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.pa===sel)));
+  const p=flat[sel];
+  q("#rtPcard").innerHTML=`<h4>${E(p[1])}<span lang="grc">${p[2]}</span></h4><p class="def">${E(p[3])}<small>${E(p[4])}</small></p>
+   <div class="rt-three"><div><b>${t.pk.st}</b><span>${E(p[5])}</span></div><div><b>${t.pk.who}</b><span>${E(p[6])}</span></div><div><b>${t.pk.why}</b><span>${E(p[7])}</span></div></div>
+   <p class="hoy"><b>${t.hoy}</b>${E(p[8])}</p>`;
+}
+pairs.addEventListener("click",e=>{ const b=e.target.closest("[data-pa]"); if(!b) return; sel=b.dataset.pa; paDraw(); });
+paDraw();
+
+/* ---- 5. metáfora por analogía ---- */
+let ai=0;
+const ab=q("#rtAnalBtns");
+ab.innerHTML=t.an.map((a,i)=>`<button type="button" class="chip" data-an="${i}" aria-pressed="${i===0}">${E(a[0])}</button>`).join("");
+function anDraw(){
+  ab.querySelectorAll("[data-an]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.an===ai)));
+  const a=t.an[ai], [A,B,C,D]=a[1];
+  const box=(x,y,txt,col)=>`<rect x="${x-62}" y="${y-22}" width="124" height="40" rx="4" fill="rgba(255,255,255,.02)" stroke="${col}" stroke-opacity=".6"/><text x="${x}" y="${y+5}" font-size="17">${E(txt)}</text>`;
+  let h=`<defs><marker id="rtArr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f2b46a"/></marker></defs>`;
+  h+=box(80,46,A,"#f0e7d9")+box(80,150,C,"#f2b46a")+box(360,46,B,"#f0e7d9")+box(360,150,D,"#f2b46a");
+  h+=`<line x1="146" y1="46" x2="294" y2="46" stroke="rgba(236,219,196,.35)" stroke-dasharray="3 4"/><text class="s" x="220" y="38">${E(t.anS.is)}</text>`;
+  h+=`<line x1="146" y1="150" x2="294" y2="150" stroke="rgba(242,180,106,.45)" stroke-dasharray="3 4"/><text class="s" x="220" y="142">${E(t.anS.is)}</text>`;
+  h+=`<text class="s" x="220" y="102" style="font-size:12px;fill:#f2b46a">${E(t.anS.as)}</text>`;
+  h+=`<path d="M138 132 Q220 98 300 64" fill="none" stroke="#f2b46a" stroke-width="1.6" marker-end="url(#rtArr)" ${RM?"":'stroke-dasharray="4 4"'}><animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.2s" repeatCount="indefinite"/></path>`;
+  q("#rtAnal").innerHTML=h;
+  q("#rtAnal").setAttribute("aria-label",`${A} : ${B} :: ${C} : ${D}`);
+  q("#rtAnalRes").innerHTML=a[2];
+  q("#rtAnalSrc").textContent=a[3];
+}
+ab.addEventListener("click",e=>{ const b=e.target.closest("[data-an]"); if(!b) return; ai=+b.dataset.an; anDraw(); });
+anDraw();
+
+/* ---- 6. en acto ---- */
+const actSw=root.querySelector(".rt-met .sw");
+function actDraw(k){
+  actSw.querySelectorAll("[data-act]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.act===k)));
+  const a=t.act[k]; q("#rtActQ").innerHTML=`${E(a[0])}<small>${E(a[1])}</small>`; q("#rtActP").innerHTML=a[2];
+}
+actSw.addEventListener("click",e=>{ const b=e.target.closest("[data-act]"); if(b) actDraw(+b.dataset.act); });
+actDraw(0);
+
+/* ---- 7. partes del discurso ---- */
+const tx=root.querySelector(".rt-taxis .sw");
+tx.addEventListener("click",e=>{
+  const b=e.target.closest("[data-tx]"); if(!b) return; const four=b.dataset.tx==="4";
+  tx.querySelectorAll("[data-tx]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  qa("#rtStrip div").forEach(d=>d.classList.toggle("nec",four||d.dataset.k==="exp"||d.dataset.k==="pru"));
+});
+
+/* ---- saltos a las escenas del Liceo ---- */
+root.addEventListener("click",e=>{
+  const s=e.target.closest("[data-rt-scene]"); if(!s) return; e.preventDefault();
+  const tab=document.getElementById("lyTab-"+s.dataset.rtScene); if(tab) tab.click();
+  const st=document.getElementById("lyStage"); st&&st.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
+});
 })();
 </script>
 </body>

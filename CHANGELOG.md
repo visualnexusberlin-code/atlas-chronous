@@ -1,5 +1,11 @@
 # Historial
 
+## v1.4 · La Retórica · 2026-10-20
+- Nueva sección en El Liceo, tras «Del concepto al código»: **El arte de ver lo convincente** / *Die Kunst, das Überzeugende zu sehen*, a partir de la *Retórica* de Aristóteles (trad. Alberto Bernabé, Alianza, 1998).
+- Tres grados del razonamiento (demostración, entimema, mímesis); triángulo interactivo ethos · logos · pathos con ejemplos; los tres géneros con un juego de clasificación; cuatro entimemas con la premisa callada; mapa de catorce pasiones con las tres preguntas de II 1; metáfora por analogía y «poner ante los ojos»; partes del discurso; herencia (Cicerón, Perelman, Barthes, Bonsiepe, Ricoeur, Lakoff) y taller.
+- Enlaces a las escenas del silogismo y de trama y catarsis.
+- El botón de idioma pasa a la derecha del título.
+
 ## v1.3 · ¿Fue Platón platónico? · 2026-10-19
 - Nueva sección en El Umbral, justo después de «Del concepto al código»: lectura de Lloyd P. Gerson, *From Plato to Platonism* (Cornell, 2013), en español y alemán (`War Platon Platoniker?`).
 - Pentágono interactivo del ur-platonismo (antimaterialismo, antimecanicismo, antinominalismo, antirrelativismo, antiescepticismo): se puede «conceder» cada negación y se ven las tensiones que señala Gerson; veredicto platonismo / naturalismo / posición mixta.
