@@ -1,5 +1,9 @@
 # Historial
 
+## v1.5 · Tributo a Gustavo Bueno · 2026-10-21
+- Nueva sección breve en El Umbral, tras la lectura de Gerson: **Ir a Platón desde nosotros** / *Von uns aus zu Platon gehen*, a partir de «Lenguaje y pensamiento en Platón» (Taula, n.º 3, 1985; conferencia de 1982).
+- Principios de cierre frente a leyes del mundo (Lavoisier, especificidad, arbitrariedad, continuidad) con lectura conmutable; el *Cratilo* en cuatro partes y la doble articulación; letras animadas (ρ, δ τ, λ, α η, ο, ι); cinco agudezas en la voz mecanografiada de la conferencia; symploké con red conmutable (todo con todo, nada con nada, symploké).
+
 ## v1.4 · La Retórica · 2026-10-20
 - Nueva sección en El Liceo, tras «Del concepto al código»: **El arte de ver lo convincente** / *Die Kunst, das Überzeugende zu sehen*, a partir de la *Retórica* de Aristóteles (trad. Alberto Bernabé, Alianza, 1998).
 - Tres grados del razonamiento (demostración, entimema, mímesis); triángulo interactivo ethos · logos · pathos con ejemplos; los tres géneros con un juego de clasificación; cuatro entimemas con la premisa callada; mapa de catorce pasiones con las tres preguntas de II 1; metáfora por analogía y «poner ante los ojos»; partes del discurso; herencia (Cicerón, Perelman, Barthes, Bonsiepe, Ricoeur, Lakoff) y taller.

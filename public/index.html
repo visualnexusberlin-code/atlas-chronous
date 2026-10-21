@@ -1326,6 +1326,103 @@ body[data-lens="asombro"]{--lens:var(--gold)}
   .rt-three{grid-template-columns:minmax(0,1fr)}
   .rt-fig{max-width:440px;width:100%;margin:0 auto}
 }
+
+/* ---------- TRIBUTO · GUSTAVO BUENO (El Umbral, tras Gerson) ---------- */
+.gb{display:grid;gap:60px;position:relative}
+.gb:before{content:"";position:absolute;left:0;right:0;top:-44px;height:1px;background:linear-gradient(90deg,rgba(128,216,255,0),rgba(128,216,255,.35),rgba(227,180,96,.35),rgba(128,216,255,0))}
+.gb .sec-head{margin-bottom:0}
+.gb-k{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:500;margin-bottom:8px}
+.gb-h3{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.4vw,1.9rem);line-height:1.1;color:var(--ink);text-wrap:balance}
+.gb-lead{margin:0;max-width:66ch;color:var(--dim)}
+.gb-lead + .gb-lead{margin-top:10px}
+.gb-src{font-size:11px;color:var(--um-cyan);letter-spacing:.04em}
+/* la voz de la conferencia: mecanografiada, como una transcripción */
+.gb-voice{font-family:var(--f-type);color:var(--ink)}
+.gb-open{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:34px;align-items:start}
+.gb-big{margin:0;font-family:var(--f-type);font-size:clamp(1.35rem,2.6vw,2rem);line-height:1.3;color:var(--ink);padding:18px 0 18px 18px;border-left:2px solid var(--um-cyan)}
+.gb-big small{display:block;font-family:var(--f-body);font-size:11.5px;color:var(--faint);margin-top:10px}
+.gb-life{border:1px solid var(--line);border-radius:4px;padding:16px 18px;display:grid;gap:8px}
+.gb-life dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px}
+.gb-life dt{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--um-cyan);font-weight:600;padding-top:3px}
+.gb-life dd{margin:0;color:var(--dim);font-size:13px}
+.gb-life dd i{color:var(--ink)}
+
+/* principios de cierre */
+.gb-cierre{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:30px;align-items:start;margin-top:24px}
+.gb-ps{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.gb-ps button{width:100%;background:none;border:1px solid var(--line);border-radius:4px;color:var(--ink);text-align:left;padding:11px 13px;font-family:var(--f-display);font-size:1.08rem;cursor:pointer;display:grid;gap:2px;transition:border-color .2s,background .2s}
+.gb-ps button small{font-family:var(--f-body);font-size:11.5px;color:var(--faint)}
+.gb-ps button[aria-pressed="true"]{border-color:var(--um-cyan);background:rgba(128,216,255,.07)}
+.gb-card{border:1px solid var(--line);border-radius:4px;padding:18px 20px;display:grid;gap:14px}
+.gb-sw{display:inline-flex;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;justify-self:start}
+.gb-sw button{background:none;border:0;color:var(--dim);font-size:12px;padding:6px 13px;cursor:pointer}
+.gb-sw button[aria-pressed="true"]{background:rgba(128,216,255,.16);color:var(--ink)}
+.gb-sw button.w[aria-pressed="true"]{background:rgba(255,138,42,.16)}
+.gb-read{display:grid;gap:8px}
+.gb-read .st{margin:0;font-family:var(--f-type);font-size:1.12rem;line-height:1.38;color:var(--ink)}
+.gb-read .vd{margin:0;font-size:13.5px;color:var(--dim);padding-left:12px;border-left:2px solid var(--um-cyan)}
+.gb-read.w .vd{border-left-color:var(--um-fire)}
+.gb-read .tg{font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;color:var(--um-cyan)}
+.gb-read.w .tg{color:#ffb266}
+
+/* el Cratilo */
+.gb-crat{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid var(--line);border-radius:4px}
+.gb-crat li{padding:16px 18px;display:grid;gap:6px;align-content:start}
+.gb-crat li + li{border-left:1px solid var(--line)}
+.gb-crat .n{font-family:var(--f-type);font-size:11px;color:var(--um-cyan)}
+.gb-crat b{font-family:var(--f-display);font-weight:400;font-size:1.15rem;color:var(--ink)}
+.gb-crat p{margin:0;color:var(--dim);font-size:13px}
+.gb-crat .eq{font-size:11.5px;color:var(--gold)}
+.gb-letters{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:30px;align-items:center;margin-top:26px}
+.gb-stage{position:relative;aspect-ratio:1.35;border:1px solid var(--line);border-radius:4px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 50% 55%,rgba(128,216,255,.08),rgba(0,0,0,0) 60%)}
+.gb-glyph{font-family:var(--f-display);font-size:clamp(6rem,15vw,10rem);line-height:1;color:var(--ink);text-shadow:0 0 28px rgba(128,216,255,.45)}
+.gb-stage .cap{position:absolute;left:14px;bottom:10px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.gb-glyph.flow{animation:gbFlow 1.6s ease-in-out infinite}
+.gb-glyph.bind{animation:gbBind 1.8s cubic-bezier(.7,0,.3,1) infinite}
+.gb-glyph.slide{animation:gbSlide 2.2s ease-in-out infinite}
+.gb-glyph.wide{animation:gbWide 2.4s ease-in-out infinite}
+.gb-glyph.round{animation:gbRound 3.2s linear infinite}
+.gb-glyph.thin{animation:gbThin 2s ease-in-out infinite}
+@keyframes gbFlow{0%,100%{transform:translateX(-14px) skewX(-8deg)}50%{transform:translateX(14px) skewX(8deg)}}
+@keyframes gbBind{0%,20%{transform:scale(1)}45%,70%{transform:scale(.82);letter-spacing:-.1em;text-shadow:0 0 6px rgba(128,216,255,.2)}100%{transform:scale(1)}}
+@keyframes gbSlide{0%,100%{transform:translate(-26px,-8px) rotate(-6deg)}50%{transform:translate(26px,8px) rotate(6deg)}}
+@keyframes gbWide{0%,100%{transform:scale(.9)}50%{transform:scale(1.25)}}
+@keyframes gbRound{to{transform:rotate(360deg)}}
+@keyframes gbThin{0%,100%{transform:scaleX(1)}50%{transform:scaleX(.45)}}
+@media (prefers-reduced-motion:reduce){ .gb-glyph{animation:none!important} }
+.gb-lt{display:grid;gap:12px}
+.gb-lt .row{display:flex;gap:6px;flex-wrap:wrap}
+.gb-lt .row button{font-family:var(--f-display);font-size:1.15rem;min-width:46px;justify-content:center}
+.gb-lt .row button[aria-pressed="true"]{border-color:var(--um-cyan);background:rgba(128,216,255,.12);color:var(--ink)}
+.gb-lt h4{margin:0;font-family:var(--f-display);font-weight:400;font-size:1.4rem;color:var(--ink)}
+.gb-lt h4 span{font-size:1rem;color:var(--um-cyan);margin-left:8px}
+.gb-lt p{margin:0;color:var(--dim);font-size:13.5px}
+.gb-lt p.w{font-size:12.5px;color:var(--faint)}
+.gb-lt p.w b{color:var(--gold);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+.gb-note{margin:18px 0 0;max-width:70ch;padding:14px 16px;border:1px dashed var(--line-strong);border-radius:4px;color:var(--dim);font-size:13.5px}
+.gb-note b{color:var(--ink);font-weight:500}
+
+/* agudezas */
+.gb-quotes{list-style:none;margin:24px 0 0;padding:0;columns:2 320px;column-gap:28px}
+.gb-quotes li{break-inside:avoid;margin:0 0 22px;padding:14px 0 0;border-top:1px solid var(--line)}
+.gb-quotes blockquote{margin:0;font-family:var(--f-type);font-size:1.02rem;line-height:1.45;color:var(--ink)}
+.gb-quotes p{margin:8px 0 0;font-size:12.5px;color:var(--faint)}
+.gb-quotes p b{color:var(--um-cyan);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;margin-right:6px}
+
+/* symploké */
+.gb-sym{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;align-items:center;margin-top:24px}
+.gb-sym svg{width:100%;height:auto;display:block}
+.gb-sym .gb-sw{margin-bottom:10px}
+.gb-sym p{margin:0;color:var(--dim);font-size:13.5px}
+.gb-sym .lbl{margin:8px 0 0;font-family:var(--f-display);font-size:1.25rem;color:var(--ink)}
+
+@media (max-width:900px){
+  .gb-open,.gb-cierre,.gb-letters,.gb-sym{grid-template-columns:minmax(0,1fr)}
+  .gb-crat{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .gb-crat li:nth-child(3){border-left:0}
+  .gb-crat li:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:520px){ .gb-crat{grid-template-columns:minmax(0,1fr)} .gb-crat li + li{border-left:0;border-top:1px solid var(--line)} }
 </style>
 </head>
 <body>
@@ -1913,6 +2010,98 @@ body[data-lens="asombro"]{--lens:var(--gold)}
           <p class="src-note"><b>Procedencia.</b> Lloyd P. Gerson, <i>From Plato to Platonism</i>, Ithaca y Londres, Cornell University Press, 2013: cap. 1 (ur-platonismo y las cinco negaciones), cap. 3 (Platón artista y filósofo), cap. 4 (Aristóteles), caps. 5–8 (Academia Antigua, escépticos académicos, platonismo medio, Numenio), caps. 9–11 (Plotino), Conclusión. Paráfrasis propias. Las citas de Platón van en traducción orientativa con numeración Stephanus. La tarjeta «Lectura del atlas» es una extrapolación nuestra, no de Gerson. Pendiente de revisión editorial humana.</p>
         </div>
        </div>
+      </section>
+
+      <section aria-labelledby="gbTitle" id="bueno" class="gb">
+        <div class="sec-head">
+          <div class="kicker">Tributo · Gustavo Bueno (1924–2016)</div>
+          <h2 id="gbTitle">Ir a Platón desde nosotros</h2>
+          <p>Gustavo Bueno enseñó a pensar en voz alta, con frases largas que avanzaban como un argumento y remataban como un golpe sobre la mesa. Este homenaje parte de una conferencia improvisada en Palma en 1982, «Lenguaje y pensamiento en Platón», donde defiende algo que recorre todo este atlas: que Platón sigue siendo actual.</p>
+          <span class="gb-src">G. Bueno, «Lenguaje y pensamiento en Platón», <i>Taula</i>, n.º 3 (1985), transcripción de la conferencia del 20 de mayo de 1982</span>
+        </div>
+
+        <div class="gb-open">
+          <div>
+            <p class="gb-big">«Por tanto estamos yendo a Platón desde nosotros, y no viceversa.»<small>Bueno, 1982</small></p>
+            <p class="gb-lead" style="margin-top:16px">La actualidad de Platón no está en sus doctrinas, sino en el <b>horizonte de alternativas</b> que dejó planteado y del que todavía no hemos salido. La química no le debe nada a Empédocles; la filosofía del lenguaje, en cambio, se reencuentra en el <i>Cratilo</i> cada vez que la lingüística y la etología chocan entre sí.</p>
+            <p class="gb-lead">Por eso volver a los griegos no es cerrar los ojos al presente, sino criticarlo: el presente «tiene muchas capas, muchos estratos y muchos horizontes», y criticar «quiere decir separar, cribar, discriminar».</p>
+          </div>
+          <aside class="gb-life" aria-label="Gustavo Bueno">
+            <dl>
+              <dt>Nace</dt><dd>Santo Domingo de la Calzada, 1924</dd>
+              <dt>Enseña</dt><dd>Instituto en Salamanca (1949–1960); Universidad de Oviedo desde 1960</dd>
+              <dt>Sistema</dt><dd>Materialismo filosófico y teoría del cierre categorial</dd>
+              <dt>Obras</dt><dd><i>Ensayos materialistas</i> (1972), <i>El animal divino</i> (1985), <i>Teoría del cierre categorial</i> (1992–1993), <i>El mito de la cultura</i></dd>
+              <dt>Muere</dt><dd>Niembro, Asturias, 2016</dd>
+            </dl>
+          </aside>
+        </div>
+
+        <div>
+          <div class="gb-k">La agudeza del método</div>
+          <h3 class="gb-h3">Principios de cierre, no leyes del mundo</h3>
+          <p class="gb-lead">Lingüistas y etólogos se acusaban mutuamente de «gramáticos» y de «reduccionistas». Bueno desactiva la pelea con una distinción: muchos principios científicos no describen el mundo, sino que <b>cierran</b> el campo de una ciencia. Son evidentes, pero su evidencia es gnoseológica. Elige un principio y léelo de las dos maneras.</p>
+          <div class="gb-cierre">
+            <ul class="gb-ps" id="gbPs" aria-label="Principios"></ul>
+            <div class="gb-card">
+              <div class="gb-sw" role="group" aria-label="Modo de lectura"><button type="button" class="w" data-gbm="w" aria-pressed="false">Como ley del mundo</button><button type="button" data-gbm="c" aria-pressed="true">Como principio de cierre</button></div>
+              <div class="gb-read" id="gbRead" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="gb-k">El Cratilo, leído sin prisa</div>
+          <h3 class="gb-h3">Un diálogo que no es una broma</h3>
+          <p class="gb-lead">Algunos lingüistas despacharon el <i>Cratilo</i> como un catálogo de etimologías místicas, y algunos defensores de Platón lo salvaron diciendo que era irónico. Para Bueno las dos lecturas son perezosas: el diálogo expone, a su manera, la doble articulación que la lingüística del siglo XX creyó descubrir.</p>
+          <ol class="gb-crat">
+            <li><span class="n">I · preámbulo</span><b>Ciencia y filosofía</b><p>Hermógenes: los nombres son pura convención. Sócrates: el nombre es un instrumento que corta la realidad por sus junturas, como el cuchillo del carnicero o la lanzadera del tejedor.</p><span class="eq">≈ el lenguaje como herramienta</span></li>
+            <li><span class="n">II · primer tercio</span><b>Las etimologías</b><p>Astianacte, «señor de la ciudad», hijo de su defensor. El hijo del caballo se llama caballo: si cada nombre fuera arbitrario, no podríamos hablar.</p><span class="eq">≈ primera articulación</span></li>
+            <li><span class="n">III · segundo tercio</span><b>Letras y sílabas</b><p>Los nombres primeros se componen de sonidos que reconstruyen la cosa, no por onomatopeya, sino por la operación de la lengua.</p><span class="eq">≈ segunda articulación</span></li>
+            <li><span class="n">IV · final</span><b>Contra el flujo</b><p>Con Heráclito, Cratilo dice que todo fluye. Pero si se puede hablar es porque algo se repite y permanece.</p><span class="eq">≈ las esencias</span></li>
+          </ol>
+
+          <div class="gb-letters">
+            <div class="gb-stage" aria-hidden="true"><span class="gb-glyph" id="gbGlyph">ρ</span><span class="cap" id="gbCap"></span></div>
+            <div class="gb-lt">
+              <div class="row" id="gbLetters" role="group" aria-label="Letras del Cratilo"></div>
+              <h4 id="gbLtH"></h4>
+              <p id="gbLtP"></p>
+              <p class="w" id="gbLtW"></p>
+            </div>
+          </div>
+          <p class="gb-note"><b>La lectura de Bueno.</b> No es que el sonido copie la cosa: la lengua <i>opera</i>. Se detiene en la <i>d</i> como se aprieta una atadura, vibra en la <i>r</i> como lo que corre, igual que las manos se abren para decir «grande». Para Bueno el lenguaje es praxis, una operación con el cuerpo, y el pensamiento ya está en el sonido construido, no en una mente previa que luego lo emite.</p>
+        </div>
+
+        <div>
+          <div class="gb-k">Agudezas</div>
+          <h3 class="gb-h3">Con sus palabras</h3>
+          <ul class="gb-quotes">
+            <li><blockquote>«Los lingüistas no tratan del lenguaje, tratan del inglés, del francés, etc.»</blockquote><p><b>Por qué</b>Una ciencia no estudia conceptos generales, sino campos concretos. La ciencia de la religión tampoco trata «de la religión», sino del budismo o del cristianismo.</p></li>
+            <li><blockquote>«El hablar es un hecho, el hecho de hablar es una práctica.»</blockquote><p><b>Por qué</b>Contra el tópico «hechos, y no palabras». Austin y Searle, con su «hacer cosas con palabras», llegaron tarde: ya estaba en Platón.</p></li>
+            <li><blockquote>«Estoy refiriéndome a esta mesa (toc, toc), y no a esa imagen nemónica que tenga yo.»</blockquote><p><b>Por qué</b>Contra el psicologismo. Cuando hablo de la mesa no hablo de mi representación de la mesa, sino de la cosa que tengo delante.</p></li>
+            <li><blockquote>«Hablar en términos sintéticos no es sintetizar, sino decir otras cosas distintas.»</blockquote><p><b>Por qué</b>Las leyes del todo no son las de las partes: también es una tesis platónica, aplicada a su propia manera de resumir.</p></li>
+            <li><blockquote>«El presente es anómalo, como decían los estoicos.»</blockquote><p><b>Por qué</b>Quien solo atiende a la última novedad no ha analizado la estructura de esa novedad.</p></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="gb-k">Una palabra de Platón para un sistema</div>
+          <h3 class="gb-h3">Symploké: ni todo con todo, ni nada con nada</h3>
+          <div class="gb-sym">
+            <div>
+              <div class="gb-sw" role="group" aria-label="Tres maneras de conectar las ideas"><button type="button" data-sym="all" aria-pressed="false">Todo con todo</button><button type="button" data-sym="none" aria-pressed="false">Nada con nada</button><button type="button" data-sym="sym" aria-pressed="true">Symploké</button></div>
+              <svg id="gbSym" viewBox="0 0 320 220" role="img" aria-label="Red de ideas"></svg>
+            </div>
+            <div>
+              <p class="lbl" id="gbSymL"></p>
+              <p id="gbSymP"></p>
+              <p style="margin-top:12px">Bueno tomó el término del <i>Sofista</i> (259e), donde el discurso nace del entrelazamiento de las formas. Es el principio de su materialismo filosófico, y responde a la misma vía negativa que Gerson describe más arriba: ni monismo ni atomismo.</p>
+              <p style="margin-top:12px"><button type="button" class="chip umbral-go" data-gs-jump="#gerson">Volver a Gerson ↑</button></p>
+            </div>
+          </div>
+          <p class="src-note"><b>Procedencia.</b> Gustavo Bueno, «Lenguaje y pensamiento en Platón», <i>Taula. Quaderns de pensament</i>, n.º 3, Universitat de les Illes Balears, 1985, pp. 39–59: transcripción de la conferencia del 20 de mayo de 1982 en las III Jornadas de Filosofía, que conserva el tono oral. Las citas entre comillas son literales y breves. El resto, paráfrasis propias. Referencias del <i>Cratilo</i> y del <i>Sofista</i> con numeración Stephanus. Pendiente de revisión editorial humana.</p>
+        </div>
       </section>
 
       <section aria-labelledby="utTitle">
@@ -7161,6 +7350,121 @@ root.addEventListener("click",e=>{
   const tab=document.getElementById("lyTab-"+s.dataset.rtScene); if(tab) tab.click();
   const st=document.getElementById("lyStage"); st&&st.scrollIntoView({behavior:RM?"auto":"smooth",block:"start"});
 });
+})();
+</script>
+
+<script>
+/* ---------------- TRIBUTO · GUSTAVO BUENO (ES · DE según <html lang>) ---------------- */
+(function(){
+const root=document.getElementById("bueno"); if(!root) return;
+const q=s=>root.querySelector(s);
+const E=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const L=(document.documentElement.getAttribute("lang")||"es").toLowerCase().startsWith("de")?"de":"es";
+const T={
+es:{
+ tw:"Leído como ley del mundo", tc:"Leído como principio de cierre",
+ ps:[
+  ["Lavoisier","química clásica","«La materia no se crea ni se destruye, solo se transforma.»",
+   ["La cantidad total de materia del universo es invariable.","Leído así es metafísica, y la cosmología de un universo en expansión lo pone en duda. ¿Habría que decir que Lavoisier se equivocó?"],
+   ["La masa pesada antes y después de cada reacción tiene que ser la misma, si no se deja escapar ningún gas.","Sin este principio se rompe la química clásica, con sus pesos atómicos. Es absolutamente evidente, pero dentro del campo que cierra."]],
+  ["Especificidad","lingüística","«Los animales no hablan.»",
+   ["Solo el ser humano habla; el lenguaje animal es una metáfora.","Leído así, lo desmiente la etología: hoy se descifra el lenguaje de las abejas y los chimpancés aprenden a comunicarse con signos."],
+   ["El campo de la lingüística son las lenguas humanas: el francés, el inglés, el catalán. Saussure no habla de los chimpancés.","Es una frontera de trabajo, no una tesis sobre la naturaleza."]],
+  ["Arbitrariedad","lingüística","«El signo lingüístico es arbitrario.»",
+   ["Las palabras no guardan relación alguna con las cosas.","Si fuera así, dice Bueno con Platón, no cabría hablar nunca de verdad. Es la tesis de Hermógenes en el Cratilo."],
+   ["El lingüista estudia cada lengua frente a otras lenguas, desde la traducción, y deja fuera la relación con las cosas.","La gramática castellana de Nebrija se hizo desde el latín: el análisis de una lengua nace de la multiplicidad de lenguas."]],
+  ["Continuidad","etología","«El lenguaje humano es un lenguaje animal más.»",
+   ["El ser humano no es más que zoología, y lo que llamamos espíritu se reduce a estructuras naturales.","Leído así es reduccionismo, y deja fuera lo que el lenguaje tiene de verdad y de norma."],
+   ["La etología estudia el lenguaje desde los lenguajes animales y trata al ser humano como entidad zoológica.","Es su manera legítima de cerrar el campo. El choque con la lingüística ocurre en el plano filosófico, y ahí es donde hay que leer a Platón."]]
+ ],
+ lt:[
+  ["ρ","flow","Rho · el movimiento","426c–e","La lengua vibra y no se está quieta: por eso la ρ aparece en ῥεῖν (fluir), τρόμος (temblor), τρέχειν (correr).","«La “ro” es movimiento»: πάντα ῥεῖ, todo fluye.","movimiento"],
+  ["δ τ","bind","Delta y tau · la atadura","427a–b","La lengua se aprieta y se detiene contra los dientes: δεσμός (atadura), στάσις (reposo).","«Estamos encadenando la lengua, entre los dientes.»","detención"],
+  ["λ","slide","Lambda · el deslizamiento","427b","La lengua resbala: λεῖος (liso), ὀλισθάνειν (resbalar), λιπαρός (untuoso).","No es onomatopeya: si lo fuera, solo podríamos nombrar las cosas que suenan.","deslizamiento"],
+  ["α η","wide","Alfa y eta · lo grande y lo largo","427c","La boca se abre: α para μέγα (grande), η para μῆκος (longitud).","«Abrimos la vocal “a”, abierta, para decir “magnus”, o “grande”.»","amplitud"],
+  ["ο","round","Ómicron · lo redondo","427c","La boca se redondea: ο para γογγύλον (redondo).","Imitar no es copiar el sonido de la cosa, sino reconstruirla con una operación del cuerpo.","redondez"],
+  ["ι","thin","Iota · lo sutil y lo pequeño","426e–427a","En Platón, la ι sirve para lo sutil que lo atraviesa todo (ἰέναι, ir).","Bueno lo prolonga: «pequeñito», «micro», «petit». La i es la vocal menos abierta.","estrechez"]
+ ],
+ bueno:"Bueno", crat:"Cratilo",
+ sym:{all:["Todo con todo","Monismo: si todo estuviera conectado con todo, no se podría distinguir nada. No habría ciencias, solo una totalidad indiferenciada."],
+      none:["Nada con nada","Atomismo: si nada se conectara con nada, no habría discurso. Las palabras sueltas no dicen nada."],
+      sym:["Unas cosas con otras, no todas con todas","Las ideas se entretejen en unos puntos y se separan en otros. Por eso hay ciencias distintas, con campos cerrados, y hace falta la filosofía para pensar sus choques."]}
+},
+de:{
+ tw:"Als Gesetz der Welt gelesen", tc:"Als Schließungsprinzip gelesen",
+ ps:[
+  ["Lavoisier","klassische Chemie","»Materie wird weder geschaffen noch vernichtet, sie wird nur umgewandelt.«",
+   ["Die Gesamtmenge der Materie im Universum ist unveränderlich.","So gelesen ist es Metaphysik, und die Kosmologie eines expandierenden Universums stellt es in Frage. Müsste man sagen, Lavoisier habe sich geirrt?"],
+   ["Die vor und nach jeder Reaktion gewogene Masse muss gleich sein, sofern kein Gas entweicht.","Ohne dieses Prinzip zerbricht die klassische Chemie mit ihren Atomgewichten. Es ist vollkommen evident, aber innerhalb des Feldes, das es schließt."]],
+  ["Spezifität","Linguistik","»Tiere sprechen nicht.«",
+   ["Nur der Mensch spricht; Tiersprache ist eine Metapher.","So gelesen widerlegt es die Ethologie: Heute entschlüsselt man die Sprache der Bienen, und Schimpansen lernen, sich mit Zeichen zu verständigen."],
+   ["Das Feld der Linguistik sind die menschlichen Sprachen: Französisch, Englisch, Katalanisch. Saussure spricht nicht von Schimpansen.","Es ist eine Arbeitsgrenze, keine These über die Natur."]],
+  ["Arbitrarität","Linguistik","»Das sprachliche Zeichen ist arbiträr.«",
+   ["Die Wörter haben keinerlei Beziehung zu den Dingen.","Wäre das so, sagt Bueno mit Platon, könnte man nie von Wahrheit sprechen. Es ist die These des Hermogenes im Kratylos."],
+   ["Der Linguist untersucht jede Sprache im Vergleich mit anderen, von der Übersetzung aus, und lässt die Beziehung zu den Dingen beiseite.","Nebrijas kastilische Grammatik entstand vom Lateinischen aus: Die Analyse einer Sprache entsteht aus der Vielheit der Sprachen."]],
+  ["Kontinuität","Ethologie","»Menschliche Sprache ist nur eine Tiersprache mehr.«",
+   ["Der Mensch ist nichts als Zoologie, und was wir Geist nennen, reduziert sich auf natürliche Strukturen.","So gelesen ist es Reduktionismus und lässt außen vor, was an der Sprache Wahrheit und Norm ist."],
+   ["Die Ethologie untersucht die Sprache von den Tiersprachen her und behandelt den Menschen als zoologisches Wesen.","Das ist ihre legitime Art, das Feld zu schließen. Der Zusammenstoß mit der Linguistik geschieht auf philosophischer Ebene, und dort muss man Platon lesen."]]
+ ],
+ lt:[
+  ["ρ","flow","Rho · die Bewegung","426c–e","Die Zunge vibriert und steht nicht still: darum das ρ in ῥεῖν (fließen), τρόμος (Zittern), τρέχειν (laufen).","»Das R ist Bewegung«: πάντα ῥεῖ, alles fließt.","Bewegung"],
+  ["δ τ","bind","Delta und Tau · die Fessel","427a–b","Die Zunge presst sich an die Zähne und hält an: δεσμός (Fessel), στάσις (Ruhe).","»Wir fesseln die Zunge zwischen den Zähnen.«","Stillstand"],
+  ["λ","slide","Lambda · das Gleiten","427b","Die Zunge gleitet: λεῖος (glatt), ὀλισθάνειν (ausgleiten), λιπαρός (ölig).","Es ist keine Lautmalerei: Sonst könnten wir nur Dinge benennen, die klingen.","Gleiten"],
+  ["α η","wide","Alpha und Eta · das Große und das Lange","427c","Der Mund öffnet sich: α für μέγα (groß), η für μῆκος (Länge).","»Wir öffnen den Vokal A, offen, um ›magnus‹ oder ›groß‹ zu sagen.«","Weite"],
+  ["ο","round","Omikron · das Runde","427c","Der Mund rundet sich: ο für γογγύλον (rund).","Nachahmen heißt nicht, den Klang des Dings zu kopieren, sondern es mit einer Tätigkeit des Körpers zu rekonstruieren.","Rundung"],
+  ["ι","thin","Iota · das Feine und das Kleine","426e–427a","Bei Platon steht ι für das Feine, das alles durchdringt (ἰέναι, gehen).","Bueno führt es weiter: »pequeñito«, »micro«, »petit«. Das I ist der am wenigsten offene Vokal.","Enge"]
+ ],
+ bueno:"Bueno", crat:"Kratylos",
+ sym:{all:["Alles mit allem","Monismus: Wäre alles mit allem verbunden, ließe sich nichts unterscheiden. Es gäbe keine Wissenschaften, nur eine ununterschiedene Ganzheit."],
+      none:["Nichts mit nichts","Atomismus: Wäre nichts mit nichts verbunden, gäbe es keine Rede. Lose Wörter sagen nichts."],
+      sym:["Manches mit manchem, nicht alles mit allem","Die Ideen verflechten sich an einigen Stellen und trennen sich an anderen. Darum gibt es verschiedene Wissenschaften mit geschlossenen Feldern, und darum braucht es die Philosophie, um ihre Zusammenstöße zu denken."]}
+}};
+const t=T[L];
+
+/* principios de cierre */
+let pi=0, mode="c";
+const ps=q("#gbPs");
+ps.innerHTML=t.ps.map((p,i)=>`<li><button type="button" data-gbp="${i}" aria-pressed="${i===0}">${E(p[2])}<small>${E(p[0])} · ${E(p[1])}</small></button></li>`).join("");
+function rd(){
+  ps.querySelectorAll("[data-gbp]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.gbp===pi)));
+  root.querySelectorAll("[data-gbm]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.gbm===mode)));
+  const p=t.ps[pi], r=mode==="w"?p[3]:p[4], box=q("#gbRead");
+  box.className="gb-read"+(mode==="w"?" w":"");
+  box.innerHTML=`<span class="tg">${E(mode==="w"?t.tw:t.tc)}</span><p class="st">${E(r[0])}</p><p class="vd">${E(r[1])}</p>`;
+}
+ps.addEventListener("click",e=>{ const b=e.target.closest("[data-gbp]"); if(b){ pi=+b.dataset.gbp; rd(); } });
+root.querySelector(".gb-card .gb-sw").addEventListener("click",e=>{ const b=e.target.closest("[data-gbm]"); if(b){ mode=b.dataset.gbm; rd(); } });
+rd();
+
+/* letras del Cratilo */
+let li=0; const lb=q("#gbLetters");
+lb.innerHTML=t.lt.map((l,i)=>`<button type="button" class="chip" data-gbl="${i}" aria-pressed="${i===0}" lang="grc">${l[0]}</button>`).join("");
+function ld(){
+  lb.querySelectorAll("[data-gbl]").forEach(b=>b.setAttribute("aria-pressed",String(+b.dataset.gbl===li)));
+  const l=t.lt[li], g=q("#gbGlyph");
+  g.textContent=l[0].split(" ")[0]; g.className="gb-glyph"; void g.offsetWidth; g.classList.add(l[1]);
+  q("#gbCap").textContent=l[6];
+  q("#gbLtH").innerHTML=`${E(l[2])}<span>${E(t.crat)} ${E(l[3])}</span>`;
+  q("#gbLtP").textContent=l[4];
+  q("#gbLtW").innerHTML=`<b>${E(t.bueno)}</b>${E(l[5])}`;
+}
+lb.addEventListener("click",e=>{ const b=e.target.closest("[data-gbl]"); if(b){ li=+b.dataset.gbl; ld(); } });
+ld();
+
+/* symploké */
+const N=[[48,46],[118,30],[86,104],[40,160],[150,92],[124,176],[210,42],[264,70],[236,140],[288,184],[196,196]];
+const SYM=[[0,1],[0,2],[1,2],[2,3],[2,4],[4,5],[3,5],[6,7],[7,8],[6,8],[8,9],[9,10],[4,6],[5,10]];
+let sm="sym";
+function sd(){
+  root.querySelectorAll("[data-sym]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.sym===sm)));
+  let ed=[]; if(sm==="all"){ for(let i=0;i<N.length;i++) for(let j=i+1;j<N.length;j++) ed.push([i,j]); } else if(sm==="sym") ed=SYM;
+  let h=ed.map(([a,b])=>`<line x1="${N[a][0]}" y1="${N[a][1]}" x2="${N[b][0]}" y2="${N[b][1]}" stroke="${sm==="all"?"rgba(240,231,217,.22)":"#80d8ff"}" stroke-opacity="${sm==="all"?1:.6}" stroke-width="${sm==="all"?.7:1.4}"/>`).join("");
+  h+=N.map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${sm==="sym"&&(i===4||i===6||i===8)?6:4.5}" fill="#000" stroke="${sm==="none"?"#978898":"#e3b460"}" stroke-width="1.5"/>`).join("");
+  q("#gbSym").innerHTML=h;
+  q("#gbSymL").textContent=t.sym[sm][0]; q("#gbSymP").textContent=t.sym[sm][1];
+}
+root.querySelector(".gb-sym .gb-sw").addEventListener("click",e=>{ const b=e.target.closest("[data-sym]"); if(b){ sm=b.dataset.sym; sd(); } });
+sd();
 })();
 </script>
 </body>
