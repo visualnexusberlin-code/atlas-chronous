@@ -26,3 +26,6 @@ jobs:
           projectId: atlas-chronous
           channelId: ${{ github.event_name == 'push' && 'live' || '' }}
           expires: 7d
+          # firebase-tools 15.35.0 exige serviceusage.services.get, que la cuenta de servicio no tiene.
+          # Se fija la última versión que desplegaba sin ese permiso.
+          firebaseToolsVersion: 15.34.0
