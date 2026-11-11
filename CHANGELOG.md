@@ -1,5 +1,27 @@
 # Historial
 
+## v1.6 · Orientación, estructura y legibilidad · 2026-11-11
+Revisión de uso de toda la web, en ES y DE. No cambia ningún texto existente.
+
+**Navegación**
+- **Índice de la obra**: botón junto al título y, al bajar, botón flotante con el capítulo actual. Panel con 8 capítulos y 40 entradas; en móvil ocupa toda la pantalla e incluye el conmutador de idioma.
+- **Todas las secciones tienen `id`** y dirección propia (`/#retorica`, `/#fuentes`, `/de#dilemas`…), con los mismos identificadores en los dos idiomas.
+- **Barra de progreso de lectura** en el borde superior, con el color del capítulo.
+- Enlace «Saltar al contenido» para teclado y lectores de pantalla.
+
+**Estructura**
+- Nuevo orden: Mapa · Los orígenes · La Acrópolis · El Umbral · El Liceo · **Plotino** · La orilla · **Fuentes y método**.
+- Plotino («La mirada de Plotino» y «Sobre lo bello») pasa detrás de El Liceo, con portada propia.
+- «Qué sabemos y cómo lo sabemos» y la Rueda del asombro pasan al final, junto al colofón.
+- Portada nueva para el primer tramo, **Los orígenes**.
+- **Lecturas plegadas**: Gerson, Bueno y la Retórica muestran su planteamiento y se despliegan con «Seguir leyendo».
+- **Modo taller**: «Del concepto al código» y «Sugerencias para el taller» quedan plegados; se abren uno a uno o todos a la vez desde el índice (la preferencia se guarda en el navegador, sin cookies).
+
+**Legibilidad**
+- Suelo tipográfico de 12 px en textos e interfaz (142 reglas); las etiquetas del mapa, la cronología y las escenas 3D conservan su tamaño.
+- Botones y enlaces más altos en pantallas táctiles y estrechas (40–44 px).
+- **Sello de build** visible en el colofón y en el índice (`meta[name=build]`, `data-build`). El colofón deja de decir «prototipo v1.1 / v1.3».
+
 ## v1.5 · Tributo a Gustavo Bueno · 2026-10-21
 - Nueva sección breve en El Umbral, tras la lectura de Gerson: **Ir a Platón desde nosotros** / *Von uns aus zu Platon gehen*, a partir de «Lenguaje y pensamiento en Platón» (Taula, n.º 3, 1985; conferencia de 1982).
 - Principios de cierre frente a leyes del mundo (Lavoisier, especificidad, arbitrariedad, continuidad) con lectura conmutable; el *Cratilo* en cuatro partes y la doble articulación; letras animadas (ρ, δ τ, λ, α η, ο, ι); cinco agudezas en la voz mecanografiada de la conferencia; symploké con red conmutable (todo con todo, nada con nada, symploké).
